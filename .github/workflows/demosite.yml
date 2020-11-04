@@ -1,0 +1,18 @@
+name: Publish Demo Site
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Hugo to GH Pages
+        uses: chabad360/hugo-gh-pages@v2
