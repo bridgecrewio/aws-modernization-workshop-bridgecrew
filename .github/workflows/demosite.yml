@@ -17,4 +17,4 @@ jobs:
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.PAGES_TOKEN }}
+          githubToken: ${{ secrets.PAGES_TOKEN }}
