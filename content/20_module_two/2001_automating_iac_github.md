@@ -19,7 +19,3 @@ If you have multiple organisations, github will ask which of your orgs to fork i
 You'll then be redirected to your own fork, notice your username at the top of the page:
 
 ![Personal fork of CFNGoat repository for metahertz](./images/github-fork-cfngoat.png "Personal fork of CFNGoat repository for metahertz")
-
-
-
-## Setup AWS CodeBuild for our CFNGoat fork.
