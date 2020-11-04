@@ -12,10 +12,13 @@ We appreciate the double-edged sword when it comes to testing cloud security too
 - An insight into what happens if you don’t add infrastructure security to your pipeline because it’s always fun to break things!
 
 ## Prerequisites
-- A basic understanding of git and github.com
-- An understanding of the role CI/CD pipelines play in a development lifecycle
+- A basic understanding of git and github.com.
+- An understanding of the role CI/CD pipelines play in a development lifecycle.
 - Familiarity with AWS core concepts, such as IAM, regions, UI, CLI and API's.
-- Todo
+- The AWS command line installed on your machine, `aws --version`
+- An AWS account in which you will create an AWS Codebuild and AWS Codepipeline temporary environment.
+
+You can test the current credentials cofigured for your local aws cli with the `aws sts get-caller-identity` command.
 
 {{% notice warning %}}
 <p style='text-align: left;'>
