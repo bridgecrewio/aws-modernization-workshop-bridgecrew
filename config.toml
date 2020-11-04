@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/aws-modernization-workshop-bridgecrew/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
