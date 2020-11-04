@@ -16,5 +16,5 @@ jobs:
           submodules: true
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
-        env:
+        with:
           githubToken: ${{ secrets.PAGES_TOKEN }}
