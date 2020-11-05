@@ -1,91 +1,125 @@
 ---
-title: "Automate Fixes through Pull Requests"
+title: "Protect non CloudFormation Infrastructure"
 chapter: true
-weight: 31
+weight: 32
 ---
 
-## Automate Fixes Through Pull Requests
+## Runtime Scanning of Vulnerable Infrastructure
 
-By adding another Intgration into Bridgecrew, we can generate automated Pull Requests (PR's) into your Github repository, to update your CloudFormation manifests and fix security issues!
+Last but definitley by no means least, lets answer the remaining question:
 
-To do this, we'll use the "Github" Source Control integration within the [Bridgecrew Dashboard](https://www.bridgecrew.cloud/integrations/Github/?utm_source=aws_workshop), allowing Bridgecrew to raise pull requests (and also, scan incoming pull requests automatically for issues!) 
+ - What about infrastructure that wasnt deployed by CloudFormation?
 
+Greenfield Infrastructure as Code deployments are a luxury not many of us have, with many objects in our AWS accounts often historical, created manually, or managed by a team that has not yet made the DevOps move to automation.
 
-![Authorize Github Bridgecrew Integration](./images/dash-authorize-github-2.png "Authorize Github Bridgecrew Integration")
+Scanning objects directly in the AWS environment we call *"Runtime Scanning"*, compared to *"Build time"* scanning of CloudFormation or Terraform manifests in git or as part of the CI/CD pipeline as we've already seen.
 
-Just like the previous AWS Github authorization, you can choose which repositories to give Bridgecrew permission to access. In this case, a minimum of your CFNGoat fork is required if you're following along with the workshop!
+Bridgecrew allows Runtime scanning via an AWS integration, allowing full coverage of Infrastrucure security, both before and after deployment.
 
-![Authorize Github Bridgecrew Integration](./images/dash-authorize-github-3.png "Authorize Github Bridgecrew Integration")
+### AWS Runtime Integration
 
-Once authorized, we will Bridgecrew will scan your Infrastructure as Code manifests in the repositories for CloudFormation, AWS CDK, Terraform, Serverless Framework, ARM, and Kubernetes manifests, adding issues found to the *Incidents* page and Dashboards 
+To enable runtime scanning of your AWS account, goto the [Bridgecrew Dashboard](https://www.bridgecrew.cloud/integrations?utm_source=aws_workshop) and chose the Integrations menu.
 
-![Authorize Github Bridgecrew Integration](./images/dash-authorize-github.png "Authorize Github Bridgecrew Integration")
+Then, Select **AWS Read Only** under the **Cloud Providers** section. 
 
-You may need to check your filters on the incidents page to see all relevant scanning sources. In the following filter, i've selected the information source coming from our `bridgecrew-tutorial` CodePipeline, and also the newly added `metahertz/cfngoat` source from the Github integration.
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00001.png "AWS Bridgecrew Integration")
 
-![Filtering Incidents in the Bridgecrew dashboard](./images/dash-github-integration-filter-1.png "Filtering Incidents in the Bridgecrew dashboard")
+{{% notice info %}}
+<p style='text-align: left;'>
+Read only access is scoped as minimally as possible in order to give the Bridgecrew platform necessary access to scan your AWS accounts. We constantly revise the necessary IAM permissions, and review against our own IAM rightsizing features which we'll cover in just a moment!
+</p>
+{{% /notice %}}
 
-You will now see the same violation alerting from two sources, the source Github repository itself, and the latest CodePipeline run, from [Module Two of this workshop](../20_module_two.html)!
+Click **Add Account** then **Launch Stack** to enable the integration: 
 
-Find the *Ensure S3 bucket has 'restrict_public_bucket' enabled* violation in your dashboard, as in the example below: 
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00002.png "AWS Bridgecrew Integration")
 
-![Showing multiple information sources in the Bridgecrew Dashboard](./images/dash-remediate-1.png "Showing multiple information sources in the Bridgecrew Dashboard")
+You will be taken to your AWS account to authorize the integration:
 
-When we click on one of the Github-integrated violations, we'll see the platform recommending an automated fix in the form of a visual *diff*, lets fix the Financials bucket, click on `<yourgithubusername>/cfngoat: Bucket.FinancialsBucket` as shown below:
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew Integration")
 
-![Git remediation workflow](./images/dash-remediate-2.png "Git remediation workflow")
+**Check the checkbox** to approve the IAM permission creations via our CloudFormation stack, and click **Create Stack**
 
-If you are happy with the proposed fix (See our guidelines tab for more developer-friendly context if needbe) you can **tick the resource name above the diff**, and click **Remediate**.
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00004.png "AWS Bridgecrew Integration")
 
+You can track the progress of the stack creation within your AWS account, once completed, you'll see the integration turn green in the Bridgecrew dashboard!
 
-![Git remediation workflow](./images/dash-remediate-3.png "Git remediation workflow")
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00005.png "AWS Bridgecrew Integration")
 
-The remediation popout shows there will be a Pull Request raised against your Github repository, hit *REMEDIATE*.
+Creation Complete:
 
-![Git remediation workflow](./images/dash-remediate-4.png "Git remediation workflow")
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00006.png "AWS Bridgecrew Integration")
 
-After a couple of seconds, you'll be taken back to the Incidents screen, with a message confirming the Pull Request has been sucessfully raised, you'll also see the remediation has had the effect of hiding the issue from the Incidents list (*other buckets are listed, but Financials is gone*).
+Sucessful Integration: 
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00007.png "AWS Bridgecrew Integration")
 
-**However, notice the issue is still present from our CodePipeline source, so we're not secure yet!**
+Thats it for connecting your AWS account to Bridgecrew, super simple!
 
-![Git remediation workflow](./images/dash-remediate-5.png "Git remediation workflow")
+### Exploring Runtime Violations
+With the runtime AWS account added, lets quickly edit our filters in the Violations page to show only the new account.
 
-Over at our CFNGoat repository in Github, we will see a new PR under "Pull Requests", which the development team can review:
+In the filters option payne, select your **AWS Account Number** from the available sources, you'll also see our CodePipeline and Github repositories from the earlier modules.
 
-![Git remediation workflow](./images/dash-remediate-6.png "Git remediation workflow")
-
-
-![Git remediation workflow](./images/dash-remediate-7.png "Git remediation workflow")
-
-And Merge!
-
-
-![Git remediation workflow](./images/dash-remediate-8.png "Git remediation workflow")
-
-
-### Bringing it all together.
-Why have two reports of the same issue? One from Git and one from our CodePipeline run?
-
-**It's important to track security posture at multiple steps in the DevOps lifecycle, and Bridgecrew lets us do just that!**, 
-
-Merging our Pull Request in Github triggers our CI/CD deployment in AWS CodePipeline from Module Two.... 
-
-You may be able to tell where this is going!
+Make Sure **All* alert types are selected at the top of the filter payne.
+![AWS Bridgecrew Filter Payne](./images/filter-aws-only-dash.png "AWS Bridgecrew Filter Payne")
 
 
-![Git remediation workflow](./images/dash-remediate-9.png "Git remediation workflow")
+{{% notice info %}}
+<p style='text-align: left;'>
+Unlike the rest of this workshop, the information displayed in your Bridgecrew Dashboard will be different than some of the output we display below, as we will all have different things configured within our AWS accounts (where as for modules one and two, everything was based off a common set of security issues within the CFNGoat project!)
+</p>
+{{% /notice %}}
 
-Notice our merged pull request commit has triggered the Pipeline: 
 
-![Git remediation workflow](./images/dash-remediate-10.png "Git remediation workflow")
-![Git remediation workflow](./images/dash-remediate-11.png "Git remediation workflow")
+After setting our filter, we can browse through violations detected in our live AWS account, in the example below, we can see our S3 bucket is not encrypted at rest, **clicking on a resource** from the right hand side list of resource for this violation will produce much more information, including a Terraform representation of the AWS object in question:
 
-The scan will still fail, as there are more than one security issues affecting the CFNGoat repository, However! Lets go and look at our Bridgecrew dashboard again!....
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00012.png "AWS Bridgecrew Integration")
 
-![Git remediation workflow](./images/dash-remediate-12.png "Git remediation workflow")
+Further context on the issue and remediation options is available in the **Guidelines** tab for a given issue.
 
-The AWS Codepipeline integration has also seen the change and removed the alert for our `FinancialsBucket`, 
-**Now we know that the issue is not only fixed at source, but that the fix has also made it through the CI/CD pipeline into production!**
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00013.png "AWS Bridgecrew Integration")
+
+### Feature Highlight - IAM Insights
+One of the features we are really proud of within Runtime Scanning is called *IAM Insights*, it can recommend remediations of old, unused and badly sized (granting too many permissions) IAM users, roles and policies.
+
+You can use the **filter payne** to only show **Insights**, highlighting IAM specific issues:
+
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00009.png "AWS Bridgecrew Integration")
+
+IAM Insights will even provide a re-written, rightsized IAM policy document with only the permissions your applications are requesting of the role or policy, this reduces scope for abuse from a missconfigured or exploited application!
+
+![Rightsizing an IAM policy](./images/iam-insights-rightsizing.png "Rightsizing an IAM policy")
+
+
+### Automating fixes at Runtime.
+
+Just as we did with our Pull Request fixes in Module Two, Bridgecrew allows immediate remediation of runtime resources by reconfiguring your objects via the AWS API's.
+
+However, this requires extra permissions than we grant with the default *AWS Read Only* integration, trying to remediate using this integration will highlight the permissions issue and prompt you to configure remediation permissions if preferred!
+
+We can see this below, remediating an unused IAM role, flagged from the *IAM insights* violations
+
+![AWS Bridgecrew Integration, Remediate IAM](./images/dashboard-aws-runtime-00010.png "AWS Bridgecrew Integration, Remediate IAM")
+
+We also alert on account-wide settings, such as user password policies, and informational best practices, such as tagging each resource with ownership or purpose information:
+
+##### Untagged Items in Account
+![AWS Bridgecrew Filter Payne](./images/example-tagging-info.png "AWS Bridgecrew Filter Payne")
+
+##### Weak Account Password Policy
+![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00008.png "AWS Bridgecrew Integration")
 
 ## Congratulations!
-You've built an automated Infrastructure as Code scanning solution, in a live environment, and automated the fixing of an exposed S3 bucket! Maybe it's time for a victory coffee?
+You've integrated runtime security alerting and remediation into your **DevSecOps** automation! 
+
+Feel free to explore more of the Bridgecrew Dashboard, and try inviting more of your team to view and collaborate on the same security dashboard from the [**User Management** page](https://www.bridgecrew.cloud/settings/userManagement?utm_source=awsworkshop)
+
+![Bridgecrew User management](./images/UserManagement.png "Bridgecrew User Management")
+
+That brings us to the end of the Bridgecrew workshop!
+We hope you've enjoyed automating your way to better Infrastructure Security with us! We'd love to hear your feedback and would be happy to answer any further questions you may have!
+
+You can find us [@bridgecrewio](https://twitter.com/bridgecrewio) on twitter, or say *hi!* in our [#CodifiedSecurity slack channel here!](https://slack.bridgecrew.io/?utm_source=awsworkshop)
+
+
+
