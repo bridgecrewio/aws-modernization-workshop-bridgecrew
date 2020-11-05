@@ -30,6 +30,12 @@ Here we are provided a link to our build logs, revealing the security violations
 
 ![AWS CodeBuild Run Failed](./images/runpipeline-5.png "AWS CodeBuild Run Failed")
 
+
+Navigating to [*Codebuild > Report Group*](https://console.aws.amazon.com/codesuite/codebuild/), we can also see a simple graph of failed vs passed checks with an easier to read output of all failed checks. 
+
+![AWS CodeBuild JUnit output](./images/junit-codebuild-output-report.png) "AWS CodeBuild JUnit output)
+
+
 ## Data is good, easy to visualize data is better.
 While the output above is very useful, you may want to visualise issues over time with a given repository, or group objects affected by the same issue into one group for clearer understanding.
 
