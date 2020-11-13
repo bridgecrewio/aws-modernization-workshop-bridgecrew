@@ -1,21 +1,21 @@
 ---
-title: "Fork your own CFNGoat"
+title: "CloudFormation repository setup"
 chapter: true
 weight: 21
 ---
 
-## Create your own CFNGoat fork on Github
+## Creating your own CfnGoat repository on GitHub
 
-Since CFNGoat is already hosted on github, lets create our own fork so we can make changes and integrate our automated pipeline.
+To set up our continuous workflow and demonstrate the value of getting automated infrastructure security scanning, we need a hosted source repository. You can either push your local demo repository to GitHub or, since CfnGoat is already hosted on GitHub, we recommend you fork the repository to your own GitHub account.
 
-Visit the CFNGoat repo at [(https://github.com/bridgecrewio/cfngoat)](https://github.com/bridgecrewio/cfngoat)
-
-Login to `github.com` if you are not already authenticated, and click the `Fork` button for the CFNGoat repository.
+Head to your GitHub account, visit the CfnGoat repository at [https://github.com/bridgecrewio/cfngoat](https://github.com/bridgecrewio/cfngoat), and select Fork in the top right-hand corner:
 
 ![bridgecrewio CFNGoat repository on github.com](./images/github-cfngoat.png "bridgecrewio CFNGoat repository on github.com")
 
-If you have multiple organisations, github will ask which of your orgs to fork into, chose your personal account (your username in the list) to fork the repo.
+If you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account via your username in the list to fork the repo.
 
-You'll then be redirected to your own fork, notice your username at the top of the page:
+You’ll then be redirected to your newly forked repository—notice your username at the top of the page:
 
 ![Personal fork of CFNGoat repository for metahertz](./images/github-fork-cfngoat.png "Personal fork of CFNGoat repository for metahertz")
+
+Now we’re ready to make changes and integrate our automated pipeline!
