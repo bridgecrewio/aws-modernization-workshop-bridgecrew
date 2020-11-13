@@ -4,28 +4,23 @@ chapter: false
 weight: 2
 ---
 
-We appreciate the double-edged sword when it comes to testing cloud security tools, with no appetite to expose production code repositories to new tools right away. We've tried to make it super easy to follow this workshop by providing our own, purposley-vulnerable set of CloudFormation templates, so that you can scan and automate infrastructure code without the added friction of integrating your own code.
+## DevSecWhat?
+The foundation of DevSecOps lies in the DevOps movement, wherein development and operations functions have merged to make deployments faster, safer, and more repeatable. Common DevOps practices include automated infrastructure build pipelines (CI/CD) and version-controlled manifests (GitOps) to make it easier to control cloud deployments. By baking software and infrastructure quality requirements into the release lifecycle, teams save time manually reviewing code, allowing them to focus more on shipping features.
 
-## Learning Objectives
-- Hands-on experience with both build-time and run-time configuration security and learn why addressing both leads to better security posture for your deployed infrastructure.
-- Howto build a CI/CD pipeline with embedded policy governance enforced by security scanning tools.
-- An insight into what happens if you don’t add infrastructure security to your pipeline because it’s always fun to break things!
+As deployments to production speed up, however, many traditional cloud security concepts break down. With the rise of containerized technologies, serverless functions, and IaC frameworks (which we’ll dig into in the next section), it’s harder to maintain cloud security posture visibility. 
 
-## Prerequisites
-- A basic understanding of git and github.com.
-- An understanding of the role CI/CD pipelines play in a development lifecycle.
-- Familiarity with AWS core concepts, such as IAM, regions, UI, CLI and API's.
-- The AWS command line installed on your machine, `aws --version`
-- An AWS account in which you will create an AWS Codebuild and AWS Codepipeline temporary environment.
+By leveraging DevOps foundations, security and development teams can build security scanning and policy enforcement into automated pipelines. The ultimate goal with DevSecOps is to “shift cloud security left.” That means automating it and embedding it earlier into the development lifecycle so that actions can be taken earlier. Preventing risky deployments is a more proactive approach to traditional cloud security that often slows down development teams with deployment rollbacks and disruptive fixes.
 
-You can test the current credentials cofigured for your local aws cli with the `aws sts get-caller-identity` command.
+For DevSecOps to be successful for teams working to build and secure infrastructure, embracing existing tools and workflows is critical. At Bridgecrew, we’re committed to making it as simple, effective, and painless as possible to automate cloud security and integrate it seamlessly into release lifecycles.
+
+
 
 {{% notice warning %}}
 <p style='text-align: left;'>
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various Bridgecrew and AWS services can be architected to build a solution while demonstrating best practices along the way. These examples, especially the intentionally vulnerable "CFNGoat" repository, are not intended for use in production environments.
 </p>
 {{% /notice %}}
-
+ 
 
 
 
