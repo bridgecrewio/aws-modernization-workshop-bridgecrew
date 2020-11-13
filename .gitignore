@@ -1,3 +1,6 @@
+# Ignore config.toml with local path edits for hugo rendering
+config.toml
+
 *.swp
 *.*~
 project.lock.json
