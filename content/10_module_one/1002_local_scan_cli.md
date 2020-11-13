@@ -4,44 +4,56 @@ chapter: true
 weight: 12
 ---
 
-## Scan a repo locally with the bridgecrew CLI
+## Run Bridgecrew CLI locally
 
-We use the Bridgecrew API token to connect our local Bridgecrew CLI with the Bridgecrew cloud, the following command will scan the CFNGoat repository we cloned for infrastructure vulnerabilitues and display any issues and violations.
+To demonstrate what kinds of security and compliance errors Bridgecrew can identify in CloudFormation templates, we’ll start by using Bridgecrew CLI and send the results to the Bridgecrew platform.
 
-The API key also sends these results to the Bridgecrew cloud for so we can track, inspect in more detail and remediate them there, we'll cover this a little later.
+Make sure you are in the `cfngoat` directory from the previous step, copy your unique Bridgecrew API token, and scan the `cfngoat.yaml` file:
 
 
-`bridgecrew -f cfngoat.yaml --bc-api-key YOUR_API_KEY_HERE`
+```bash
+bridgecrew -f templates/cfngoat.yaml --bc-api-key YOUR_API_KEY_HERE
+```
 
-You can also scan entire directories with -d:
+You can also scan entire directories with `-d <path>`:
 
-`bridgecrew -d cfn --framework cloudformation --bc-api-key YOUR_API_KEY_HERE` 
-
-{{% notice info %}}
-<p style='text-align: left;'>
-Make sure you are in the `cfngoat` directory we checked out from git during the getting started section
-</p>
-{{% /notice %}}
-
-The results show all the failed checks, as well as link to a guide explaining the cause and how to fix them. Note the output also includes the filename and snippet of code that is misconfigured:
-
-![Bridgecrew CLI local scan output](./images/bridgecrewcli1.png "Bridgecrew CLI local scan output")
-
-Bridgecrew comes pre-built with hundreds of AWS security and compliance policies. To get the list of security checks, use -l or --list:
-
-`bridgecrew --list`
-
-In many instances, when testing locally with the CLI, like now, you may only be interested in running a select few checks. In that case, you can add the -c or --check option:
-
-`bridgecrew -f cfngoat.yaml -c CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE`
-
-Or, if you want to run all but some checks, use the --skip-check option:
-`bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE`
-
-Next, we'll inspect these results in the Bridgecrew dashboard!
+`bridgecrew -d . --framework cloudformation --bc-api-key YOUR_API_KEY_HERE` 
 
 {{% notice info %}}
 <p style='text-align: left;'>
 You can use the bridgecrew CLI without --bc-api-key, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scans.
 </p>
 {{% /notice %}}
+
+The results will show all the failed checks and link to a guide explaining the cause and how to fix them. Note the output also includes the filename and snippet of code that is misconfigured:
+
+![Highligting bridgecrew CLI policies](./images/highlight_cli_policies.png)
+
+As you can see in the highlighted CLI output above, our demo CloudFormation repository has failing checks for two policies:
+- Ensure S3 bucket has ignore public ACLs enabled
+- Ensure S3 bucket has ‘restrict_public_bucket’ enabled
+
+To get the list of policies that Bridgecrew checks for, use -l or –list:
+
+```bash
+bridgecrew --list
+```
+
+## Bridgecrew policies
+
+In many instances, when testing locally with the Bridgecrew CLI, you may only be interested in running just a few checks. In that case, you can add the `-c` or `--check` option:
+
+
+```
+bridgecrew -f cfngoat.yaml -c CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE
+```
+
+Alternatively, if you want to run all but a few checks, use the `--skip-check` option: 
+
+
+```
+bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE
+```
+
+Next, let’s inspect these results in the Bridgecrew dashboard.
+
