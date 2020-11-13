@@ -3,7 +3,7 @@ name: Publish Demo Site
 on:
   push:
     branches:
-      - develop
+      - payton-review-1
 
 jobs:
   build-deploy:
