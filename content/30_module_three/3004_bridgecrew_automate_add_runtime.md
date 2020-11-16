@@ -93,28 +93,3 @@ IAM Insights will even provide a re-written, rightsized IAM policy document with
 ![Rightsizing an IAM policy](./images/iam-insights-rightsizing.png "Rightsizing an IAM policy")
 
 
-### Automating fixes at Runtime.
-
-Just as we did with our Pull Request fixes in Module Two, Bridgecrew allows immediate remediation of runtime resources by reconfiguring your objects via the AWS API's.
-
-However, this requires extra permissions than we grant with the default *AWS Read Only* integration, trying to remediate using this integration will highlight the permissions issue and prompt you to configure remediation permissions if preferred!
-
-We can see this below, remediating an unused IAM role, flagged from the *IAM insights* violations
-
-![AWS Bridgecrew Integration, Remediate IAM](./images/dashboard-aws-runtime-00010.png "AWS Bridgecrew Integration, Remediate IAM")
-
-
-## Congratulations!
-You've integrated runtime security alerting and remediation into your **DevSecOps** automation! 
-
-Feel free to explore more of the Bridgecrew Dashboard, and try inviting more of your team to view and collaborate on the same security dashboard from the [**User Management** page](https://www.bridgecrew.cloud/settings/userManagement?utm_source=awsworkshop)
-
-![Bridgecrew User management](./images/UserManagement.png "Bridgecrew User Management")
-
-That brings us to the end of the Bridgecrew workshop!
-We hope you've enjoyed automating your way to better Infrastructure Security with us! We'd love to hear your feedback and would be happy to answer any further questions you may have!
-
-You can find us [@bridgecrewio](https://twitter.com/bridgecrewio) on twitter, or say *hi!* in our [#CodifiedSecurity slack channel here!](https://slack.bridgecrew.io/?utm_source=awsworkshop)
-
-
-
