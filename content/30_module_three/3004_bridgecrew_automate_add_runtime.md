@@ -2,6 +2,7 @@
 title: "AWS runtime scanning"
 chapter: true
 weight: 34
+pre: "<b>6.4 </b>"
 ---
 
 ## Scanning runtime resources for vulnerable infrastructure

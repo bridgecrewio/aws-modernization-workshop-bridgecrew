@@ -2,6 +2,7 @@
 title: "CfnGoat"
 chapter: true
 weight: 11
+pre: "<b>4.1 </b>"
 ---
 
 ## Vulnerable-by-design demo repository setup

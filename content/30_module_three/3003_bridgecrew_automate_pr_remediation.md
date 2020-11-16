@@ -2,6 +2,7 @@
 title: "Pull request fixes"
 chapter: true
 weight: 33
+pre: "<b>6.3 </b>"
 ---
 
 ## Automating fixes through pull requests

@@ -2,6 +2,7 @@
 title: "CloudFormation repository setup"
 chapter: true
 weight: 21
+pre: "<b>5.1 </b>"
 ---
 
 ## Creating your own CfnGoat repository on GitHub

@@ -2,6 +2,7 @@
 title: "Bridgecrew CLI"
 chapter: true
 weight: 12
+pre: "<b>4.2 </b>"
 ---
 
 ## Run Bridgecrew CLI locally

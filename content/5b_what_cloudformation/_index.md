@@ -2,6 +2,7 @@
 title: "CloudFormation Overview"
 chapter: true
 weight: 3
+pre: "<b>2 </b>"
 ---
 
 ## How do CloudFormation and infrastructure as code work?

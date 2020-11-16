@@ -2,11 +2,10 @@
 title: "Conclusion"
 chapter: true
 weight: 40
+pre: "<b>7 </b>"
 ---
 
 ## Conclusion
-
-Congratulations! You've integrated runtime security alerting and remediation into your **DevSecOps** automation! 
 
 In this workshop, you didn’t just learn how to automate security scanning—you learned how to bridge the gap between infrastructure development, DevOps, and cloud security. With these tools and processes at your disposal, you’re equipped to reduce risk by preventing cloud security errors as part of your development lifecycle. We also hope you’ve learned how important and easy it is to make security accessible to your engineering teams.
 

@@ -2,6 +2,7 @@
 title: "GitHub integration"
 chapter: true
 weight: 32
+pre: "<b>6.2 </b>"
 ---
 
 ## Integrating Bridgecrew with GitHub

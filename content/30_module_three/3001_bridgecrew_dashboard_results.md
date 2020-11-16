@@ -2,6 +2,7 @@
 title: "Bridgecrew platform results"
 chapter: true
 weight: 31
+pre: "<b>6.1 </b>"
 ---
 
 ## Investigating security violations in Bridgecrew

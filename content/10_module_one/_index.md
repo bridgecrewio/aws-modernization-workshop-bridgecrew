@@ -1,7 +1,8 @@
 ---
-title: "Module 1 - Scan"
+title: "Module - Scan"
 chapter: false
 weight: 10
+pre: "<b>4 </b>"
 ---
 
 In this module, we’ll identify common misconfigurations and security best practices in AWS CloudFormation.

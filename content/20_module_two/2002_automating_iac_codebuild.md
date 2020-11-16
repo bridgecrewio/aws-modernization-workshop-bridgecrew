@@ -2,6 +2,7 @@
 title: "AWS CodeBuild setup"
 chapter: true
 weight: 22
+pre: "<b>5.2 </b>"
 ---
 
 ## Setting up AWS CodeBuild for our CloudFormation repository.

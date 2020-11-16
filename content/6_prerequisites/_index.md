@@ -2,6 +2,7 @@
 title: "Prerequisites"
 chapter: false
 weight: 4
+pre: "<b>3 </b>"
 ---
 
 Before we get started, make sure you have the following prerequisites. To get the most out of this tutorial, it will also be helpful to have a basic understanding of git, AWS core concepts (IAM, regions, UI, CLI, APIs), and CI/CD principles.

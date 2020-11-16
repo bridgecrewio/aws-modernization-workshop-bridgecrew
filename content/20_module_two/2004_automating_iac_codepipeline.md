@@ -2,6 +2,7 @@
 title: "AWS CodePipeline Setup"
 chapter: true
 weight: 24
+pre: "<b>5.4 </b>"
 ---
 
 ## Setting up AWS CodePipeline to automatically trigger scans

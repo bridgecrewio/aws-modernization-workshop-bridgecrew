@@ -1,7 +1,8 @@
 ---
-title: "Module 3 - Fix"
+title: "Module - Fix"
 chapter: false
 weight: 30
+pre: "<b>6 </b>"
 ---
 
 As we’ve shown so far, Bridgecrew provides the policies and workflow to audit your CloudFormation templates before deployment, and optionally, to block vulnerabilities from making their way to your deployment pipeline.
