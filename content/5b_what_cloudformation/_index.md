@@ -1,5 +1,5 @@
 ---
-title: "CloudFormation Overview?"
+title: "CloudFormation Overview"
 chapter: true
 weight: 3
 ---

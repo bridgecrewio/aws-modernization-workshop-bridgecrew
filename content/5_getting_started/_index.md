@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "DevSecWhat?"
 chapter: false
 weight: 2
 ---

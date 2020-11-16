@@ -1,5 +1,5 @@
 ---
-title: "Module 3"
+title: "Module 3 - Fix"
 chapter: false
 weight: 30
 ---
