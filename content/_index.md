@@ -1,22 +1,19 @@
 ---
-title: "AWS Modernization Workshop"
+title: "Cloud DevSecOps with Bridgecrew"
 chapter: true
 weight: 1
 ---
 
-# AWS Modernization Workshop
+# Welcome!
 
-### Welcome
+In this workshop, you’ll learn how to leverage infrastructure as code (IaC) and DevSecOps to automate your cloud security efforts. If you’re interested in making cloud security more efficient, proactive, and accessible to developers, this workshop is for you! 
 
-In this workshop you will learn why DevOps is a pattern for modernization and how to use patterns to release features and functionality at a faster pace.
+Using **Bridgecrew, GitHub, AWS CodeBuild**, and **AWS CodePipeline**, you’ll get hands-on experience implementing an automated **CloudFormation** security and compliance workflow. 
 
-### Learning Objectives
-- Deploy Cloud9 as an IDE for completing workshop exercises.
-- How DevOps patterns help to release features and functionality faster.
-- Best practices for implementing 2 pizza team pipelines.
+## Learning Objectives
+- Overview of DevSecOps and CloudFormation infrastructure as code (IaC) 
+- Getting started with Bridgecrew to scan for CloudFormation misconfigurations
+- Setting up your CI/CD pipeline to automate security scanning and policy enforcement
+- Fixing IaC security errors and AWS resource misconfigurations with Bridgecrew
 
-{{% notice warning %}}
-<p style='text-align: left;'>
-The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
-</p>
-{{% /notice %}}
+Before we dive in, let’s go through a refresher on the core concepts explored in this workshop.
