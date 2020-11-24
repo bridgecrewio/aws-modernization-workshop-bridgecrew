@@ -2,6 +2,7 @@
 title: "Create an IAM role for your workspace"
 chapter: false
 weight: 13
+pre: "<b>3.5 </b>"
 ---
 
 {{% notice info %}}

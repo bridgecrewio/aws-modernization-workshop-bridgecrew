@@ -2,6 +2,7 @@
 title: "Create a workspace"
 chapter: false
 weight: 12
+pre: "<b>3.4 </b>"
 ---
 
 {{% notice warning %}}

@@ -2,6 +2,7 @@
 title: "...on your own"
 chapter: true
 weight: 11
+pre: "<b>3.3 </b>"
 ---
 
 ### Running the workshop on your own

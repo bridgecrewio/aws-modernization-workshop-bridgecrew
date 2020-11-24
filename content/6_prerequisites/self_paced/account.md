@@ -2,6 +2,7 @@
 title: "Create an AWS account"
 chapter: false
 weight: 1
+pre: "<b>3.3.1 </b>"
 ---
 
 {{% notice warning %}}

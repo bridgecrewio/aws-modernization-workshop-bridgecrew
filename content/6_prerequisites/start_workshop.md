@@ -2,6 +2,7 @@
 title: "Start the Workshop..."
 chapter: true
 weight: 9
+pre: "<b>3.1 </b>"
 ---
 
 # Getting Started
