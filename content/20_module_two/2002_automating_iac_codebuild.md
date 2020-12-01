@@ -1,7 +1,7 @@
 ---
 title: "AWS CodeBuild setup"
 chapter: true
-weight: 22
+weight: 203
 pre: "<b>5.2 </b>"
 ---
 

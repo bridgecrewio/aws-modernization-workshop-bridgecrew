@@ -1,7 +1,7 @@
 ---
 title: "Module - Automate"
 chapter: true
-weight: 20
+weight: 201
 pre: "<b>5 </b>"
 ---
 

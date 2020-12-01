@@ -1,7 +1,7 @@
 ---
 title: "GitHub integration"
 chapter: true
-weight: 32
+weight: 302
 pre: "<b>6.2 </b>"
 ---
 

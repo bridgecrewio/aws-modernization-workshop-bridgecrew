@@ -1,7 +1,7 @@
 ---
 title: "AWS CodePipeline Setup"
 chapter: true
-weight: 24
+weight: 205
 pre: "<b>5.4 </b>"
 ---
 
