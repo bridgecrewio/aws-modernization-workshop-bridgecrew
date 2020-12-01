@@ -1,7 +1,7 @@
 ---
 title: "AWS fixes in runtime"
 chapter: true
-weight: 35
+weight: 305
 pre: "<b>6.5 </b>"
 ---
 

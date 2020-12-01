@@ -1,12 +1,9 @@
 ﻿---
 title: "Bridgecrew Setup"
 chapter: false
-weight: 31
-pre: "<b>3.9 </b>"
+weight: 5
+pre: "<b>3.1 </b>"
 ---
-
-
-
 
 You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account [here](https://bridgecrew.cloud/?utm_source=awsworkshop).
 

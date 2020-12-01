@@ -1,7 +1,7 @@
 ---
 title: "Edit IAM for CodeBuild"
 chapter: true
-weight: 23
+weight: 204
 pre: "<b>5.3 </b>"
 ---
 

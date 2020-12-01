@@ -1,8 +1,8 @@
 ---
 title: "Create a workspace"
 chapter: false
-weight: 12
-pre: "<b>3.4 </b>"
+weight: 10
+pre: "<b>3.2.1.1 </b>"
 ---
 
 {{% notice warning %}}

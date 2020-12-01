@@ -1,7 +1,7 @@
 ---
 title: "AWS runtime scanning"
 chapter: true
-weight: 34
+weight: 304
 pre: "<b>6.4 </b>"
 ---
 

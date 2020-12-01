@@ -1,9 +1,11 @@
 ---
-title: "Create an AWS account"
-chapter: false
-weight: 1
-pre: "<b>3.3.1 </b>"
+title: "Own AWS Account"
+chapter: true
+weight: 14
+pre: "<b>3.2.2 </b>"
 ---
+
+# Using your own AWS Account
 
 {{% notice warning %}}
 Your account must have the ability to create new IAM roles and scope other IAM permissions.

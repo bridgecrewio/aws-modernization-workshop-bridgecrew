@@ -1,7 +1,7 @@
 ---
 title: "Module - Fix"
 chapter: false
-weight: 30
+weight: 300
 pre: "<b>6 </b>"
 ---
 

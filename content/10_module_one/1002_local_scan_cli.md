@@ -1,7 +1,7 @@
 ---
 title: "Bridgecrew CLI"
 chapter: true
-weight: 12
+weight: 102
 pre: "<b>4.2 </b>"
 ---
 
