@@ -1,7 +1,7 @@
 ---
 title: "CloudFormation repository setup"
 chapter: true
-weight: 21
+weight: 202
 pre: "<b>5.1 </b>"
 ---
 

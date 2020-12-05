@@ -1,10 +1,12 @@
 ---
 title: "At an AWS Event"
-chapter: false
-weight: 10
-pre: "<b>3.2 </b>"
+chapter: true
+weight: 9
+pre: "<b>3.2.1 </b>"
+hidden: false
 ---
 
+# Using AWS Event engine
 
 To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
 
@@ -28,7 +30,3 @@ This account will expire at the end of the workshop and the all the resources cr
 Please select **US West (Oregon)** in the top right corner.
 
 ![Event Engine Region](/images/event-engine-region.png)
-
-### Next step
-
-Once you have completed the step above, you can leave the AWS console open. You can now move to the [**Workshop Setup**](/6_prerequisites/gettingstarted.html) section.

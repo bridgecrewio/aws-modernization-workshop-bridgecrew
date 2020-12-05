@@ -1,8 +1,8 @@
 ﻿---
 title: "Update IAM settings for your Workspace"
 chapter: false
-weight: 19
-pre: "<b>3.7 </b>"
+weight: 13
+pre: "<b>3.2.1.4 </b>"
 ---
 
 {{% notice info %}}
