@@ -33,7 +33,7 @@ Make sure you are naming your Cloud9 environment `Bridgecrew-Workshop`, otherwis
 - Select **Create environment**
 - Name it **Bridgecrew-Workshop** and hit next. 
 - Select a t3 small instance
-![t3small](/images/instance-type.png)
+![t3small](/images/c9-settings.png)
 
 - Leave all the default selections. 
 - When it comes up, customize the environment by closing the **welcome tab**
