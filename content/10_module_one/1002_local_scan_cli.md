@@ -13,16 +13,18 @@ Make sure you are in the `cfngoat` directory from the previous step, copy your u
 
 
 ```bash
-bridgecrew -f templates/cfngoat.yaml --bc-api-key YOUR_API_KEY_HERE
+bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
 ```
 
 You can also scan entire directories with `-d <path>`:
 
-`bridgecrew -d . --framework cloudformation --bc-api-key YOUR_API_KEY_HERE` 
+```bash
+bridgecrew -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
+```
 
 {{% notice info %}}
 <p style='text-align: left;'>
-You can use the bridgecrew CLI without --bc-api-key, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scans.
+You can use the bridgecrew CLI without --bc-api-key, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scan results.
 </p>
 {{% /notice %}}
 
@@ -46,14 +48,14 @@ In many instances, when testing locally with the Bridgecrew CLI, you may only be
 
 
 ```
-bridgecrew -f cfngoat.yaml -c CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE
+bridgecrew -f cfngoat.yaml -c CKV_AWS_55,CKV_AWS_56
 ```
 
 Alternatively, if you want to run all but a few checks, use the `--skip-check` option: 
 
 
 ```
-bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_1,CKV_AWS_2  --bc-api-key YOUR_API_KEY_HERE
+bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_55,CKV_AWS_56 
 ```
 
 Next, let’s inspect these results in the Bridgecrew dashboard.
