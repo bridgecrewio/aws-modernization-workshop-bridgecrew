@@ -16,7 +16,7 @@ For all those reasons and more, Bridgecrew provides reporting, monitoring, alert
 
 Heading back to Bridgecrew, you’ll notice, our AWS CodeBuild integration has gone green showing that we’ve received data. You can also see the AWS account ID and the name of our CodeBuild pipeline received from our CodeBuild job!
 
-![AWS Sucessfull Bridgecrew Integration](./images/runpipeline-dashboard-1.png "AWS Sucessfull Bridgecrew Integration")
+![AWS Sucessful Bridgecrew Integration](./images/runpipeline-dashboard-1.png "AWS Sucessful Bridgecrew Integration")
 
 Navigating to the **Incidents** tab, you’ll see a list of all of the issues previously reported in the CodeBuild logs. If you select an item on the left-hand side, you’ll see all of the CloudFormation resources impacted by that issue. 
 
