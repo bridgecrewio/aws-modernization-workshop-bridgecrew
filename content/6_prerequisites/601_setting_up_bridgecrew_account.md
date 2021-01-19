@@ -16,6 +16,12 @@ In this tutorial, we’re also going to use Bridgecrew CLI. The CLI works on Win
 pip3 install bridgecrew
 ```
 
+If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:
+
+```bash
+sudo pip3 install bridgecrew
+```
+
 If you run into problems, try the [alternate install instructions](https://docs.bridgecrew.io/docs/ingesting-scan-data#installation?utm_source=awsworkshop).
 
 
@@ -23,4 +29,4 @@ If you run into problems, try the [alternate install instructions](https://docs.
 
 Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access [it here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.
 
-![Bridgecrew API token](./images/dashboardapitoken1.png)
+![Bridgecrew API token](./images/bc_api_key.gif)
