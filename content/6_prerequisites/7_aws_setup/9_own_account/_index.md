@@ -1,7 +1,7 @@
 ---
 title: "Own AWS Account"
 chapter: true
-weight: 14
+weight: 11
 pre: "<b>3.2.2 </b>"
 ---
 
