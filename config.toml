@@ -44,35 +44,25 @@ enableEmoji = "true"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[[menu.shortcuts]] 
-name = "<i class='fas fa-graduation-cap'></i> Modernization Workshops"
-url = "https://awsworkshop.io"
-weight = 10
-
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> AWS Builders Library"
-url = "https://aws.amazon.com/builders-library/"
+name = "<i class='fas fa-tools'></i>Platform"
+url = "https://bridgecrew.io/platform/"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='far fa-lightbulb'></i> Modernization with AWS"
-url = "https://aws.amazon.com/blogs/modernizing-with-aws/"
+name = "<i class='far fa-lightbulb'></i>Docs"
+url = "https://docs.bridgecrew.io"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> EKS Workshop"
-url = "https://eksworkshop.com/"
+name = "<i class='fas fa-chalkboard-teacher'></i>Blog"
+url = "https://bridgecrew.io/blog/"
 weight = 21
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> ECS Workshop"
-url = "https://ecsworkshop.com/"
+name = "<i class='fas fa-chalkboard-teacher'></i> Sign up"
+url = "https://www.bridgecrew.cloud/login/signUp?utm_source=workshop.bridgecrew.io&utm_medium=workshop&utm_campaign=workshop"
 weight = 22
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-chalkboard-teacher'></i> App Mesh Workshop"
-url = "https://www.appmeshworkshop.com/"
-weight = 23
 
 [markup]
   defaultMarkdownHandler = "blackfriday"
