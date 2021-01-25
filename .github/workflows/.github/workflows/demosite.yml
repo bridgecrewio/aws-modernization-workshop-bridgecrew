@@ -18,3 +18,5 @@ jobs:
         uses: chabad360/hugo-gh-pages@v2
         with:
           githubToken: ${{ secrets.PAGES_TOKEN }}
+          cname: workshop.bridgecrew.io
+
