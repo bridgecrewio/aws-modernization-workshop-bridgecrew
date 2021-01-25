@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Cloud DevSecOps with Bridgecrew"
+title = "Cloud DevSecOps workshop with Bridgecrew"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "true"
@@ -17,7 +17,7 @@ enableEmoji = "true"
   # Author of the site, will be used in meta information
   author = "Matt Johnson @ Bridgecrew"
   # Description of the site, will be used in meta information
-  description = "learn how to automate your infrastructure security from code to commit with Bridgecrew and the AWS developer tools suite."
+  description = "learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
   # Disable search function. It will hide search bar
