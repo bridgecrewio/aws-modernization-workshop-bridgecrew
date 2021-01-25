@@ -19,3 +19,11 @@ jobs:
         with:
           githubToken: ${{ secrets.PAGES_TOKEN }}
           cname: workshop.bridgecrew.io
+      - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+        with:
+          # The arguments for the `git add` command (see the paragraph below for more info)
+          # Default: '.'
+          add: 'CNAME'
+          # Name of the branch to use, if different from the one that triggered the workflow
+          # Default: the branch that triggered the run
+          branch: gh-pages
