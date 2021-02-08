@@ -10,7 +10,7 @@ AWS CodeBuild paired with AWS CodePipeline is a CI/CD platform that can build pr
 
 ![AWS CodeBuild](./images/aws-codebuild-home.png "AWS CodeBuild")
 
-We’ll also automatically send the results to Brigecrew  to maintain a view across all of our infrastructure projects and share visibility throughout our organization.
+We’ll also automatically send the results to Brigecrew to maintain a view across all of our infrastructure projects and share visibility throughout our organization.
 
 First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account and select AWS CodeBuild, then **Add Subscription**.
 

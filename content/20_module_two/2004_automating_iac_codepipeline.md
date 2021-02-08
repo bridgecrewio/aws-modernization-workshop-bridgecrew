@@ -13,9 +13,11 @@ To set it up, go to [AWS CodePipeline](https://console.aws.amazon.com/codesuite/
 
 ![AWS CodePipeline](./images/codepipeline-create-project-github-1.png "AWS CodePipeline")
 
-After giving the pipeline a name, select **Next** and choose **Github (Version 2)** as the **source provider**.
+After giving the pipeline a name, (`scan-cfngoat-pipeline`) select **Next**.
 
 ![AWS CodePipeline Setup](./images/codepipeline-create-project-github-2.png "AWS CodePipeline Setup")
+
+Choose **Github (Version 2)** as the **source provider**.
 
 ![AWS CodePipeline Setup](./images/codepipeline-create-project-github-3.png "AWS CodePipeline Setup")
 

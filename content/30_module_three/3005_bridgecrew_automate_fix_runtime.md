@@ -16,10 +16,10 @@ Implementing automated remediations does require extra permissions than previous
 
 Adding the AWS Remediation stack follows the same workflow as the previous read-only AWS integration:
 
-![AWS Bridgecrew remediation integration](./images/Remediate_stack_1.png "AWS Bridgecrew remediation integration")
+![AWS Bridgecrew remediation integration](./images/remediate_stack_1.png "AWS Bridgecrew remediation integration")
 
 Select **Create Stack** and return to Bridgecrew, you will now be able to Remediate runtime resources:
-![AWS Bridgecrew remediation integration](./images/Remediate_stack_3.png "AWS Bridgecrew remediation integration")
+![AWS Bridgecrew remediation integration](./images/remediate_stack_3.png "AWS Bridgecrew remediation integration")
 
 ## Fixing an unencrypted S3 bucket
 

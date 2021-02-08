@@ -1,8 +1,8 @@
 ---
 title: "Create a workspace"
 chapter: false
-weight: 10
-pre: "<b>3.2.1.1 </b>"
+weight: 12
+pre: "<b>3.2.2.1 </b>"
 ---
 
 {{% notice warning %}}
@@ -31,11 +31,7 @@ Make sure you are naming your Cloud9 environment `Bridgecrew-Workshop`, otherwis
 {{% /notice %}}
 
 - Select **Create environment**
-- Name it **Bridgecrew-Workshop** and hit next. 
-- Select a t3 medium instance
-![t3small](/images/c9-settings.png)
-
-- Leave all the default selections. 
+- Name it **Bridgecrew-Workshop**, and take all other defaults
 - When it comes up, customize the environment by closing the **welcome tab**
 and **lower work area**, and opening a new **terminal** tab in the main work area:
 ![c9before](/images/c9before.png)
