@@ -1,13 +1,13 @@
 ---
 title: "Bridgecrew Dashboard"
 chapter: true
-weight: 103
-pre: "<b>4.3 </b>"
+weight: 104
+pre: "<b>4.4 </b>"
 ---
 
 ## Viewing results in Bridgecrew
 
-In the previous section, we scanned our demo CloudFormation repository locally and sent the results to the [Bridgecrew platform](https://bridgecrew.cloud) for investigation and remediation. 
+In the previous section, we scanned our demo CloudFormation repository locally with both standalone CLI and the Checkob VSCode plugin, and sent the results to the [Bridgecrew platform](https://bridgecrew.cloud) for investigation and remediation. 
 
 To explore the reported issues we saw in the CLI output, head to the [Incidents tab](https://www.bridgecrew.cloud/incidents) in your Bridgecrew account.
 
