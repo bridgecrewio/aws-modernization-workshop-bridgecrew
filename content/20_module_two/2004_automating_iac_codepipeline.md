@@ -19,6 +19,13 @@ After giving the pipeline a name, (`scan-cfngoat-pipeline`) select **Next**.
 
 Choose **Github (Version 2)** as the **source provider**.
 
+{{% notice info %}}
+<p style='text-align: left;'>
+In some AWS events you will need to use GitHub V1. Please pay attention to the moderator's instructions.
+</p>
+{{% /notice %}}
+
+
 ![AWS CodePipeline Setup](./images/codepipeline-create-project-github-3.png "AWS CodePipeline Setup")
 
 As CodeBuild and CodePipeline are different tools, you'll also need to authorize CodePipeline to your GitHub account, select **Connect to Github** and follow the authorization redirects in the popup window.
