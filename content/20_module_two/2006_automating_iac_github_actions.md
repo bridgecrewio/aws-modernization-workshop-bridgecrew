@@ -87,7 +87,7 @@ Finally, save the new workflow file into your code repository by selecting **Com
 
 ![Save Github action workflow](./images/github_action_8.png "Save Github action workflow")
 
-The GitHub Action will immediatley start running the Bridgecrew CLI against the latest commit in your GFNGoat Repository.
+The GitHub Action will immediatley start running the Checkov CLI against the latest commit in your GFNGoat Repository.
 
 You can see this by selecting the **Actions** page within your CFNGoat forked repository in GitHub.
 
@@ -95,7 +95,7 @@ You will see a new workflow, titled *Bridgecrew* and a job about to run automati
 
  ![Save Github action workflow](./images/github_action_10.png "Save Github action workflow")
 
-Selecting this *job* will allow you to view the status and logging output from the pipeline, where the Bridgecrew CLI will run and output any violations found in the CFNGoat codebase.
+Selecting this *job* will allow you to view the status and logging output from the pipeline, where the Checkov CLI will run and output any violations found in the CFNGoat codebase.
 
  ![Github action workflow logs](./images/github_action_11.png "Github action workflow logs")
 

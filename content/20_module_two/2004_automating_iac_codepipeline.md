@@ -69,4 +69,4 @@ Finally, select **Create pipeline** on the review page, which will trigger your 
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-13.png "AWS CodePipeline Select Repo")
 
-**Now we don’t need to manually run the Bridgecrew CLI; your developers will get a Bridgecrew scan every time they commit!** 
+**Now we don’t need to manually run the Checkov CLI; your developers will get a Bridgecrew scan every time they commit!** 
