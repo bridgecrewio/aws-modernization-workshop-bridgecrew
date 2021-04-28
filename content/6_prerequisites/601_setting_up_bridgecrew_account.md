@@ -9,8 +9,8 @@ You’ll need to sign up for a free Bridgecrew account to follow along with this
 
 ![Signup to Bridgecrew](./images/signup_bridgecrew.png)
 
-## Bridgecrew CLI
-In this tutorial, we’re also going to use Bridgecrew CLI. The CLI works on Windows, Mac, and Linux. You can install it with pip:
+## Checkov CLI
+In this tutorial, we’re also going to use Checkov CLI. The CLI works on Windows, Mac, and Linux. You can install it with pip:
 
 ```bash
 pip3 install bridgecrew
