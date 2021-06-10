@@ -24,9 +24,30 @@ sudo pip3 install bridgecrew
 
 If you run into problems, try the [alternate install instructions](https://docs.bridgecrew.io/docs/ingesting-scan-data#installation?utm_source=awsworkshop).
 
+## Yor CLI
+We'll also be using a new Bridgecrew open source tool, Yor, to make tagging and tracing infrastructure between code and the cloud easier, to install into our linux environment, run the following:
+
+```bash
+wget -q -O - https://github.com/bridgecrewio/yor/releases/download/0.1.62/yor-0.1.62-linux-amd64.tar.gz | tar -xvz -C /usr/bin
+```
+
+Now test we can run `yor`
+
+```bash
+$ yor
+NAME:
+   yor - enrich IaC files with tags automatically
+
+USAGE:
+   yor [global options] command [command options] [arguments...]
+
+VERSION:
+   0.1.61
+```
 
 ## Bridgecrew API token
 
 Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access [it here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.
 
 ![Bridgecrew API token](./images/bc_api_key.gif)
+
