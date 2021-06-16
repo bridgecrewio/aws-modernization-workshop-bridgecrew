@@ -13,13 +13,13 @@ You’ll need to sign up for a free Bridgecrew account to follow along with this
 In this tutorial, we’re also going to use Checkov CLI. The CLI works on Windows, Mac, and Linux. You can install it with pip:
 
 ```bash
-pip3 install bridgecrew
+pip3 install checkov
 ```
 
 If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:
 
 ```bash
-sudo pip3 install bridgecrew
+sudo pip3 install checkov
 ```
 
 If you run into problems, try the [alternate install instructions](https://docs.bridgecrew.io/docs/ingesting-scan-data#installation?utm_source=awsworkshop).
@@ -28,7 +28,7 @@ If you run into problems, try the [alternate install instructions](https://docs.
 We'll also be using a new Bridgecrew open source tool, Yor, to make tagging and tracing infrastructure between code and the cloud easier, to install into our linux environment, run the following:
 
 ```bash
-wget -q -O - https://github.com/bridgecrewio/yor/releases/download/0.1.62/yor-0.1.62-linux-amd64.tar.gz | tar -xvz -C /usr/bin
+wget -q -O - https://github.com/bridgecrewio/yor/releases/download/0.1.62/yor-0.1.62-linux-amd64.tar.gz | sudo tar -xvz -C /usr/bin
 ```
 
 Now test we can run `yor`
