@@ -13,18 +13,18 @@ Make sure you are in the `cfngoat` directory from the previous step, copy your u
 
 
 ```bash
-checkov -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
+checkov -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/cfngoat --branch main
 ```
 
 You can also scan entire directories with `-d <path>`:
 
 ```bash
-checkov -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
+checkov -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/cfngoat --branch main
 ```
 
 {{% notice info %}}
 <p style='text-align: left;'>
-You can use the checkov CLI without --bc-api-key, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scan results.
+You can use the checkov CLI without `--bc-api-key`, `--repo-id` and `--branch`, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scan results.
 </p>
 {{% /notice %}}
 
