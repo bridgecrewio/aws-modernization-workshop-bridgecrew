@@ -56,7 +56,7 @@ body #chapter h1 {
     }
 }
 a {
-    color: #00bdf3;
+    color: #662eff;
 }
 a:hover {
     color: #0082a7;
@@ -102,10 +102,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     box-shadow: inset 0 1px 3px rgba(0,0,0,.06),0 0 5px rgba(0,169,218,.7)
 }
 #header-wrapper {
-    background: #8451a1;
+    background: #734bff;
     color: #fff;
     text-align: center;
-    border-bottom: 4px solid #9c6fb6;
+    border-bottom: 4px solid #7e5aff;
     padding: 1rem;
 }
 #header a {
@@ -121,8 +121,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 .searchbox {
     margin-top: 1rem;
     position: relative;
-    border: 1px solid #915eae;
-    background: #764890;
+    border: 1px solid #927eff;
+    background: #662eff;
     border-radius: 4px;
 }
 .searchbox label {
@@ -173,7 +173,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     }
 }
 #sidebar {
-    background-color: #322A38;
+    background-color: #262234;
     position: fixed;
     top: 0;
     width: 300px;
@@ -183,7 +183,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-size: 15px;
 }
 #sidebar a {
-    color: #ccc;
+    color: #cfc7ff;
 }
 #sidebar a:hover {
     color: #e6e6e6;
@@ -283,8 +283,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-right: 1rem;
 }
 #sidebar ul li.active > a {
-    background: #fff;
-    color: #777 !important;
+    background: #1a152e;
+    color: #fff !important;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
@@ -441,7 +441,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #footer {
     padding: 3rem 1rem;
-    color: #b3b3b3;
+    color: #cfc7ff;
     font-size: 13px;
 }
 #footer p {
@@ -1116,22 +1116,22 @@ pre .copy-to-clipboard:hover {
     text-align: right;
 }
 #sidebar ul li.visited > a .read-icon {
-    color: #00bdf3;
+    color: #52be96;
     display: inline;
 }
 
 #sidebar #shortcuts h3 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    color: white ;
+    color: #cfc7ff ;
     margin-top:1rem;
     padding-left: 1rem;
 }
 
 #homelinks {
-  background-color: #9c6fb6;
+  background-color: #7e5aff;
   color: #fff;
   padding: 7px 0;
-  border-bottom: 4px solid #9c6fb6;
+  border-bottom: 4px solid #7e5aff;
 }
 
 #searchResults {
