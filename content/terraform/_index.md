@@ -1,19 +1,21 @@
 ---
-title: "Terraform workshop"
+title: "Terraform Workshop"
 chapter: true
 weight: 1
 ---
 
 # Welcome!
 
-In this workshop, you’ll learn how to leverage infrastructure as code (IaC) and DevSecOps to automate your cloud security efforts. If you’re interested in making cloud security more efficient, proactive, and accessible to developers, this workshop is for you! 
+In this workshop, you’ll learn how to leverage infrastructure as code (IaC) and DevSecOps to automate, scale, and improve the security posture of your cloud infrastructure. We’ll create a pipeline that provides frequent, easy-to-digest improvements to ensure our configurations are secure and compliant from the build-time to runtime.
 
-Using **Bridgecrew, GitHub, AWS CodeBuild**, and **AWS CodePipeline**, you’ll get hands-on experience implementing an automated **CloudFormation** security and compliance workflow. 
+Using **Bridgecrew, Checkov, VS Code, GitHub, Terraform Cloud,** and **AWS**, we’ll get hands-on experience implementing an automated **Terraform** security and compliance workflow.
+
+![Diagram of workshop flow](./images/0_flow_diagram.png "Diagram of workshop flow")
 
 ## Learning Objectives
-- Overview of DevSecOps and CloudFormation infrastructure as code (IaC) 
-- Getting started with Bridgecrew to scan for CloudFormation misconfigurations
-- Setting up your CI/CD pipeline to automate security scanning and policy enforcement
-- Fixing IaC security errors and AWS resource misconfigurations with Bridgecrew
+- Get an overview of DevSecOps and Terraform infrastructure as code (IaC)
+- Scan IaC files for misconfigurations locally
+- Set up CI/CD pipelines to automate security scanning and policy enforcement
+- Fix IaC security errors and AWS resource misconfigurations with Bridgecrew
 
-Before we dive in, let’s go through a refresher on the core concepts explored in this workshop.
+**Let’s start with a few core concepts!**
