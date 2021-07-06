@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud DevSecOps with Bridgecrew on Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Terraform workshop on Cloud DevSecOps workshop with Bridgecrew</title>
     <link>/terraform.html</link>
-    <description>Recent content in Cloud DevSecOps with Bridgecrew on Cloud DevSecOps workshop with Bridgecrew</description>
+    <description>Recent content in Terraform workshop on Cloud DevSecOps workshop with Bridgecrew</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/terraform/index.xml" rel="self" type="application/rss+xml" />
   </channel>
