@@ -10,7 +10,7 @@ In this workshop, you’ll learn how to leverage infrastructure as code (IaC) an
 
 Using **Bridgecrew, Checkov, VS Code, GitHub, Terraform Cloud,** and **AWS**, we’ll get hands-on experience implementing an automated **Terraform** security and compliance workflow.
 
-![Diagram of workshop flow](./images/0_flow_diagram.png "Diagram of workshop flow")
+![Diagram of workshop flow](images/0_flow_diagram.png "Diagram of workshop flow")
 
 ## Learning Objectives
 - Get an overview of DevSecOps and Terraform infrastructure as code (IaC)
