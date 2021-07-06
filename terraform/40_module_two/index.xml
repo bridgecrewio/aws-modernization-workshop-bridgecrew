@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module - Automate on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/terraform/40_module_two.html</link>
+    <description>Recent content in Module - Automate on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/terraform/40_module_two/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fork the TerraGoat repository</title>
+      <link>/terraform/40_module_two/2001_automating_iac_github.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2001_automating_iac_github.html</guid>
+      <description>Fork the TerraGoat repository on GitHub To set up your demo environment, you can push your local clone of TerraGoat or fork the repository. We’re doing the second option.
+Head over to the TerraGoat repository at https://github.com/bridgecrewio/terragoat. Fork the code using the button in the upper right corner.
+If you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account via your username in the list to fork the repo.</description>
+    </item>
+    
+    <item>
+      <title>GitHub Action</title>
+      <link>/terraform/40_module_two/2002_automating_iac_github_action.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2002_automating_iac_github_action.html</guid>
+      <description>Setting up the Bridgecrew GitHub Action You can leverage GitHub actions to run automated scans for every build or specific builds, such as the ones that merge into the master branch. This action can alert on misconfigurations or you can set it up to block code from being merged if certain policies are violated. It can also send the results to Bridgecrew for further review and remediation steps.
+The TerraGoat repository already has a Checkov Action built in at terragoat/.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Cloud</title>
+      <link>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
+      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the [HashiCorp keynote](https://youtu.be/ZzLZaWUve4M?t=1387) for more information.  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
+    </item>
+    
+    <item>
+      <title>GitHub Application</title>
+      <link>/terraform/40_module_two/2004_github_application.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2004_github_application.html</guid>
+      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate and push automated pull requests (PRs) back into your GitHub repository to update your Terraform code and fix security issues. This integration also provides native and automated scanning of incoming commits and pull requests.
+Head back to the Bridgecrew Integrations tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
+Choose which accounts and repositories to grant the Bridgecrew GitHub integration access to:</description>
+    </item>
+    
+  </channel>
+</rss>
