@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/aws"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
