@@ -1,5 +1,5 @@
 ---
-title: "foo"
+title: "Cleanup"
 chapter: true
 weight: 1000
 pre: "<b>8 </b>"

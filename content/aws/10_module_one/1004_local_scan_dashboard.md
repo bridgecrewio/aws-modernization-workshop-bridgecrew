@@ -18,10 +18,10 @@ Clicking into one of the violations will show all the violating resources found 
 For example...
 
 
-![Bridgecrew Dashboard](./images/dashboardpolicy2.png "Bridgecrew Dashboard")
+![Bridgecrew Dashboard](images/dashboardpolicy2.png "Bridgecrew Dashboard")
 
 From here, we can drill down into a specific CloudFormation object to see the relevant piece of code along with a suggestion for fixing the error. We’ll cover how to implement remediations in more depth a little later!
 
-![Bridgecrew Dashboard](./images/dashboardpolicy3.png "Bridgecrew Dashboard")
+![Bridgecrew Dashboard](images/dashboardpolicy3.png "Bridgecrew Dashboard")
 
 Now that we have a feel for the kinds of IaC security issues Bridgecrew is equipped to find, let's add some DevSecOps magic.

@@ -30,7 +30,7 @@ You can use the bridgecrew CLI without --bc-api-key, the results will still disp
 
 The results will show all the failed checks and link to a guide explaining the cause and how to fix them. Note the output also includes the filename and snippet of code that is misconfigured:
 
-![Highligting bridgecrew CLI policies](./images/highlight_cli_policies.png)
+![Highligting bridgecrew CLI policies](images/highlight_cli_policies.png)
 
 As you can see in the highlighted CLI output above, our demo CloudFormation repository has failing checks for two policies:
 - Ensure S3 bucket has ignore public ACLs enabled
