@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aws on Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Cloud DevSecOps with Bridgecrew on Cloud DevSecOps workshop with Bridgecrew</title>
     <link>/aws.html</link>
-    <description>Recent content in Aws on Cloud DevSecOps workshop with Bridgecrew</description>
+    <description>Recent content in Cloud DevSecOps with Bridgecrew on Cloud DevSecOps workshop with Bridgecrew</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/aws/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>foo</title>
-      <link>/aws/foo.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/aws/foo.html</guid>
-      <description>AWS Cleanup In order to prevent charges to your account we recommend cleaning up the infrastructure that was created. If you plan to keep things running so you can examine the workshop a bit more please remember to do the cleanup when you are done. It is very easy to leave things running in an AWS account, forget about it, and then accrue charges. CodePipeline In the AWS console, go to AWS CodePipeline, and delete the scan-cfngoat-bridgecrew pipeline we created.</description>
-    </item>
-    
   </channel>
 </rss>
