@@ -1,5 +1,5 @@
 ---
-title: "Cloud DevSecOps with Bridgecrew"
+title: "Terraform workshop"
 chapter: true
 weight: 1
 ---
