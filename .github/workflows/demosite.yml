@@ -20,4 +20,3 @@ jobs:
           githubToken: ${{ secrets.PAGES_TOKEN }}
           cname: workshop.bridgecrew.io 
           args: -d aws
-          siteDir: aws
