@@ -11,7 +11,7 @@ You can leverage GitHub actions to run automated scans for every build or specif
 
 {{% notice info %}}
 <p style='text-align: left;'>
-The TerraGoat repository already has a Checkov Action built in at terragoat/.github/workflows/pull\_request.yaml and terragoat/.github/workflows/checkov.yaml. You can remove those files to remove that redundant scan, but we will keep it for this workshop.
+The TerraGoat repository already has a Checkov Action built in at terragoat/.github/workflows/pull_request.yaml and terragoat/.github/workflows/checkov.yaml. You can remove those files to remove that redundant scan, but we will keep it for this workshop.
 
 Typically, you wouldn’t do more than one scan during a build, such as two Actions, a CI/CD integration and a Terraform Cloud scan, so you can remove the Actions when you setup the Terraform Cloud scan or leave it for illustrative purposes.
 </p>

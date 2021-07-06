@@ -7,7 +7,7 @@ pre: "<b>5.3 </b>"
 
 {{% notice info %}}
 <p style='text-align: left;'>
-A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the [HashiCorp keynote](https://youtu.be/ZzLZaWUve4M?t=1387) for more information.
+A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
 </p>
 {{% /notice %}}
 
@@ -17,7 +17,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
 
 {{% notice info %}}
-Heads up that Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial.
+Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the "drift detection" section.
 {{% /notice %}}
 
 To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. Select “Settings” and “Plan & Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.
