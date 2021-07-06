@@ -12,22 +12,22 @@
     <title>GitHub Action :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1625611787" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1625611787" rel="stylesheet">
-    <link href="../../css/hybrid.css?1625611787" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1625611787" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1625611787" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1625611787" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1625611787" rel="stylesheet">
-    <link href="../../css/theme.css?1625611787" rel="stylesheet">
-    <link href="../../css/tabs.css?1625611787" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1625611787" rel="stylesheet">
+    <link href="../../css/nucleus.css?1625612176" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1625612176" rel="stylesheet">
+    <link href="../../css/hybrid.css?1625612176" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1625612176" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1625612176" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1625612176" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1625612176" rel="stylesheet">
+    <link href="../../css/theme.css?1625612176" rel="stylesheet">
+    <link href="../../css/tabs.css?1625612176" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1625612176" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1625611787" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1625612176" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1625611787"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1625612176"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1625611787"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1625611787"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1625612176"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1625612176"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1625611787"></script>
+<script type="text/javascript" src="../../js/search.js?1625612176"></script>
 
     
   </div>
@@ -1666,8 +1666,7 @@
 
 <div class="notices info" ><p style='text-align: left;'>
 The TerraGoat repository already has a Checkov Action built in at terragoat/.github/workflows/pull\_request.yaml and terragoat/.github/workflows/checkov.yaml. You can remove those files to remove that redundant scan, but we will keep it for this workshop.
-</p>
-<p style='text-align: left;'>
+
 Typically, you wouldn’t do more than one scan during a build, such as two Actions, a CI/CD integration and a Terraform Cloud scan, so you can remove the Actions when you setup the Terraform Cloud scan or leave it for illustrative purposes.
 </p>
 </div>
@@ -1712,22 +1711,21 @@ Typically, you wouldn’t do more than one scan during a build, such as two Acti
 <p>Name the new file bridgecrew.yaml and replace the entire contents with the workflow template provided below, This takes the jobs section provided by the Bridgecrew integration instructions and wraps it in a fully functional GitHub Actions definition.</p>
 <pre><code>name: Bridgecrew
 on:
- push:
- branches:
- - master
+  pull_request
 jobs:
- scan:
- runs-on: ubuntu-latest
- strategy:
- matrix:
- python-version: \[3.8\]
- steps:
- - uses: actions/checkout@v2
- - name: Run Bridgecrew
- id: Bridgecrew
- uses: bridgecrewio/bridgecrew-action@master
- with:
- api-key: ${{ secrets.BRIDGECREW\_API\_KEY }}</code></pre>
+  scan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Bridgecrew 
+      id: Bridgecrew
+      uses: bridgecrewio/bridgecrew-action@master
+      with:
+        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+        directory: terraform/</code></pre>
 <p>Select “Start commit” once you’ve added the workflow file contents:</p>
 
 <p><img src="images/github_action_yaml.png" alt="Add the Bridgecrew Action yaml" title="Add the Bridgecrew Action yaml" /></p>
@@ -1736,11 +1734,7 @@ jobs:
 
 <p><img src="images/github_commit.png" alt="Commit the file" title="Commit the file" /></p>
 
-<p>The GitHub Action will start running Checkov scans against the latest commit in your TerraGoat repository.</p>
-
-<p>You can see this by selecting the “Actions” page within your TerraGoat forked repository in GitHub.</p>
-
-<p>You will see a new workflow, titled Bridgecrew and the job that was kicked off by merging in the workflow yaml file.</p>
+<p>The GitHub Action will start running Bridgecrew scans against the latest commit in your TerraGoat repository. You can see this by selecting the “Actions” page within your TerraGoat forked repository in GitHub. You will see a new workflow, titled Bridgecrew and the job that was kicked off by merging in the workflow yaml file.</p>
 
 <p><img src="images/github_action_results1.png" alt="Results of the Action" title="Results of the Action" /></p>
 
@@ -2718,19 +2712,19 @@ jobs:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1625611787"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1625611787"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1625611787"></script>
-    <script src="../../js/jquery.sticky.js?1625611787"></script>
-    <script src="../../js/featherlight.min.js?1625611787"></script>
-    <script src="../../js/highlight.pack.js?1625611787"></script>
+    <script src="../../js/clipboard.min.js?1625612176"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1625612176"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1625612176"></script>
+    <script src="../../js/jquery.sticky.js?1625612176"></script>
+    <script src="../../js/featherlight.min.js?1625612176"></script>
+    <script src="../../js/highlight.pack.js?1625612176"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1625611787"></script>
-    <script src="../../js/learn.js?1625611787"></script>
-    <script src="../../js/hugo-learn.js?1625611787"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1625612176"></script>
+    <script src="../../js/learn.js?1625612176"></script>
+    <script src="../../js/hugo-learn.js?1625612176"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1625611787"></script>
+            <script src="../../mermaid/mermaid.js?1625612176"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
