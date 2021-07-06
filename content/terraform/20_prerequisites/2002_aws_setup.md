@@ -11,10 +11,11 @@ Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capab
 
 ## AWS Environment setup
 
-{{% notice warning %}}
+{{% notice info %}}
 Your account must have the ability to create new IAM roles and scope other IAM permissions.
 {{% /notice %}}
 
+<div style="text-align: center">
 1. If you don't already have an AWS account with Administrator access: [create
 one now by clicking here](https://aws.amazon.com/getting-started/)
 
@@ -33,3 +34,4 @@ as an IAM user with administrator access to the AWS account:
 
 1. Take note of the login URL and save:
 ![Login URL](images/iam-4-save-url.png)
+</div>
