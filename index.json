@@ -217,6 +217,20 @@
 	"content": " AWS Cleanup In order to prevent charges to your account we recommend cleaning up the infrastructure that was created. If you plan to keep things running so you can examine the workshop a bit more please remember to do the cleanup when you are done. It is very easy to leave things running in an AWS account, forget about it, and then accrue charges. CodePipeline In the AWS console, go to AWS CodePipeline, and delete the scan-cfngoat-bridgecrew pipeline we created.\nCodeBuild AWS CodeBuild, and delete the bridgecrew-tutorial project we created.\nIAM Role Finally, remove the IAM role we created: - codebuild-bridgecrew-tutorial-service-role\nBridgecrew Cleanup The Bridgecrew account you created is free to use for up to 100 cloud resources, you can leave your AWS account integrated from the runtime section of this workshop to automatically detect infrastructure security issues in your account. The GitHub integration will also continue to scan pull requests to detect, annotate and prevent new infrastructure as code issues.\nYou may want to check out the following resources:\nIAM Insights: Automated right-sizing with policy-as-code Scanning AWS Cloud Development Kit (CDK) with Bridgecrew Bridgecrew Documentation\nThese integrations can be disabled from the Bridgecrew platform integrations page if need be.\n "
 },
 {
+	"uri": "https://workshop.bridgecrew.io/aws/aws/foo.html",
+	"title": "foo",
+	"tags": [],
+	"description": "",
+	"content": " AWS Cleanup In order to prevent charges to your account we recommend cleaning up the infrastructure that was created. If you plan to keep things running so you can examine the workshop a bit more please remember to do the cleanup when you are done. It is very easy to leave things running in an AWS account, forget about it, and then accrue charges. CodePipeline In the AWS console, go to AWS CodePipeline, and delete the scan-cfngoat-bridgecrew pipeline we created.\nCodeBuild AWS CodeBuild, and delete the bridgecrew-tutorial project we created.\nIAM Role Finally, remove the IAM role we created: - codebuild-bridgecrew-tutorial-service-role\nBridgecrew Cleanup The Bridgecrew account you created is free to use for up to 100 cloud resources, you can leave your AWS account integrated from the runtime section of this workshop to automatically detect infrastructure security issues in your account. The GitHub integration will also continue to scan pull requests to detect, annotate and prevent new infrastructure as code issues.\nYou may want to check out the following resources:\nIAM Insights: Automated right-sizing with policy-as-code Scanning AWS Cloud Development Kit (CDK) with Bridgecrew Bridgecrew Documentation\nThese integrations can be disabled from the Bridgecrew platform integrations page if need be.\n "
+},
+{
+	"uri": "https://workshop.bridgecrew.io/aws/aws.html",
+	"title": "Aws",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://workshop.bridgecrew.io/aws/categories.html",
 	"title": "Categories",
 	"tags": [],
