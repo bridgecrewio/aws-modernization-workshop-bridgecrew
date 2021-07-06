@@ -33,7 +33,7 @@ The TerraGoat repository already has a Checkov Action built in at terragoat/.</d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
-      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the [HashiCorp keynote](https://youtu.be/ZzLZaWUve4M?t=1387) for more information.  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
+      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
     </item>
     
     <item>
