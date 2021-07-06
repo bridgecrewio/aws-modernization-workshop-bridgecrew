@@ -1,4 +1,4 @@
-baseURL = "https://workshop.bridgecrew.io/aws/"
+baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
