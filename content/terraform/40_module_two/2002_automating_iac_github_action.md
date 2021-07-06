@@ -12,8 +12,7 @@ You can leverage GitHub actions to run automated scans for every build or specif
 {{% notice info %}}
 <p style='text-align: left;'>
 The TerraGoat repository already has a Checkov Action built in at terragoat/.github/workflows/pull\_request.yaml and terragoat/.github/workflows/checkov.yaml. You can remove those files to remove that redundant scan, but we will keep it for this workshop.
-</p>
-<p style='text-align: left;'>
+
 Typically, you wouldn’t do more than one scan during a build, such as two Actions, a CI/CD integration and a Terraform Cloud scan, so you can remove the Actions when you setup the Terraform Cloud scan or leave it for illustrative purposes.
 </p>
 {{% /notice %}}
@@ -59,22 +58,21 @@ Name the new file bridgecrew.yaml and replace the entire contents with the workf
 ```
 name: Bridgecrew
 on:
- push:
- branches:
- - master
+  pull_request
 jobs:
- scan:
- runs-on: ubuntu-latest
- strategy:
- matrix:
- python-version: \[3.8\]
- steps:
- - uses: actions/checkout@v2
- - name: Run Bridgecrew
- id: Bridgecrew
- uses: bridgecrewio/bridgecrew-action@master
- with:
- api-key: ${{ secrets.BRIDGECREW\_API\_KEY }}
+  scan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Bridgecrew 
+      id: Bridgecrew
+      uses: bridgecrewio/bridgecrew-action@master
+      with:
+        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+        directory: terraform/
 ```
 
 Select “Start commit” once you’ve added the workflow file contents:
@@ -85,11 +83,7 @@ Finally, save the new workflow file into your code repository by selecting “Co
 
 ![Commit the file](images/github_commit.png "Commit the file")
 
-The GitHub Action will start running Checkov scans against the latest commit in your TerraGoat repository.
-
-You can see this by selecting the “Actions” page within your TerraGoat forked repository in GitHub.
-
-You will see a new workflow, titled Bridgecrew and the job that was kicked off by merging in the workflow yaml file.
+The GitHub Action will start running Bridgecrew scans against the latest commit in your TerraGoat repository. You can see this by selecting the “Actions” page within your TerraGoat forked repository in GitHub. You will see a new workflow, titled Bridgecrew and the job that was kicked off by merging in the workflow yaml file.
 
 ![Results of the Action](images/github_action_results1.png "Results of the Action")
 
