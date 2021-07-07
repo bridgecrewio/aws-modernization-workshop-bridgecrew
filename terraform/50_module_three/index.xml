@@ -32,7 +32,7 @@ Let’s walk through the process with one of the policies you looked at earlier,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html</guid>
-      <description>Scanning runtime resources for vulnerable infrastructure Last but definitely not least, let’s switch gears to address infrastructure that wasn&amp;rsquo;t deployed by CloudFormation.
+      <description>Scanning runtime resources for vulnerable infrastructure Let’s switch gears to address infrastructure that wasn&amp;rsquo;t deployed by Terraform.
 Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our AWS accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch.</description>
     </item>
     
