@@ -6,7 +6,8 @@ pre: "<b>5.4 </b>"
 ---
 
 ## Integrating Bridgecrew with GitHub
-In this section, you’ll add a GitHub integration to generate and push automated pull requests (PRs) back into your GitHub repository to update your Terraform code and fix security issues. This integration also provides native and automated scanning of incoming commits and pull requests.
+
+In this section, you’ll add a GitHub integration to generate code comments and setup for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
 
 Head back to the [Bridgecrew Integrations](https://www.bridgecrew.cloud/integrations/Github) tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
 
@@ -27,9 +28,3 @@ You will now see the same violation alerting from multiple sources. Although thi
 **You’re all set!**
 
 Now head over to your forked TerraGoat repository in GitHub to kick off a pull request to make sure it’s working.
-
-### Congratulations!
-
-You’ve now set up both a GitHub action and a Terraform Cloud scan for your Terraform templates.
-
-In the next module, you’ll look at how to investigate and fix the issues arising from the automated scans, as well as providing more tips for integrating security into the developer workflow without causing friction.

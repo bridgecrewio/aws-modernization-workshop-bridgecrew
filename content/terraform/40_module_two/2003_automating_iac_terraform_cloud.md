@@ -36,11 +36,11 @@ Select “GitHub” and choose your TerraGoat repository we previously forked:
 
 ![Add GitHub](images/terraform_cloud_add_github.png "Add GitHub")
 
-Name the workspace `terragoat` and open the “Advanced options” and add the directory `terraform/aws/`. This will focus the scans to just the aws templates. Select “Create workspace”:
+Name the workspace `terragoat` and open the “Advanced options” and add the directory `/terraform/simple_instance/` (we'll be adding that directory later). This will focus the scans to just the aws templates. Turn on "Automatic speculative plans" to create plans for pull requests. Select “Create workspace”:
 
 ![Config settings](images/terraform_cloud_config_settings.png "Config settings")
 
-Select “Configure variables” and add your AWS Account and Access Keys as environment variables. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
 
@@ -48,7 +48,7 @@ Go to Settings and select General. From this settings screen, grab your workspac
 
 ![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
 
-Grab the API token from Terraform Cloud for the integration. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) and select “Create an API token.”
+Grab the API token from Terraform Cloud for the integration. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) (User -> Settings -> Tokens) and select “Create an API token.”
 
 ![Terraform Cloud API token](images/terraform_cloud_api_token.png "Terraform Cloud API token")
 
@@ -71,3 +71,9 @@ Select “[Policy Sets](https://app.terraform.io/app/bridgecrew-demo/settings/po
 Go back to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settings/policies)” section and select the policy you made. Scroll down to the “Policy Sets” section and add the `terragoat_set` you made.
 
 ![Policy sets](images/terraform_cloud_policy_sets.png "Policy sets")
+
+Finally, go to your workspace's main page and queue a run. Don't worry if it fails, this just primes the runs to be automated with future GitHub pull requests.
+
+![Queue a plan](images/tfc_queue.png "Queue a plan")
+
+**Your Terraform Cloud integration is ready to go!**

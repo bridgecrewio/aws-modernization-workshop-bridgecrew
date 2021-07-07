@@ -1,5 +1,5 @@
 ---
-title: "AWS fixes in runtime"
+title: "Drift detection"
 chapter: true
 weight: 305
 pre: "<b>6.5 </b>"
