@@ -247,9 +247,19 @@ To set it up, go to AWS CodePipeline and select Create Pipeline:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2004_github_application.html</guid>
-      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate and push automated pull requests (PRs) back into your GitHub repository to update your Terraform code and fix security issues. This integration also provides native and automated scanning of incoming commits and pull requests.
+      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate code comments and setup for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
 Head back to the Bridgecrew Integrations tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
 Choose which accounts and repositories to grant the Bridgecrew GitHub integration access to:</description>
+    </item>
+    
+    <item>
+      <title>Test Pull Request</title>
+      <link>/terraform/40_module_two/2005_kickoff_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
+      <description>Kick off a test Pull Request Check that all 3 integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terragoat-demo-test/terraform/simple_instance/ec2.tf. Add the following code:
+provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource &amp;#34;aws_security_group&amp;#34; &amp;#34;ssh_traffic&amp;#34; { name = &amp;#34;ssh_traffic&amp;#34; description = &amp;#34;Allow SSH inbound traffic&amp;#34; ingress { description = &amp;#34;SSH&amp;#34; from_port = 22 to_port = 22 protocol = &amp;#34;tcp&amp;#34; cidr_blocks = [&amp;#34;0.</description>
     </item>
     
     <item>
@@ -367,7 +377,7 @@ Implementing automated remediations does require extra permissions than previous
     </item>
     
     <item>
-      <title>AWS fixes in runtime</title>
+      <title>Drift detection</title>
       <link>/terraform/50_module_three/3005_bridgecrew_drift_detections.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

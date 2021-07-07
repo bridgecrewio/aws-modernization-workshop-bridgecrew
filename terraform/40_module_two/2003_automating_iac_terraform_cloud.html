@@ -12,22 +12,22 @@
     <title>Terraform Cloud :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1625612573" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/hybrid.css?1625612573" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1625612573" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1625612573" rel="stylesheet">
-    <link href="../../css/theme.css?1625612573" rel="stylesheet">
-    <link href="../../css/tabs.css?1625612573" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1625612573" rel="stylesheet">
+    <link href="../../css/nucleus.css?1625672701" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/hybrid.css?1625672701" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1625672701" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1625672701" rel="stylesheet">
+    <link href="../../css/theme.css?1625672701" rel="stylesheet">
+    <link href="../../css/tabs.css?1625672701" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1625672701" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1625612573" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1625672701" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1625612573"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1625672701"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1625612573"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1625612573"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1625672701"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1625672701"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1625612573"></script>
+<script type="text/javascript" src="../../js/search.js?1625672701"></script>
 
     
   </div>
@@ -1323,6 +1323,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test Pull Request" class="dd-item ">
+        <a href="../../terraform/40_module_two/2005_kickoff_pr.html">
+        <b>5.4 </b>Test Pull Request
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -1454,9 +1475,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="AWS fixes in runtime" class="dd-item ">
+      <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>AWS fixes in runtime
+        <b>6.5 </b>Drift detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1691,11 +1712,11 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p><img src="images/terraform_cloud_add_github.png" alt="Add GitHub" title="Add GitHub" /></p>
 
-<p>Name the workspace <code>terragoat</code> and open the “Advanced options” and add the directory <code>terraform/aws/</code>. This will focus the scans to just the aws templates. Select “Create workspace”:</p>
+<p>Name the workspace <code>terragoat</code> and open the “Advanced options” and add the directory <code>/terraform/simple_instance/</code> (we&rsquo;ll be adding that directory later). This will focus the scans to just the aws templates. Turn on &ldquo;Automatic speculative plans&rdquo; to create plans for pull requests. Select “Create workspace”:</p>
 
 <p><img src="images/terraform_cloud_config_settings.png" alt="Config settings" title="Config settings" /></p>
 
-<p>Select “Configure variables” and add your AWS Account and Access Keys as environment variables. If you aren’t sure where to find the keys, see <a href="https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html" target="_blank">this guide</a>.</p>
+<p>Select “Configure variables” and add your AWS Account and Access Keys as environment variables called <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>. If you aren’t sure where to find the keys, see <a href="https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html" target="_blank">this guide</a>.</p>
 
 <p><img src="images/terraform_cloud_env_variables.png" alt="Add environment variables" title="Add environment variables" /></p>
 
@@ -1703,7 +1724,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p><img src="images/terraform_cloud_workspace_id.png" alt="Grab your workspace ID" title="Grab your workspace ID" /></p>
 
-<p>Grab the API token from Terraform Cloud for the integration. Go to the <a href="https://app.terraform.io/app/settings/tokens" target="_blank">API token menu</a> and select “Create an API token.”</p>
+<p>Grab the API token from Terraform Cloud for the integration. Go to the <a href="https://app.terraform.io/app/settings/tokens" target="_blank">API token menu</a> (User -&gt; Settings -&gt; Tokens) and select “Create an API token.”</p>
 
 <p><img src="images/terraform_cloud_api_token.png" alt="Terraform Cloud API token" title="Terraform Cloud API token" /></p>
 
@@ -1726,6 +1747,12 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 <p>Go back to the “<a href="https://app.terraform.io/app/bridgecrew-demo/settings/policies" target="_blank">Policies</a>” section and select the policy you made. Scroll down to the “Policy Sets” section and add the <code>terragoat_set</code> you made.</p>
 
 <p><img src="images/terraform_cloud_policy_sets.png" alt="Policy sets" title="Policy sets" /></p>
+
+<p>Finally, go to your workspace&rsquo;s main page and queue a run. Don&rsquo;t worry if it fails, this just primes the runs to be automated with future GitHub pull requests.</p>
+
+<p><img src="images/tfc_queue.png" alt="Queue a plan" title="Queue a plan" /></p>
+
+<p><strong>Your Terraform Cloud integration is ready to go!</strong></p>
 
 
 <footer class="footline">
@@ -2537,6 +2564,22 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2693,19 +2736,19 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1625612573"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1625612573"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1625612573"></script>
-    <script src="../../js/jquery.sticky.js?1625612573"></script>
-    <script src="../../js/featherlight.min.js?1625612573"></script>
-    <script src="../../js/highlight.pack.js?1625612573"></script>
+    <script src="../../js/clipboard.min.js?1625672701"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1625672701"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1625672701"></script>
+    <script src="../../js/jquery.sticky.js?1625672701"></script>
+    <script src="../../js/featherlight.min.js?1625672701"></script>
+    <script src="../../js/highlight.pack.js?1625672701"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1625612573"></script>
-    <script src="../../js/learn.js?1625612573"></script>
-    <script src="../../js/hugo-learn.js?1625612573"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1625672701"></script>
+    <script src="../../js/learn.js?1625672701"></script>
+    <script src="../../js/hugo-learn.js?1625672701"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1625612573"></script>
+            <script src="../../mermaid/mermaid.js?1625672701"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

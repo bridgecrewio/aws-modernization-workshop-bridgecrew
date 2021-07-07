@@ -12,22 +12,22 @@
     <title>GitHub Application :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1625612573" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/hybrid.css?1625612573" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1625612573" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1625612573" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1625612573" rel="stylesheet">
-    <link href="../../css/theme.css?1625612573" rel="stylesheet">
-    <link href="../../css/tabs.css?1625612573" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1625612573" rel="stylesheet">
+    <link href="../../css/nucleus.css?1625672701" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/hybrid.css?1625672701" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1625672701" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1625672701" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1625672701" rel="stylesheet">
+    <link href="../../css/theme.css?1625672701" rel="stylesheet">
+    <link href="../../css/tabs.css?1625672701" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1625672701" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1625612573" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1625672701" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1625612573"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1625672701"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1625612573"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1625612573"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1625672701"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1625672701"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1625612573"></script>
+<script type="text/javascript" src="../../js/search.js?1625672701"></script>
 
     
   </div>
@@ -1323,6 +1323,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test Pull Request" class="dd-item ">
+        <a href="../../terraform/40_module_two/2005_kickoff_pr.html">
+        <b>5.4 </b>Test Pull Request
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -1454,9 +1475,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="AWS fixes in runtime" class="dd-item ">
+      <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>AWS fixes in runtime
+        <b>6.5 </b>Drift detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1661,7 +1682,7 @@
 
 <h2 id="integrating-bridgecrew-with-github">Integrating Bridgecrew with GitHub</h2>
 
-<p>In this section, you’ll add a GitHub integration to generate and push automated pull requests (PRs) back into your GitHub repository to update your Terraform code and fix security issues. This integration also provides native and automated scanning of incoming commits and pull requests.</p>
+<p>In this section, you’ll add a GitHub integration to generate code comments and setup for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.</p>
 
 <p>Head back to the <a href="https://www.bridgecrew.cloud/integrations/Github" target="_blank">Bridgecrew Integrations</a> tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:</p>
 
@@ -1682,12 +1703,6 @@
 <p><strong>You’re all set!</strong></p>
 
 <p>Now head over to your forked TerraGoat repository in GitHub to kick off a pull request to make sure it’s working.</p>
-
-<h3 id="congratulations">Congratulations!</h3>
-
-<p>You’ve now set up both a GitHub action and a Terraform Cloud scan for your Terraform templates.</p>
-
-<p>In the next module, you’ll look at how to investigate and fix the issues arising from the automated scans, as well as providing more tips for integrating security into the developer workflow without causing friction.</p>
 
 
 <footer class="footline">
@@ -2496,9 +2511,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -2506,6 +2518,25 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2645,7 +2676,7 @@
 			<a class="nav nav-prev" href="../../terraform/40_module_two/2003_automating_iac_terraform_cloud.html" title="Terraform Cloud"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../terraform/50_module_three.html" title="Module - Fix" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../terraform/40_module_two/2005_kickoff_pr.html" title="Test Pull Request" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2655,19 +2686,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1625612573"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1625612573"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1625612573"></script>
-    <script src="../../js/jquery.sticky.js?1625612573"></script>
-    <script src="../../js/featherlight.min.js?1625612573"></script>
-    <script src="../../js/highlight.pack.js?1625612573"></script>
+    <script src="../../js/clipboard.min.js?1625672701"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1625672701"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1625672701"></script>
+    <script src="../../js/jquery.sticky.js?1625672701"></script>
+    <script src="../../js/featherlight.min.js?1625672701"></script>
+    <script src="../../js/highlight.pack.js?1625672701"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1625612573"></script>
-    <script src="../../js/learn.js?1625612573"></script>
-    <script src="../../js/hugo-learn.js?1625612573"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1625672701"></script>
+    <script src="../../js/learn.js?1625672701"></script>
+    <script src="../../js/hugo-learn.js?1625672701"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1625612573"></script>
+            <script src="../../mermaid/mermaid.js?1625672701"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
