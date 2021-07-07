@@ -13,3 +13,4 @@ In this module, we’ll show how to visualize our posture and automate remediati
 - Investigate security violations in Bridgecrew
 - Automate pull requests in GitHub
 - Scan runtime resources for vulnerable infrastructure
+- Detect and mitigate drift

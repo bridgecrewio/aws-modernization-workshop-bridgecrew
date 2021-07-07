@@ -7,11 +7,11 @@ pre: "<b>6.3 </b>"
 
 ## Scanning runtime resources for vulnerable infrastructure
 
-Last but definitely not least, let’s switch gears to address  infrastructure that wasn't deployed by CloudFormation.
+Let’s switch gears to address infrastructure that wasn't deployed by Terraform.
 
 Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our AWS accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch.
 
-That’s why it’s important to scan objects directly in your AWS environment in addition to scanning your CloudFormation or Terraform manifests in git or as part of the CI/CD pipeline, as we’ve already shown.
+That’s why it’s important to scan objects directly in your AWS environment in addition to scanning your Terraform templates in git or as part of the CI/CD pipeline, as we’ve already shown.
 
 Bridgecrew provides runtime scanning via an AWS integration, allowing full coverage of infrastructure security both before and after deployment.
 
@@ -36,7 +36,7 @@ You will be taken to your AWS account to authorize the integration:
 
 ![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew Integration")
 
-**Check the checkbox** to approve the IAM permission creations via our CloudFormation stack, and click **Create Stack**
+**Check the checkbox** to approve the IAM permission creations via our Terraform stack, and click **Create Stack**
 
 ![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00004.png "AWS Bridgecrew Integration")
 
@@ -50,7 +50,7 @@ Sucessful Integration:
 That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking.
 
 ### Exploring runtime violations
-With the runtime AWS account connected, let’s edit our filters on the Incidents page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your CodePipeline and GitHub repositories from the earlier modules.
+With the runtime AWS account connected, let’s edit our filters on the Incidents page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.
 
 
 ![AWS Bridgecrew filter pane](./images/filter-aws-only-dash.png "AWS Bridgecrew filter pane")
