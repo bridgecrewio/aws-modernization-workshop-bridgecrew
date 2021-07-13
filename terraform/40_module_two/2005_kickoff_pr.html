@@ -12,22 +12,22 @@
     <title>Test Pull Request :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1625685080" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/hybrid.css?1625685080" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1625685080" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1625685080" rel="stylesheet">
-    <link href="../../css/theme.css?1625685080" rel="stylesheet">
-    <link href="../../css/tabs.css?1625685080" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1625685080" rel="stylesheet">
+    <link href="../../css/nucleus.css?1626151196" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/hybrid.css?1626151196" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1626151196" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1626151196" rel="stylesheet">
+    <link href="../../css/theme.css?1626151196" rel="stylesheet">
+    <link href="../../css/tabs.css?1626151196" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1626151196" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1625685080" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1626151196" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1625685080"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1626151196"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1625685080"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1625685080"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1626151196"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1626151196"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1625685080"></script>
+<script type="text/javascript" src="../../js/search.js?1626151196"></script>
 
     
   </div>
@@ -1334,7 +1334,7 @@
     
       <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test Pull Request" class="dd-item active">
         <a href="../../terraform/40_module_two/2005_kickoff_pr.html">
-        <b>5.4 </b>Test Pull Request
+        <b>5.5 </b>Test Pull Request
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1680,9 +1680,9 @@
 
 
 
-<h2 id="kick-off-a-test-pull-request">Kick off a test Pull Request</h2>
+<h2 id="kick-off-a-test-pull-request">Kick off a test pull request</h2>
 
-<p>Check that all 3 integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &ldquo;Add file&rdquo; -&gt; &ldquo;Create new file.&rdquo; Set the path to <code>terragoat-demo-test/terraform/simple_instance/ec2.tf</code>. Add the following code:</p>
+<p>Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &ldquo;Add file&rdquo; -&gt; &ldquo;Create new file.&rdquo; Set the path to <code>terragoat-demo-test/terraform/simple_instance/ec2.tf</code>. Add the following code:</p>
 <pre><code>provider &#34;aws&#34; {
   region = &#34;us-east-1&#34;
 }
@@ -1727,27 +1727,27 @@ data &#34;aws_ami&#34; &#34;ubuntu&#34; {
 <p><img src="images/github_propose_new_file.png" alt="Propose new file" title="Propose new file" /></p>
 
 <p>Then &ldquo;Create a pull request.&rdquo; After a few seconds, you should automatically see Code Review Comments. Expand one to see the additional details like Fix recommendations. At the bottom, you should see five checks:
-- The Checkov GitHub Action
-- The Bridgecrew GitHub Action
-- The Bridgecrew GitHub Application
-- Two Terraform Cloud integration checks</p>
+* The Checkov GitHub Action
+* The Bridgecrew GitHub Action
+* The Bridgecrew GitHub Application
+* Two Terraform Cloud integration checks</p>
 
 <p><img src="images/github_checks.png" alt="All the GitHub integrations" title="All the GitHub integrations" /></p>
 
-<p>You can fix the violations later, but for now, click &ldquo;Merge pull request&rdquo; and &ldquo;Confirm merge.&rdquo; Head back over to Terraform Cloud and select the latest run. You&rsquo;ll again see the policy violations, but since we set the failure level to &ldquo;advisory (logging only)&rdquo;, we can still apply the template.</p>
+<p>You can fix the violations later, but for now, click &ldquo;Merge pull request&rdquo; and &ldquo;Confirm merge.&rdquo; Head back over to Terraform Cloud and select the latest run. You&rsquo;ll again see the policy violations, but since we set the failure level to &ldquo;advisory (logging only),&rdquo; we can still apply the template.</p>
 
 
 <div class="notices warning" ><p>We&rsquo;re using a free tier instance (t2-micro), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.</p>
 </div>
 
 
-<p>Click &ldquo;Confirm &amp; Apply&rdquo;. This will deploy the simple EC2 instance and security group. Optionally, head over to your AWS console to confirm an instance was created.</p>
+<p>Click &ldquo;Confirm &amp; Apply.&rdquo; This will deploy the simple EC2 instance and security group. Optionally, head over to your AWS console to confirm an instance was created.</p>
 
 <p><img src="images/aws_instance.png" alt="New EC2 instance" title="New EC2 instance" /></p>
 
 <h3 id="congratulations">Congratulations!</h3>
 
-<p>You’ve now set up a GitHub action, a Terraform Cloud integration and a GitHub Application to secure your Terraform templates.</p>
+<p>You’ve now set up a GitHub Action, a Terraform Cloud integration, and a GitHub Application to secure your Terraform templates.</p>
 
 <p>In the next module, you’ll look at how to investigate and fix the issues arising from the automated scans, as well as providing more tips for integrating security into the developer workflow without causing friction.</p>
 
@@ -2733,19 +2733,19 @@ data &#34;aws_ami&#34; &#34;ubuntu&#34; {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1625685080"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1625685080"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1625685080"></script>
-    <script src="../../js/jquery.sticky.js?1625685080"></script>
-    <script src="../../js/featherlight.min.js?1625685080"></script>
-    <script src="../../js/highlight.pack.js?1625685080"></script>
+    <script src="../../js/clipboard.min.js?1626151196"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1626151196"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1626151196"></script>
+    <script src="../../js/jquery.sticky.js?1626151196"></script>
+    <script src="../../js/featherlight.min.js?1626151196"></script>
+    <script src="../../js/highlight.pack.js?1626151196"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1625685080"></script>
-    <script src="../../js/learn.js?1625685080"></script>
-    <script src="../../js/hugo-learn.js?1625685080"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1626151196"></script>
+    <script src="../../js/learn.js?1626151196"></script>
+    <script src="../../js/hugo-learn.js?1626151196"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1625685080"></script>
+            <script src="../../mermaid/mermaid.js?1626151196"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

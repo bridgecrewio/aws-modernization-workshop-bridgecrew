@@ -80,9 +80,9 @@
   </url><url>
     <loc>/terraform/40_module_two/2004_github_application.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2005_kickoff_pr.html</loc>
-  </url><url>
     <loc>/aws/20_module_two/2005_automating_iac_results.html</loc>
+  </url><url>
+    <loc>/terraform/40_module_two/2005_kickoff_pr.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2006_automating_iac_github_actions.html</loc>
   </url><url>

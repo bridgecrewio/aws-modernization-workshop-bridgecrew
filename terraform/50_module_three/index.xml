@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3001_bridgecrew_dashboard_results.html</guid>
-      <description>Investigating security violations in Bridgecrew Providing feedback in IDEs and CI/CD pipelines provides valuable insights into the posture of your code. Bridgecrew provides centralized, aggregated locations for tracking misconfigurations across your code scans and runtime environments. We’ll start with the view across code scans.
-Navigate to the Projects tab in the Bridgecrew platform. Here you can see the results of your GitHub scan, as well as any other code scan that includes repo-id and your Bridgecrew API.</description>
+      <description>Investigating security violations in Bridgecrew Providing feedback in IDEs and CI/CD pipelines provides valuable insights into the posture of your code. Bridgecrew provides a centralized view for tracking misconfigurations across your code scans and runtime environments. We’ll start with the view across code scans.
+Navigate to the Projects tab in the Bridgecrew platform. Here you can see the results of your GitHub scan, as well as any other code scan that includes a repository ID and your Bridgecrew API.</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ Implementing automated remediations does require extra permissions than previous
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3005_bridgecrew_drift_detections.html</guid>
-      <description>Drift detection with Bridgecrew and Terraform Cloud In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.</description>
+      <description>Drift detection between AWS and Terraform Cloud state using Bridgecrew In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.</description>
     </item>
     
   </channel>

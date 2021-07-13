@@ -13,7 +13,7 @@
       
       <guid>/terraform/20_prerequisites/2001_terraform_setup.html</guid>
       <description>Terraform Environment Setup You’ll use the Terraform CLI locally as well as Terraform Cloud. If you don’t have the Terraform CLI installed on your computer, see the instructions here.
-Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilities of the open source Terraform CLI. It’s free for basic usage but we’ll be leveraging advanced features, such as Sentinel, that will require a paid subscription or trial. Sign up for Terraform Cloud here and login in your CLI.</description>
+Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilities of the open source Terraform CLI. It’s free for basic usage, but we’ll be leveraging advanced features, such as Sentinel, that will require a paid subscription or trial. Sign up for Terraform Cloud here and log in using your CLI.</description>
     </item>
     
     <item>
@@ -101,7 +101,7 @@ $ git clone https://github.com/bridgecrewio/cfngoat.git cd cfngoat git status Cl
       
       <guid>/terraform/30_module_one/1001_terragoat.html</guid>
       <description>Vulnerable-by-design demo repository setup This workshop uses our vulnerable-by-design Terraform project, TerraGoat, so that you can scan and automate infrastructure code without the added friction of integrating your own code. Simply clone the open-source project’s repository:
-git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Sample output
+git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Sample output:
 $ git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Cloning into &amp;#39;terragoat&amp;#39;... remote: Enumerating objects: 10, done. remote: Counting objects: 100% (10/10), done. remote: Compressing objects: 100% (10/10), done.</description>
     </item>
     
@@ -122,9 +122,8 @@ bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfn
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/30_module_one/1002_local_scan_cli.html</guid>
-      <description>Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.
-Make sure you are in the cloned directory from the previous step, copy your unique Bridgecrew API token, and scan the s3.tf in the aws directory:
-cd terragoat checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3 You can also scan entire directories with -d , such as the aws directory:</description>
+      <description>If you are running Checkov with the Bridgecrew API token and you use a proxy, you may need to turn off your VPN/proxy or use the --ca-certificate flag to allow your proxy&amp;rsquo;s certificate using the directions here: https://github.com/bridgecrewio/checkov/pull/1099. If you run Checkov without the Bridgecrew API token, this won&amp;rsquo;t be an issue.
+ Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</description>
     </item>
     
     <item>
@@ -133,8 +132,8 @@ cd terragoat checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/30_module_one/1003_local_scan_dashboard.html</guid>
-      <description>Viewing results in Bridgecrew You just scanned your Terraform templates locally using Checkov. If you included your API key, the results were sent to the Bridgecrew platform for investigation and remediation. You may have noticed the URL at the end of the CLI scan. That’s a direct link to the results in Bridgecrew.
-Click on that link to bring up that scan’s Code Review page. This is a list of all of the misconfigurations identified from that scan grouped by resource and labeled by severity.</description>
+      <description>Viewing results in Bridgecrew You just scanned your Terraform templates locally using Checkov. If you included your API key, the results were sent to the Bridgecrew platform for further investigation. You may have noticed the URL at the end of the CLI scan. That’s a direct link to the results in Bridgecrew.
+Click on that link to bring up that scan’s Code Review page. This is a list of all of the misconfigurations identified from that scan grouped by resource and labeled by severity.</description>
     </item>
     
     <item>
@@ -186,7 +185,7 @@ Head to your GitHub account, visit the CfnGoat repository at https://github.com/
       
       <guid>/terraform/40_module_two/2001_automating_iac_github.html</guid>
       <description>Fork the TerraGoat repository on GitHub To set up your demo environment, you can push your local clone of TerraGoat or fork the repository. We’re doing the second option.
-Head over to the TerraGoat repository at https://github.com/bridgecrewio/terragoat. Fork the code using the button in the upper right corner.
+Head over to the TerraGoat repository and fork it using the button in the upper right corner.
 If you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account via your username in the list to fork the repo.</description>
     </item>
     
@@ -206,7 +205,7 @@ We’ll also automatically send the results to Brigecrew to maintain a view acro
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2002_automating_iac_github_action.html</guid>
-      <description>Setting up the Bridgecrew GitHub Action You can leverage GitHub actions to run automated scans for every build or specific builds, such as the ones that merge into the master branch. This action can alert on misconfigurations or you can set it up to block code from being merged if certain policies are violated. It can also send the results to Bridgecrew for further review and remediation steps.
+      <description>Setting up the Bridgecrew GitHub Action You can leverage GitHub actions to run automated scans for every build or specific builds, such as the ones that merge into the master branch. This action can alert on misconfigurations, or you can set it up to block code from being merged if certain policies are violated. It can also send the results to Bridgecrew for further review and remediation steps.
 The TerraGoat repository already has a Checkov Action built in at terragoat/.</description>
     </item>
     
@@ -228,7 +227,7 @@ This will bring up the &amp;ldquo;create policy visual editor&amp;rdquo;, for Se
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
-      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
+      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
     </item>
     
     <item>
@@ -247,19 +246,9 @@ To set it up, go to AWS CodePipeline and select Create Pipeline:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2004_github_application.html</guid>
-      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate code comments and setup for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
+      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate code comments and set up for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
 Head back to the Bridgecrew Integrations tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
 Choose which accounts and repositories to grant the Bridgecrew GitHub integration access to:</description>
-    </item>
-    
-    <item>
-      <title>Test Pull Request</title>
-      <link>/terraform/40_module_two/2005_kickoff_pr.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
-      <description>Kick off a test Pull Request Check that all 3 integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terragoat-demo-test/terraform/simple_instance/ec2.tf. Add the following code:
-provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource &amp;#34;aws_security_group&amp;#34; &amp;#34;ssh_traffic&amp;#34; { name = &amp;#34;ssh_traffic&amp;#34; description = &amp;#34;Allow SSH inbound traffic&amp;#34; ingress { description = &amp;#34;SSH&amp;#34; from_port = 22 to_port = 22 protocol = &amp;#34;tcp&amp;#34; cidr_blocks = [&amp;#34;0.</description>
     </item>
     
     <item>
@@ -272,6 +261,16 @@ provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource
 You will be taken to the Pipeline Jobs page where you will see the progress as CodeBuild checks out the latest commit from GitHub and starts our job to run Bridgecrew against the CloudFormation configuration.
 Below we see the Pipeline sucessfully created and starting to run:
 If everything goes as intended, the pipeline should fail at the build stage since the CfnGoat code is purposely designed with security flaws.</description>
+    </item>
+    
+    <item>
+      <title>Test Pull Request</title>
+      <link>/terraform/40_module_two/2005_kickoff_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
+      <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terragoat-demo-test/terraform/simple_instance/ec2.tf. Add the following code:
+provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource &amp;#34;aws_security_group&amp;#34; &amp;#34;ssh_traffic&amp;#34; { name = &amp;#34;ssh_traffic&amp;#34; description = &amp;#34;Allow SSH inbound traffic&amp;#34; ingress { description = &amp;#34;SSH&amp;#34; from_port = 22 to_port = 22 protocol = &amp;#34;tcp&amp;#34; cidr_blocks = [&amp;#34;0.</description>
     </item>
     
     <item>
@@ -301,8 +300,8 @@ For all those reasons and more, Bridgecrew provides reporting, monitoring, alert
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3001_bridgecrew_dashboard_results.html</guid>
-      <description>Investigating security violations in Bridgecrew Providing feedback in IDEs and CI/CD pipelines provides valuable insights into the posture of your code. Bridgecrew provides centralized, aggregated locations for tracking misconfigurations across your code scans and runtime environments. We’ll start with the view across code scans.
-Navigate to the Projects tab in the Bridgecrew platform. Here you can see the results of your GitHub scan, as well as any other code scan that includes repo-id and your Bridgecrew API.</description>
+      <description>Investigating security violations in Bridgecrew Providing feedback in IDEs and CI/CD pipelines provides valuable insights into the posture of your code. Bridgecrew provides a centralized view for tracking misconfigurations across your code scans and runtime environments. We’ll start with the view across code scans.
+Navigate to the Projects tab in the Bridgecrew platform. Here you can see the results of your GitHub scan, as well as any other code scan that includes a repository ID and your Bridgecrew API.</description>
     </item>
     
     <item>
@@ -382,7 +381,7 @@ Implementing automated remediations does require extra permissions than previous
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3005_bridgecrew_drift_detections.html</guid>
-      <description>Drift detection with Bridgecrew and Terraform Cloud In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.</description>
+      <description>Drift detection between AWS and Terraform Cloud state using Bridgecrew In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.</description>
     </item>
     
   </channel>

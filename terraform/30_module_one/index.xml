@@ -13,7 +13,7 @@
       
       <guid>/terraform/30_module_one/1001_terragoat.html</guid>
       <description>Vulnerable-by-design demo repository setup This workshop uses our vulnerable-by-design Terraform project, TerraGoat, so that you can scan and automate infrastructure code without the added friction of integrating your own code. Simply clone the open-source project’s repository:
-git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Sample output
+git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Sample output:
 $ git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Cloning into &amp;#39;terragoat&amp;#39;... remote: Enumerating objects: 10, done. remote: Counting objects: 100% (10/10), done. remote: Compressing objects: 100% (10/10), done.</description>
     </item>
     
@@ -23,9 +23,8 @@ $ git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git statu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/30_module_one/1002_local_scan_cli.html</guid>
-      <description>Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.
-Make sure you are in the cloned directory from the previous step, copy your unique Bridgecrew API token, and scan the s3.tf in the aws directory:
-cd terragoat checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3 You can also scan entire directories with -d , such as the aws directory:</description>
+      <description>If you are running Checkov with the Bridgecrew API token and you use a proxy, you may need to turn off your VPN/proxy or use the --ca-certificate flag to allow your proxy&amp;rsquo;s certificate using the directions here: https://github.com/bridgecrewio/checkov/pull/1099. If you run Checkov without the Bridgecrew API token, this won&amp;rsquo;t be an issue.
+ Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</description>
     </item>
     
     <item>
@@ -34,8 +33,8 @@ cd terragoat checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/30_module_one/1003_local_scan_dashboard.html</guid>
-      <description>Viewing results in Bridgecrew You just scanned your Terraform templates locally using Checkov. If you included your API key, the results were sent to the Bridgecrew platform for investigation and remediation. You may have noticed the URL at the end of the CLI scan. That’s a direct link to the results in Bridgecrew.
-Click on that link to bring up that scan’s Code Review page. This is a list of all of the misconfigurations identified from that scan grouped by resource and labeled by severity.</description>
+      <description>Viewing results in Bridgecrew You just scanned your Terraform templates locally using Checkov. If you included your API key, the results were sent to the Bridgecrew platform for further investigation. You may have noticed the URL at the end of the CLI scan. That’s a direct link to the results in Bridgecrew.
+Click on that link to bring up that scan’s Code Review page. This is a list of all of the misconfigurations identified from that scan grouped by resource and labeled by severity.</description>
     </item>
     
     <item>

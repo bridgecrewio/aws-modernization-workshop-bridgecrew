@@ -12,22 +12,22 @@
     <title>AWS runtime scanning :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1625685080" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/hybrid.css?1625685080" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1625685080" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1625685080" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1625685080" rel="stylesheet">
-    <link href="../../css/theme.css?1625685080" rel="stylesheet">
-    <link href="../../css/tabs.css?1625685080" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1625685080" rel="stylesheet">
+    <link href="../../css/nucleus.css?1626151196" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/hybrid.css?1626151196" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1626151196" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1626151196" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1626151196" rel="stylesheet">
+    <link href="../../css/theme.css?1626151196" rel="stylesheet">
+    <link href="../../css/tabs.css?1626151196" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1626151196" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1625685080" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1626151196" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1625685080"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1626151196"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1625685080"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1625685080"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1626151196"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1626151196"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1625685080"></script>
+<script type="text/javascript" src="../../js/search.js?1626151196"></script>
 
     
   </div>
@@ -1334,7 +1334,7 @@
     
       <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test Pull Request" class="dd-item ">
         <a href="../../terraform/40_module_two/2005_kickoff_pr.html">
-        <b>5.4 </b>Test Pull Request
+        <b>5.5 </b>Test Pull Request
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1690,11 +1690,11 @@
 
 <p>Bridgecrew provides runtime scanning via an AWS integration, allowing full coverage of infrastructure security both before and after deployment.</p>
 
-<h3 id="aws-runtime-integration">AWS Runtime Integration</h3>
+<h3 id="aws-runtime-integration">AWS runtime integration</h3>
 
-<p>To enable runtime scanning of your AWS account, goto the <a href="https://www.bridgecrew.cloud/integrations" target="_blank"><strong>Integrations Tab</strong></a> and select <strong>AWS Read Only</strong> under the <strong>Cloud Providers</strong> section.</p>
+<p>To enable runtime scanning of your AWS account, go to the <a href="https://www.bridgecrew.cloud/integrations" target="_blank"><strong>Integrations Tab</strong></a> and select <strong>AWS Read Only</strong> under the <strong>Cloud Providers</strong> section.</p>
 
-<p><img src="./images/dashboard-aws-runtime-00001.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00001.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 
 <div class="notices info" ><p style='text-align: left;'>
@@ -1703,30 +1703,30 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 </div>
 
 
-<p>Click <strong>Add Account</strong> then <strong>Launch Stack</strong> to enable the integration:</p>
+<p>Click <strong>Add Account</strong>, then <strong>Launch Stack</strong> to enable the integration:</p>
 
-<p><img src="./images/aws-integration-add.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/aws-integration-add.png" alt="Launch stack" title="Launch stack" /></p>
 
 <p>You will be taken to your AWS account to authorize the integration:</p>
 
-<p><img src="./images/dashboard-aws-runtime-00003.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00003.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p><strong>Check the checkbox</strong> to approve the IAM permission creations via our Terraform stack, and click <strong>Create Stack</strong></p>
+<p><strong>Check the checkbox</strong> to approve the IAM permission creations via our Terraform stack, and click <strong>Create Stack</strong>:</p>
 
-<p><img src="./images/dashboard-aws-runtime-00004.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00004.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>You can track the progress of the stack creation within your AWS account, once completed, you&rsquo;ll see the integration turn green in the Bridgecrew dashboard!</p>
+<p>You can track the progress of the stack creation within your AWS account. Once completed, you&rsquo;ll see the integration turn green in the Bridgecrew dashboard:</p>
 
-<p><img src="./images/dashboard-aws-runtime-00006.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00006.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>Sucessful Integration:
-<img src="./images/dashboard-aws-runtime-00007.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p>Successful integration:
+<img src="./images/dashboard-aws-runtime-00007.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <p>That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking.</p>
 
 <h3 id="exploring-runtime-violations">Exploring runtime violations</h3>
 
-<p>With the runtime AWS account connected, let’s edit our filters on the Incidents page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.</p>
+<p>With the runtime AWS account connected, let’s edit our filters on the <a href="https://www.bridgecrew.cloud/incidents" target="_blank">Incidents</a> page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.</p>
 
 <p><img src="./images/filter-aws-only-dash.png" alt="AWS Bridgecrew filter pane" title="AWS Bridgecrew filter pane" /></p>
 
@@ -1739,23 +1739,21 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 
 <p>After setting our filter, we can browse through all the security and compliance violations detected in our live AWS account,</p>
 
-<p>In the example below, we can see an S3 bucket is not encrypted at rest. Selecting a resource from the group of resources on the right hand side will display much more information, including a Terraform representation of the AWS object in question:</p>
+<p>In the example below, we can see an S3 bucket is not encrypted at rest. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:</p>
 
-<p><img src="./images/dashboard-aws-runtime-00012.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00012.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <p>Further context on the issue and remediation options is also available in the <strong>Guidelines</strong> tab.</p>
 
-<p><img src="./images/dashboard-aws-runtime-00013.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00013.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <p>Bridgecrew also alerts on account-wide settings such as user password policies and informational best practices, such as tagging each resource with ownership or purpose information:</p>
 
-<h5 id="untagged-items-in-account">Untagged Items in Account</h5>
+<p>Untagged items in account:
+<img src="./images/example-tagging-info.png" alt="AWS Bridgecrew filter pane" title="AWS Bridgecrew filter pane" /></p>
 
-<p><img src="./images/example-tagging-info.png" alt="AWS Bridgecrew filter pane" title="AWS Bridgecrew filter pane" /></p>
-
-<h5 id="weak-account-password-policy">Weak Account Password Policy</h5>
-
-<p><img src="./images/dashboard-aws-runtime-00008.png" alt="AWS Bridgecrew Integration" title="AWS Bridgecrew Integration" /></p>
+<p>Weak account password policy:
+<img src="./images/dashboard-aws-runtime-00008.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <h3 id="identity-and-access-management-iam-insights">Identity and Access Management (IAM) Insights</h3>
 
@@ -1768,6 +1766,8 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 <p>IAM Insights will even provide a re-written, rightsized IAM policy document with only the permissions your applications are requesting of the role or policy. This helps you build and maintain least-privilege IAM and reduces the scope of abuse from a misconfigured or exploited application.</p>
 
 <p><img src="./images/iam-insights-rightsizing.png" alt="Rightsizing an IAM policy" title="Rightsizing an IAM policy" /></p>
+
+<p>Next we&rsquo;ll create some fixes in production.</p>
 
 
 <footer class="footline">
@@ -2751,19 +2751,19 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1625685080"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1625685080"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1625685080"></script>
-    <script src="../../js/jquery.sticky.js?1625685080"></script>
-    <script src="../../js/featherlight.min.js?1625685080"></script>
-    <script src="../../js/highlight.pack.js?1625685080"></script>
+    <script src="../../js/clipboard.min.js?1626151196"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1626151196"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1626151196"></script>
+    <script src="../../js/jquery.sticky.js?1626151196"></script>
+    <script src="../../js/featherlight.min.js?1626151196"></script>
+    <script src="../../js/highlight.pack.js?1626151196"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1625685080"></script>
-    <script src="../../js/learn.js?1625685080"></script>
-    <script src="../../js/hugo-learn.js?1625685080"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1626151196"></script>
+    <script src="../../js/learn.js?1626151196"></script>
+    <script src="../../js/hugo-learn.js?1626151196"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1625685080"></script>
+            <script src="../../mermaid/mermaid.js?1626151196"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
