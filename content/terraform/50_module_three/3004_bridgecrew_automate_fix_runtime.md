@@ -45,6 +45,4 @@ Checking the resource once more in the AWS Console, you will see that encryption
 
 The violation will also have been marked resolved in the Bridgecrew **Incidents** page.
 
-
-## Congratulations! 
-You've integrated runtime security alerting and remediation into your **DevSecOps** automation! 
+Instead of resolving issues in production, if you follow GitOps best practices, we should prevent changes in production. We'll cover how to handle drift in the next session.

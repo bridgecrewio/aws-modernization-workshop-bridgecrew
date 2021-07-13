@@ -21,11 +21,11 @@ Scan your S3 bucket template using the extension. Go to File -> Add Folder to Wo
 
 ![See the scan results](images/vs_code3.png "See the scan results")
 
-Checkov will immediately start scanning and identifying multiple misconfigurations, underlining and highlighting their line in red. Move your cursor over the first code block `resource "aws_s3_bucket" "data"`. Checkov has identified multiple misconfigurations, including “Ensure all data stored in the S3 bucket have versioning enabled Checkov CKV_AWS_21."
+Checkov will immediately start scanning and will highlight any identified misconfigurations, with red underline. Move your cursor over the first code block `resource "aws_s3_bucket" "data"`. Checkov has identified multiple misconfigurations, including “Ensure all data stored in the S3 bucket have versioning enabled Checkov CKV_AWS_21."
 
 ![List the policies and fixes](images/vs_code4.png "List the policies and fixes")
 
-You can learn more about the policy by selecting “View Problem” or select “Quick Fix” to do exactly that. By selecting `“Apply fix for - Ensure all data stored in the S3 bucket have versioning enabled”` you automatically patched your code base for a common misconfiguration.
+You can learn more about the policy by selecting “View Problem” or select “Quick Fix” to do exactly that. By selecting “Apply fix for - Ensure all data stored in the S3 bucket have versioning enabled” you automatically patched your codebase for a common misconfiguration.
 
 ![Remediation lines added automatically](images/vs_code5.png "Remediation lines added automatically")
 

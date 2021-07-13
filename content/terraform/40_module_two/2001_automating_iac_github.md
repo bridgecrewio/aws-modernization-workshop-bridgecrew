@@ -9,7 +9,7 @@ pre: "<b>5.1 </b>"
 
 To set up your demo environment, you can push your local clone of TerraGoat or fork the repository. We’re doing the second option.
 
-Head over to the TerraGoat repository at [https://github.com/bridgecrewio/terragoat](https://github.com/bridgecrewio/terragoat). Fork the code using the button in the upper right corner.
+Head over to the [TerraGoat](https://github.com/bridgecrewio/terragoat) repository and fork it using the button in the upper right corner.
 
 ![Fork the TerraGoat repo](images/terragoat_repo.png "Fork the TerraGoat repo")
 

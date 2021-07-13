@@ -15,11 +15,11 @@ That’s why it’s important to scan objects directly in your AWS environment i
 
 Bridgecrew provides runtime scanning via an AWS integration, allowing full coverage of infrastructure security both before and after deployment.
 
-### AWS Runtime Integration
+### AWS runtime integration
 
-To enable runtime scanning of your AWS account, goto the [**Integrations Tab**](https://www.bridgecrew.cloud/integrations) and select **AWS Read Only** under the **Cloud Providers** section.
+To enable runtime scanning of your AWS account, go to the [**Integrations Tab**](https://www.bridgecrew.cloud/integrations) and select **AWS Read Only** under the **Cloud Providers** section.
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00001.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00001.png "AWS Bridgecrew integration")
 
 
 {{% notice info %}}
@@ -28,29 +28,29 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 </p>
 {{% /notice %}}
 
-Click **Add Account** then **Launch Stack** to enable the integration: 
+Click **Add Account**, then **Launch Stack** to enable the integration: 
 
-![AWS Bridgecrew Integration](./images/aws-integration-add.png "AWS Bridgecrew Integration")
+![Launch stack](./images/aws-integration-add.png "Launch stack")
 
 You will be taken to your AWS account to authorize the integration:
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew integration")
 
-**Check the checkbox** to approve the IAM permission creations via our Terraform stack, and click **Create Stack**
+**Check the checkbox** to approve the IAM permission creations via our Terraform stack, and click **Create Stack**:
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00004.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00004.png "AWS Bridgecrew integration")
 
-You can track the progress of the stack creation within your AWS account, once completed, you'll see the integration turn green in the Bridgecrew dashboard!
+You can track the progress of the stack creation within your AWS account. Once completed, you'll see the integration turn green in the Bridgecrew dashboard:
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00006.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00006.png "AWS Bridgecrew integration")
 
-Sucessful Integration: 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00007.png "AWS Bridgecrew Integration")
+Successful integration: 
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00007.png "AWS Bridgecrew integration")
 
 That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking.
 
 ### Exploring runtime violations
-With the runtime AWS account connected, let’s edit our filters on the Incidents page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.
+With the runtime AWS account connected, let’s edit our filters on the [Incidents](https://www.bridgecrew.cloud/incidents) page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.
 
 
 ![AWS Bridgecrew filter pane](./images/filter-aws-only-dash.png "AWS Bridgecrew filter pane")
@@ -64,21 +64,21 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 
 After setting our filter, we can browse through all the security and compliance violations detected in our live AWS account, 
 
-In the example below, we can see an S3 bucket is not encrypted at rest. Selecting a resource from the group of resources on the right hand side will display much more information, including a Terraform representation of the AWS object in question:
+In the example below, we can see an S3 bucket is not encrypted at rest. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00012.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00012.png "AWS Bridgecrew integration")
 
 Further context on the issue and remediation options is also available in the **Guidelines** tab.
 
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00013.png "AWS Bridgecrew Integration")
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00013.png "AWS Bridgecrew integration")
 
 Bridgecrew also alerts on account-wide settings such as user password policies and informational best practices, such as tagging each resource with ownership or purpose information:
 
-##### Untagged Items in Account
+Untagged items in account:
 ![AWS Bridgecrew filter pane](./images/example-tagging-info.png "AWS Bridgecrew filter pane")
 
-##### Weak Account Password Policy
-![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00008.png "AWS Bridgecrew Integration")
+Weak account password policy:
+![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00008.png "AWS Bridgecrew integration")
 
 
 ### Identity and Access Management (IAM) Insights
@@ -93,4 +93,4 @@ IAM Insights will even provide a re-written, rightsized IAM policy document with
 
 ![Rightsizing an IAM policy](./images/iam-insights-rightsizing.png "Rightsizing an IAM policy")
 
-
+Next we'll create some fixes in production.

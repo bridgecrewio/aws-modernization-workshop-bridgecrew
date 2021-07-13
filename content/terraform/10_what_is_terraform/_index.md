@@ -5,9 +5,9 @@ weight: 3
 pre: "<b>2 </b>"
 ---
 
-## What is Infrastructure as Code anyway?
+## What is infrastructure as code anyway?
 
-Infrastructure as code (IaC) frameworks such as AWS CloudFormation, HashiCorp Terraform, and Pulumi, make cloud provisioning scalable and straightforward by leveraging automation and code. Defining our cloud infrastructure in code simplifies repetitive DevOps tasks and gives us a versioned, auditable single source of truth for our environment configurations.
+Infrastructure as code (IaC) frameworks such as AWS CloudFormation, HashiCorp Terraform, and Pulumi make cloud provisioning scalable and straightforward by leveraging automation and code. Defining our cloud infrastructure in code simplifies repetitive DevOps tasks and gives us a versioned, auditable single source of truth for our environment configurations.
 
 HashiCorp Terraform is a multi-cloud IaC tool that allows us to define how we want our infrastructure to look, and it will generate all of the commands to make that happen. Any changes we want to make, such as adding more instances with the same configurations, Terraform will handle for us after we define the changes in our template. 
 

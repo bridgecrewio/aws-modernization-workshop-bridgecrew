@@ -7,7 +7,7 @@ pre: "<b>4.1 </b>"
 
 ## Vulnerable-by-design demo repository setup
 
-This workshop uses our vulnerable-by-design Terraform project, TerraGoat, so that you can scan and automate infrastructure code without the added friction of integrating your own code. Simply clone the open-source project’s repository:
+This workshop uses our vulnerable-by-design Terraform project, [TerraGoat](www.github.com/bridgecrewio/terragoat), so that you can scan and automate infrastructure code without the added friction of integrating your own code. Simply clone the open-source project’s repository:
 
 ```bash
 git clone https://github.com/bridgecrewio/terragoat.git
@@ -15,7 +15,7 @@ cd terragoat
 git status
 ```
 
-Sample output
+Sample output:
 
 ```bash
 $ git clone https://github.com/bridgecrewio/terragoat.git

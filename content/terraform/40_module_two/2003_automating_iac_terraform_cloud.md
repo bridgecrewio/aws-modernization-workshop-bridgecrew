@@ -14,7 +14,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 ## Leveraging Terraform Cloud and Sentinel for Bridgecrew scans
 
-Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
+Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
 
 {{% notice info %}}
 Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the "drift detection" section.
@@ -60,7 +60,7 @@ Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](h
 
 Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud.
 
-Head back to Terraform Cloud and go to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settings/policies)" setting and "Create a new policy". Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
+Head back to Terraform Cloud and go to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settings/policies)" setting and "Create a new policy." Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
 
 ![Add Sentinel Policy](images/sentinel_policy.png "Add Sentinel Policy")
 
@@ -72,7 +72,7 @@ Go back to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settin
 
 ![Policy sets](images/terraform_cloud_policy_sets.png "Policy sets")
 
-Finally, go to your workspace's main page and queue a run. Don't worry if it fails, this just primes the runs to be automated with future GitHub pull requests.
+Finally, go to your workspace's main page and queue a run; don't worry if it fails, this just primes the runs to be automated with future GitHub pull requests.
 
 ![Queue a plan](images/tfc_queue.png "Queue a plan")
 

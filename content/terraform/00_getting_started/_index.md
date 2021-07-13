@@ -5,7 +5,6 @@ weight: 2
 pre: "<b>1 </b>"
 ---
 
-## DevSecWhat?
 The foundation of DevSecOps lies in the DevOps movement, wherein development and operations functions are creating tighter coupling with more collaboration. DevOps tooling usually includes codifying every aspect of an application stack, version controlling all the code (GitOps), and automating the build and deployment process (CI/CD). 
 
 Dev***Sec***Ops is when we embed security into each of those steps.
