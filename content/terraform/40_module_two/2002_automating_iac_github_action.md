@@ -1,6 +1,6 @@
 ---
 title: "GitHub Action"
-chapter: true
+chapter: false
 weight: 203
 pre: "<b>5.2 </b>"
 ---

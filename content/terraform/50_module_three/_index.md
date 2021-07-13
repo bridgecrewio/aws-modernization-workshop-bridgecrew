@@ -1,6 +1,6 @@
 ---
 title: "Module - Fix"
-chapter: false
+chapter: true
 weight: 300
 pre: "<b>6 </b>"
 ---

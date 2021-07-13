@@ -1,6 +1,6 @@
 ---
 title: "Drift detection"
-chapter: true
+chapter: false
 weight: 305
 pre: "<b>6.5 </b>"
 ---

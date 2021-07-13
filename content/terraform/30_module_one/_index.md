@@ -1,6 +1,6 @@
 ---
 title: "Module - Scan"
-chapter: false
+chapter: true
 weight: 100
 pre: "<b>4 </b>"
 ---

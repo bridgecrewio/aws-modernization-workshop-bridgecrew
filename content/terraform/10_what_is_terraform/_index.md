@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code using Terraform"
-chapter: true
+chapter: false
 weight: 3
 pre: "<b>2 </b>"
 ---

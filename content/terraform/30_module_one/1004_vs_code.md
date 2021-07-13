@@ -1,6 +1,6 @@
 ---
 title: "VS Code Plugin"
-chapter: true
+chapter: false
 weight: 104
 pre: "<b>4.4 </b>"
 ---

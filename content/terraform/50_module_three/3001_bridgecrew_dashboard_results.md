@@ -1,6 +1,6 @@
 ---
 title: "Bridgecrew platform results"
-chapter: true
+chapter: false
 weight: 301
 pre: "<b>6.1 </b>"
 ---

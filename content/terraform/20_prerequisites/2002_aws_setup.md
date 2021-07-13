@@ -1,6 +1,6 @@
 ---
 title: "AWS Environment setup"
-chapter: true
+chapter: false
 weight: 6
 pre: "<b>3.2 </b>"
 ---

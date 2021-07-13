@@ -1,6 +1,6 @@
 ---
 title: "TerraGoat"
-chapter: true
+chapter: false
 weight: 101
 pre: "<b>4.1 </b>"
 ---

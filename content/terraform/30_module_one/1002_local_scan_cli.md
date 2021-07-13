@@ -1,6 +1,6 @@
 ---
 title: "Checkov"
-chapter: true
+chapter: false
 weight: 102
 pre: "<b>4.2 </b>"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Pull request fixes"
-chapter: true
+chapter: false
 weight: 302
 pre: "<b>6.2 </b>"
 ---

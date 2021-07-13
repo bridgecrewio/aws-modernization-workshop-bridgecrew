@@ -1,6 +1,6 @@
 ---
 title: "Bridgecrew Dashboard"
-chapter: true
+chapter: false
 weight: 103
 pre: "<b>4.3 </b>"
 ---

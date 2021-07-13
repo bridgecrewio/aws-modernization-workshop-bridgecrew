@@ -1,6 +1,6 @@
 ---
 title: "GitHub Application"
-chapter: true
+chapter: false
 weight: 205
 pre: "<b>5.4 </b>"
 ---

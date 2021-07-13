@@ -1,6 +1,6 @@
 ---
 title: "Terraform Cloud"
-chapter: true
+chapter: false
 weight: 204
 pre: "<b>5.3 </b>"
 ---
