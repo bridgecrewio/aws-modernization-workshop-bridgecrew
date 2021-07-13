@@ -1,5 +1,5 @@
 ---
-title: "Fork the TerraGoat repository"
+title: "Fork TerraGoat"
 chapter: true
 weight: 202
 pre: "<b>5.1 </b>"

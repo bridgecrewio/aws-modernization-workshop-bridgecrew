@@ -1,6 +1,6 @@
 ---
 title: "Terraform Environment"
-chapter: true
+chapter: false
 weight: 5
 pre: "<b>3.1 </b>"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Test Pull Request"
+title: "Test pull request"
 chapter: true
 weight: 206
 pre: "<b>5.5 </b>"

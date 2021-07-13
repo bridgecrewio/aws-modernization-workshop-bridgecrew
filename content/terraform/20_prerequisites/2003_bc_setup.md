@@ -1,5 +1,5 @@
 ﻿---
-title: "Bridgecrew Setup"
+title: "Bridgecrew setup"
 chapter: false
 weight: 7
 pre: "<b>3.3 </b>"
