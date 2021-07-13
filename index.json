@@ -144,7 +144,7 @@
 	"title": "Module - Scan",
 	"tags": [],
 	"description": "",
-	"content": " In this module, we’ll identify common misconfigurations and security best practices in Terraform.\nModule Learning Objectives  Create a demo environment using our vulnerable-by-design TerraGoat project Scan a Terraform template and directory for misconfigurations using two methods Investigate policy violations in the Bridgecrew platform  "
+	"content": " MODULE - SCAN In this module, we’ll identify common misconfigurations and security best practices in Terraform.\nModule Learning Objectives  Create a demo environment using our vulnerable-by-design TerraGoat project Scan a Terraform template and directory for misconfigurations using two methods Investigate policy violations in the Bridgecrew platform  "
 },
 {
 	"uri": "/aws/10_module_one/1001_cfngoat.html",
@@ -305,7 +305,7 @@
 	"title": "Module - Fix",
 	"tags": [],
 	"description": "",
-	"content": " We’ve covered scanning for misconfigurations during the development cycle and prior to committing to our repository. We can alert or block at each stage to provide that feedback early and make updates before the issues make it into production.\nIn this module, we’ll show how to visualize our posture and automate remediations. We teased this module in the VS Code section, where we performed our first fix, but in this section, we’ll fix the issues that make it into our repository and in production.\nModule Learning Objectives  Investigate security violations in Bridgecrew Automate pull requests in GitHub Scan runtime resources for vulnerable infrastructure Detect and mitigate drift  "
+	"content": " MODULE - FIX We’ve covered scanning for misconfigurations during the development cycle and prior to committing to our repository. We can alert or block at each stage to provide that feedback early and make updates before the issues make it into production.\nIn this module, we’ll show how to visualize our posture and automate remediations. We teased this module in the VS Code section, where we performed our first fix, but in this section, we’ll fix the issues that make it into our repository and in production.\nModule Learning Objectives  Investigate security violations in Bridgecrew Automate pull requests in GitHub Scan runtime resources for vulnerable infrastructure Detect and mitigate drift  "
 },
 {
 	"uri": "/aws/30_module_three/3001_bridgecrew_dashboard_results.html",
@@ -389,7 +389,7 @@
 	"title": "Conclusion",
 	"tags": [],
 	"description": "",
-	"content": "In this workshop, we didn’t just learn how to identify and automate fixing misconfigurations — we learned how to bridge the gap between infrastructure development, DevOps, and cloud security. We are now equipped with full visibility, guardrails, and remediation capabilities across the development lifecycle. We also learned how important and easy it is to make security accessible to our engineering teams.\nTry more of the integrations with other popular developer and DevOps tools. Share what you’ve found with other members of your team and show how easy it is to incorporate this into their development processes. This will show how we can collaborate on the same security dashboard from the User Management page.\nIf you have any questions or thoughts, find us @bridgecrewio on Twitter, or say hi! in our #CodifiedSecurity Slack channel!\n"
+	"content": " CONCLUSION In this workshop, we didn’t just learn how to identify and automate fixing misconfigurations — we learned how to bridge the gap between infrastructure development, DevOps, and cloud security. We are now equipped with full visibility, guardrails, and remediation capabilities across the development lifecycle. We also learned how important and easy it is to make security accessible to our engineering teams.\nTry more of the integrations with other popular developer and DevOps tools. Share what you’ve found with other members of your team and show how easy it is to incorporate this into their development processes. This will show how we can collaborate on the same security dashboard from the User Management page.\nIf you have any questions or thoughts, find us @bridgecrewio on Twitter, or say hi! in our #CodifiedSecurity Slack channel!\n"
 },
 {
 	"uri": "/aws/100_cleanup.html",
