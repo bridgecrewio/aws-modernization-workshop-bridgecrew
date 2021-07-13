@@ -6,6 +6,7 @@ pre: "<b>5 </b>"
 ---
 
 # MODULE - AUTOMATE
+
 In the previous section, we used Checkov and VS Code extension to scan our Terraform templates locally. However, we can’t expect consistency if the process is one-off. We need to continuously scan the code for misconfigurations before it makes its way into production.
 
 That’s where automating IaC scanning in our continuous integration/continuous delivery (CI/CD) pipeline comes in. With Bridgecrew, we can scan templates before they are committed to our VCS when you run other unit and integration testing, or in your VCS. This allows you to provide automated feedback as a part of a CI run and, if in blocking mode, block misconfigured code.

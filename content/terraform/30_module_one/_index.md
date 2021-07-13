@@ -5,6 +5,8 @@ weight: 100
 pre: "<b>4 </b>"
 ---
 
+# MODULE - SCAN
+
 In this module, we’ll identify common misconfigurations and security best practices in Terraform.
 
 ### Module Learning Objectives
