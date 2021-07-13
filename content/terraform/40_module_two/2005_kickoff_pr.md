@@ -56,10 +56,11 @@ Select "Create a new branch" and "Propose new file."
 ![Propose new file](images/github_propose_new_file.png "Propose new file")
 
 Then "Create a pull request." After a few seconds, you should automatically see Code Review Comments. Expand one to see the additional details like Fix recommendations. At the bottom, you should see five checks:
-* The Checkov GitHub Action
-* The Bridgecrew GitHub Action
-* The Bridgecrew GitHub Application
-* Two Terraform Cloud integration checks
+
+- The Checkov GitHub Action
+- The Bridgecrew GitHub Action
+- The Bridgecrew GitHub Application
+- Two Terraform Cloud integration checks
 
 ![All the GitHub integrations](images/github_checks.png "All the GitHub integrations")
 
