@@ -85,7 +85,7 @@
 },
 {
 	"uri": "/terraform/20_prerequisites/2003_bc_setup.html",
-	"title": "Bridgecrew Setup",
+	"title": "Bridgecrew setup",
 	"tags": [],
 	"description": "",
 	"content": " You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account here.\nCheckov In this tutorial, we’re also going to use Checkov. Checkov works on Windows, Mac, and Linux. You can install it with pip:\npip3 install checkov If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:\nsudo pip3 install checkov If you run into problems, try the alternate install instructions.\nBridgecrew API token Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access it here or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.\n"
@@ -225,7 +225,7 @@
 },
 {
 	"uri": "/terraform/40_module_two/2001_automating_iac_github.html",
-	"title": "Fork the TerraGoat repository",
+	"title": "Fork TerraGoat",
 	"tags": [],
 	"description": "",
 	"content": " Fork the TerraGoat repository on GitHub To set up your demo environment, you can push your local clone of TerraGoat or fork the repository. We’re doing the second option.\nHead over to the TerraGoat repository and fork it using the button in the upper right corner.\nIf you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account via your username in the list to fork the repo.\nTime to integrate an automatic scan in our CI/CD pipeline!\n"
@@ -281,7 +281,7 @@
 },
 {
 	"uri": "/terraform/40_module_two/2005_kickoff_pr.html",
-	"title": "Test Pull Request",
+	"title": "Test pull request",
 	"tags": [],
 	"description": "",
 	"content": " Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select \u0026ldquo;Add file\u0026rdquo; -\u0026gt; \u0026ldquo;Create new file.\u0026rdquo; Set the path to terragoat-demo-test/terraform/simple_instance/ec2.tf. Add the following code:\nprovider \u0026#34;aws\u0026#34; { region = \u0026#34;us-east-1\u0026#34; } resource \u0026#34;aws_security_group\u0026#34; \u0026#34;ssh_traffic\u0026#34; { name = \u0026#34;ssh_traffic\u0026#34; description = \u0026#34;Allow SSH inbound traffic\u0026#34; ingress { description = \u0026#34;SSH\u0026#34; from_port = 22 to_port = 22 protocol = \u0026#34;tcp\u0026#34; cidr_blocks = [\u0026#34;0.0.0.0/0\u0026#34;] } } resource \u0026#34;aws_instance\u0026#34; \u0026#34;web_server_instance\u0026#34; { ami = data.aws_ami.ubuntu.id instance_type = \u0026#34;t2.micro\u0026#34; security_groups = [ \u0026#34;${aws_security_group.ssh_traffic.name}\u0026#34; ] } data \u0026#34;aws_ami\u0026#34; \u0026#34;ubuntu\u0026#34; { most_recent = true filter { name = \u0026#34;name\u0026#34; values = [\u0026#34;ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*\u0026#34;] } filter { name = \u0026#34;virtualization-type\u0026#34; values = [\u0026#34;hvm\u0026#34;] } owners = [\u0026#34;099720109477\u0026#34;] # Canonical } Select \u0026ldquo;Create a new branch\u0026rdquo; and \u0026ldquo;Propose new file.\u0026rdquo;\nThen \u0026ldquo;Create a pull request.\u0026rdquo; After a few seconds, you should automatically see Code Review Comments. Expand one to see the additional details like Fix recommendations. At the bottom, you should see five checks:\n The Checkov GitHub Action The Bridgecrew GitHub Action The Bridgecrew GitHub Application Two Terraform Cloud integration checks  You can fix the violations later, but for now, click \u0026ldquo;Merge pull request\u0026rdquo; and \u0026ldquo;Confirm merge.\u0026rdquo; Head back over to Terraform Cloud and select the latest run. You\u0026rsquo;ll again see the policy violations, but since we set the failure level to \u0026ldquo;advisory (logging only),\u0026rdquo; we can still apply the template.\nWe\u0026rsquo;re using a free tier instance (t2-micro), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.\n Click \u0026ldquo;Confirm \u0026amp; Apply.\u0026rdquo; This will deploy the simple EC2 instance and security group. Optionally, head over to your AWS console to confirm an instance was created.\nCongratulations! You’ve now set up a GitHub Action, a Terraform Cloud integration, and a GitHub Application to secure your Terraform templates.\nIn the next module, you’ll look at how to investigate and fix the issues arising from the automated scans, as well as providing more tips for integrating security into the developer workflow without causing friction.\n"

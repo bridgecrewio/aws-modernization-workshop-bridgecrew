@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/terraform/40_module_two/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fork the TerraGoat repository</title>
+      <title>Fork TerraGoat</title>
       <link>/terraform/40_module_two/2001_automating_iac_github.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -48,7 +48,7 @@ Choose which accounts and repositories to grant the Bridgecrew GitHub integratio
     </item>
     
     <item>
-      <title>Test Pull Request</title>
+      <title>Test pull request</title>
       <link>/terraform/40_module_two/2005_kickoff_pr.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
