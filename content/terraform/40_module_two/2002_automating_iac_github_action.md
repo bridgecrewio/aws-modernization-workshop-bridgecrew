@@ -58,7 +58,7 @@ Name the new file bridgecrew.yaml and replace the entire contents with the workf
 ```
 name: Bridgecrew
 on:
-  pull-request:
+  pull_request:
   push:
     branches:
       - master
