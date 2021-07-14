@@ -11,7 +11,7 @@
 	"title": "Cloud DevSecOps with Bridgecrew",
 	"tags": [],
 	"description": "",
-	"content": " Welcome! "
+	"content": "  a { color: inherit; text-decoration: none; } \nWelcome! \nAWS workshop Learn about securing CloudFormation templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, CodeBuild, CodePipeline, GitHub and AWS runtime\n    Terraform workshop Learn about securing Terraform templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, GitHub, Terraform Cloud, and AWS runtime\n     \n"
 },
 {
 	"uri": "/terraform.html",
