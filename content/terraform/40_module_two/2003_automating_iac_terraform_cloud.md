@@ -20,7 +20,7 @@ Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel
 Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the "drift detection" section.
 {{% /notice %}}
 
-To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. Select “Settings” and “Plan & Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.
+To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan & Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.
 
 ![Terraform Cloud plans](images/terraform_cloud_signup.png "Terraform Cloud plans")
 
@@ -44,7 +44,7 @@ Select “Configure variables” and add your AWS Account and Access Keys as env
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
 
-Go to Settings and select General. From this settings screen, grab your workspace ID for the next step.
+Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.
 
 ![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
 
@@ -60,15 +60,15 @@ Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](h
 
 Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud.
 
-Head back to Terraform Cloud and go to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settings/policies)" setting and "Create a new policy." Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
+Head back to Terraform Cloud and go to the “Policies" setting and "Create a new policy." Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
 
 ![Add Sentinel Policy](images/sentinel_policy.png "Add Sentinel Policy")
 
-Select “[Policy Sets](https://app.terraform.io/app/bridgecrew-demo/settings/policy-sets)” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the `terragoat` workspace and select “Connect policy set”.
+Select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the `terragoat` workspace and select “Connect policy set”.
 
 ![Connect the policy set](images/terraform_cloud_connect_policy_set.png "Connect the policy set")
 
-Go back to the “[Policies](https://app.terraform.io/app/bridgecrew-demo/settings/policies)” section and select the policy you made. Scroll down to the “Policy Sets” section and add the `terragoat_set` you made.
+Go back to the “Policies” section and select the policy you made. Scroll down to the “Policy Sets” section and add the `terragoat_set` you made.
 
 ![Policy sets](images/terraform_cloud_policy_sets.png "Policy sets")
 
