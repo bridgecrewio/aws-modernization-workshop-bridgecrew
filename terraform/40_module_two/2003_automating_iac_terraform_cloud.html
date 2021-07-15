@@ -12,22 +12,22 @@
     <title>Terraform Cloud :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1626301782" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1626301782" rel="stylesheet">
-    <link href="../../css/hybrid.css?1626301782" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1626301782" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1626301782" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1626301782" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1626301782" rel="stylesheet">
-    <link href="../../css/theme.css?1626301782" rel="stylesheet">
-    <link href="../../css/tabs.css?1626301782" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1626301782" rel="stylesheet">
+    <link href="../../css/nucleus.css?1626389861" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1626389861" rel="stylesheet">
+    <link href="../../css/hybrid.css?1626389861" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1626389861" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1626389861" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1626389861" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1626389861" rel="stylesheet">
+    <link href="../../css/theme.css?1626389861" rel="stylesheet">
+    <link href="../../css/tabs.css?1626389861" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1626389861" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1626301782" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1626389861" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1626301782"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1626389861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1626301782"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1626301782"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1626389861"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1626389861"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1626301782"></script>
+<script type="text/javascript" src="../../js/search.js?1626389861"></script>
 
     
   </div>
@@ -1715,7 +1715,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 </div>
 
 
-<p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. Select “Settings” and “Plan &amp; Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
+<p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan &amp; Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
 
 <p><img src="images/terraform_cloud_signup.png" alt="Terraform Cloud plans" title="Terraform Cloud plans" /></p>
 
@@ -1739,7 +1739,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p><img src="images/terraform_cloud_env_variables.png" alt="Add environment variables" title="Add environment variables" /></p>
 
-<p>Go to Settings and select General. From this settings screen, grab your workspace ID for the next step.</p>
+<p>Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.</p>
 
 <p><img src="images/terraform_cloud_workspace_id.png" alt="Grab your workspace ID" title="Grab your workspace ID" /></p>
 
@@ -1755,15 +1755,15 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p>Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud.</p>
 
-<p>Head back to Terraform Cloud and go to the “<a href="https://app.terraform.io/app/bridgecrew-demo/settings/policies" target="_blank">Policies</a>&rdquo; setting and &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code> and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:</p>
+<p>Head back to Terraform Cloud and go to the “Policies&rdquo; setting and &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code> and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:</p>
 
 <p><img src="images/sentinel_policy.png" alt="Add Sentinel Policy" title="Add Sentinel Policy" /></p>
 
-<p>Select “<a href="https://app.terraform.io/app/bridgecrew-demo/settings/policy-sets" target="_blank">Policy Sets</a>” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the <code>terragoat</code> workspace and select “Connect policy set”.</p>
+<p>Select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the <code>terragoat</code> workspace and select “Connect policy set”.</p>
 
 <p><img src="images/terraform_cloud_connect_policy_set.png" alt="Connect the policy set" title="Connect the policy set" /></p>
 
-<p>Go back to the “<a href="https://app.terraform.io/app/bridgecrew-demo/settings/policies" target="_blank">Policies</a>” section and select the policy you made. Scroll down to the “Policy Sets” section and add the <code>terragoat_set</code> you made.</p>
+<p>Go back to the “Policies” section and select the policy you made. Scroll down to the “Policy Sets” section and add the <code>terragoat_set</code> you made.</p>
 
 <p><img src="images/terraform_cloud_policy_sets.png" alt="Policy sets" title="Policy sets" /></p>
 
@@ -2753,19 +2753,19 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1626301782"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1626301782"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1626301782"></script>
-    <script src="../../js/jquery.sticky.js?1626301782"></script>
-    <script src="../../js/featherlight.min.js?1626301782"></script>
-    <script src="../../js/highlight.pack.js?1626301782"></script>
+    <script src="../../js/clipboard.min.js?1626389861"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1626389861"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1626389861"></script>
+    <script src="../../js/jquery.sticky.js?1626389861"></script>
+    <script src="../../js/featherlight.min.js?1626389861"></script>
+    <script src="../../js/highlight.pack.js?1626389861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1626301782"></script>
-    <script src="../../js/learn.js?1626301782"></script>
-    <script src="../../js/hugo-learn.js?1626301782"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1626389861"></script>
+    <script src="../../js/learn.js?1626389861"></script>
+    <script src="../../js/hugo-learn.js?1626389861"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1626301782"></script>
+            <script src="../../mermaid/mermaid.js?1626389861"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
