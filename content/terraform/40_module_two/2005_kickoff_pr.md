@@ -7,7 +7,7 @@ pre: "<b>5.5 </b>"
 
 ## Kick off a test pull request
 
-Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select "Add file" -> "Create new file." Set the path to `terragoat-demo-test/terraform/simple_instance/ec2.tf`. Add the following code:
+Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select "Add file" -> "Create new file." Set the path to `terragoat/terraform/simple_instance/ec2.tf`. Add the following code:
 
 ```
 provider "aws" {
@@ -30,6 +30,9 @@ resource "aws_instance" "web_server_instance" {
   ami = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   security_groups = [ "${aws_security_group.ssh_traffic.name}" ]
+  tags = {
+    Name = "bc_workshop_ec2"
+  }
 }
 
 data "aws_ami" "ubuntu" {

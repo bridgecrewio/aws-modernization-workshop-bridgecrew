@@ -58,7 +58,7 @@ Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](h
 
 ![Add TFC details to Bridgecrew](images/bc_tfc_details.png "Add TFC details to Bridgecrew")
 
-Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud.
+Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud. Copy the code from section 3 of the output.
 
 Head back to Terraform Cloud and go to the “Policies" setting and "Create a new policy." Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
 
