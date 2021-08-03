@@ -32,3 +32,9 @@ If you run into problems, try the [alternate install instructions](https://docs.
 Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access [it here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.
 
 ![Bridgecrew API token](./images/dashboardapitoken1.png)
+
+We'll use the API token in a few places with the environment variable `YOUR_BC_API_KEY`. To make following along easier, set this variable to equal your API token using the following command in your terminal:
+
+```bash
+YOUR_BC_API_KEY=<paste-bc-api-key-here>
+```

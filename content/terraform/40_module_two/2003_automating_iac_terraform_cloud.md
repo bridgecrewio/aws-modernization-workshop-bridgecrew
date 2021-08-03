@@ -60,7 +60,9 @@ Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](h
 
 Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud. Copy the code from section 3 of the output.
 
-Head back to Terraform Cloud and go to the “Policies" setting and "Create a new policy." Name the policy `bridgecrew` and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
+Head back to Terraform Cloud and go to the “Policies" setting and "Create a new policy." Name the policy `bridgecrew`. The "Enforcement mode" will determine whether builds are blocked (`hard-mandatory`) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (`soft-mandatory`), or just provide the violations but don't block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to `advisory (logging only)`.
+
+Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
 
 ![Add Sentinel Policy](images/sentinel_policy.png "Add Sentinel Policy")
 

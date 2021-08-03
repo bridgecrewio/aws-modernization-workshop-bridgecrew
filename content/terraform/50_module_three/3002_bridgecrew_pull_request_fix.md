@@ -9,7 +9,7 @@ pre: "<b>6.2 </b>"
 
 Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository.
 
-Let’s walk through the process with one of the policies you looked at earlier, "S3 Bucket has an ACL defined which allows public READ access."
+Let’s walk through the process with one of the policies you looked at earlier, "Ensure bucket ACL does not grant READ permission to everyone"
 
 ![Bridgecrew Projects page](images/bridgecrew_projects_page2.png "Bridgecrew Projects page")
 

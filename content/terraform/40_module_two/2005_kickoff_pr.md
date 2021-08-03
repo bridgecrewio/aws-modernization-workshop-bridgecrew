@@ -7,7 +7,7 @@ pre: "<b>5.5 </b>"
 
 ## Kick off a test pull request
 
-Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select "Add file" -> "Create new file." Set the path to `terragoat/terraform/simple_instance/ec2.tf`. Add the following code:
+Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select "Add file" -> "Create new file." Set the path to `terraform/simple_instance/ec2.tf`. Add the following code:
 
 ```
 provider "aws" {

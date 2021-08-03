@@ -16,7 +16,6 @@ To demonstrate what kinds of security and compliance errors Bridgecrew can ident
 Make sure you are in the cloned directory from the previous step, copy your unique Bridgecrew API token, and scan the `s3.tf` in the `aws` directory:
 
 ```bash
-cd terragoat
 checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3
 ```
 
