@@ -269,7 +269,7 @@ If everything goes as intended, the pipeline should fail at the build stage sinc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
-      <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terragoat/terraform/simple_instance/ec2.tf. Add the following code:
+      <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terraform/simple_instance/ec2.tf. Add the following code:
 provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource &amp;#34;aws_security_group&amp;#34; &amp;#34;ssh_traffic&amp;#34; { name = &amp;#34;ssh_traffic&amp;#34; description = &amp;#34;Allow SSH inbound traffic&amp;#34; ingress { description = &amp;#34;SSH&amp;#34; from_port = 22 to_port = 22 protocol = &amp;#34;tcp&amp;#34; cidr_blocks = [&amp;#34;0.</description>
     </item>
     
@@ -322,7 +322,7 @@ Just like we did for the AWS CodePipeline GitHub authorization, choose which acc
       
       <guid>/terraform/50_module_three/3002_bridgecrew_pull_request_fix.html</guid>
       <description>Automating fixes through pull requests Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository.
-Let’s walk through the process with one of the policies you looked at earlier, &amp;ldquo;S3 Bucket has an ACL defined which allows public READ access.</description>
+Let’s walk through the process with one of the policies you looked at earlier, &amp;ldquo;Ensure bucket ACL does not grant READ permission to everyone&amp;rdquo;</description>
     </item>
     
     <item>
@@ -351,8 +351,7 @@ Let’s walk through the process with one of the policies we looked at earlier, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html</guid>
-      <description>Automating fixes in runtime Similar to what we did with pull request fixes in the previous module, Bridgecrew allows for immediate remediation of issues in runtime by reconfiguring your objects via the AWS APIs.
-Implementing automated remediations does require extra permissions than previously granted with the default AWS Read Only integration. When you attempt a runtime remediation without the correct permissions, you’ll be prompted to configure the AWS Remediation Stack:</description>
+      <description>Automating fixes in runtime Similar to what we did with pull request fixes in the previous module, Bridgecrew allows for immediate remediation of issues in runtime by reconfiguring your objects via the AWS APIs. Typically, it&amp;rsquo;s a best practice to make all changes to IaC provisioned resources in the code that provisioned them or else you create drift (discussed next). However, for resources not provisioned using IaC templates, runtime remediations make meeting compliance much easier.</description>
     </item>
     
     <item>

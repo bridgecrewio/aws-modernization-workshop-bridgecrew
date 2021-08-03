@@ -12,22 +12,22 @@
     <title>Checkov :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1627454962" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/hybrid.css?1627454962" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1627454962" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1627454962" rel="stylesheet">
-    <link href="../../css/theme.css?1627454962" rel="stylesheet">
-    <link href="../../css/tabs.css?1627454962" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1627454962" rel="stylesheet">
+    <link href="../../css/nucleus.css?1627977492" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/hybrid.css?1627977492" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1627977492" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1627977492" rel="stylesheet">
+    <link href="../../css/theme.css?1627977492" rel="stylesheet">
+    <link href="../../css/tabs.css?1627977492" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1627977492" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1627454962" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1627977492" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1627454962"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1627977492"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1627454962"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1627454962"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1627977492"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1627977492"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1627454962"></script>
+<script type="text/javascript" src="../../js/search.js?1627977492"></script>
 
     
   </div>
@@ -1709,8 +1709,7 @@
 <p>To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</p>
 
 <p>Make sure you are in the cloned directory from the previous step, copy your unique Bridgecrew API token, and scan the <code>s3.tf</code> in the <code>aws</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd terragoat
-checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3</code></pre></div>
 <p>You can also scan entire directories with -d <path>, such as the <code>aws</code> directory:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -d terraform/aws/ --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/awsterragoat</code></pre></div>
 <p>You can use Checkov without <code>--bc-api-key</code> to display the results in the command line without uploading to the Bridgecrew platform for testing or local-only scan results.</p>
@@ -2708,19 +2707,19 @@ In many instances, when testing locally with the Checkov, you may only be intere
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1627454962"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1627454962"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1627454962"></script>
-    <script src="../../js/jquery.sticky.js?1627454962"></script>
-    <script src="../../js/featherlight.min.js?1627454962"></script>
-    <script src="../../js/highlight.pack.js?1627454962"></script>
+    <script src="../../js/clipboard.min.js?1627977492"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1627977492"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1627977492"></script>
+    <script src="../../js/jquery.sticky.js?1627977492"></script>
+    <script src="../../js/featherlight.min.js?1627977492"></script>
+    <script src="../../js/highlight.pack.js?1627977492"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1627454962"></script>
-    <script src="../../js/learn.js?1627454962"></script>
-    <script src="../../js/hugo-learn.js?1627454962"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1627977492"></script>
+    <script src="../../js/learn.js?1627977492"></script>
+    <script src="../../js/hugo-learn.js?1627977492"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1627454962"></script>
+            <script src="../../mermaid/mermaid.js?1627977492"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -12,22 +12,22 @@
     <title>Terraform Cloud :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1627454962" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/hybrid.css?1627454962" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1627454962" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1627454962" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1627454962" rel="stylesheet">
-    <link href="../../css/theme.css?1627454962" rel="stylesheet">
-    <link href="../../css/tabs.css?1627454962" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1627454962" rel="stylesheet">
+    <link href="../../css/nucleus.css?1627977492" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/hybrid.css?1627977492" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1627977492" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1627977492" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1627977492" rel="stylesheet">
+    <link href="../../css/theme.css?1627977492" rel="stylesheet">
+    <link href="../../css/tabs.css?1627977492" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1627977492" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1627454962" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1627977492" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1627454962"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1627977492"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1627454962"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1627454962"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1627977492"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1627977492"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1627454962"></script>
+<script type="text/javascript" src="../../js/search.js?1627977492"></script>
 
     
   </div>
@@ -1755,7 +1755,9 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p>Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud. Copy the code from section 3 of the output.</p>
 
-<p>Head back to Terraform Cloud and go to the “Policies&rdquo; setting and &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code> and paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:</p>
+<p>Head back to Terraform Cloud and go to the “Policies&rdquo; setting and &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code>. The &ldquo;Enforcement mode&rdquo; will determine whether builds are blocked (<code>hard-mandatory</code>) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (<code>soft-mandatory</code>), or just provide the violations but don&rsquo;t block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to <code>advisory (logging only)</code>.</p>
+
+<p>Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:</p>
 
 <p><img src="images/sentinel_policy.png" alt="Add Sentinel Policy" title="Add Sentinel Policy" /></p>
 
@@ -2753,19 +2755,19 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1627454962"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1627454962"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1627454962"></script>
-    <script src="../../js/jquery.sticky.js?1627454962"></script>
-    <script src="../../js/featherlight.min.js?1627454962"></script>
-    <script src="../../js/highlight.pack.js?1627454962"></script>
+    <script src="../../js/clipboard.min.js?1627977492"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1627977492"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1627977492"></script>
+    <script src="../../js/jquery.sticky.js?1627977492"></script>
+    <script src="../../js/featherlight.min.js?1627977492"></script>
+    <script src="../../js/highlight.pack.js?1627977492"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1627454962"></script>
-    <script src="../../js/learn.js?1627454962"></script>
-    <script src="../../js/hugo-learn.js?1627454962"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1627977492"></script>
+    <script src="../../js/learn.js?1627977492"></script>
+    <script src="../../js/hugo-learn.js?1627977492"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1627454962"></script>
+            <script src="../../mermaid/mermaid.js?1627977492"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
