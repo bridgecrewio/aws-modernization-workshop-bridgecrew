@@ -64,7 +64,7 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 
 After setting our filter, we can browse through all the security and compliance violations detected in our live AWS account, 
 
-In the example below, we can see an S3 bucket is not encrypted at rest. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:
+In the example below, we can see the security group we deployed previously that opens port 22 to all traffic. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00012.png "AWS Bridgecrew integration")
 
