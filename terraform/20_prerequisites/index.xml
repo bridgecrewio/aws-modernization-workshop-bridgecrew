@@ -27,17 +27,6 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     </item>
     
     <item>
-      <title>Bridgecrew setup</title>
-      <link>/terraform/20_prerequisites/2003_bc_setup.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/20_prerequisites/2003_bc_setup.html</guid>
-      <description>You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account here.
-Checkov In this tutorial, we’re also going to use Checkov. Checkov works on Windows, Mac, and Linux. You can install it with pip:
-pip3 install checkov If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:</description>
-    </item>
-    
-    <item>
       <title>At an AWS Event</title>
       <link>/terraform/20_prerequisites/2002a_event_engine.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -56,6 +45,17 @@ e8476example Create AWS Account 1 . Connect to the portal by clicking the button
       <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
  AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
   If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
+    </item>
+    
+    <item>
+      <title>Bridgecrew setup</title>
+      <link>/terraform/20_prerequisites/2003_bc_setup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/20_prerequisites/2003_bc_setup.html</guid>
+      <description>You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account here.
+Checkov In this tutorial, we’re also going to use Checkov. Checkov works on Windows, Mac, and Linux. You can install it with pip:
+pip3 install checkov If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:</description>
     </item>
     
   </channel>
