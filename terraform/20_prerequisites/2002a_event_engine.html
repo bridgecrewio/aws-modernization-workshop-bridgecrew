@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>GitHub Actions :: Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>At an AWS Event :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
     <link href="../../css/nucleus.css?1630053860" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../aws/20_module_two/2006_automating_iac_github_actions.html">
+  <body class="" data-url="../../terraform/20_prerequisites/2002a_event_engine.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -91,7 +91,7 @@
   
     
     <li data-nav-id="/aws.html" title="AWS Workshop" class="dd-item
-        parent
+        
         
         
         ">
@@ -540,7 +540,7 @@
   
     
     <li data-nav-id="/aws/20_module_two.html" title="Module - Automate" class="dd-item
-        parent
+        
         
         
         ">
@@ -673,7 +673,7 @@
  
   
     
-      <li data-nav-id="/aws/20_module_two/2006_automating_iac_github_actions.html" title="GitHub Actions" class="dd-item active">
+      <li data-nav-id="/aws/20_module_two/2006_automating_iac_github_actions.html" title="GitHub Actions" class="dd-item ">
         <a href="../../aws/20_module_two/2006_automating_iac_github_actions.html">
         <b>5.6 </b>GitHub Actions
         <i class="fas fa-check read-icon"></i>
@@ -910,7 +910,7 @@
   
     
     <li data-nav-id="/terraform.html" title="Terraform Workshop" class="dd-item
-        
+        parent
         
         
         ">
@@ -997,7 +997,7 @@
   
     
     <li data-nav-id="/terraform/20_prerequisites.html" title="Prerequisites" class="dd-item
-        
+        parent
         
         
         ">
@@ -1067,7 +1067,7 @@
  
   
     
-      <li data-nav-id="/terraform/20_prerequisites/2002a_event_engine.html" title="At an AWS Event" class="dd-item ">
+      <li data-nav-id="/terraform/20_prerequisites/2002a_event_engine.html" title="At an AWS Event" class="dd-item active">
         <a href="../../terraform/20_prerequisites/2002a_event_engine.html">
         <b>3.2.1 </b>At an AWS Event
         <i class="fas fa-check read-icon"></i>
@@ -1674,6 +1674,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1692,7 +1694,7 @@
             
           
           
-            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../aws.html'>AWS Workshop</a> > <a href='../../aws/20_module_two.html'>Module - Automate</a> > GitHub Actions
+            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Terraform Workshop</a> > <a href='../../terraform/20_prerequisites.html'>Prerequisites</a> > At an AWS Event
           
         
           
@@ -1705,6 +1707,23 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#using-aws-event-engine">Using AWS Event engine</a>
+<ul>
+<li><a href="#e8476example"><code>e8476example</code></a>
+<ul>
+<li><a href="#create-aws-account">Create AWS Account</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1712,9 +1731,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              At an AWS Event
+            </h1>
           
 
         
@@ -1722,120 +1744,38 @@
 
 
 
-<h2 id="setting-up-github-actions-for-our-cloudformation-repository">Setting up GitHub Actions for our CloudFormation repository.</h2>
+<h1 id="using-aws-event-engine">Using AWS Event engine</h1>
 
-<p>If your existing CI/CD Pipeline runs in GitHub Actions, this can also be configured to scan the CloudFormation templates before deployment, allowing us to fail the build job and halt a deployment if there are any security violations in our CloudFormation code.</p>
+<p>To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:</p>
 
-<p>As with AWS CodeBuild, we’ll also automatically send the results to Brigecrew to maintain a view across all of our infrastructure projects and share visibility throughout our organization.</p>
+<h2 id="e8476example"><code>e8476example</code></h2>
 
+<h3 id="create-aws-account">Create AWS Account</h3>
 
-<div class="notices info" ><p>Generally speaking, you wouldn&rsquo;t configure both CI/CD solutions for a single repository, consider this page informational only if you have followed through the AWS CodeBuild and AWS CodeDeploy sections, the observability provided into the Bridgecrew platform will be similar.</p>
-</div>
+<p>1 . Connect to the portal by clicking the button or browsing to <a href="https://dashboard.eventengine.run/" target="_blank">https://dashboard.eventengine.run/</a>. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to <strong>Accept Terms &amp; Login</strong>. Click on that button to continue.</p>
 
+<p><img src="../../images/event-engine-initial-screen.png" alt="Event Engine" /></p>
 
-<p>As with other Integrations, the GitHub Actions CI/CD integration page at <a href="https://www.bridgecrew.cloud/integrations/githubActions" target="_blank">https://www.bridgecrew.cloud/integrations/githubActions</a> allows us to setup GitHub Actions, select <strong>Add Subscription</strong>.</p>
+<p>2 . Choose <strong>AWS Console</strong>, then <strong>Open AWS Console</strong>.
+This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.</p>
 
-<p><img src="./images/github_action_1.png" alt="GitHub Action Integration in Bridgecrew" title="GitHub Action Integration in Bridgecrew" /></p>
+<p><img src="../../images/event-engine-dashboard.png" alt="Event Engine Dashboard" /></p>
 
-<p>The integration provides steps to enable GitHub actions, which we&rsquo;ll walk through below.</p>
+<p>3 . Use a single region for the duration of this workshop. This workshop supports the following regions:</p>
 
-<p><img src="./images/github_action_1a1.png" alt="GitHub Action Integration in Bridgecrew" title="GitHub Action Integration in Bridgecrew" /></p>
+<ul>
+<li>us-west-2 (US West - Oregon)</li>
+</ul>
 
-<p>Firstly, just like we stored the Bridgecrew API secret in <code>aws ssm put-parameter</code> for CodeBuild, allowing the CI/CD run to securely access the secret, we do the same with GitHub Actions, by creating a GitHub secret, this prevents our API key being exposed in the configuration (which is stored in our codebase).</p>
+<p>Please select <strong>US West (Oregon)</strong> in the top right corner.</p>
 
-<p>Go to your <strong>fork of CFNGoat on GitHub</strong>, select <strong>Settings</strong></p>
-
-<p><img src="./images/github_action_2.png" alt="CFNGoat fork in GitHub" title="CFNGoat fork in GitHub" /></p>
-
-<p>Then select <strong>Secrets</strong> from the left, and click <strong>New Repository Secret</strong></p>
-
-<p><img src="./images/github_action_3.png" alt="CFNGoat fork in GitHub" title="CFNGoat fork in GitHub" /></p>
-
-<p>Name the secret <code>BRIDGECREW_API_KEY</code> as instructed in the Bridgecrew integration details above.</p>
-
-<p>Copy and paste your API Token from the Bridgecrew integration details page into the <code>value</code> field.</p>
-
-<p><img src="./images/github_action_4.png" alt="CFNGoat repository secrets" title="CFNGoat repository secrets" /></p>
-
-<p>Select <strong>Add secret</strong>, the secret will then be listed by name in the <strong>Settings &gt; Secrets</strong> page you&rsquo;ll be taken back too.</p>
-
-<p><img src="./images/github_action_5.png" alt="CFNGoat repository secrets" title="CFNGoat repository secrets" /></p>
-
-<h3 id="adding-the-automated-workflow">Adding the automated workflow.</h3>
-
-
-<div class="notices info" ><p>Github Actions are defined as <em>workflow</em> files, within your code repository under the <code>.github/workflows</code> directory. To create an action, we&rsquo;ll be adding a new file to this directory. If you already have workflows, and are familiar with the workflow file format, you could add the bridgecrew <code>step</code> section to your own workflows for the same results.</p>
-</div>
-
-
-<p>To create a new workflow, select <strong>Actions</strong> within your CFNGoat forked repository, then select <strong>New Workflow</strong> button.</p>
-
-<p><img src="./images/github_action_6.png" alt="Create new github action workflow" title="Create new github action workflow" /></p>
-
-<p>Select <strong>set up a workflow yourself</strong> to create a new, blank workflow.</p>
-
-<p><strong>Name the new file</strong> <code>bridgecrew.yaml</code> and replace the entire contents with the workflow template provided below,
-This takes the <code>jobs</code> section provided by the Bridgecrew integration instructions and wraps it in a fully functional GitHub Actions definition.</p>
-<pre><code>name: Bridgecrew
-on:
-  push:
-    branches:
-      - master
-jobs:
-  scan:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run Bridgecrew 
-      id: Bridgecrew
-      uses: bridgecrewio/bridgecrew-action@master
-      with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}</code></pre>
-<p>The result should look like this, select <strong>Start commit</strong></p>
-
-<p><img src="./images/github_action_7.png" alt="Save Github action workflow" title="Save Github action workflow" /></p>
-
-<p>Finally, save the new workflow file into your code repository by selecting <strong>Commit new file</strong></p>
-
-<p><img src="./images/github_action_8.png" alt="Save Github action workflow" title="Save Github action workflow" /></p>
-
-<p>The GitHub Action will immediatley start running the Bridgecrew CLI against the latest commit in your GFNGoat Repository.</p>
-
-<p>You can see this by selecting the <strong>Actions</strong> page within your CFNGoat forked repository in GitHub.</p>
-
-<p>You will see a new workflow, titled <em>Bridgecrew</em> and a job about to run automatically because of the new commit (of the workflow file)</p>
-
-<p><img src="./images/github_action_10.png" alt="Save Github action workflow" title="Save Github action workflow" /></p>
-
-<p>Selecting this <em>job</em> will allow you to view the status and logging output from the pipeline, where the Bridgecrew CLI will run and output any violations found in the CFNGoat codebase.</p>
-
-<p><img src="./images/github_action_11.png" alt="Github action workflow logs" title="Github action workflow logs" /></p>
-
-<p>Rather than digging through the job logs, the action also outputs annotations for each violation found into the <strong>Summary</strong> page of the action.</p>
-
-<p><img src="./images/github_action_11.png" alt="Github action workflow annotations" title="Github action workflow annotations" /></p>
-
-
-<div class="notices tip" ><p>By default, the Bridgecrew GitHub Action is designed to pass, acting as a reporting and observability task, which updates the Bridgecrew dashboard of the current security posture within the CI/CD pipeline.</p>
-</div>
-
-
-<h2 id="congratulations">Congratulations!</h2>
-
-<p>You’ve just automated security scanning of your infrastructure as code into a developer-friendly CI/CD pipeline.</p>
-
-<p>In the next module, we’ll look at how to investigate and fix the issues arising from the automated scans, as well as providing more tips for integrating security into the developer workflow without causing friction.</p>
+<p><img src="../../images/event-engine-region.png" alt="Event Engine Region" /></p>
 
 
 <footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -2222,7 +2162,6 @@ jobs:
             
                 
                     
-                    
                 
                 
 
@@ -2241,9 +2180,6 @@ jobs:
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2468,6 +2404,7 @@ jobs:
             
                 
                     
+                    
                 
                 
 
@@ -2483,6 +2420,9 @@ jobs:
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2830,10 +2770,10 @@ jobs:
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../aws/20_module_two/2005_automating_iac_results.html" title="Pipeline Results"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../terraform/20_prerequisites/2002_aws_setup.html" title="AWS Environment"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../aws/30_module_three.html" title="Module - Fix" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../terraform/20_prerequisites/2002b_own_aws_setup.html" title="AWS Environment setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

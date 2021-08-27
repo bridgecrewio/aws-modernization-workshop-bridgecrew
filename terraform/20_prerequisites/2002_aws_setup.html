@@ -9,25 +9,25 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>AWS Environment setup :: Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>AWS Environment :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1627977492" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1627977492" rel="stylesheet">
-    <link href="../../css/hybrid.css?1627977492" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1627977492" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1627977492" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1627977492" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1627977492" rel="stylesheet">
-    <link href="../../css/theme.css?1627977492" rel="stylesheet">
-    <link href="../../css/tabs.css?1627977492" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1627977492" rel="stylesheet">
+    <link href="../../css/nucleus.css?1630053860" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1630053860" rel="stylesheet">
+    <link href="../../css/hybrid.css?1630053860" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1630053860" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1630053860" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1630053860" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1630053860" rel="stylesheet">
+    <link href="../../css/theme.css?1630053860" rel="stylesheet">
+    <link href="../../css/tabs.css?1630053860" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1630053860" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1627977492" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1630053860" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1627977492"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1630053860"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1627977492"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1627977492"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1630053860"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1630053860"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1627977492"></script>
+<script type="text/javascript" src="../../js/search.js?1630053860"></script>
 
     
   </div>
@@ -1046,9 +1046,51 @@
  
   
     
-      <li data-nav-id="/terraform/20_prerequisites/2002_aws_setup.html" title="AWS Environment setup" class="dd-item active">
+      <li data-nav-id="/terraform/20_prerequisites/2002_aws_setup.html" title="AWS Environment" class="dd-item active">
         <a href="../../terraform/20_prerequisites/2002_aws_setup.html">
-        <b>3.2 </b>AWS Environment setup
+        <b>3.2 </b>AWS Environment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/20_prerequisites/2002a_event_engine.html" title="At an AWS Event" class="dd-item ">
+        <a href="../../terraform/20_prerequisites/2002a_event_engine.html">
+        <b>3.2.1 </b>At an AWS Event
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/20_prerequisites/2002b_own_aws_setup.html" title="AWS Environment setup" class="dd-item ">
+        <a href="../../terraform/20_prerequisites/2002b_own_aws_setup.html">
+        <b>3.2.2 </b>AWS Environment setup
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1652,7 +1694,7 @@
             
           
           
-            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Terraform Workshop</a> > <a href='../../terraform/20_prerequisites.html'>Prerequisites</a> > AWS Environment setup
+            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Terraform Workshop</a> > <a href='../../terraform/20_prerequisites.html'>Prerequisites</a> > AWS Environment
           
         
           
@@ -1669,10 +1711,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#aws-environment-setup">AWS Environment setup</a></li>
-</ul></li>
+<li><a href="#aws-environment-setup">AWS Environment Setup</a></li>
 </ul>
 </nav>
     </div>
@@ -1690,7 +1729,7 @@
           
             <h1>
               
-              AWS Environment setup
+              AWS Environment
             </h1>
           
 
@@ -1699,38 +1738,14 @@
 
 
 
+<h1 id="aws-environment-setup">AWS Environment Setup</h1>
 
-<div class="notices warning" ><p>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.</p>
-</div>
+<p>To start the workshop, select one of the following, depending on whether you are&hellip;</p>
 
-
-<h2 id="aws-environment-setup">AWS Environment setup</h2>
-
-
-<div class="notices info" ><p>Your account must have the ability to create new IAM roles and scope other IAM permissions.</p>
-</div>
-
-
-<ol>
-<li><p>If you don&rsquo;t already have an AWS account with Administrator access: <a href="https://aws.amazon.com/getting-started/" target="_blank">create
-one now by clicking here</a></p></li>
-
-<li><p>Once you have an AWS account, ensure you are following the remaining workshop steps
-as an IAM user with administrator access to the AWS account:
-<a href="https://console.aws.amazon.com/iam/home?#/users$new" target="_blank">Create a new IAM user to use for the workshop</a></p></li>
-
-<li><p>Enter the user details:
-<img src="images/iam-1-create-user.png" alt="Create User" /></p></li>
-
-<li><p>Attach the AdministratorAccess IAM Policy:
-<img src="images/iam-2-attach-policy.png" alt="Attach Policy" /></p></li>
-
-<li><p>Click to create the new user:
-<img src="images/iam-3-create-user.png" alt="Confirm User" /></p></li>
-
-<li><p>Take note of the login URL and save:
-<img src="images/iam-4-save-url.png" alt="Login URL" /></p></li>
-</ol>
+<ul>
+<li>&hellip;<a href="./7_aws_setup/8_aws_eventengine.html">attending an AWS hosted event</a>, or</li>
+<li>&hellip;<a href="./7_aws_setup/9_own_account.html">running the workshop on your own AWS account</a></li>
+</ul>
 
 
 <footer class="footline">
@@ -2380,6 +2395,38 @@ as an IAM user with administrator access to the AWS account:
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2702,7 +2749,7 @@ as an IAM user with administrator access to the AWS account:
 			<a class="nav nav-prev" href="../../terraform/20_prerequisites/2001_terraform_setup.html" title="Terraform Environment"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../terraform/20_prerequisites/2003_bc_setup.html" title="Bridgecrew setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../terraform/20_prerequisites/2002a_event_engine.html" title="At an AWS Event" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2712,19 +2759,19 @@ as an IAM user with administrator access to the AWS account:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1627977492"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1627977492"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1627977492"></script>
-    <script src="../../js/jquery.sticky.js?1627977492"></script>
-    <script src="../../js/featherlight.min.js?1627977492"></script>
-    <script src="../../js/highlight.pack.js?1627977492"></script>
+    <script src="../../js/clipboard.min.js?1630053860"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1630053860"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1630053860"></script>
+    <script src="../../js/jquery.sticky.js?1630053860"></script>
+    <script src="../../js/featherlight.min.js?1630053860"></script>
+    <script src="../../js/highlight.pack.js?1630053860"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1627977492"></script>
-    <script src="../../js/learn.js?1627977492"></script>
-    <script src="../../js/hugo-learn.js?1627977492"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1630053860"></script>
+    <script src="../../js/learn.js?1630053860"></script>
+    <script src="../../js/hugo-learn.js?1630053860"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1627977492"></script>
+            <script src="../../mermaid/mermaid.js?1630053860"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

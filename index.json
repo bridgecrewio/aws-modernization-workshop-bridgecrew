@@ -78,17 +78,24 @@
 },
 {
 	"uri": "/terraform/20_prerequisites/2002_aws_setup.html",
+	"title": "AWS Environment",
+	"tags": [],
+	"description": "",
+	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;attending an AWS hosted event, or \u0026hellip;running the workshop on your own AWS account  "
+},
+{
+	"uri": "/terraform/20_prerequisites/2002a_event_engine.html",
+	"title": "At an AWS Event",
+	"tags": [],
+	"description": "",
+	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
+},
+{
+	"uri": "/terraform/20_prerequisites/2002b_own_aws_setup.html",
 	"title": "AWS Environment setup",
 	"tags": [],
 	"description": "",
 	"content": " Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.\n AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.\n  If you don\u0026rsquo;t already have an AWS account with Administrator access: create one now by clicking here\n Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop\n Enter the user details:  Attach the AdministratorAccess IAM Policy:  Click to create the new user:  Take note of the login URL and save:   "
-},
-{
-	"uri": "/terraform/20_prerequisites/2003_bc_setup.html",
-	"title": "Bridgecrew setup",
-	"tags": [],
-	"description": "",
-	"content": " You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account here.\nCheckov In this tutorial, we’re also going to use Checkov. Checkov works on Windows, Mac, and Linux. You can install it with pip:\npip3 install checkov If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:\nsudo pip3 install checkov If you run into problems, try the alternate install instructions.\nBridgecrew API token Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access it here or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.\nWe\u0026rsquo;ll use the API token in a few places with the environment variable YOUR_BC_API_KEY. To make following along easier, set this variable to equal your API token using the following command in your terminal:\nYOUR_BC_API_KEY=\u0026lt;paste-bc-api-key-here\u0026gt;"
 },
 {
 	"uri": "/aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html",
@@ -96,6 +103,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476543c00e Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
+},
+{
+	"uri": "/terraform/20_prerequisites/2003_bc_setup.html",
+	"title": "Bridgecrew setup",
+	"tags": [],
+	"description": "",
+	"content": " You’ll need to sign up for a free Bridgecrew account to follow along with this tutorial. You can sign up for a free account here.\nCheckov In this tutorial, we’re also going to use Checkov. Checkov works on Windows, Mac, and Linux. You can install it with pip:\npip3 install checkov If installing globally on your system (not in a python venv or pipenv) you may need to have permissions to write the libraries to the necessary locations, ie:\nsudo pip3 install checkov If you run into problems, try the alternate install instructions.\nBridgecrew API token Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access it here or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.\nWe\u0026rsquo;ll use the API token in a few places with the environment variable YOUR_BC_API_KEY. To make following along easier, set this variable to equal your API token using the following command in your terminal:\nYOUR_BC_API_KEY=\u0026lt;paste-bc-api-key-here\u0026gt;"
 },
 {
 	"uri": "/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html",
