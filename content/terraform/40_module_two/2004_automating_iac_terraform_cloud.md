@@ -1,9 +1,15 @@
 ---
 title: "Terraform Cloud"
 chapter: false
-weight: 204
-pre: "<b>5.3 </b>"
+weight: 205
+pre: "<b>5.4 </b>"
 ---
+
+{{% notice info %}}
+<p style='text-align: left;'>
+There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don't conflict with each other so you can add both.
+</p>
+{{% /notice %}}
 
 {{% notice info %}}
 <p style='text-align: left;'>

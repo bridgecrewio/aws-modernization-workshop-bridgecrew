@@ -9,7 +9,7 @@ pre: "<b>6.5 </b>"
 
 In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.
 
-This usually occurs during a major incident, where DevOps and SRE teams make manual changes to quickly solve the problem, such as opening up ports to larger CIDR blocks or turning off HTTPS to find the problem. If these aren’t reverted, they present security issues and it weakens the auditability benefit of IaC versioning.
+This usually occurs during a major incident, where DevOps and SRE teams make manual changes to quickly solve the problem, such as opening up ports to larger CIDR blocks or turning off HTTPS to find the problem, or if there are knowledge or access control gaps that make fixing an issue in the cloud directly the easier option. If these aren’t reverted, they present security issues and it weakens the benefits of using IaC.
 
 ### Create drift
 
@@ -37,4 +37,4 @@ That will force start a scan of your environment that will find misconfiguration
 
 ![Drift alert in Bridgecrew](images/bc_drift_alert.png "Drift alert in Bridgecrew")
 
-You found drift! From here, you can either run `terraform apply` to bring your cloud instances back in line with the state saved in Terraform Cloud or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud.
+You found drift! From here, you can either run `terraform apply` to bring your cloud instances back in line with the state saved locally or in Terraform Cloud, or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud. Alternatively, in the Projects page, you will find **Fix Drift** that will open a pull request on your behalf to make the change to match code to cloud.
