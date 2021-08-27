@@ -84,20 +84,6 @@
 	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;attending an AWS hosted event, or \u0026hellip;running the workshop on your own AWS account  "
 },
 {
-	"uri": "/terraform/20_prerequisites/21_eventengine/2002a_event_engine.html",
-	"title": "At an AWS Event",
-	"tags": [],
-	"description": "",
-	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
-},
-{
-	"uri": "/terraform/20_prerequisites/22_own_aws/2002b_own_aws_setup.html",
-	"title": "AWS Environment setup",
-	"tags": [],
-	"description": "",
-	"content": " Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.\n AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.\n  If you don\u0026rsquo;t already have an AWS account with Administrator access: create one now by clicking here\n Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop\n Enter the user details:  Attach the AdministratorAccess IAM Policy:  Click to create the new user:  Take note of the login URL and save:   "
-},
-{
 	"uri": "/aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html",
 	"title": "At an AWS Event",
 	"tags": [],
@@ -119,11 +105,25 @@
 	"content": " The Cloud9 workspace should be built by an IAM user with Administrator privileges, not the root account user. Please ensure you are logged in as an IAM user, not the root account user.\n This workshop was designed to run in the Oregon (us-west-2) region. Please don\u0026rsquo;t run in any other region. Future versions of this workshop will expand region availability, and this message will be removed.\n Ad blockers, javascript disablers, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the specific domains.\n Launch Cloud9: Create a Cloud9 Environment: https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2\nMake sure you are naming your Cloud9 environment Bridgecrew-Workshop, otherwise things will break later.\n  Select Create environment Name it Bridgecrew-Workshop and hit next. Select a t3 medium instance  Leave all the default selections.\n When it comes up, customize the environment by closing the welcome tab and lower work area, and opening a new terminal tab in the main work area:  Your workspace should now look like this:  If you like this theme, you can choose it yourself by selecting View / Themes / Solarized / Solarized Dark in the Cloud9 workspace menu.\n  "
 },
 {
+	"uri": "/terraform/20_prerequisites/2002a_event_engine.html",
+	"title": "At an AWS Event",
+	"tags": [],
+	"description": "",
+	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
+},
+{
 	"uri": "/aws/6_prerequisites/7_aws_setup/9_own_account.html",
 	"title": "Own AWS Account",
 	"tags": [],
 	"description": "",
 	"content": " Using your own AWS Account Your account must have the ability to create new IAM roles and scope other IAM permissions.\n  If you don\u0026rsquo;t already have an AWS account with Administrator access: create one now by clicking here\n Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop\n Enter the user details:  Attach the AdministratorAccess IAM Policy:  Click to create the new user:  Take note of the login URL and save:   "
+},
+{
+	"uri": "/terraform/20_prerequisites/2002b_own_aws_setup.html",
+	"title": "AWS Environment setup",
+	"tags": [],
+	"description": "",
+	"content": " Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.\n AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.\n  If you don\u0026rsquo;t already have an AWS account with Administrator access: create one now by clicking here\n Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop\n Enter the user details:  Attach the AdministratorAccess IAM Policy:  Click to create the new user:  Take note of the login URL and save:   "
 },
 {
 	"uri": "/aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html",
