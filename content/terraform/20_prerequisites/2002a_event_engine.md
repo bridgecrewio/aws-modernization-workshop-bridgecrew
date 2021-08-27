@@ -1,7 +1,7 @@
 ---
 title: "At an AWS Event"
 chapter: false
-weight: 7
+weight: 11
 pre: "<b>3.2.1 </b>"
 ---
 
