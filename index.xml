@@ -28,10 +28,10 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     
     <item>
       <title>At an AWS Event</title>
-      <link>/terraform/20_prerequisites/2002a_event_engine.html</link>
+      <link>/terraform/20_prerequisites/2002a_eventengine.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/terraform/20_prerequisites/2002a_event_engine.html</guid>
+      <guid>/terraform/20_prerequisites/2002a_eventengine.html</guid>
       <description>Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
 e8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
     </item>
