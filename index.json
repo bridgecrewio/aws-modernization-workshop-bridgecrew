@@ -84,14 +84,14 @@
 	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;attending an AWS hosted event, or \u0026hellip;running the workshop on your own AWS account  "
 },
 {
-	"uri": "/terraform/20_prerequisites/2002a_event_engine.html",
+	"uri": "/terraform/20_prerequisites/21_eventengine/2002a_event_engine.html",
 	"title": "At an AWS Event",
 	"tags": [],
 	"description": "",
 	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
 },
 {
-	"uri": "/terraform/20_prerequisites/2002b_own_aws_setup.html",
+	"uri": "/terraform/20_prerequisites/22_own_aws/2002b_own_aws_setup.html",
 	"title": "AWS Environment setup",
 	"tags": [],
 	"description": "",

@@ -26,9 +26,9 @@
   </url><url>
     <loc>/terraform/20_prerequisites/2002_aws_setup.html</loc>
   </url><url>
-    <loc>/terraform/20_prerequisites/2002a_event_engine.html</loc>
+    <loc>/terraform/20_prerequisites/21_eventengine/2002a_event_engine.html</loc>
   </url><url>
-    <loc>/terraform/20_prerequisites/2002b_own_aws_setup.html</loc>
+    <loc>/terraform/20_prerequisites/22_own_aws/2002b_own_aws_setup.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html</loc>
   </url><url>
