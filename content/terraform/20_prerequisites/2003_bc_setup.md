@@ -1,7 +1,7 @@
 ﻿---
 title: "Bridgecrew setup"
 chapter: false
-weight: 7
+weight: 9
 pre: "<b>3.3 </b>"
 ---
 
