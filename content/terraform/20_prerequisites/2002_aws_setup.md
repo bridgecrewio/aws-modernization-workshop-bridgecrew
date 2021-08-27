@@ -8,5 +8,5 @@ pre: "<b>3.2 </b>"
 # AWS Environment Setup
 To start the workshop, select one of the following, depending on whether you are...
 
-* ...[attending an AWS hosted event](./7_aws_setup/8_aws_eventengine.html), or
-* ...[running the workshop on your own AWS account](./7_aws_setup/9_own_account.html)
+* ...[attending an AWS hosted event](./2002a_eventengine.html), or
+* ...[running the workshop on your own AWS account](./2002b_own_aws_setup.html)
