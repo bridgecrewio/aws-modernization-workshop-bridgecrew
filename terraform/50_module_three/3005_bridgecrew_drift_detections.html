@@ -12,22 +12,22 @@
     <title>Drift detection :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1630054947" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1630054947" rel="stylesheet">
-    <link href="../../css/hybrid.css?1630054947" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1630054947" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1630054947" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1630054947" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1630054947" rel="stylesheet">
-    <link href="../../css/theme.css?1630054947" rel="stylesheet">
-    <link href="../../css/tabs.css?1630054947" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1630054947" rel="stylesheet">
+    <link href="../../css/nucleus.css?1630099591" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1630099591" rel="stylesheet">
+    <link href="../../css/hybrid.css?1630099591" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1630099591" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1630099591" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1630099591" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1630099591" rel="stylesheet">
+    <link href="../../css/theme.css?1630099591" rel="stylesheet">
+    <link href="../../css/tabs.css?1630099591" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1630099591" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1630054947" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1630099591" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1630054947"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1630099591"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1630054947"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1630054947"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1630099591"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1630099591"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1630054947"></script>
+<script type="text/javascript" src="../../js/search.js?1630099591"></script>
 
     
   </div>
@@ -1332,9 +1332,9 @@
  
   
     
-      <li data-nav-id="/terraform/40_module_two/2003_automating_iac_terraform_cloud.html" title="Terraform Cloud" class="dd-item ">
-        <a href="../../terraform/40_module_two/2003_automating_iac_terraform_cloud.html">
-        <b>5.3 </b>Terraform Cloud
+      <li data-nav-id="/terraform/40_module_two/2003_yor_github_action.html" title="Yor tag &amp; trace" class="dd-item ">
+        <a href="../../terraform/40_module_two/2003_yor_github_action.html">
+        <b>5.3 </b>Yor tag &amp; trace
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1353,9 +1353,9 @@
  
   
     
-      <li data-nav-id="/terraform/40_module_two/2004_github_application.html" title="GitHub Application" class="dd-item ">
-        <a href="../../terraform/40_module_two/2004_github_application.html">
-        <b>5.4 </b>GitHub Application
+      <li data-nav-id="/terraform/40_module_two/2004_automating_iac_terraform_cloud.html" title="Terraform Cloud" class="dd-item ">
+        <a href="../../terraform/40_module_two/2004_automating_iac_terraform_cloud.html">
+        <b>5.4 </b>Terraform Cloud
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1374,9 +1374,30 @@
  
   
     
-      <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test pull request" class="dd-item ">
-        <a href="../../terraform/40_module_two/2005_kickoff_pr.html">
-        <b>5.5 </b>Test pull request
+      <li data-nav-id="/terraform/40_module_two/2005_github_application.html" title="GitHub Application" class="dd-item ">
+        <a href="../../terraform/40_module_two/2005_github_application.html">
+        <b>5.5 </b>GitHub Application
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/40_module_two/2006_kickoff_pr.html" title="Test pull request" class="dd-item ">
+        <a href="../../terraform/40_module_two/2006_kickoff_pr.html">
+        <b>5.6 </b>Test pull request
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1748,7 +1769,7 @@
 
 <p>In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.</p>
 
-<p>This usually occurs during a major incident, where DevOps and SRE teams make manual changes to quickly solve the problem, such as opening up ports to larger CIDR blocks or turning off HTTPS to find the problem. If these aren’t reverted, they present security issues and it weakens the auditability benefit of IaC versioning.</p>
+<p>This usually occurs during a major incident, where DevOps and SRE teams make manual changes to quickly solve the problem, such as opening up ports to larger CIDR blocks or turning off HTTPS to find the problem, or if there are knowledge or access control gaps that make fixing an issue in the cloud directly the easier option. If these aren’t reverted, they present security issues and it weakens the benefits of using IaC.</p>
 
 <h3 id="create-drift">Create drift</h3>
 
@@ -1772,7 +1793,7 @@
 
 <p><img src="images/bc_drift_alert.png" alt="Drift alert in Bridgecrew" title="Drift alert in Bridgecrew" /></p>
 
-<p>You found drift! From here, you can either run <code>terraform apply</code> to bring your cloud instances back in line with the state saved in Terraform Cloud or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud.</p>
+<p>You found drift! From here, you can either run <code>terraform apply</code> to bring your cloud instances back in line with the state saved locally or in Terraform Cloud, or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud. Alternatively, in the Projects page, you will find <strong>Fix Drift</strong> that will open a pull request on your behalf to make the change to match code to cloud.</p>
 
 
 <footer class="footline">
@@ -2626,6 +2647,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2786,19 +2823,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1630054947"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1630054947"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1630054947"></script>
-    <script src="../../js/jquery.sticky.js?1630054947"></script>
-    <script src="../../js/featherlight.min.js?1630054947"></script>
-    <script src="../../js/highlight.pack.js?1630054947"></script>
+    <script src="../../js/clipboard.min.js?1630099591"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1630099591"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1630099591"></script>
+    <script src="../../js/jquery.sticky.js?1630099591"></script>
+    <script src="../../js/featherlight.min.js?1630099591"></script>
+    <script src="../../js/highlight.pack.js?1630099591"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1630054947"></script>
-    <script src="../../js/learn.js?1630054947"></script>
-    <script src="../../js/hugo-learn.js?1630054947"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1630099591"></script>
+    <script src="../../js/learn.js?1630099591"></script>
+    <script src="../../js/hugo-learn.js?1630099591"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1630054947"></script>
+            <script src="../../mermaid/mermaid.js?1630099591"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

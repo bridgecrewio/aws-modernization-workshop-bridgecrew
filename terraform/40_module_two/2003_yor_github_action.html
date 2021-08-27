@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>AWS fixes in runtime :: Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Yor tag &amp; trace :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
     <link href="../../css/nucleus.css?1630099591" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
+  <body class="" data-url="../../terraform/40_module_two/2003_yor_github_action.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1262,7 +1262,7 @@
   
     
     <li data-nav-id="/terraform/40_module_two.html" title="Module - Automate" class="dd-item
-        
+        parent
         
         
         ">
@@ -1332,7 +1332,7 @@
  
   
     
-      <li data-nav-id="/terraform/40_module_two/2003_yor_github_action.html" title="Yor tag &amp; trace" class="dd-item ">
+      <li data-nav-id="/terraform/40_module_two/2003_yor_github_action.html" title="Yor tag &amp; trace" class="dd-item active">
         <a href="../../terraform/40_module_two/2003_yor_github_action.html">
         <b>5.3 </b>Yor tag &amp; trace
         <i class="fas fa-check read-icon"></i>
@@ -1426,7 +1426,7 @@
   
     
     <li data-nav-id="/terraform/50_module_three.html" title="Module - Fix" class="dd-item
-        parent
+        
         
         
         ">
@@ -1517,7 +1517,7 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item active">
+      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
         <a href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
         <b>6.4 </b>AWS fixes in runtime
         <i class="fas fa-check read-icon"></i>
@@ -1715,7 +1715,7 @@
             
           
           
-            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Terraform Workshop</a> > <a href='../../terraform/50_module_three.html'>Module - Fix</a> > AWS fixes in runtime
+            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Terraform Workshop</a> > <a href='../../terraform/40_module_two.html'>Module - Automate</a> > Yor tag & trace
           
         
           
@@ -1734,9 +1734,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#automating-fixes-in-runtime">Automating fixes in runtime</a></li>
-<li><a href="#adding-an-unencrypted-s3-bucket">Adding an unencrypted S3 bucket</a></li>
-<li><a href="#fixing-the-unencrypted-s3-bucket">Fixing the unencrypted S3 bucket</a></li>
+<li>
+<ul>
+<li><a href="#an-introduction-to-yor">An introduction to Yor</a></li>
+<li><a href="#adding-the-yor-github-action">Adding the Yor GitHub Action</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1755,7 +1757,7 @@
           
             <h1>
               
-              AWS fixes in runtime
+              Yor tag &amp; trace
             </h1>
           
 
@@ -1764,50 +1766,53 @@
 
 
 
-<h2 id="automating-fixes-in-runtime">Automating fixes in runtime</h2>
 
-<p>Similar to what we did with pull request fixes in the previous module, Bridgecrew allows for immediate remediation of issues in runtime by reconfiguring your objects via the AWS APIs. Typically, it&rsquo;s a best practice to make all changes to IaC provisioned resources in the code that provisioned them or else you create drift (discussed next). However, for resources not provisioned using IaC templates, runtime remediations make meeting compliance much easier.</p>
+<div class="notices info" ><p style='text-align: left;'>
+There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don't conflict with each other so you can add both.
+</p>
+</div>
 
-<p>Implementing automated remediations does require extra permissions than previously granted with the default AWS Read Only integration. When you attempt a runtime remediation without the correct permissions, you’ll be prompted to configure the AWS Remediation Stack:</p>
 
-<p><img src="./images/dashboard-aws-runtime-00010.png" alt="AWS Bridgecrew Integration, Remediate" title="AWS Bridgecrew Integration, Remediate" /></p>
+<h3 id="an-introduction-to-yor">An introduction to Yor</h3>
 
-<p>Adding the AWS Remediation stack follows the same workflow as the previous read-only AWS integration:</p>
+<p><a href="http://github.com/bridgecrewio/yor" target="_blank">Yor</a> is an open-source tool that automatically tags infrastructure as code (IaC) templates with attribution and ownership details, unique IDs that get carried across to cloud resources, and any other need-to-know information. It can run locally, as a pre-commit hook, or in a CI/CD pipeline.</p>
 
-<p><img src="./images/remediate_stack_1.png" alt="AWS Bridgecrew remediation integration" title="AWS Bridgecrew remediation integration" /></p>
+<p>For drift detection, the important tag is <code>yor_trace</code>. It’s a unique identifier that helps us trace from a cloud runtime configuration back to the IaC that provisioned it. To do that we need 3 elements:</p>
 
-<p>Select <strong>Create Stack</strong> and return to Bridgecrew, you will now be able to Remediate runtime resources:
-<img src="./images/remediate_stack_3.png" alt="AWS Bridgecrew remediation integration" title="AWS Bridgecrew remediation integration" /></p>
+<p>Yor automated tagging (this page)
+Integration with the VCS that stores the IaC (we’ll use GitHub in step 5.4 as an example)
+Cloud integration (we’ll use AWS in step 6.3 as an example)</p>
 
-<h2 id="adding-an-unencrypted-s3-bucket">Adding an unencrypted S3 bucket</h2>
+<p>Let’s start with Yor!</p>
 
-<p>Let&rsquo;s add an S3 bucket that does not have default encryption turned (a critical misconfiguration). In the AWS console, find the S3 services page.</p>
+<h3 id="adding-the-yor-github-action">Adding the Yor GitHub Action</h3>
 
-<p><img src="./images/s3_page.png" alt="S3 services page" title="S3 services page" /></p>
+<p>If you followed the previous setup for the Bridgecrew GitHub Action, this will be very straightforward. If you’re in the home directory of your TerraGoat repository, select “Create new file”.</p>
 
-<p>Select &ldquo;Create bucket.&rdquo; Give it a globally unique name and leave everything else as the defaults. Notice that &ldquo;Default encryption&rdquo; is disabled.</p>
+<p><img src="images/yor_create_file.png" alt="GitHub Create new file" title="GitHub Create new file" /></p>
 
-<p>Give Bridgecrew a minute to scan the new resource&rsquo;s configurations or jumpstart the scan with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#e6db74">&#34;Authorization: </span>$YOUR_BC_API_KEY<span style="color:#e6db74">&#34;</span> https://www.bridgecrew.cloud/api/v1/scans/integrations</code></pre></div>
-<h2 id="fixing-the-unencrypted-s3-bucket">Fixing the unencrypted S3 bucket</h2>
+<p>Set the path to <code>.github/workflows/yor.yml</code>. Add the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">name: IaC tag and trace
 
-<p>If we head over to the Incidents page and search for <code>BC_AWS_S3_14</code> you will find the policy titled &ldquo;Ensure data stored in the S3 bucket is securely encrypted at rest.&rdquo;</p>
+on:
+  push:
+  pull_request:
 
-<p>The <strong>Fix</strong> button will now allow runtime changes to the S3 configuration:</p>
+jobs:
+  yor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout repo
+        with:
+          fetch-depth: <span style="color:#ae81ff">0</span>
+      - name: Run yor action
+        uses: bridgecrewio/yor-action@main</code></pre></div>
+<p>This will run Yor to automatically tag your IaC resources every time you perform a push or pull request to your repo. The result will look something like this:</p>
 
-<p><img src="./images/remediation-s3-encryption-00001.png" alt="AWS Bridgecrew remediating s3 unencrypted bucket" title="AWS Bridgecrew remediating s3 unencrypted bucket" /></p>
+<p><img src="images/yor_tags.png" alt="Yor tag example" title="Yor tag example" /></p>
 
-<p>Select <strong>Fix</strong> again to run the remediation. Bridgecrew will now use the AWS APIs to ensure encryption is turned on for the selected resource:</p>
-
-<p><img src="./images/remediation-s3-encryption-00008.png" alt="AWS Bridgecrew remediating s3 unencrypted bucket" title="AWS Bridgecrew remediating s3 unencrypted bucket" /></p>
-
-<p>Checking the resource once more in the AWS Console, you will see that encryption is now enabled:</p>
-
-<p><img src="./images/remediation-s3-encryption-00009.png" alt="AWS Bridgecrew remediating s3 unencrypted bucket" title="AWS Bridgecrew remediating s3 unencrypted bucket" /></p>
-
-<p>The violation will also have been marked resolved in the Bridgecrew <strong>Incidents</strong> page.</p>
-
-<p>Instead of resolving issues in production, if you follow GitOps best practices, we should prevent changes in production. We&rsquo;ll cover how to handle drift in the next session.</p>
+<p>Notice the <code>yor_trace</code> tag? That’s all we need to track drift!</p>
 
 
 <footer class="footline">
@@ -2618,6 +2623,90 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2677,94 +2766,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2824,10 +2829,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html" title="AWS runtime scanning"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../terraform/40_module_two/2002_automating_iac_github_action.html" title="GitHub Action"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift detection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../terraform/40_module_two/2004_automating_iac_terraform_cloud.html" title="Terraform Cloud" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

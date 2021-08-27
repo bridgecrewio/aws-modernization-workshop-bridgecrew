@@ -28,20 +28,29 @@ The TerraGoat repository already has a Checkov Action built in at terragoat/.</d
     </item>
     
     <item>
-      <title>Terraform Cloud</title>
-      <link>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</link>
+      <title>Yor tag &amp; trace</title>
+      <link>/terraform/40_module_two/2003_yor_github_action.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
-      <description>A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</description>
+      <guid>/terraform/40_module_two/2003_yor_github_action.html</guid>
+      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  An introduction to Yor Yor is an open-source tool that automatically tags infrastructure as code (IaC) templates with attribution and ownership details, unique IDs that get carried across to cloud resources, and any other need-to-know information.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Cloud</title>
+      <link>/terraform/40_module_two/2004_automating_iac_terraform_cloud.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terraform/40_module_two/2004_automating_iac_terraform_cloud.html</guid>
+      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls.</description>
     </item>
     
     <item>
       <title>GitHub Application</title>
-      <link>/terraform/40_module_two/2004_github_application.html</link>
+      <link>/terraform/40_module_two/2005_github_application.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/terraform/40_module_two/2004_github_application.html</guid>
+      <guid>/terraform/40_module_two/2005_github_application.html</guid>
       <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to generate code comments and set up for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
 Head back to the Bridgecrew Integrations tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
 Choose which accounts and repositories to grant the Bridgecrew GitHub integration access to:</description>
@@ -49,10 +58,10 @@ Choose which accounts and repositories to grant the Bridgecrew GitHub integratio
     
     <item>
       <title>Test pull request</title>
-      <link>/terraform/40_module_two/2005_kickoff_pr.html</link>
+      <link>/terraform/40_module_two/2006_kickoff_pr.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
+      <guid>/terraform/40_module_two/2006_kickoff_pr.html</guid>
       <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terraform/simple_instance/ec2.tf. Add the following code:
 provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-east-1&amp;#34; } resource &amp;#34;aws_security_group&amp;#34; &amp;#34;ssh_traffic&amp;#34; { name = &amp;#34;ssh_traffic&amp;#34; description = &amp;#34;Allow SSH inbound traffic&amp;#34; ingress { description = &amp;#34;SSH&amp;#34; from_port = 22 to_port = 22 protocol = &amp;#34;tcp&amp;#34; cidr_blocks = [&amp;#34;0.</description>
     </item>
