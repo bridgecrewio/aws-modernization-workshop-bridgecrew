@@ -1,11 +1,11 @@
 ---
-title: "Drift detection"
+title: "Drift Detection"
 chapter: false
 weight: 305
 pre: "<b>6.5 </b>"
 ---
 
-## Drift detection between AWS and Terraform Cloud state using Bridgecrew
+## Drift Detection between AWS and Terraform Cloud state using Bridgecrew
 
 In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in AWS may have different configurations than the Terraform template defined.
 
