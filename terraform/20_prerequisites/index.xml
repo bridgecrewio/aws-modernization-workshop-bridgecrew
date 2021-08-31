@@ -17,16 +17,6 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     </item>
     
     <item>
-      <title>AWS Environment</title>
-      <link>/terraform/20_prerequisites/2002_aws_setup.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/20_prerequisites/2002_aws_setup.html</guid>
-      <description> AWS Environment Setup To start the workshop, select one of the following, depending on whether you are&amp;hellip;
- &amp;hellip;attending an AWS hosted event, or &amp;hellip;running the workshop on your own AWS account  </description>
-    </item>
-    
-    <item>
       <title>Bridgecrew setup</title>
       <link>/terraform/20_prerequisites/2003_bc_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -77,14 +77,14 @@
 	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;running the workshop on your own AWS account, or \u0026hellip;attending an AWS hosted event  "
 },
 {
-	"uri": "/terraform/20_prerequisites/2002_aws_setup.html",
+	"uri": "/terraform/20_prerequisites/aws_setup.html",
 	"title": "AWS Environment",
 	"tags": [],
 	"description": "",
 	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;attending an AWS hosted event, or \u0026hellip;running the workshop on your own AWS account  "
 },
 {
-	"uri": "/terraform/20_prerequisites/aws_setup.html",
+	"uri": "/terraform/20_prerequisites/aws_setup/2002a_aws_event.html",
 	"title": "At an AWS Event",
 	"tags": [],
 	"description": "",
