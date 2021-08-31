@@ -1,8 +1,8 @@
 ---
 title: "GitHub Application"
 chapter: false
-weight: 206
-pre: "<b>5.5 </b>"
+weight: 205
+pre: "<b>5.4 </b>"
 ---
 
 ## Integrating Bridgecrew with GitHub

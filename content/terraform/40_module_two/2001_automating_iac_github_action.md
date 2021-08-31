@@ -1,8 +1,8 @@
 ---
 title: "GitHub Action"
 chapter: false
-weight: 203
-pre: "<b>5.2 </b>"
+weight: 202
+pre: "<b>5.1 </b>"
 ---
 
 ## Setting up the Bridgecrew GitHub Action

@@ -1,8 +1,8 @@
 ---
 title: "Test pull request"
 chapter: false
-weight: 207
-pre: "<b>5.6 </b>"
+weight: 206
+pre: "<b>5.5 </b>"
 ---
 
 ## Kick off a test pull request
@@ -11,7 +11,7 @@ Check that all three integrations are working by kicking off a pull request. Go 
 
 ```
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 resource "aws_security_group" "ssh_traffic" {
@@ -83,7 +83,9 @@ Click "Confirm & Apply." This will deploy the simple EC2 instance and security g
 
 ### Without Terraform Cloud
 
-Alternatively, locally you can run `git pull origin master` to update your local directory and `terraform apply` in the `simple_instance` directory in your terminal. Type `yes` and let Terraform provision your resources.
+Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your EC2 instance and security group. Type `yes` and let Terraform provision your resources.
+
+![Plan output](images/tf_plan.png "Plan output")
 
 
 #### Check that the instance is live
