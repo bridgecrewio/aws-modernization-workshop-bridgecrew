@@ -33,7 +33,7 @@ Bridgecrew scans your cloud configurations periodically, but to speed up the pro
 curl -X POST -H "Authorization: $YOUR_BC_API_KEY" https://www.bridgecrew.cloud/api/v1/scans/integrations
 ```
 
-That will force start a scan of your environment that will find misconfigurations and identify drift from your Terraform state. After a few moments, head back over to the [Incidents](https://www.bridgecrew.cloud/incidents) section of Bridgecrew. Search for the policy “Ensure provisioned resources are not manually modified” and select the object. Here you can see the difference in AWS versus the state saved in Terraform Cloud.
+That will force start a scan of your environment that will find misconfigurations and identify drift from your Terraform state. After a few moments, head back over to the [Projects](https://www.bridgecrew.cloud/projects) page of Bridgecrew. Select your repository (`<organization>/terragoat`) and filter by "Drift." Here you can see the difference in AWS versus the state saved in Terraform Cloud or your VCS.
 
 ![Drift alert in Bridgecrew](images/bc_drift_alert.png "Drift alert in Bridgecrew")
 
