@@ -13,16 +13,16 @@ To complete this workshop, you are provided with an AWS account via the AWS Even
 
 ### Create AWS Account
 
-1. Connect to the portal by clicking the button or browsing to [https://dashboard.eventengine.run/](https://dashboard.eventengine.run/). The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to **Accept Terms & Login**. Click on that button to continue.
+1 . Connect to the portal by clicking the button or browsing to [https://dashboard.eventengine.run/](https://dashboard.eventengine.run/). The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to **Accept Terms & Login**. Click on that button to continue.
 
 ![Event Engine](/images/event-engine-initial-screen.png)
 
-2. Choose **AWS Console**, then **Open AWS Console**.
+2 . Choose **AWS Console**, then **Open AWS Console**.
 This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.
 
 ![Event Engine Dashboard](/images/event-engine-dashboard.png)
 
-3. Use a single region for the duration of this workshop. This workshop supports the following regions:
+3 . Use a single region for the duration of this workshop. This workshop supports the following regions:
 
 * us-west-2 (US West - Oregon)
 
@@ -30,11 +30,11 @@ Please select **US West (Oregon)** in the top right corner.
 
 ![Event Engine Region](/images/event-engine-region.png)
 
-4. Install the AWS CLI
+4 . Install the AWS CLI
 
 If you haven't already, install the AWS CLI following the directions here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 
-5. Add the Credentials / CLI Snippets to your terminal or wherever you have your AWS CLI installed. For example, in Linux or MacOS:
+5 . Add the Credentials / CLI Snippets to your terminal or wherever you have your AWS CLI installed. For example, in Linux or MacOS:
 
 ```bash
 export AWS_DEFAULT_REGION=us-west-2
