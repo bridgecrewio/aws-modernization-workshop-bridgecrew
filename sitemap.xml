@@ -70,27 +70,25 @@
   </url><url>
     <loc>/aws/20_module_two/2001_automating_iac_github.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2001_automating_iac_github.html</loc>
+    <loc>/terraform/40_module_two/2001_automating_iac_github_action.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2002_automating_iac_codebuild.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2002_automating_iac_github_action.html</loc>
+    <loc>/terraform/40_module_two/2002_yor_github_action.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2003_automating_iac_codebuild_iam.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2003_yor_github_action.html</loc>
+    <loc>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2004_automating_iac_codepipeline.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2004_automating_iac_terraform_cloud.html</loc>
-  </url><url>
-    <loc>/terraform/40_module_two/2005_github_application.html</loc>
+    <loc>/terraform/40_module_two/2004_github_application.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2005_automating_iac_results.html</loc>
   </url><url>
-    <loc>/aws/20_module_two/2006_automating_iac_github_actions.html</loc>
+    <loc>/terraform/40_module_two/2005_kickoff_pr.html</loc>
   </url><url>
-    <loc>/terraform/40_module_two/2006_kickoff_pr.html</loc>
+    <loc>/aws/20_module_two/2006_automating_iac_github_actions.html</loc>
   </url><url>
     <loc>/aws/30_module_three.html</loc>
   </url><url>

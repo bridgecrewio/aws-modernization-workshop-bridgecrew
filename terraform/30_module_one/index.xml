@@ -12,9 +12,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/30_module_one/1001_terragoat.html</guid>
-      <description>Vulnerable-by-design demo repository setup This workshop uses our vulnerable-by-design Terraform project, TerraGoat, so that you can scan and automate infrastructure code without the added friction of integrating your own code. Simply clone the open-source project’s repository:
-git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Sample output:
-$ git clone https://github.com/bridgecrewio/terragoat.git cd terragoat git status Cloning into &amp;#39;terragoat&amp;#39;... remote: Enumerating objects: 10, done. remote: Counting objects: 100% (10/10), done. remote: Compressing objects: 100% (10/10), done.</description>
+      <description>Vulnerable-by-design demo repository setup This workshop uses our vulnerable-by-design Terraform project, TerraGoat, so that you can scan and automate infrastructure code without the added friction of integrating your own code.
+Fork the TerraGoat repository on GitHub To set up your demo environment, we&amp;rsquo;re going to fork the TerraGoat repository.
+Head over to the TerraGoat repository and fork it using the button in the upper right corner.
+If you have multiple organizations, GitHub will ask which of your orgs to fork into.</description>
     </item>
     
     <item>
