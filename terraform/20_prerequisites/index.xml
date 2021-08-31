@@ -27,27 +27,6 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     </item>
     
     <item>
-      <title>At an AWS Event</title>
-      <link>/terraform/20_prerequisites/2002a_eventengine.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/20_prerequisites/2002a_eventengine.html</guid>
-      <description>Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
-e8476example Create AWS Account  Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
-    </item>
-    
-    <item>
-      <title>AWS Environment setup</title>
-      <link>/terraform/20_prerequisites/2002b_own_aws_setup.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/20_prerequisites/2002b_own_aws_setup.html</guid>
-      <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
- AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
-  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
-    </item>
-    
-    <item>
       <title>Bridgecrew setup</title>
       <link>/terraform/20_prerequisites/2003_bc_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
