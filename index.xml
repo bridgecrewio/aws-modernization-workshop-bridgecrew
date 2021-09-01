@@ -17,7 +17,7 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     </item>
     
     <item>
-      <title>AWS Environment setup</title>
+      <title>Own AWS environment</title>
       <link>/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
