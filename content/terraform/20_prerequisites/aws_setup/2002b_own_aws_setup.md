@@ -1,5 +1,5 @@
 ---
-title: "AWS Environment setup"
+title: "Own AWS environment"
 chapter: false
 weight: 8
 pre: "<b>3.2.2 </b>"
