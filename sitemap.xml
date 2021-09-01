@@ -26,7 +26,7 @@
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup.html</loc>
   </url><url>
-    <loc>/terraform/20_prerequisites/aws_setup/2002a_aws_event.html</loc>
+    <loc>/terraform/20_prerequisites/aws_setup/aws_event.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html</loc>
   </url><url>
@@ -36,6 +36,8 @@
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html</loc>
   </url><url>
+    <loc>/terraform/20_prerequisites/aws_setup/aws_event/workspace.html</loc>
+  </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/9_own_account.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html</loc>
@@ -43,6 +45,8 @@
     <loc>/aws/6_prerequisites/601_setting_up_bridgecrew_account.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html</loc>
+  </url><url>
+    <loc>/terraform/20_prerequisites/aws_setup/aws_event/setup_short.html</loc>
   </url><url>
     <loc>/aws/10_module_one.html</loc>
   </url><url>

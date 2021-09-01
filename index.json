@@ -84,11 +84,11 @@
 	"content": " AWS Environment Setup To start the workshop, select one of the following, depending on whether you are\u0026hellip;\n \u0026hellip;attending an AWS hosted event, or \u0026hellip;running the workshop on your own AWS account  "
 },
 {
-	"uri": "/terraform/20_prerequisites/aws_setup/2002a_aws_event.html",
+	"uri": "/terraform/20_prerequisites/aws_setup/aws_event.html",
 	"title": "At an AWS Event",
 	"tags": [],
 	"description": "",
-	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n4 . Install the AWS CLI\nIf you haven\u0026rsquo;t already, install the AWS CLI following the directions here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html\n5 . Add the Credentials / CLI Snippets to your terminal or wherever you have your AWS CLI installed. For example, in Linux or MacOS:\nexport AWS_DEFAULT_REGION=us-west-2 export AWS_ACCESS_KEY_ID=ASIAYNGA6HGCPEXAMPLE export AWS_SECRET_ACCESS_KEY=W7ZFRLHBbe61i1VDzjopoQoWR0QPGh3nvexample export AWS_SESSION_TOKEN=EXAMPLEpZ2luX2VjEIz//////////wEaCXVzLWVhc3QtMSJGMEQCIFbnVWSc6OAivQNSWlfgud2UcvjXprUkRVy7JFr4sLvfAiAN1p08n2FhBSD2WlCVLnHdYAHkRNjBJAvAQHIIQx0tVCqgAgjF//////////8BEAAaDDU3ODA3NzczNTMwMCIM/QhZMGhfh6+ZsKJdKvQBCJ+7axtIjet9jrFUddi/Qa3wlqCx9tb+nCMxnoq5mNYmdp+dDV4Sfa3ucikQeuRQKQH0XKhxCAvEYngdCc2oJnDUpPf5rQ2WbwoUZwq6cR8JBlCIzyqZetHkt04Vgr5nOd+ZHmVm2aJJBJITzfw2qXUcokigcjyION4MHn7r0BTB5N2vKPcemevmGEO+BFpz23u1Pn4HHv61ezY1+8br2/YLQ2rS3/HOSPKMYtsG0FiqnRs0HBCbF5cq06OPuPO8uN6WTebdgXnE3pHhGqJzzrBYlPzzT4x1dNFKkdBF9hLgfZ+b2VcDsbidlSqkV89IhQejLzDA7bSJBjqeAdMdyt/HGxpG+2aS9GXdOZNg8kuAGzb/JQmNEagJWH+0TPBKlUGCvlFPEt6UXEB2wdbVMKjMOT53W8muycP5Nj5x5/NlEcJbjrs0ON1f2vq6WyiiAslqLbh3w5ggtCEnxwPYgS6v41rChcEwJnmIbCEAn3+Aqq+V/qq+ix5kR+Jvc0CqBbKks2tY8pU8DC32FUvnx+6NIP5HaNexample"
+	"content": " Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:\ne8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms \u0026amp; Login. Click on that button to continue.\n2 . Choose AWS Console, then Open AWS Console. This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.\n3 . Use a single region for the duration of this workshop. This workshop supports the following regions:\n us-west-2 (US West - Oregon)  Please select US West (Oregon) in the top right corner.\n"
 },
 {
 	"uri": "/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html",
@@ -119,6 +119,13 @@
 	"content": " The Cloud9 workspace should be built by an IAM user with Administrator privileges, not the root account user. Please ensure you are logged in as an IAM user, not the root account user.\n This workshop was designed to run in the Oregon (us-west-2) region. Please don\u0026rsquo;t run in any other region. Future versions of this workshop will expand region availability, and this message will be removed.\n Ad blockers, javascript disablers, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the specific domains.\n Launch Cloud9: Create a Cloud9 Environment: https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2\nMake sure you are naming your Cloud9 environment Bridgecrew-Workshop, otherwise things will break later.\n  Select Create environment Name it Bridgecrew-Workshop and hit next. Select a t3 medium instance  Leave all the default selections.\n When it comes up, customize the environment by closing the welcome tab and lower work area, and opening a new terminal tab in the main work area:  Your workspace should now look like this:  If you like this theme, you can choose it yourself by selecting View / Themes / Solarized / Solarized Dark in the Cloud9 workspace menu.\n  "
 },
 {
+	"uri": "/terraform/20_prerequisites/aws_setup/aws_event/workspace.html",
+	"title": "Create a workspace",
+	"tags": [],
+	"description": "",
+	"content": " The Cloud9 workspace should be built by an IAM user with Administrator privileges, not the root account user. Please ensure you are logged in as an IAM user, not the root account user.\n This workshop was designed to run in the Oregon (us-west-2) region. Please don\u0026rsquo;t run in any other region. Future versions of this workshop will expand region availability, and this message will be removed.\n Ad blockers, javascript disablers, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the specific domains.\n Launch Cloud9: Create a Cloud9 Environment: https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2\nMake sure you are naming your Cloud9 environment Bridgecrew-Workshop, otherwise things will break later.\n  Select Create environment Name it Bridgecrew-Workshop and hit next. Select a t3 medium instance  Leave all the default selections.\n When it comes up, customize the environment by closing the welcome tab and lower work area, and opening a new terminal tab in the main work area:  Your workspace should now look like this:  If you like this theme, you can choose it yourself by selecting View / Themes / Solarized / Solarized Dark in the Cloud9 workspace menu.\n  "
+},
+{
 	"uri": "/aws/6_prerequisites/7_aws_setup/9_own_account.html",
 	"title": "Own AWS Account",
 	"tags": [],
@@ -141,6 +148,13 @@
 },
 {
 	"uri": "/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html",
+	"title": "Quick Setup",
+	"tags": [],
+	"description": "",
+	"content": " We are going to install jq and initilize a python enviroment. Cloud9 already has the latest version of Python installed.\n Install jq - jq is a command-line tool for parsing JSON.\nsudo yum install jq Start a python enviroment\npython3 -m venv env source ./env/bin/activate "
+},
+{
+	"uri": "/terraform/20_prerequisites/aws_setup/aws_event/setup_short.html",
 	"title": "Quick Setup",
 	"tags": [],
 	"description": "",

@@ -7,27 +7,27 @@
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
-    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
 
-    <title>Module - Fix :: Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>At an AWS Event :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../css/nucleus.css?1630518977" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1630518977" rel="stylesheet">
-    <link href="../css/hybrid.css?1630518977" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1630518977" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1630518977" rel="stylesheet">
-    <link href="../css/auto-complete.css?1630518977" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1630518977" rel="stylesheet">
-    <link href="../css/theme.css?1630518977" rel="stylesheet">
-    <link href="../css/tabs.css?1630518977" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1630518977" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1630518978" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1630518978" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1630518978" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1630518978" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1630518978" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1630518978" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1630518978" rel="stylesheet">
+    <link href="../../../css/theme.css?1630518978" rel="stylesheet">
+    <link href="../../../css/tabs.css?1630518978" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1630518978" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1630518977" rel="stylesheet">
+    <link href="../../../css/theme-mine.css?1630518978" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1630518977"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1630518978"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,14 +37,14 @@
     </style>
     
   </head>
-  <body class="" data-url="../aws/30_module_three.html">
+  <body class="" data-url="../../../terraform/20_prerequisites/aws_setup/aws_event.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
 
   <div id="header-wrapper">
     <div id="header">
-      <a href="../" title="Bridgecrew Workshop home">
+      <a href="../../../" title="Bridgecrew Workshop home">
 <img class="login-step-container__logo__29R6Z" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAgCAMAAAAse8q7AAAC6FBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8u4OzqAAAA93RSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFDREVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZn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" alt="logo">
 </a>
 
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1630518977"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1630518977"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1630518978"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1630518978"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1630518977"></script>
+<script type="text/javascript" src="../../../js/search.js?1630518978"></script>
 
     
   </div>
@@ -71,7 +71,7 @@
     <section id="homelinks">
       <ul>
         <li>
-            <a class="padding" href='../'><i class='fas fa-home'></i> Home</a>
+            <a class="padding" href='../../../'><i class='fas fa-home'></i> Home</a>
         </li>
       </ul>
     </section>
@@ -91,11 +91,11 @@
   
     
     <li data-nav-id="/aws.html" title="AWS Workshop" class="dd-item
-        parent
+        
         
         
         ">
-      <a href="../aws.html">
+      <a href="../../../aws.html">
           AWS Workshop
           
             <i class="fas fa-check read-icon"></i>
@@ -126,7 +126,7 @@
         
         
         ">
-      <a href="../aws/5_getting_started.html">
+      <a href="../../../aws/5_getting_started.html">
           <b>1 </b>DevSecWhat?
           
             <i class="fas fa-check read-icon"></i>
@@ -154,7 +154,7 @@
         
         
         ">
-      <a href="../aws/5b_what_cloudformation.html">
+      <a href="../../../aws/5b_what_cloudformation.html">
           <b>2 </b>CloudFormation Overview
           
             <i class="fas fa-check read-icon"></i>
@@ -182,7 +182,7 @@
         
         
         ">
-      <a href="../aws/6_prerequisites.html">
+      <a href="../../../aws/6_prerequisites.html">
           <b>3 </b>Prerequisites
           
             <i class="fas fa-check read-icon"></i>
@@ -213,7 +213,7 @@
         
         
         ">
-      <a href="../aws/6_prerequisites/7_aws_setup.html">
+      <a href="../../../aws/6_prerequisites/7_aws_setup.html">
           <b>3.1 </b>AWS Environment
           
             <i class="fas fa-check read-icon"></i>
@@ -244,7 +244,7 @@
         
         
         ">
-      <a href="../aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html">
+      <a href="../../../aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html">
           <b>3.2.1 </b>At an AWS Event
           
             <i class="fas fa-check read-icon"></i>
@@ -269,7 +269,7 @@
   
     
       <li data-nav-id="/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html" title="Create a workspace" class="dd-item ">
-        <a href="../aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html">
+        <a href="../../../aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html">
         <b>3.2.1.1 </b>Create a workspace
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -290,7 +290,7 @@
   
     
       <li data-nav-id="/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html" title="Quick Setup" class="dd-item ">
-        <a href="../aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html">
+        <a href="../../../aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html">
         <b>3.2.1.5 </b>Quick Setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -324,7 +324,7 @@
         
         
         ">
-      <a href="../aws/6_prerequisites/7_aws_setup/9_own_account.html">
+      <a href="../../../aws/6_prerequisites/7_aws_setup/9_own_account.html">
           <b>3.2.2 </b>Own AWS Account
           
             <i class="fas fa-check read-icon"></i>
@@ -349,7 +349,7 @@
   
     
       <li data-nav-id="/aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html" title="Create a workspace" class="dd-item ">
-        <a href="../aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html">
+        <a href="../../../aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html">
         <b>3.2.2.1 </b>Create a workspace
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -388,7 +388,7 @@
   
     
       <li data-nav-id="/aws/6_prerequisites/601_setting_up_bridgecrew_account.html" title="Bridgecrew Setup" class="dd-item ">
-        <a href="../aws/6_prerequisites/601_setting_up_bridgecrew_account.html">
+        <a href="../../../aws/6_prerequisites/601_setting_up_bridgecrew_account.html">
         <b>3.2 </b>Bridgecrew Setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -422,7 +422,7 @@
         
         
         ">
-      <a href="../aws/10_module_one.html">
+      <a href="../../../aws/10_module_one.html">
           <b>4 </b>Module - Scan
           
             <i class="fas fa-check read-icon"></i>
@@ -447,7 +447,7 @@
   
     
       <li data-nav-id="/aws/10_module_one/1001_cfngoat.html" title="CfnGoat" class="dd-item ">
-        <a href="../aws/10_module_one/1001_cfngoat.html">
+        <a href="../../../aws/10_module_one/1001_cfngoat.html">
         <b>4.1 </b>CfnGoat
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -468,7 +468,7 @@
   
     
       <li data-nav-id="/aws/10_module_one/1002_local_scan_cli.html" title="Bridgecrew CLI" class="dd-item ">
-        <a href="../aws/10_module_one/1002_local_scan_cli.html">
+        <a href="../../../aws/10_module_one/1002_local_scan_cli.html">
         <b>4.2 </b>Bridgecrew CLI
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -489,7 +489,7 @@
   
     
       <li data-nav-id="/aws/10_module_one/1003_vscode.html" title="VSCode Plugin" class="dd-item ">
-        <a href="../aws/10_module_one/1003_vscode.html">
+        <a href="../../../aws/10_module_one/1003_vscode.html">
         <b>4.3 </b>VSCode Plugin
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -510,7 +510,7 @@
   
     
       <li data-nav-id="/aws/10_module_one/1004_local_scan_dashboard.html" title="Bridgecrew Dashboard" class="dd-item ">
-        <a href="../aws/10_module_one/1004_local_scan_dashboard.html">
+        <a href="../../../aws/10_module_one/1004_local_scan_dashboard.html">
         <b>4.4 </b>Bridgecrew Dashboard
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -544,7 +544,7 @@
         
         
         ">
-      <a href="../aws/20_module_two.html">
+      <a href="../../../aws/20_module_two.html">
           <b>5 </b>Module - Automate
           
             <i class="fas fa-check read-icon"></i>
@@ -569,7 +569,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2001_automating_iac_github.html" title="CloudFormation repository setup" class="dd-item ">
-        <a href="../aws/20_module_two/2001_automating_iac_github.html">
+        <a href="../../../aws/20_module_two/2001_automating_iac_github.html">
         <b>5.1 </b>CloudFormation repository setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -590,7 +590,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2002_automating_iac_codebuild.html" title="AWS CodeBuild setup" class="dd-item ">
-        <a href="../aws/20_module_two/2002_automating_iac_codebuild.html">
+        <a href="../../../aws/20_module_two/2002_automating_iac_codebuild.html">
         <b>5.2 </b>AWS CodeBuild setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -611,7 +611,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2003_automating_iac_codebuild_iam.html" title="Edit IAM for CodeBuild" class="dd-item ">
-        <a href="../aws/20_module_two/2003_automating_iac_codebuild_iam.html">
+        <a href="../../../aws/20_module_two/2003_automating_iac_codebuild_iam.html">
         <b>5.3 </b>Edit IAM for CodeBuild
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -632,7 +632,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2004_automating_iac_codepipeline.html" title="AWS CodePipeline Setup" class="dd-item ">
-        <a href="../aws/20_module_two/2004_automating_iac_codepipeline.html">
+        <a href="../../../aws/20_module_two/2004_automating_iac_codepipeline.html">
         <b>5.4 </b>AWS CodePipeline Setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -653,7 +653,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2005_automating_iac_results.html" title="Pipeline Results" class="dd-item ">
-        <a href="../aws/20_module_two/2005_automating_iac_results.html">
+        <a href="../../../aws/20_module_two/2005_automating_iac_results.html">
         <b>5.5 </b>Pipeline Results
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -674,7 +674,7 @@
   
     
       <li data-nav-id="/aws/20_module_two/2006_automating_iac_github_actions.html" title="GitHub Actions" class="dd-item ">
-        <a href="../aws/20_module_two/2006_automating_iac_github_actions.html">
+        <a href="../../../aws/20_module_two/2006_automating_iac_github_actions.html">
         <b>5.6 </b>GitHub Actions
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -704,11 +704,11 @@
   
     
     <li data-nav-id="/aws/30_module_three.html" title="Module - Fix" class="dd-item
-        parent
-        active
+        
+        
         
         ">
-      <a href="../aws/30_module_three.html">
+      <a href="../../../aws/30_module_three.html">
           <b>6 </b>Module - Fix
           
             <i class="fas fa-check read-icon"></i>
@@ -733,7 +733,7 @@
   
     
       <li data-nav-id="/aws/30_module_three/3001_bridgecrew_dashboard_results.html" title="Bridgecrew platform results" class="dd-item ">
-        <a href="../aws/30_module_three/3001_bridgecrew_dashboard_results.html">
+        <a href="../../../aws/30_module_three/3001_bridgecrew_dashboard_results.html">
         <b>6.1 </b>Bridgecrew platform results
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -754,7 +754,7 @@
   
     
       <li data-nav-id="/aws/30_module_three/3002_bridgecrew_automate_integrate_github.html" title="GitHub integration" class="dd-item ">
-        <a href="../aws/30_module_three/3002_bridgecrew_automate_integrate_github.html">
+        <a href="../../../aws/30_module_three/3002_bridgecrew_automate_integrate_github.html">
         <b>6.2 </b>GitHub integration
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -775,7 +775,7 @@
   
     
       <li data-nav-id="/aws/30_module_three/3003_bridgecrew_automate_pr_remediation.html" title="Pull request fixes" class="dd-item ">
-        <a href="../aws/30_module_three/3003_bridgecrew_automate_pr_remediation.html">
+        <a href="../../../aws/30_module_three/3003_bridgecrew_automate_pr_remediation.html">
         <b>6.3 </b>Pull request fixes
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -796,7 +796,7 @@
   
     
       <li data-nav-id="/aws/30_module_three/3004_bridgecrew_automate_add_runtime.html" title="AWS runtime scanning" class="dd-item ">
-        <a href="../aws/30_module_three/3004_bridgecrew_automate_add_runtime.html">
+        <a href="../../../aws/30_module_three/3004_bridgecrew_automate_add_runtime.html">
         <b>6.4 </b>AWS runtime scanning
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -817,7 +817,7 @@
   
     
       <li data-nav-id="/aws/30_module_three/3005_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../aws/30_module_three/3005_bridgecrew_automate_fix_runtime.html">
+        <a href="../../../aws/30_module_three/3005_bridgecrew_automate_fix_runtime.html">
         <b>6.5 </b>AWS fixes in runtime
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -851,7 +851,7 @@
         
         
         ">
-      <a href="../aws/40_conclusion.html">
+      <a href="../../../aws/40_conclusion.html">
           <b>7 </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
@@ -879,7 +879,7 @@
         
         
         ">
-      <a href="../aws/100_cleanup.html">
+      <a href="../../../aws/100_cleanup.html">
           <b>8 </b>Cleanup
           
             <i class="fas fa-check read-icon"></i>
@@ -910,11 +910,11 @@
   
     
     <li data-nav-id="/terraform.html" title="Terraform Workshop" class="dd-item
-        
+        parent
         
         
         ">
-      <a href="../terraform.html">
+      <a href="../../../terraform.html">
           Terraform Workshop
           
             <i class="fas fa-check read-icon"></i>
@@ -945,7 +945,7 @@
         
         
         ">
-      <a href="../terraform/00_getting_started.html">
+      <a href="../../../terraform/00_getting_started.html">
           <b>1 </b>DevSecWhat?
           
             <i class="fas fa-check read-icon"></i>
@@ -973,7 +973,7 @@
         
         
         ">
-      <a href="../terraform/10_what_is_terraform.html">
+      <a href="../../../terraform/10_what_is_terraform.html">
           <b>2 </b>Infrastructure as Code using Terraform
           
             <i class="fas fa-check read-icon"></i>
@@ -997,11 +997,11 @@
   
     
     <li data-nav-id="/terraform/20_prerequisites.html" title="Prerequisites" class="dd-item
-        
+        parent
         
         
         ">
-      <a href="../terraform/20_prerequisites.html">
+      <a href="../../../terraform/20_prerequisites.html">
           <b>3 </b>Prerequisites
           
             <i class="fas fa-check read-icon"></i>
@@ -1028,7 +1028,7 @@
   
     
       <li data-nav-id="/terraform/20_prerequisites/2001_terraform_setup.html" title="Terraform Environment" class="dd-item ">
-        <a href="../terraform/20_prerequisites/2001_terraform_setup.html">
+        <a href="../../../terraform/20_prerequisites/2001_terraform_setup.html">
         <b>3.1 </b>Terraform Environment
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1049,11 +1049,11 @@
   
     
     <li data-nav-id="/terraform/20_prerequisites/aws_setup.html" title="AWS Environment" class="dd-item
-        
+        parent
         
         
         ">
-      <a href="../terraform/20_prerequisites/aws_setup.html">
+      <a href="../../../terraform/20_prerequisites/aws_setup.html">
           <b>3.2 </b>AWS Environment
           
             <i class="fas fa-check read-icon"></i>
@@ -1080,11 +1080,11 @@
   
     
     <li data-nav-id="/terraform/20_prerequisites/aws_setup/aws_event.html" title="At an AWS Event" class="dd-item
-        
-        
+        parent
+        active
         
         ">
-      <a href="../terraform/20_prerequisites/aws_setup/aws_event.html">
+      <a href="../../../terraform/20_prerequisites/aws_setup/aws_event.html">
           <b>3.2.1 </b>At an AWS Event
           
             <i class="fas fa-check read-icon"></i>
@@ -1109,7 +1109,7 @@
   
     
       <li data-nav-id="/terraform/20_prerequisites/aws_setup/aws_event/workspace.html" title="Create a workspace" class="dd-item ">
-        <a href="../terraform/20_prerequisites/aws_setup/aws_event/workspace.html">
+        <a href="../../../terraform/20_prerequisites/aws_setup/aws_event/workspace.html">
         <b>3.2.1.1 </b>Create a workspace
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1130,7 +1130,7 @@
   
     
       <li data-nav-id="/terraform/20_prerequisites/aws_setup/aws_event/setup_short.html" title="Quick Setup" class="dd-item ">
-        <a href="../terraform/20_prerequisites/aws_setup/aws_event/setup_short.html">
+        <a href="../../../terraform/20_prerequisites/aws_setup/aws_event/setup_short.html">
         <b>3.2.1.2 </b>Quick Setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1160,7 +1160,7 @@
   
     
       <li data-nav-id="/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html" title="AWS Environment setup" class="dd-item ">
-        <a href="../terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html">
+        <a href="../../../terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html">
         <b>3.2.2 </b>AWS Environment setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1190,7 +1190,7 @@
   
     
       <li data-nav-id="/terraform/20_prerequisites/2003_bc_setup.html" title="Bridgecrew setup" class="dd-item ">
-        <a href="../terraform/20_prerequisites/2003_bc_setup.html">
+        <a href="../../../terraform/20_prerequisites/2003_bc_setup.html">
         <b>3.3 </b>Bridgecrew setup
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1224,7 +1224,7 @@
         
         
         ">
-      <a href="../terraform/30_module_one.html">
+      <a href="../../../terraform/30_module_one.html">
           <b>4 </b>Module - Scan
           
             <i class="fas fa-check read-icon"></i>
@@ -1249,7 +1249,7 @@
   
     
       <li data-nav-id="/terraform/30_module_one/1001_terragoat.html" title="TerraGoat" class="dd-item ">
-        <a href="../terraform/30_module_one/1001_terragoat.html">
+        <a href="../../../terraform/30_module_one/1001_terragoat.html">
         <b>4.1 </b>TerraGoat
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1270,7 +1270,7 @@
   
     
       <li data-nav-id="/terraform/30_module_one/1002_local_scan_cli.html" title="Checkov" class="dd-item ">
-        <a href="../terraform/30_module_one/1002_local_scan_cli.html">
+        <a href="../../../terraform/30_module_one/1002_local_scan_cli.html">
         <b>4.2 </b>Checkov
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1291,7 +1291,7 @@
   
     
       <li data-nav-id="/terraform/30_module_one/1003_local_scan_dashboard.html" title="Bridgecrew Dashboard" class="dd-item ">
-        <a href="../terraform/30_module_one/1003_local_scan_dashboard.html">
+        <a href="../../../terraform/30_module_one/1003_local_scan_dashboard.html">
         <b>4.3 </b>Bridgecrew Dashboard
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1312,7 +1312,7 @@
   
     
       <li data-nav-id="/terraform/30_module_one/1004_vs_code.html" title="VS Code Plugin" class="dd-item ">
-        <a href="../terraform/30_module_one/1004_vs_code.html">
+        <a href="../../../terraform/30_module_one/1004_vs_code.html">
         <b>4.4 </b>VS Code Plugin
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1346,7 +1346,7 @@
         
         
         ">
-      <a href="../terraform/40_module_two.html">
+      <a href="../../../terraform/40_module_two.html">
           <b>5 </b>Module - Automate
           
             <i class="fas fa-check read-icon"></i>
@@ -1371,7 +1371,7 @@
   
     
       <li data-nav-id="/terraform/40_module_two/2001_automating_iac_github_action.html" title="GitHub Action" class="dd-item ">
-        <a href="../terraform/40_module_two/2001_automating_iac_github_action.html">
+        <a href="../../../terraform/40_module_two/2001_automating_iac_github_action.html">
         <b>5.1 </b>GitHub Action
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1392,7 +1392,7 @@
   
     
       <li data-nav-id="/terraform/40_module_two/2002_yor_github_action.html" title="Yor tag &amp; trace" class="dd-item ">
-        <a href="../terraform/40_module_two/2002_yor_github_action.html">
+        <a href="../../../terraform/40_module_two/2002_yor_github_action.html">
         <b>5.2 </b>Yor tag &amp; trace
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1413,7 +1413,7 @@
   
     
       <li data-nav-id="/terraform/40_module_two/2003_automating_iac_terraform_cloud.html" title="Terraform Cloud" class="dd-item ">
-        <a href="../terraform/40_module_two/2003_automating_iac_terraform_cloud.html">
+        <a href="../../../terraform/40_module_two/2003_automating_iac_terraform_cloud.html">
         <b>5.3 </b>Terraform Cloud
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1434,7 +1434,7 @@
   
     
       <li data-nav-id="/terraform/40_module_two/2004_github_application.html" title="GitHub Application" class="dd-item ">
-        <a href="../terraform/40_module_two/2004_github_application.html">
+        <a href="../../../terraform/40_module_two/2004_github_application.html">
         <b>5.4 </b>GitHub Application
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1455,7 +1455,7 @@
   
     
       <li data-nav-id="/terraform/40_module_two/2005_kickoff_pr.html" title="Test pull request" class="dd-item ">
-        <a href="../terraform/40_module_two/2005_kickoff_pr.html">
+        <a href="../../../terraform/40_module_two/2005_kickoff_pr.html">
         <b>5.5 </b>Test pull request
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1489,7 +1489,7 @@
         
         
         ">
-      <a href="../terraform/50_module_three.html">
+      <a href="../../../terraform/50_module_three.html">
           <b>6 </b>Module - Fix
           
             <i class="fas fa-check read-icon"></i>
@@ -1514,7 +1514,7 @@
   
     
       <li data-nav-id="/terraform/50_module_three/3001_bridgecrew_dashboard_results.html" title="Bridgecrew platform results" class="dd-item ">
-        <a href="../terraform/50_module_three/3001_bridgecrew_dashboard_results.html">
+        <a href="../../../terraform/50_module_three/3001_bridgecrew_dashboard_results.html">
         <b>6.1 </b>Bridgecrew platform results
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1535,7 +1535,7 @@
   
     
       <li data-nav-id="/terraform/50_module_three/3002_bridgecrew_pull_request_fix.html" title="Pull request fixes" class="dd-item ">
-        <a href="../terraform/50_module_three/3002_bridgecrew_pull_request_fix.html">
+        <a href="../../../terraform/50_module_three/3002_bridgecrew_pull_request_fix.html">
         <b>6.2 </b>Pull request fixes
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1556,7 +1556,7 @@
   
     
       <li data-nav-id="/terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html" title="AWS runtime scanning" class="dd-item ">
-        <a href="../terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html">
+        <a href="../../../terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html">
         <b>6.3 </b>AWS runtime scanning
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1577,7 +1577,7 @@
   
     
       <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
+        <a href="../../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
         <b>6.4 </b>AWS fixes in runtime
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1598,7 +1598,7 @@
   
     
       <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" class="dd-item ">
-        <a href="../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
+        <a href="../../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
         <b>6.5 </b>Drift Detection
         <i class="fas fa-check read-icon"></i>
         </a>
@@ -1632,7 +1632,7 @@
         
         
         ">
-      <a href="../terraform/60_conclusion.html">
+      <a href="../../../terraform/60_conclusion.html">
           <b>7 </b>Conclusion
           
             <i class="fas fa-check read-icon"></i>
@@ -1660,7 +1660,7 @@
         
         
         ">
-      <a href="../terraform/100_cleanup.html">
+      <a href="../../../terraform/100_cleanup.html">
           <b>8 </b>Cleanup
           
             <i class="fas fa-check read-icon"></i>
@@ -1770,7 +1770,19 @@
             
           
           
-            <a href='../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../aws.html'>AWS Workshop</a> > Module - Fix
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../../terraform.html'>Terraform Workshop</a> > <a href='../../../terraform/20_prerequisites.html'>Prerequisites</a> > <a href='../../../terraform/20_prerequisites/aws_setup.html'>AWS Environment</a> > At an AWS Event
+          
+        
+          
+        
           
         
           
@@ -1785,9 +1797,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#using-aws-event-engine">Using AWS Event engine</a>
 <ul>
-<li><a href="#module-learning-objectives">Module Learning Objectives</a></li>
+<li><a href="#e8476example"><code>e8476example</code></a>
+<ul>
+<li><a href="#create-aws-account">Create AWS Account</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1806,7 +1821,7 @@
           
             <h1>
               
-              Module - Fix
+              At an AWS Event
             </h1>
           
 
@@ -1816,18 +1831,32 @@
 
 	
 
-<p>As we’ve shown so far, Bridgecrew provides the policies and workflow to audit your CloudFormation templates before deployment, and optionally, to block vulnerabilities from making their way to your deployment pipeline.</p>
+<h1 id="using-aws-event-engine">Using AWS Event engine</h1>
 
-<p>In this module, we’ll head back to the Bridgecrew platform to show how easy it can be to improve your cloud security posture with easy-to-understand visualizations and automated remediations.</p>
+<p>To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:</p>
 
-<h2 id="module-learning-objectives">Module Learning Objectives</h2>
+<h2 id="e8476example"><code>e8476example</code></h2>
+
+<h3 id="create-aws-account">Create AWS Account</h3>
+
+<p>1 . Connect to the portal by clicking the button or browsing to <a href="https://dashboard.eventengine.run/" target="_blank">https://dashboard.eventengine.run/</a>. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to <strong>Accept Terms &amp; Login</strong>. Click on that button to continue.</p>
+
+<p><img src="../../../images/event-engine-initial-screen.png" alt="Event Engine" /></p>
+
+<p>2 . Choose <strong>AWS Console</strong>, then <strong>Open AWS Console</strong>.
+This account will expire at the end of the workshop and the all the resources created will be automatically deprovisioned. You will not be able to access this account after today.</p>
+
+<p><img src="../../../images/event-engine-dashboard.png" alt="Event Engine Dashboard" /></p>
+
+<p>3 . Use a single region for the duration of this workshop. This workshop supports the following regions:</p>
 
 <ul>
-<li>Investigating security violations in Bridgecrew</li>
-<li>Integrating Bridgecrew with GitHub</li>
-<li>Automating pull requests with GitHub</li>
-<li>Scanning runtime resources for vulnerable infrastructure</li>
+<li>us-west-2 (US West - Oregon)</li>
 </ul>
+
+<p>Please select <strong>US West (Oregon)</strong> in the top right corner.</p>
+
+<p><img src="../../../images/event-engine-region.png" alt="Event Engine Region" /></p>
 
 
 
@@ -2242,7 +2271,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2255,9 +2283,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2470,6 +2495,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2482,6 +2508,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2867,10 +2896,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../aws/20_module_two/2006_automating_iac_github_actions.html" title="GitHub Actions"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../../terraform/20_prerequisites/aws_setup.html" title="AWS Environment"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../aws/30_module_three/3001_bridgecrew_dashboard_results.html" title="Bridgecrew platform results" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../../terraform/20_prerequisites/aws_setup/aws_event/workspace.html" title="Create a workspace" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2880,19 +2909,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1630518977"></script>
-    <script src="../js/perfect-scrollbar.min.js?1630518977"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1630518977"></script>
-    <script src="../js/jquery.sticky.js?1630518977"></script>
-    <script src="../js/featherlight.min.js?1630518977"></script>
-    <script src="../js/highlight.pack.js?1630518977"></script>
+    <script src="../../../js/clipboard.min.js?1630518978"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1630518978"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1630518978"></script>
+    <script src="../../../js/jquery.sticky.js?1630518978"></script>
+    <script src="../../../js/featherlight.min.js?1630518978"></script>
+    <script src="../../../js/highlight.pack.js?1630518978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1630518977"></script>
-    <script src="../js/learn.js?1630518977"></script>
-    <script src="../js/hugo-learn.js?1630518977"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1630518978"></script>
+    <script src="../../../js/learn.js?1630518978"></script>
+    <script src="../../../js/hugo-learn.js?1630518978"></script>
     
         
-            <script src="../mermaid/mermaid.js?1630518977"></script>
+            <script src="../../../mermaid/mermaid.js?1630518978"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
