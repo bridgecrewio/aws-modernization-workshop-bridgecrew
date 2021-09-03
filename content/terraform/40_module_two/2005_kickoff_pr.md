@@ -81,7 +81,7 @@ We're using a free tier instance (t2-micro), but remember to cleanup with terraf
 
 Click "Confirm & Apply." This will deploy the simple EC2 instance and security group. 
 
-### Without Terraform Cloud
+#### Without Terraform Cloud
 
 Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your EC2 instance and security group. Type `yes` and let Terraform provision your resources.
 
