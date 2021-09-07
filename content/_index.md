@@ -18,26 +18,30 @@ weight: 1
 <div class="container">
     <div class="row center">
         <div class="col-lg-6 col-sm-6 mb-4">
-            <a href="./aws.html">
                 <div class="card text-center">
-                    <div class="card-body p-lg-5 px-3 py-4">
-                        <img src="images/aws_logo.png">
-                        <h4 class="card-title mb-3">AWS workshop</h4>
-                        <p class="card-text">Learn about securing CloudFormation templates from code to cloud using Bridgecrew's integrations with VS Code, CodeBuild, CodePipeline, GitHub and AWS runtime</p>
-                    </div>
+                    <a href="./aws.html">
+                        <div class="card-body p-lg-5 px-3 py-4">
+                            <a href="./aws.html">
+                                <img src="images/aws_logo.png">
+                                <h4 class="card-title mb-3">CloudFormation workshop</h4>
+                                <p class="card-text">Learn about securing CloudFormation templates from code to cloud using Bridgecrew's integrations with VS Code, CodeBuild, CodePipeline, GitHub and AWS runtime.</p>
+                            </a>
+                        </div>
+                    </a>
                 </div>
-            </a>
         </div>
         <div class="col-lg-6 col-sm-6 mb-4">
-            <a href="./terraform.html">
                 <div class="card text-center">
-                    <div class="card-body p-lg-5 px-3 py-4">
-                        <img src="images/terraform_logo.png">
-                        <h4 class="card-title mb-3">Terraform workshop</h4>
-                        <p class="card-text">Learn about securing Terraform templates from code to cloud using Bridgecrew's integrations with VS Code, GitHub, Terraform Cloud, and AWS runtime</p>
-                    </div>
+                    <a href="./terraform.html">
+                        <div class="card-body p-lg-5 px-3 py-4">
+                            <a href="./terraform.html">
+                                <img src="images/terraform_logo.png">
+                                <h4 class="card-title mb-3">Terraform workshop</h4>
+                                <p class="card-text">Learn about securing Terraform templates from code to cloud using Bridgecrew's integrations with VS Code, GitHub, Terraform Cloud, and AWS runtime.</p>
+                            </a>
+                        </div>
+                    </a>
                 </div>
-            </a>
         </div>
     </div>
 </div>
