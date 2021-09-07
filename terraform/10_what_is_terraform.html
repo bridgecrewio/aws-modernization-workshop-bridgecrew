@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.88.1" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Infrastructure as Code using Terraform :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../css/nucleus.css?1630649172" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1630649172" rel="stylesheet">
-    <link href="../css/hybrid.css?1630649172" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1630649172" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1630649172" rel="stylesheet">
-    <link href="../css/auto-complete.css?1630649172" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1630649172" rel="stylesheet">
-    <link href="../css/theme.css?1630649172" rel="stylesheet">
-    <link href="../css/tabs.css?1630649172" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1630649172" rel="stylesheet">
+    <link href="../css/nucleus.css?1631033306" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1631033306" rel="stylesheet">
+    <link href="../css/hybrid.css?1631033306" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1631033306" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1631033306" rel="stylesheet">
+    <link href="../css/auto-complete.css?1631033306" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631033306" rel="stylesheet">
+    <link href="../css/theme.css?1631033306" rel="stylesheet">
+    <link href="../css/tabs.css?1631033306" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1631033306" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1630649172" rel="stylesheet">
+    <link href="../css/theme-mine.css?1631033306" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1630649172"></script>
+    <script src="../js/jquery-3.3.1.min.js?1631033306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1630649172"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1630649172"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1631033306"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1631033306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1630649172"></script>
+<script type="text/javascript" src="../js/search.js?1631033306"></script>
 
     
   </div>
@@ -1826,12 +1826,12 @@
 <p>HashiCorp Terraform is a multi-cloud IaC tool that allows us to define how we want our infrastructure to look, and it will generate all of the commands to make that happen. Any changes we want to make, such as adding more instances with the same configurations, Terraform will handle for us after we define the changes in our template.</p>
 
 <p>For strictly demonstration purposes, the following Terraform resource block creates an S3 bucket without any CLI or GUI commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-hcl" data-lang="hcl"><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_s3_bucket&#34; &#34;data&#34;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-hcl" data-lang="hcl"><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_s3_bucket&#34; &#34;data&#34;</span> {
   bucket     <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my_bucket_name&#34;</span>
   acl        <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;public-read-write&#34;</span>
 }</code></pre></div>
 <p>After performing <code>terraform init</code>, we can provision an S3 bucket with the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">terraform apply</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">terraform apply</code></pre></div>
 <p>Any changes we make to that file, such as adding tagging or changing the acl, will just require another <code>terraform apply</code> command to update our bucket.</p>
 
 <h3 id="security-and-terraform">Security and Terraform</h3>
@@ -2893,19 +2893,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1630649172"></script>
-    <script src="../js/perfect-scrollbar.min.js?1630649172"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1630649172"></script>
-    <script src="../js/jquery.sticky.js?1630649172"></script>
-    <script src="../js/featherlight.min.js?1630649172"></script>
-    <script src="../js/highlight.pack.js?1630649172"></script>
+    <script src="../js/clipboard.min.js?1631033306"></script>
+    <script src="../js/perfect-scrollbar.min.js?1631033306"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1631033306"></script>
+    <script src="../js/jquery.sticky.js?1631033306"></script>
+    <script src="../js/featherlight.min.js?1631033306"></script>
+    <script src="../js/highlight.pack.js?1631033306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1630649172"></script>
-    <script src="../js/learn.js?1630649172"></script>
-    <script src="../js/hugo-learn.js?1630649172"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1631033306"></script>
+    <script src="../js/learn.js?1631033306"></script>
+    <script src="../js/hugo-learn.js?1631033306"></script>
     
         
-            <script src="../mermaid/mermaid.js?1630649172"></script>
+            <script src="../mermaid/mermaid.js?1631033306"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

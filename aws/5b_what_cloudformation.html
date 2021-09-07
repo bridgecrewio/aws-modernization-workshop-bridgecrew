@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.88.1" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>CloudFormation Overview :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../css/nucleus.css?1630649172" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1630649172" rel="stylesheet">
-    <link href="../css/hybrid.css?1630649172" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1630649172" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1630649172" rel="stylesheet">
-    <link href="../css/auto-complete.css?1630649172" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1630649172" rel="stylesheet">
-    <link href="../css/theme.css?1630649172" rel="stylesheet">
-    <link href="../css/tabs.css?1630649172" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1630649172" rel="stylesheet">
+    <link href="../css/nucleus.css?1631033306" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1631033306" rel="stylesheet">
+    <link href="../css/hybrid.css?1631033306" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1631033306" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1631033306" rel="stylesheet">
+    <link href="../css/auto-complete.css?1631033306" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631033306" rel="stylesheet">
+    <link href="../css/theme.css?1631033306" rel="stylesheet">
+    <link href="../css/tabs.css?1631033306" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1631033306" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1630649172" rel="stylesheet">
+    <link href="../css/theme-mine.css?1631033306" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1630649172"></script>
+    <script src="../js/jquery-3.3.1.min.js?1631033306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1630649172"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1630649172"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1631033306"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1631033306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1630649172"></script>
+<script type="text/javascript" src="../js/search.js?1631033306"></script>
 
     
   </div>
@@ -1802,7 +1802,7 @@
 <p>Infrastructure as code (IaC) frameworks such as AWS CloudFormation, Terraform, and Pulumi make cloud provisioning simple and scalable by leveraging automation and code. Defining your cloud infrastructure in code simplifies repetitive DevOps tasks and gives you a single source of truth for your app and environment configuration.</p>
 
 <p>AWS CloudFormation enables you to define your AWS infrastructure with templates, which you can check into version control or store in S3 buckets. CloudFormation templates are JSON or YAML files. For instance, the following template defines an S3 bucket:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
 
   <span style="color:#f92672">&#34;AWSTemplateFormatVersion&#34;</span> : <span style="color:#e6db74">&#34;2010-09-09&#34;</span>,
   <span style="color:#f92672">&#34;Description&#34;</span> : <span style="color:#e6db74">&#34;AWS CloudFormation Sample Template: Sample template showing how to create a publicly accessible S3 bucket.&#34;</span>,
@@ -1832,7 +1832,7 @@
 }</code></pre></div>
 <p>Using the AWS CLI, you can provision the above bucket in seconds:
 <em>(This is an example, not required for the workshop)</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws cloudformation create-stack --stack-name myexamplestack --template-body file:///home/example/mytemplate.json</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws cloudformation create-stack --stack-name myexamplestack --template-body file:///home/example/mytemplate.json</code></pre></div>
 <h2 id="security-and-cloudformation-iac">Security and CloudFormation IaC</h2>
 
 <p>The benefit of using CloudFormation to define your AWS infrastructure is that it allows you to audit templates before they’re deployed. That will enable you to bake security best practices into your development and deployment lifecycle and finding potential security and compliance issues before the infrastructure becomes real.</p>
@@ -2896,19 +2896,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1630649172"></script>
-    <script src="../js/perfect-scrollbar.min.js?1630649172"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1630649172"></script>
-    <script src="../js/jquery.sticky.js?1630649172"></script>
-    <script src="../js/featherlight.min.js?1630649172"></script>
-    <script src="../js/highlight.pack.js?1630649172"></script>
+    <script src="../js/clipboard.min.js?1631033306"></script>
+    <script src="../js/perfect-scrollbar.min.js?1631033306"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1631033306"></script>
+    <script src="../js/jquery.sticky.js?1631033306"></script>
+    <script src="../js/featherlight.min.js?1631033306"></script>
+    <script src="../js/highlight.pack.js?1631033306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1630649172"></script>
-    <script src="../js/learn.js?1630649172"></script>
-    <script src="../js/hugo-learn.js?1630649172"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1631033306"></script>
+    <script src="../js/learn.js?1631033306"></script>
+    <script src="../js/hugo-learn.js?1631033306"></script>
     
         
-            <script src="../mermaid/mermaid.js?1630649172"></script>
+            <script src="../mermaid/mermaid.js?1631033306"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

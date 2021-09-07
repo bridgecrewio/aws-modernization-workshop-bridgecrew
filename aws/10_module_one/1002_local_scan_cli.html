@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.88.1" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Bridgecrew CLI :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1630649172" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/hybrid.css?1630649172" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1630649172" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1630649172" rel="stylesheet">
-    <link href="../../css/theme.css?1630649172" rel="stylesheet">
-    <link href="../../css/tabs.css?1630649172" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1630649172" rel="stylesheet">
+    <link href="../../css/nucleus.css?1631033306" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/hybrid.css?1631033306" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1631033306" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631033306" rel="stylesheet">
+    <link href="../../css/theme.css?1631033306" rel="stylesheet">
+    <link href="../../css/tabs.css?1631033306" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1631033306" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1630649172" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1631033306" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1630649172"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1631033306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1630649172"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1630649172"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1631033306"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1631033306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1630649172"></script>
+<script type="text/javascript" src="../../js/search.js?1631033306"></script>
 
     
   </div>
@@ -1807,9 +1807,9 @@
 <p>To demonstrate what kinds of security and compliance errors Bridgecrew can identify in CloudFormation templates, we’ll start by using Bridgecrew CLI and send the results to the Bridgecrew platform.</p>
 
 <p>Make sure you are in the <code>cfngoat</code> directory from the previous step, copy your unique Bridgecrew API token, and scan the <code>cfngoat.yaml</code> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat</code></pre></div>
 <p>You can also scan entire directories with <code>-d &lt;path&gt;</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat</code></pre></div>
 
 <div class="notices info" ><p style='text-align: left;'>
 You can use the bridgecrew CLI without --bc-api-key, the results will still display locally, without uploading to the bridgecrew cloud, for testing or local-only scan results.
@@ -1826,13 +1826,13 @@ You can use the bridgecrew CLI without --bc-api-key, the results will still disp
 - Ensure S3 bucket has ‘restrict_public_bucket’ enabled</p>
 
 <p>To get the list of policies that Bridgecrew checks for, use -l or –list:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew --list</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bridgecrew --list</code></pre></div>
 <h2 id="bridgecrew-policies">Bridgecrew policies</h2>
 
 <p>In many instances, when testing locally with the Bridgecrew CLI, you may only be interested in running just a few checks. In that case, you can add the <code>-c</code> or <code>--check</code> option:</p>
-<pre><code>bridgecrew -f cfngoat.yaml -c CKV_AWS_55,CKV_AWS_56</code></pre>
+<pre tabindex="0"><code>bridgecrew -f cfngoat.yaml -c CKV_AWS_55,CKV_AWS_56</code></pre>
 <p>Alternatively, if you want to run all but a few checks, use the <code>--skip-check</code> option:</p>
-<pre><code>bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_55,CKV_AWS_56 </code></pre>
+<pre tabindex="0"><code>bridgecrew -f cfngoat.yaml --skip-check CKV_AWS_55,CKV_AWS_56 </code></pre>
 <p>Next, let’s inspect these results in the Bridgecrew dashboard.</p>
 
 
@@ -2885,19 +2885,19 @@ You can use the bridgecrew CLI without --bc-api-key, the results will still disp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1630649172"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1630649172"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1630649172"></script>
-    <script src="../../js/jquery.sticky.js?1630649172"></script>
-    <script src="../../js/featherlight.min.js?1630649172"></script>
-    <script src="../../js/highlight.pack.js?1630649172"></script>
+    <script src="../../js/clipboard.min.js?1631033306"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1631033306"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1631033306"></script>
+    <script src="../../js/jquery.sticky.js?1631033306"></script>
+    <script src="../../js/featherlight.min.js?1631033306"></script>
+    <script src="../../js/highlight.pack.js?1631033306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1630649172"></script>
-    <script src="../../js/learn.js?1630649172"></script>
-    <script src="../../js/hugo-learn.js?1630649172"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1631033306"></script>
+    <script src="../../js/learn.js?1631033306"></script>
+    <script src="../../js/hugo-learn.js?1631033306"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1630649172"></script>
+            <script src="../../mermaid/mermaid.js?1631033306"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.88.1" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Checkov :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1630649172" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/hybrid.css?1630649172" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1630649172" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1630649172" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1630649172" rel="stylesheet">
-    <link href="../../css/theme.css?1630649172" rel="stylesheet">
-    <link href="../../css/tabs.css?1630649172" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1630649172" rel="stylesheet">
+    <link href="../../css/nucleus.css?1631033306" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/hybrid.css?1631033306" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1631033306" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1631033306" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631033306" rel="stylesheet">
+    <link href="../../css/theme.css?1631033306" rel="stylesheet">
+    <link href="../../css/tabs.css?1631033306" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1631033306" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1630649172" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1631033306" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1630649172"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1631033306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1630649172"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1630649172"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1631033306"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1631033306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1630649172"></script>
+<script type="text/javascript" src="../../js/search.js?1631033306"></script>
 
     
   </div>
@@ -1831,9 +1831,9 @@
 <p>To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</p>
 
 <p>Make sure you are in the cloned directory from the previous step, copy your unique Bridgecrew API token, and scan the <code>s3.tf</code> in the <code>aws</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/s3</code></pre></div>
 <p>You can also scan entire directories with -d <path>, such as the <code>aws</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -d terraform/aws/ --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/awsterragoat</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -d terraform/aws/ --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/awsterragoat</code></pre></div>
 <p>You can use Checkov without <code>--bc-api-key</code> to display the results in the command line without uploading to the Bridgecrew platform for testing or local-only scan results.</p>
 
 <p>The results will show all the failed policies and link to guides explaining the rationale behind each misconfiguration and steps to fix them. Note the output also includes the filename and snippet of code that is misconfigured:</p>
@@ -1843,12 +1843,12 @@
 <p>In the example output above, you can see that Bridgecrew identified two failing policies: “Ensure EKS Cluster has Secrets Encryption Enabled” and “Ensure Amazon EKS public endpoint not accessible to 0.0.0.0/0”.</p>
 
 <p>To get the list of policies that Checkov checks for, use <code>-l</code> or <code>--list</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov --list</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov --list</code></pre></div>
 <p>Checkov policies
 In many instances, when testing locally with the Checkov, you may only be interested in running just a few policies. In that case, you can add the <code>-c</code> or <code>--check</code> option:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf -c CKV_AWS_18,CKV_AWS_52</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf -c CKV_AWS_18,CKV_AWS_52</code></pre></div>
 <p>Alternatively, if you want to run all but a few policies, use the <code>--skip-check</code> option:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf --skip-check CKV_AWS_18,CKV_AWS_52</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">checkov -f terraform/aws/s3.tf --skip-check CKV_AWS_18,CKV_AWS_52</code></pre></div>
 
 <footer class="footline">
 	
@@ -2897,19 +2897,19 @@ In many instances, when testing locally with the Checkov, you may only be intere
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1630649172"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1630649172"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1630649172"></script>
-    <script src="../../js/jquery.sticky.js?1630649172"></script>
-    <script src="../../js/featherlight.min.js?1630649172"></script>
-    <script src="../../js/highlight.pack.js?1630649172"></script>
+    <script src="../../js/clipboard.min.js?1631033306"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1631033306"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1631033306"></script>
+    <script src="../../js/jquery.sticky.js?1631033306"></script>
+    <script src="../../js/featherlight.min.js?1631033306"></script>
+    <script src="../../js/highlight.pack.js?1631033306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1630649172"></script>
-    <script src="../../js/learn.js?1630649172"></script>
-    <script src="../../js/hugo-learn.js?1630649172"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1631033306"></script>
+    <script src="../../js/learn.js?1631033306"></script>
+    <script src="../../js/hugo-learn.js?1631033306"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1630649172"></script>
+            <script src="../../mermaid/mermaid.js?1631033306"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
