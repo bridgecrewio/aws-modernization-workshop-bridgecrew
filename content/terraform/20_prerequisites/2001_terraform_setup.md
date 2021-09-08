@@ -1,8 +1,8 @@
 ---
 title: "Terraform Environment"
 chapter: false
-weight: 5
-pre: "<b>3.1 </b>"
+weight: 7
+pre: "<b>3.2 </b>"
 ---
 
 ## Terraform Environment Setup
