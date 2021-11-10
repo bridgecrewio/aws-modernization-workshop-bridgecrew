@@ -14,7 +14,7 @@ As with AWS CodeBuild, we’ll also automatically send the results to Brigecrew 
 Generally speaking, you wouldn't configure both CI/CD solutions for a single repository, consider this page informational only if you have followed through the AWS CodeBuild and AWS CodeDeploy sections, the observability provided into the Bridgecrew platform will be similar.
 {{% /notice %}}
 
-As with other Integrations, the GitHub Actions CI/CD integration page at [https://www.bridgecrew.cloud/integrations/githubActions](https://www.bridgecrew.cloud/integrations/githubActions) allows us to setup GitHub Actions, select **Add Subscription**.
+As with other Integrations, the GitHub Actions CI/CD integration page at [https://www.bridgecrew.cloud/integrations/githubActions](https://www.bridgecrew.cloud/integrations/githubActions) allows us to setup GitHub Actions by following the integration setup prompts:
 
 ![GitHub Action Integration in Bridgecrew](./images/github_action_1.png "GitHub Action Integration in Bridgecrew")
 
@@ -22,10 +22,13 @@ The integration provides steps to enable GitHub actions, which we'll walk throug
 
 ![GitHub Action Integration in Bridgecrew](./images/github_action_1a1.png "GitHub Action Integration in Bridgecrew")
 
-Firstly, just like we stored the Bridgecrew API secret in `aws ssm put-parameter` for CodeBuild, allowing the CI/CD run to securely access the secret, we do the same with GitHub Actions, by creating a GitHub secret, this prevents our API key being exposed in the configuration (which is stored in our codebase).
+Firstly, just like we created an API token for CodeBuild integration, we do the same for GitHub Actions.
+
+Remember we then stored the Bridgecrew API secret in `aws ssm put-parameter` for CodeBuild, allowing the CI/CD run to securely access the secret, we do the same with GitHub Actions, by creating a GitHub secret, this prevents our API key being exposed in the configuration (which is stored in our codebase).
+
+![GitHub Action Integration in Bridgecrew](./images/github_action_1a2.png "GitHub Action Integration in Bridgecrew")
 
 Go to your **fork of CFNGoat on GitHub**, select **Settings**
-
 
 ![CFNGoat fork in GitHub](./images/github_action_2.png "CFNGoat fork in GitHub")
 
@@ -33,7 +36,7 @@ Then select **Secrets** from the left, and click **New Repository Secret**
 
 ![CFNGoat fork in GitHub](./images/github_action_3.png "CFNGoat fork in GitHub")
 
-Name the secret `BRIDGECREW_API_KEY` as instructed in the Bridgecrew integration details above.
+Name the secret `BC_API_KEY` as instructed in the Bridgecrew integration details above.
 
 Copy and paste your API Token from the Bridgecrew integration details page into the `value` field.
 
@@ -71,13 +74,14 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run Bridgecrew 
-      id: Bridgecrew
-      uses: bridgecrewio/bridgecrew-action@master
-      with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+  steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run Bridgecrew 
+        id: Bridgecrew
+        uses: bridgecrewio/bridgecrew-action@master 
+        with:
+          api-key: ${{ secrets.BC_API_KEY }}
 ```
 The result should look like this, select **Start commit**
 
