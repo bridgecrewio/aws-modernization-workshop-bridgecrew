@@ -9,7 +9,7 @@ pre: "<b>6.3 </b>"
 
 Now that you’ve pulled in multiple infrastructure sources, you might be getting overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help you implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository. 
 
-Let’s walk through the process with one of the policies we looked at earlier, **Ensure S3 bucket has ‘restrict_public_bucket’ enabled**:
+Let’s walk through the process with one of the policies we looked at earlier, **Ensure S3 bucket ‘RestrictPublicBucket’ is set to True**:
 
 
 ![Showing multiple information sources in the Bridgecrew Dashboard](./images/dash-remediate-1.png "Showing multiple information sources in the Bridgecrew Dashboard")
