@@ -8,7 +8,7 @@ pre: "<b>6.2 </b>"
 ## Integrating Bridgecrew with GitHub
 By adding another Bridgecrew integration, you can generate and push automated pull requests (PRs) back into your GitHub repository to update your CloudFormation code and fix security issues, as well as gain automated scanning of incoming community pull requests.
 
-Head back to the [Bridgecrew **Integrations**](https://www.bridgecrew.cloud/integrations/Github/?utm_source=aws_workshop) tab and select **GitHub** under the **Source Control** section. 
+Head back to the [Bridgecrew **Integrations**](https://www.bridgecrew.cloud/integrations/Github/?utm_source=aws_workshop) tab and select **GitHub** under the **Code Repositories** section. 
 
 ![Authorize Github Bridgecrew Integration](./images/dash-authorize-github-2v2.png "Authorize Github Bridgecrew Integration")
 

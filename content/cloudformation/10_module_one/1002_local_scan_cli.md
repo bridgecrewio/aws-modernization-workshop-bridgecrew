@@ -34,9 +34,9 @@ The results will show all the failed checks and link to a guide explaining the c
 
 As you can see in the highlighted CLI output above, our demo CloudFormation repository has failing checks for two policies:
 - Ensure S3 bucket has ignore public ACLs enabled
-- Ensure S3 bucket has ‘restrict_public_bucket’ enabled
+- Ensure S3 bucket ‘RestrictPublicBucket’ is set to True
 
-To get the list of policies that Bridgecrew checks for, use -l or –list:
+To get the list of policies builtin to your version of checkov, use -l or –list:
 
 ```bash
 checkov --list
