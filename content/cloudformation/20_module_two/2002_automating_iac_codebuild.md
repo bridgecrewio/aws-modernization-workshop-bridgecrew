@@ -12,19 +12,39 @@ AWS CodeBuild paired with AWS CodePipeline is a CI/CD platform that can build pr
 
 We’ll also automatically send the results to Brigecrew to maintain a view across all of our infrastructure projects and share visibility throughout our organization.
 
-First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account and select AWS CodeBuild, then **Add Subscription**.
+First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account, select the `ADD INTEGRATION` button to open the integrations calalog.
+
+![Bridgecrew Integrations Catalog](./images/bridgecrew-dash-integrations-catalog.png "Bridgecrew Integrations Catalog")
+
+Select AWS CodeBuild from the catalog, to be guided through the integration setup:
 
 ![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-add-codebuild.png "Bridgecrew CodeBuild Integration")
 
-Run the command provided by Bridgecrew with your local aws CLI. This will save the Bridgecrew API key into your AWS System Manager’s parameter store so we can access it from our CodeBuild jobs later.
+You will be prompted to create a new Bridgecrew API key, this allows codebuild to talk to the Bridgecrew platform, name the key `Code Build Init Key` and click next, you will then be presented with the new API key, we need to save this for later. Create a new text file and save it.
 
-Next, copy the `buildspec.yaml` configuration to keep handy (or keep this Bridgecrew tab open).
+![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-codebuild-api-key-integration.png "Bridgecrew CodeBuild Integration")
+
+The next page provides a command to automatically add the API key to our AWS environment.
+
+Run the command provided with your local aws CLI. This will save the Bridgecrew API key into your AWS System Manager’s parameter store so we can access it from our CodeBuild jobs later.
 
 {{% notice info %}}
 <p style='text-align: left;'>
 If the aws command fails, your IAM user may not have the correct permissions to create parameters in AWS Systems Manager (SSM). In that case, you’ll need to add write permissions to the user.
 </p>
 {{% /notice %}}
+
+Finally, we tell Bridgecrew about our CodeBuild environment, what git repository, branch, etc it's going to be responsible for running. This allows us to easily find the information reported back into Bridgecrew from CodeBuild.
+
+![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-integrate-codebuild-attributes.png "Bridgecrew CodeBuild Integration")
+
+We will be setting up codebuild on our fork of `CFNGoat`, so the `Repository Owner` will be your github user, `Repository Name` will be `cfngoat` and lets use the `master` branch by default.
+
+
+Next, copy the `buildspec.yaml` configuration to keep handy for configuring our CodeBuild pipeline.
+
+
+![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-codebuild-integration-save.png "Bridgecrew CodeBuild Integration")
 
 ### New Codebuild Project
 
