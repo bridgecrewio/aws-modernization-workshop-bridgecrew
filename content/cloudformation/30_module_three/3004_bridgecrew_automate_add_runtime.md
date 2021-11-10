@@ -17,7 +17,7 @@ Bridgecrew provides runtime scanning via an AWS integration, allowing full cover
 
 ### AWS Runtime Integration
 
-To enable runtime scanning of your AWS account, goto the [**Integrations Tab**](https://www.bridgecrew.cloud/integrations?utm_source=aws_workshop) and select **AWS Read Only** under the **Cloud Providers** section.
+To enable runtime scanning of your AWS account, goto the [**Integrations Tab**](https://www.bridgecrew.cloud/integrations?utm_source=aws_workshop) and select **AWS** under the **Cloud Providers** section.
 
 ![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00001.png "AWS Bridgecrew Integration")
 
@@ -28,11 +28,11 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 </p>
 {{% /notice %}}
 
-Click **Add Account** then **Launch Stack** to enable the integration: 
+Select `AWS Read Access Stack` as the `Integration Type` and click **NEXT**:
 
 ![AWS Bridgecrew Integration](./images/aws-integration-add.png "AWS Bridgecrew Integration")
 
-You will be taken to your AWS account to authorize the integration:
+On the `Configure Account` page, click **LAUNCH STACK** You will be taken to your AWS account to authorize the integration:
 
 ![AWS Bridgecrew Integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew Integration")
 

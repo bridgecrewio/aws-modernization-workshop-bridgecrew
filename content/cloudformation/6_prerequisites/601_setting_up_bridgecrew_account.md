@@ -47,7 +47,7 @@ VERSION:
 
 ## Bridgecrew API token
 
-Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access [it here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.
+Throughout the tutorial, you’ll need to create Bridgecrew API tokens. You can access [them here](https://www.bridgecrew.cloud/integrations) via the **API TOKENS** button on the integration page.
 
-![Bridgecrew API token](./images/bc_api_key.gif)
+![Bridgecrew API token](./images/bc_api_key.png)
 
