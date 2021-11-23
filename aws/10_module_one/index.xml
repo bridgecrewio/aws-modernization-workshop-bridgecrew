@@ -25,7 +25,7 @@ $ git clone https://github.com/bridgecrewio/cfngoat.git cd cfngoat git status Cl
       <guid>/aws/10_module_one/1002_local_scan_cli.html</guid>
       <description>Run Bridgecrew CLI locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in CloudFormation templates, we’ll start by using Bridgecrew CLI and send the results to the Bridgecrew platform.
 Make sure you are in the cfngoat directory from the previous step, copy your unique Bridgecrew API token, and scan the cfngoat.yaml file:
-bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat You can also scan entire directories with -d &amp;lt;path&amp;gt;:</description>
+bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/cfngoat You can also scan entire directories with -d &amp;lt;path&amp;gt;:</description>
     </item>
     
     <item>
