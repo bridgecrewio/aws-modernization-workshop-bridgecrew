@@ -13,7 +13,7 @@ Make sure you are in the `cfngoat` directory from the previous step, copy your u
 
 
 ```bash
-bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
+bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/cfngoat
 ```
 
 You can also scan entire directories with `-d <path>`:
