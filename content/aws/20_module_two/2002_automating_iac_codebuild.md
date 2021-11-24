@@ -12,11 +12,9 @@ AWS CodeBuild paired with AWS CodePipeline is a CI/CD platform that can build pr
 
 We’ll also automatically send the results to Brigecrew to maintain a view across all of our infrastructure projects and share visibility throughout our organization.
 
-First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account and select AWS CodeBuild, then **Add Subscription**.
+First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the [Integrations](https://www.bridgecrew.cloud/integrations/catalog/codebuild) menu in your Bridgecrew account, select **Add Integration** and select AWS CodeBuild, then **Add Subscription**. Give your token a name and click Next twice. Copy and paste the SSM command in your terminal and hit enter. This will save the Bridgecrew API key into your AWS System Manager’s parameter store so we can access it from our CodeBuild jobs later.
 
 ![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-add-codebuild.png "Bridgecrew CodeBuild Integration")
-
-Run the command provided by Bridgecrew with your local aws CLI. This will save the Bridgecrew API key into your AWS System Manager’s parameter store so we can access it from our CodeBuild jobs later.
 
 Next, copy the `buildspec.yaml` configuration to keep handy (or keep this Bridgecrew tab open).
 
