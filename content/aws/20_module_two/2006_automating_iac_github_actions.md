@@ -105,7 +105,7 @@ Rather than digging through the job logs, the action also outputs annotations fo
 
 
 {{% notice tip %}}
-By default, the Bridgecrew GitHub Action is designed to pass, acting as a reporting and observability task, which updates the Bridgecrew dashboard of the current security posture within the CI/CD pipeline. 
+If you want your GitHub Action to soft-fail and just act as an observability tool, add "soft_fail: true" under "api-key" in the YAML. 
 {{% /notice %}}
 
 ## Congratulations!
