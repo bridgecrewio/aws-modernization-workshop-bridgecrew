@@ -19,7 +19,7 @@ bridgecrew -f cfngoat.yaml --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/
 You can also scan entire directories with `-d <path>`:
 
 ```bash
-bridgecrew -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo bridgecrewio/cfngoat
+bridgecrew -d . --framework cloudformation --bc-api-key $YOUR_BC_API_KEY --repo-id bridgecrewio/cfngoat
 ```
 
 {{% notice info %}}
