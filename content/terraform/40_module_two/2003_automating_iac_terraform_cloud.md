@@ -13,7 +13,7 @@ There are two options to detect drift. You can either add the integration with T
 
 {{% notice info %}}
 <p style='text-align: left;'>
-A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
+A new, native integration between Bridgecrew and Terraform Cloud called Run Tasks is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
 </p>
 {{% /notice %}}
 
@@ -26,7 +26,7 @@ Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel
 Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the "drift detection" section.
 {{% /notice %}}
 
-To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan & Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.
+To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan & Billing.” Choose the "Trial Plan" option. You should see Policies and Policy Sets show up in the left navigation menu.
 
 ![Terraform Cloud plans](images/terraform_cloud_signup.png "Terraform Cloud plans")
 
@@ -38,7 +38,7 @@ Select “Version control workflow”:
 
 ![Create a version control workflow](images/terraform_cloud_create_workspace.png "Create a version control workflow")
 
-Select “GitHub” and choose your TerraGoat repository we previously forked:
+Select “GitHub," then "github.com," and choose your TerraGoat repository we previously forked:
 
 ![Add GitHub](images/terraform_cloud_add_github.png "Add GitHub")
 
@@ -60,27 +60,25 @@ Grab the API token from Terraform Cloud for the integration. Go to the [API toke
 
 Copy that API token for the next step.
 
-Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](https://www.bridgecrew.cloud/integrations) screen in the Bridgecrew platform. Scroll down and select Terraform Cloud and Add Workspace. Fill in the Workspace ID, workspace name, and API token from the previous steps:
+Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](https://www.bridgecrew.cloud/integrations) screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Sentinel). Enter the token name `tfc` and choose "Create." You don't need to copy that key for this workshop. Paste your "Workspace ID," "terragoat," "TerraGoat," and the API key from Terraform Cloud. Then click "Next."
 
 ![Add TFC details to Bridgecrew](images/bc_tfc_details.png "Add TFC details to Bridgecrew")
 
-Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud. Copy the code from section 3 of the output.
+Normally, you would add a new repo with the Sentinel policies, but for the purpose of this workshop, we're going to simplify this flow. You can click "Next" on the "Create 'sentinel.hcl'" step.
 
-Head back to Terraform Cloud and go to the “Policies" setting and "Create a new policy." Name the policy `bridgecrew`. The "Enforcement mode" will determine whether builds are blocked (`hard-mandatory`) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (`soft-mandatory`), or just provide the violations but don't block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to `advisory (logging only)`.
-
-Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:
-
-![Add Sentinel Policy](images/sentinel_policy.png "Add Sentinel Policy")
-
-Select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the `terragoat` workspace and select “Connect policy set”.
+Copy the 'bridgecrew.sentinel' code and click "Next" in the wizard, then "Done." Head back to Terraform Cloud. Go to Settings in the top nav and select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go with "No VCS connection.". Name your setting `terragoat_set` and choose the `terragoat` workspace and select “Connect policy set”.
 
 ![Connect the policy set](images/terraform_cloud_connect_policy_set.png "Connect the policy set")
 
-Go back to the “Policies” section and select the policy you made. Scroll down to the “Policy Sets” section and add the `terragoat_set` you made.
+Then, select "Policies." Click on "Create a new policy." Name the policy `bridgecrew`. The "Enforcement mode" will determine whether builds are blocked (`hard-mandatory`) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (`soft-mandatory`), or just provide the violations but don't block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to `advisory (logging only)`.
+
+Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section. Under "Policy Sets," choose `terragoat_set` from the drop down, then "Add policy set" and select “Create policy”:
+
+![Add Sentinel Policy](images/sentinel_policy.png "Add Sentinel Policy")
 
 ![Policy sets](images/terraform_cloud_policy_sets.png "Policy sets")
 
-Finally, go to your workspace's main page and queue a run; don't worry if it fails, this just primes the runs to be automated with future GitHub pull requests.
+Finally, go to your workspace's main page and under "Actions" select "Start new plan"; don't worry if it fails, this just primes the runs to be automated with future GitHub pull requests.
 
 ![Queue a plan](images/tfc_queue.png "Queue a plan")
 

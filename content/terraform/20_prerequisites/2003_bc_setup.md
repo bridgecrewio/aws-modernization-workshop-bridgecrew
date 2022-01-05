@@ -29,7 +29,7 @@ If you run into problems, try the [alternate install instructions](https://docs.
 
 ### Bridgecrew API token
 
-Throughout the tutorial, you’ll need to use the Bridgecrew API token. You can access [it here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token. Add a token for the workshop and make sure to copy it before closing out.
+Throughout the tutorial, you’ll need to use a Bridgecrew API token. You can create one [here](https://www.bridgecrew.cloud/integrations/api-token) or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token. Add a token for the workshop and make sure to copy it before closing out.
 
 ![Bridgecrew API token](./images/dashboardapitoken1.png)
 
