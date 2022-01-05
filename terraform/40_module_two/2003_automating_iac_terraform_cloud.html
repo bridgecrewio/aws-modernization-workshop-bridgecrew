@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.91.2" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Terraform Cloud :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1638897625" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/hybrid.css?1638897625" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1638897625" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1638897625" rel="stylesheet">
-    <link href="../../css/theme.css?1638897625" rel="stylesheet">
-    <link href="../../css/tabs.css?1638897625" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1638897625" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1638897625" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1638897625"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1638897625"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1638897625"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1638897625"></script>
+<script type="text/javascript" src="../../js/search.js?1641370666"></script>
 
     
   </div>
@@ -1576,30 +1576,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
-        <b>6.4 </b>AWS fixes in runtime
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>Drift Detection
+        <b>6.4 </b>Drift Detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1830,7 +1809,7 @@ There are two options to detect drift. You can either add the integration with T
 
 
 <div class="notices info" ><p style='text-align: left;'>
-A new, native integration between Bridgecrew and Terraform Cloud is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
+A new, native integration between Bridgecrew and Terraform Cloud called Run Tasks is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
 </p>
 </div>
 
@@ -1844,7 +1823,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 </div>
 
 
-<p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan &amp; Billing.” Choose the Trial option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
+<p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan &amp; Billing.” Choose the &ldquo;Trial Plan&rdquo; option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
 
 <p><img src="images/terraform_cloud_signup.png" alt="Terraform Cloud plans" title="Terraform Cloud plans" /></p>
 
@@ -1856,7 +1835,7 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p><img src="images/terraform_cloud_create_workspace.png" alt="Create a version control workflow" title="Create a version control workflow" /></p>
 
-<p>Select “GitHub” and choose your TerraGoat repository we previously forked:</p>
+<p>Select “GitHub,&rdquo; then &ldquo;github.com,&rdquo; and choose your TerraGoat repository we previously forked:</p>
 
 <p><img src="images/terraform_cloud_add_github.png" alt="Add GitHub" title="Add GitHub" /></p>
 
@@ -1878,27 +1857,25 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
 
 <p>Copy that API token for the next step.</p>
 
-<p>Next, you’ll add the Bridgecrew integration. Head over to the <a href="https://www.bridgecrew.cloud/integrations" target="_blank">Integrations</a> screen in the Bridgecrew platform. Scroll down and select Terraform Cloud and Add Workspace. Fill in the Workspace ID, workspace name, and API token from the previous steps:</p>
+<p>Next, you’ll add the Bridgecrew integration. Head over to the <a href="https://www.bridgecrew.cloud/integrations" target="_blank">Integrations</a> screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Sentinel). Enter the token name <code>tfc</code> and choose &ldquo;Create.&rdquo; You don&rsquo;t need to copy that key for this workshop. Paste your &ldquo;Workspace ID,&rdquo; &ldquo;terragoat,&rdquo; &ldquo;TerraGoat,&rdquo; and the API key from Terraform Cloud. Then click &ldquo;Next.&rdquo;</p>
 
 <p><img src="images/bc_tfc_details.png" alt="Add TFC details to Bridgecrew" title="Add TFC details to Bridgecrew" /></p>
 
-<p>Selecting “Create Policy” will generate a Sentinel Policy that you can then add to Terraform Cloud. Copy the code from section 3 of the output.</p>
+<p>Normally, you would add a new repo with the Sentinel policies, but for the purpose of this workshop, we&rsquo;re going to simplify this flow. You can click &ldquo;Next&rdquo; on the &ldquo;Create &lsquo;sentinel.hcl&rsquo;&rdquo; step.</p>
 
-<p>Head back to Terraform Cloud and go to the “Policies&rdquo; setting and &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code>. The &ldquo;Enforcement mode&rdquo; will determine whether builds are blocked (<code>hard-mandatory</code>) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (<code>soft-mandatory</code>), or just provide the violations but don&rsquo;t block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to <code>advisory (logging only)</code>.</p>
-
-<p>Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section and select “Create policy”:</p>
-
-<p><img src="images/sentinel_policy.png" alt="Add Sentinel Policy" title="Add Sentinel Policy" /></p>
-
-<p>Select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go without a VCS connection. Name your setting and choose the <code>terragoat</code> workspace and select “Connect policy set”.</p>
+<p>Copy the &lsquo;bridgecrew.sentinel&rsquo; code and click &ldquo;Next&rdquo; in the wizard, then &ldquo;Done.&rdquo; Head back to Terraform Cloud. Go to Settings in the top nav and select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go with &ldquo;No VCS connection.&rdquo;. Name your setting <code>terragoat_set</code> and choose the <code>terragoat</code> workspace and select “Connect policy set”.</p>
 
 <p><img src="images/terraform_cloud_connect_policy_set.png" alt="Connect the policy set" title="Connect the policy set" /></p>
 
-<p>Go back to the “Policies” section and select the policy you made. Scroll down to the “Policy Sets” section and add the <code>terragoat_set</code> you made.</p>
+<p>Then, select &ldquo;Policies.&rdquo; Click on &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code>. The &ldquo;Enforcement mode&rdquo; will determine whether builds are blocked (<code>hard-mandatory</code>) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (<code>soft-mandatory</code>), or just provide the violations but don&rsquo;t block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to <code>advisory (logging only)</code>.</p>
+
+<p>Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section. Under &ldquo;Policy Sets,&rdquo; choose <code>terragoat_set</code> from the drop down, then &ldquo;Add policy set&rdquo; and select “Create policy”:</p>
+
+<p><img src="images/sentinel_policy.png" alt="Add Sentinel Policy" title="Add Sentinel Policy" /></p>
 
 <p><img src="images/terraform_cloud_policy_sets.png" alt="Policy sets" title="Policy sets" /></p>
 
-<p>Finally, go to your workspace&rsquo;s main page and queue a run; don&rsquo;t worry if it fails, this just primes the runs to be automated with future GitHub pull requests.</p>
+<p>Finally, go to your workspace&rsquo;s main page and under &ldquo;Actions&rdquo; select &ldquo;Start new plan&rdquo;; don&rsquo;t worry if it fails, this just primes the runs to be automated with future GitHub pull requests.</p>
 
 <p><img src="images/tfc_queue.png" alt="Queue a plan" title="Queue a plan" /></p>
 
@@ -2876,22 +2853,6 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2952,19 +2913,19 @@ A new, native integration between Bridgecrew and Terraform Cloud is coming soon!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1638897625"></script>
-    <script src="../../js/jquery.sticky.js?1638897625"></script>
-    <script src="../../js/featherlight.min.js?1638897625"></script>
-    <script src="../../js/highlight.pack.js?1638897625"></script>
+    <script src="../../js/clipboard.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
+    <script src="../../js/jquery.sticky.js?1641370666"></script>
+    <script src="../../js/featherlight.min.js?1641370666"></script>
+    <script src="../../js/highlight.pack.js?1641370666"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1638897625"></script>
-    <script src="../../js/learn.js?1638897625"></script>
-    <script src="../../js/hugo-learn.js?1638897625"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
+    <script src="../../js/learn.js?1641370666"></script>
+    <script src="../../js/hugo-learn.js?1641370666"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1638897625"></script>
+            <script src="../../mermaid/mermaid.js?1641370666"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -35,7 +35,7 @@ If you have multiple organizations, GitHub will ask which of your orgs to fork i
       
       <guid>/terraform/30_module_one/1003_local_scan_dashboard.html</guid>
       <description>Viewing results in Bridgecrew You just scanned your Terraform templates locally using Checkov. If you included your API key, the results were sent to the Bridgecrew platform for further investigation. You may have noticed the URL at the end of the CLI scan. That’s a direct link to the results in Bridgecrew.
-Click on that link to bring up that scan’s Code Review page. This is a list of all of the misconfigurations identified from that scan grouped by resource and labeled by severity.</description>
+Click on that link to bring up that scan’s Projects page, which is an aggregated view of the different Code Reviews across all scan types.</description>
     </item>
     
     <item>

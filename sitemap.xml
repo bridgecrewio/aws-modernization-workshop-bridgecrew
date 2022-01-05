@@ -110,13 +110,11 @@
   </url><url>
     <loc>/aws/30_module_three/3003_bridgecrew_automate_pr_remediation.html</loc>
   </url><url>
-    <loc>/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html</loc>
-  </url><url>
     <loc>/aws/30_module_three/3004_bridgecrew_automate_add_runtime.html</loc>
   </url><url>
-    <loc>/aws/30_module_three/3005_bridgecrew_automate_fix_runtime.html</loc>
-  </url><url>
     <loc>/terraform/50_module_three/3005_bridgecrew_drift_detections.html</loc>
+  </url><url>
+    <loc>/aws/30_module_three/3005_bridgecrew_automate_fix_runtime.html</loc>
   </url><url>
     <loc>/aws/40_conclusion.html</loc>
   </url><url>

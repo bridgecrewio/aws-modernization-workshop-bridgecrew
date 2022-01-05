@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.91.2" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>AWS runtime scanning :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1638897625" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/hybrid.css?1638897625" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1638897625" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1638897625" rel="stylesheet">
-    <link href="../../css/theme.css?1638897625" rel="stylesheet">
-    <link href="../../css/tabs.css?1638897625" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1638897625" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1638897625" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1638897625"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1638897625"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1638897625"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1638897625"></script>
+<script type="text/javascript" src="../../js/search.js?1641370666"></script>
 
     
   </div>
@@ -1576,30 +1576,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
-        <b>6.4 </b>AWS fixes in runtime
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>Drift Detection
+        <b>6.4 </b>Drift Detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1838,7 +1817,7 @@
 
 <h3 id="aws-runtime-integration">AWS runtime integration</h3>
 
-<p>To enable runtime scanning of your AWS account, go to the <a href="https://www.bridgecrew.cloud/integrations" target="_blank"><strong>Integrations Tab</strong></a> and select <strong>AWS Read Only</strong> under the <strong>Cloud Providers</strong> section.</p>
+<p>To enable runtime scanning of your AWS account, go to the <a href="https://www.bridgecrew.cloud/integrations/catalog/aws-api-access" target="_blank"><strong>Integrations Tab</strong></a> and select &ldquo;AWS&rdquo; under the <strong>Cloud Providers</strong> section. Choose the <code>AWS Read Access Stack</code> and click &ldquo;Next.&rdquo;</p>
 
 <p><img src="./images/dashboard-aws-runtime-00001.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
@@ -1849,11 +1828,9 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 </div>
 
 
-<p>Click <strong>Add Account</strong>, then <strong>Launch Stack</strong> to enable the integration:</p>
+<p>Click &ldquo;Launch Stack&rdquo; to enable the integration.</p>
 
-<p><img src="./images/aws-integration-add.png" alt="Launch stack" title="Launch stack" /></p>
-
-<p>You will be taken to your AWS account to authorize the integration:</p>
+<p>You will be taken to your AWS account to spin up the CloudFormation stack to authorize the integration:</p>
 
 <p><img src="./images/dashboard-aws-runtime-00003.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
@@ -1861,20 +1838,19 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 
 <p><img src="./images/dashboard-aws-runtime-00004.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>You can track the progress of the stack creation within your AWS account. Once completed, you&rsquo;ll see the integration turn green in the Bridgecrew dashboard:</p>
+<p>You can track the progress of the stack creation within your AWS account.</p>
 
 <p><img src="./images/dashboard-aws-runtime-00006.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>Successful integration:
-<img src="./images/dashboard-aws-runtime-00007.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
+<p>Once completed, you&rsquo;ll see the integration turn green in the Bridgecrew Integrations dashboard:</p>
+
+<p><img src="./images/dashboard-aws-runtime-00007.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <p>That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking.</p>
 
 <h3 id="exploring-runtime-violations">Exploring runtime violations</h3>
 
-<p>With the runtime AWS account connected, let’s edit our filters on the <a href="https://www.bridgecrew.cloud/incidents" target="_blank">Incidents</a> page to show only the AWS source. In the filters option pane, select your AWS account ID that should now show up alongside your other integrations from the earlier modules.</p>
-
-<p><img src="./images/filter-aws-only-dash.png" alt="AWS Bridgecrew filter pane" title="AWS Bridgecrew filter pane" /></p>
+<p>With the AWS account connected, you&rsquo;ll start to see runtime violations in the <a href="https://www.bridgecrew.cloud/incidents" target="_blank">Incidents</a> page.</p>
 
 
 <div class="notices info" ><p style='text-align: left;'>
@@ -1883,37 +1859,27 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 </div>
 
 
-<p>After setting our filter, we can browse through all the security and compliance violations detected in our live AWS account,</p>
+<p>We can browse through all the security and compliance violations detected in our live AWS account. We can filter based on Status, Source, Category, Severity, Time Range, Benchmarks, and Tags. There are &ldquo;low hanging fruit&rdquo; filters for traced resource, unencrypted resources and publicly accessible resources.</p>
 
-<p>In the example below, we can see the security group we deployed previously that opens port 22 to all traffic. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:</p>
+<p>In the example below, we can see a security group we deployed previously that opens port 22 to all traffic. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:</p>
 
 <p><img src="./images/dashboard-aws-runtime-00012.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>Further context on the issue and remediation options is also available in the <strong>Guidelines</strong> tab.</p>
+<p>Further context on the issue and remediation options is also available by clicking on the lightbulb and on the &ldquo;Guidelines&rdquo; link.</p>
 
-<p><img src="./images/dashboard-aws-runtime-00013.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
+<p><img src="./images/guidelines.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
-<p>Bridgecrew also alerts on account-wide settings such as user password policies and informational best practices, such as tagging each resource with ownership or purpose information:</p>
+<p>Bridgecrew also alerts on account-wide settings such as user password policies and informational best practices, such as tagging each resource with ownership or purpose information or weak account password policies:</p>
 
-<p>Untagged items in account:
-<img src="./images/example-tagging-info.png" alt="AWS Bridgecrew filter pane" title="AWS Bridgecrew filter pane" /></p>
-
-<p>Weak account password policy:
-<img src="./images/dashboard-aws-runtime-00008.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
+<p><img src="./images/dashboard-aws-runtime-00008.png" alt="AWS Bridgecrew integration" title="AWS Bridgecrew integration" /></p>
 
 <h3 id="identity-and-access-management-iam-insights">Identity and Access Management (IAM) Insights</h3>
 
-<p>Bridgecrew also analyzes AWS IAM roles, permissions, groups, and policies to identify unused and overly-permissive configurations.</p>
-
-<p>You can use the filter pane to only show <strong>Insights</strong>, highlighting IAM specific issues:</p>
+<p>Bridgecrew also analyzes AWS IAM roles, permissions, groups, and policies to identify unused and overly-permissive configurations. You can use the filter pane to only show IAM specific issues.</p>
 
 <p><img src="./images/dashboard-aws-runtime-00009.png" alt="AWS Bridgecrew filter IAM Insights" title="AWS Bridgecrew filter IAM Insights" /></p>
 
-<p>IAM Insights will even provide a re-written, rightsized IAM policy document with only the permissions your applications are requesting of the role or policy. This helps you build and maintain least-privilege IAM and reduces the scope of abuse from a misconfigured or exploited application.</p>
-
-<p><img src="./images/iam-insights-rightsizing.png" alt="Rightsizing an IAM policy" title="Rightsizing an IAM policy" /></p>
-
-<p>Next we&rsquo;ll create some fixes in production.</p>
+<p>Next, we&rsquo;ll look at Drift Detection.</p>
 
 
 <footer class="footline">
@@ -2887,22 +2853,6 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2953,7 +2903,7 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 			<a class="nav nav-prev" href="../../terraform/50_module_three/3002_bridgecrew_pull_request_fix.html" title="Pull request fixes"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2963,19 +2913,19 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1638897625"></script>
-    <script src="../../js/jquery.sticky.js?1638897625"></script>
-    <script src="../../js/featherlight.min.js?1638897625"></script>
-    <script src="../../js/highlight.pack.js?1638897625"></script>
+    <script src="../../js/clipboard.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
+    <script src="../../js/jquery.sticky.js?1641370666"></script>
+    <script src="../../js/featherlight.min.js?1641370666"></script>
+    <script src="../../js/highlight.pack.js?1641370666"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1638897625"></script>
-    <script src="../../js/learn.js?1638897625"></script>
-    <script src="../../js/hugo-learn.js?1638897625"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
+    <script src="../../js/learn.js?1641370666"></script>
+    <script src="../../js/hugo-learn.js?1641370666"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1638897625"></script>
+            <script src="../../mermaid/mermaid.js?1641370666"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

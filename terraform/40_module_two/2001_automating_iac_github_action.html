@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.91.2" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>GitHub Action :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1638897625" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/hybrid.css?1638897625" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1638897625" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1638897625" rel="stylesheet">
-    <link href="../../css/theme.css?1638897625" rel="stylesheet">
-    <link href="../../css/tabs.css?1638897625" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1638897625" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1638897625" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1638897625"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1638897625"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1638897625"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1638897625"></script>
+<script type="text/javascript" src="../../js/search.js?1641370666"></script>
 
     
   </div>
@@ -1576,30 +1576,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
-        <b>6.4 </b>AWS fixes in runtime
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>Drift Detection
+        <b>6.4 </b>Drift Detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1837,15 +1816,13 @@ Typically, you wouldn’t do more than one scan during a build, such as two Acti
 </div>
 
 
-<p>Start with the <a href="https://www.bridgecrew.cloud/integrations/githubActions" target="_blank">GitHub Actions integration page</a> within the Bridgecrew platform and select “Add Subscription.”</p>
+<p>Start with the <a href="https://www.bridgecrew.cloud/integrations/githubActions" target="_blank">GitHub Actions integration page</a> within the Bridgecrew platform. Give your key a name like <code>gh_action</code> and select “Create.” Copy that API token for the next step in the process and click &ldquo;Next&rdquo; and &ldquo;Done.&rdquo;</p>
 
 <p><img src="images/bc_github_action_integration.png" alt="GitHub Action Integration in Bridgecrew" title="GitHub Action Integration in Bridgecrew" /></p>
 
-<p>The integration provides steps to enable GitHub actions, which you’ll walk through below.</p>
+<p>The wizard provides example code to enable Bridgecrew as a GitHub Action.</p>
 
-<p><img src="images/github_action_code.png" alt="GitHub Action code to copy" title="GitHub Action code" /></p>
-
-<p>You need to add that key to GitHub in their secrets store as an environment variable. This prevents your API key from being public when you have your code in a public repository.</p>
+<p>You need to add the Bridgecrew API key you just generated to GitHub in their secrets store as an environment variable. This prevents your API key from being public when you have your code in a public repository.</p>
 
 <p>Go to your fork of TerraGoat on GitHub and select “Settings”.</p>
 
@@ -1855,9 +1832,9 @@ Typically, you wouldn’t do more than one scan during a build, such as two Acti
 
 <p><img src="images/github_secrets.png" alt="GitHub Action secrets" title="GitHub Action secrets" /></p>
 
-<p>Name the secret <code>BRIDGECREW_API_KEY</code> as instructed in the Bridgecrew integration details above.</p>
+<p>Name the secret <code>BC_API_KEY</code> as instructed in the Bridgecrew integration details above.</p>
 
-<p>Copy and paste your API Token from the Bridgecrew integration details page into the value field.</p>
+<p>Copy and paste your API Token from the Bridgecrew integration wizard into the value field.</p>
 
 <p><img src="images/add_github_secret.png" alt="Add the Bridgecrew secret" title="Add the Bridgecrew secret" /></p>
 
@@ -1867,7 +1844,7 @@ Typically, you wouldn’t do more than one scan during a build, such as two Acti
 
 <p>Github Actions are defined as workflow files within your code repository under the .github/workflows directory. To create an action, you’ll add a new file to this directory. If you already have workflows and are familiar with the workflow file format, you could add the Bridgecrew step section to your own workflows for the same results.</p>
 
-<p>To create a new workflow, select “Actions” within your TerraGoat forked repository, then select “New Workflow.”</p>
+<p>To create a new workflow, select “Actions” within your TerraGoat forked repository, click on &ldquo;I understand my workflows, go ahead and enable them,&rdquo; then select “New Workflow.”</p>
 
 <p><img src="images/github_action_menu.png" alt="GitHub Action menu" title="GitHub Action menu" /></p>
 
@@ -1892,7 +1869,7 @@ jobs:
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master
       with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+        api-key: ${{ secrets.BC_API_KEY }}
         directory: terraform/</code></pre>
 <p>Select “Start commit” once you’ve added the workflow file contents:</p>
 
@@ -1912,7 +1889,7 @@ jobs:
 
 <p><img src="images/github_action_result2.png" alt="Reults of the Action" title="Results of the Action" /></p>
 
-<p>The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. The first acts as just an observability and alerting tool, the second as guardrails for developers to prevent misconfigured templates from making it into the repository. You can change the <code>soft_fail</code> setting to block builds in the <code>bridgecrew.yaml</code> file.</p>
+<p>The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. The first acts as just an observability and alerting tool, the second as guardrails for developers to prevent misconfigured templates from making it into the repository. You can change this to not fail a build by adding <code>soft_fail: true</code> setting in the <code>with</code> block.</p>
 
 
 <footer class="footline">
@@ -2886,22 +2863,6 @@ jobs:
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2962,19 +2923,19 @@ jobs:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1638897625"></script>
-    <script src="../../js/jquery.sticky.js?1638897625"></script>
-    <script src="../../js/featherlight.min.js?1638897625"></script>
-    <script src="../../js/highlight.pack.js?1638897625"></script>
+    <script src="../../js/clipboard.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
+    <script src="../../js/jquery.sticky.js?1641370666"></script>
+    <script src="../../js/featherlight.min.js?1641370666"></script>
+    <script src="../../js/highlight.pack.js?1641370666"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1638897625"></script>
-    <script src="../../js/learn.js?1638897625"></script>
-    <script src="../../js/hugo-learn.js?1638897625"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
+    <script src="../../js/learn.js?1641370666"></script>
+    <script src="../../js/hugo-learn.js?1641370666"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1638897625"></script>
+            <script src="../../mermaid/mermaid.js?1641370666"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

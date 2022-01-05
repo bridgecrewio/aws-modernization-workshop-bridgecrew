@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.91.2" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Pull request fixes :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1638897625" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/hybrid.css?1638897625" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1638897625" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1638897625" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1638897625" rel="stylesheet">
-    <link href="../../css/theme.css?1638897625" rel="stylesheet">
-    <link href="../../css/tabs.css?1638897625" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1638897625" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1638897625" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1638897625"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1638897625"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1638897625"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1638897625"></script>
+<script type="text/javascript" src="../../js/search.js?1641370666"></script>
 
     
   </div>
@@ -1576,30 +1576,9 @@
  
   
     
-      <li data-nav-id="/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
-        <a href="../../terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html">
-        <b>6.4 </b>AWS fixes in runtime
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/terraform/50_module_three/3005_bridgecrew_drift_detections.html" title="Drift Detection" class="dd-item ">
         <a href="../../terraform/50_module_three/3005_bridgecrew_drift_detections.html">
-        <b>6.5 </b>Drift Detection
+        <b>6.4 </b>Drift Detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1823,7 +1802,7 @@
 
 <h2 id="automating-fixes-through-pull-requests">Automating fixes through pull requests</h2>
 
-<p>Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository.</p>
+<p>Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository. These fixes are sourced from static recommendations and Smart Fixes that are fixes sourced from your own repositories based on other code that has passed those checks.</p>
 
 <p>Let’s walk through the process with one of the policies you looked at earlier, &ldquo;Ensure bucket ACL does not grant READ permission to everyone&rdquo;</p>
 
@@ -1831,7 +1810,11 @@
 
 <p>The lightbulb icon takes you to the Bridgecrew docs for more information about the violation. We can also suppress that check for this specific resource. Finally, in the middle is the <strong>Fix</strong> button. This enables you to automatically create a pull request with the diff shown. In this case, it will remove the acl with <code>public-read</code> access and <code>force_destroy</code> setting.</p>
 
-<p>You can include other fixes, but for the sake of this workshop, we’ll just do the one. Select <strong>Submit</strong>.</p>
+<p>That&rsquo;s a static fix. Next, look for the &ldquo;Ensure RDS instances have backup policy&rdquo; violation. There is no one right answer for how long to keep backups, but based on other code in my repo, 15 days is the most common.</p>
+
+<p><img src="images/smart_fix.png" alt="Smart Fix" title="Smart Fix" /></p>
+
+<p>You can include other fixes, but for the sake of this workshop, we’ll just do the two. Select <strong>Submit</strong>.</p>
 
 <p>That created a pull request, but you’ll need to approve the patch to make the changes in your repository. Over in your TerraGoat repository in GitHub, you’ll see a new PR under the “Pull requests” tab, which is ready for review:</p>
 
@@ -1845,7 +1828,7 @@
 
 <p><strong>Congratulations!</strong></p>
 
-<p>You’ve built an automated IaC scanning workflow in a live environment and automated the fixing of an exposed S3 bucket!</p>
+<p>You’ve built an automated IaC scanning workflow in a live environment and automated the fixing of an IaC template!</p>
 
 
 <footer class="footline">
@@ -2819,22 +2802,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2895,19 +2862,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1638897625"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1638897625"></script>
-    <script src="../../js/jquery.sticky.js?1638897625"></script>
-    <script src="../../js/featherlight.min.js?1638897625"></script>
-    <script src="../../js/highlight.pack.js?1638897625"></script>
+    <script src="../../js/clipboard.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
+    <script src="../../js/jquery.sticky.js?1641370666"></script>
+    <script src="../../js/featherlight.min.js?1641370666"></script>
+    <script src="../../js/highlight.pack.js?1641370666"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1638897625"></script>
-    <script src="../../js/learn.js?1638897625"></script>
-    <script src="../../js/hugo-learn.js?1638897625"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
+    <script src="../../js/learn.js?1641370666"></script>
+    <script src="../../js/hugo-learn.js?1641370666"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1638897625"></script>
+            <script src="../../mermaid/mermaid.js?1641370666"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

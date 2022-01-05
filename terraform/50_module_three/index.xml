@@ -22,8 +22,7 @@ Navigate to the Projects tab in the Bridgecrew platform. Here you can see the re
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/terraform/50_module_three/3002_bridgecrew_pull_request_fix.html</guid>
-      <description>Automating fixes through pull requests Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository.
-Let’s walk through the process with one of the policies you looked at earlier, &amp;ldquo;Ensure bucket ACL does not grant READ permission to everyone&amp;rdquo;</description>
+      <description>Automating fixes through pull requests Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository. These fixes are sourced from static recommendations and Smart Fixes that are fixes sourced from your own repositories based on other code that has passed those checks.</description>
     </item>
     
     <item>
@@ -34,15 +33,6 @@ Let’s walk through the process with one of the policies you looked at earlier,
       <guid>/terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html</guid>
       <description>Scanning runtime resources for vulnerable infrastructure Let’s switch gears to address infrastructure that wasn&amp;rsquo;t deployed by Terraform.
 Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our AWS accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch.</description>
-    </item>
-    
-    <item>
-      <title>AWS fixes in runtime</title>
-      <link>/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/terraform/50_module_three/3004_bridgecrew_automate_fix_runtime.html</guid>
-      <description>Automating fixes in runtime Similar to what we did with pull request fixes in the previous module, Bridgecrew allows for immediate remediation of issues in runtime by reconfiguring your objects via the AWS APIs. Typically, it&amp;rsquo;s a best practice to make all changes to IaC provisioned resources in the code that provisioned them or else you create drift (discussed next). However, for resources not provisioned using IaC templates, runtime remediations make meeting compliance much easier.</description>
     </item>
     
     <item>
