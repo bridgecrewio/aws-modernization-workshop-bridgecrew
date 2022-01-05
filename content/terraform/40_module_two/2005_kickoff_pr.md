@@ -51,7 +51,7 @@ If you added the Terraform Cloud integration - Head back over to Terraform Cloud
 We're using a free tier resource (S3), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.
 {{% /notice %}}
 
-Click "Confirm & Apply." This will deploy the simple S3 bucket. 
+Click "Confirm & Apply." This will deploy the simple S3 bucket. If you have the Yor GitHub Action, you may have to select that run as well and click "Confirm & Apply."
 
 #### Without Terraform Cloud
 
