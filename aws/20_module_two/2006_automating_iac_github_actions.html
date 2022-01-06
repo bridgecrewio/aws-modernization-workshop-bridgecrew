@@ -12,22 +12,22 @@
     <title>GitHub Actions :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
-    <link href="../../css/theme.css?1641370666" rel="stylesheet">
-    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641429452" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641429452" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641429452" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641429452" rel="stylesheet">
+    <link href="../../css/theme.css?1641429452" rel="stylesheet">
+    <link href="../../css/tabs.css?1641429452" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641429452" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641429452" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641429452"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641429452"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641429452"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1641370666"></script>
+<script type="text/javascript" src="../../js/search.js?1641429452"></script>
 
     
   </div>
@@ -1792,7 +1792,7 @@
 </div>
 
 
-<p>As with other Integrations, the GitHub Actions CI/CD integration page at <a href="https://www.bridgecrew.cloud/integrations/githubActions" target="_blank">https://www.bridgecrew.cloud/integrations/githubActions</a> allows us to setup GitHub Actions, select <strong>Add Subscription</strong>.</p>
+<p>As with other Integrations, the GitHub Actions CI/CD integration page at <a href="https://www.bridgecrew.cloud/integrations/githubActions" target="_blank">https://www.bridgecrew.cloud/integrations/githubActions</a> allows us to setup GitHub Actions. Give the API key a name like <code>gh_action</code> and then click &ldquo;Create&rdquo; and &ldquo;Next.&rdquo;</p>
 
 <p><img src="./images/github_action_1.png" alt="GitHub Action Integration in Bridgecrew" title="GitHub Action Integration in Bridgecrew" /></p>
 
@@ -1810,15 +1810,13 @@
 
 <p><img src="./images/github_action_3.png" alt="CFNGoat fork in GitHub" title="CFNGoat fork in GitHub" /></p>
 
-<p>Name the secret <code>BRIDGECREW_API_KEY</code> as instructed in the Bridgecrew integration details above.</p>
+<p>Name the secret <code>BC_API_KEY</code> as instructed in the Bridgecrew integration details above.</p>
 
 <p>Copy and paste your API Token from the Bridgecrew integration details page into the <code>value</code> field.</p>
 
-<p><img src="./images/github_action_4.png" alt="CFNGoat repository secrets" title="CFNGoat repository secrets" /></p>
+<p><img src="./images/add_github_secret.png" alt="CFNGoat repository secrets" title="CFNGoat repository secrets" /></p>
 
-<p>Select <strong>Add secret</strong>, the secret will then be listed by name in the <strong>Settings &gt; Secrets</strong> page you&rsquo;ll be taken back too.</p>
-
-<p><img src="./images/github_action_5.png" alt="CFNGoat repository secrets" title="CFNGoat repository secrets" /></p>
+<p>Select <strong>Add secret</strong>, the secret will then be listed by name in the <strong>Settings &gt; Secrets</strong> page you&rsquo;ll be taken back to.</p>
 
 <h3 id="adding-the-automated-workflow">Adding the automated workflow.</h3>
 
@@ -1852,7 +1850,7 @@ jobs:
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master
       with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}</code></pre>
+        api-key: ${{ secrets.BC_API_KEY }}</code></pre>
 <p>The result should look like this, select <strong>Start commit</strong></p>
 
 <p><img src="./images/github_action_7.png" alt="Save Github action workflow" title="Save Github action workflow" /></p>
@@ -2922,19 +2920,19 @@ jobs:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
-    <script src="../../js/jquery.sticky.js?1641370666"></script>
-    <script src="../../js/featherlight.min.js?1641370666"></script>
-    <script src="../../js/highlight.pack.js?1641370666"></script>
+    <script src="../../js/clipboard.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641429452"></script>
+    <script src="../../js/jquery.sticky.js?1641429452"></script>
+    <script src="../../js/featherlight.min.js?1641429452"></script>
+    <script src="../../js/highlight.pack.js?1641429452"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
-    <script src="../../js/learn.js?1641370666"></script>
-    <script src="../../js/hugo-learn.js?1641370666"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641429452"></script>
+    <script src="../../js/learn.js?1641429452"></script>
+    <script src="../../js/hugo-learn.js?1641429452"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1641370666"></script>
+            <script src="../../mermaid/mermaid.js?1641429452"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

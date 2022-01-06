@@ -12,22 +12,22 @@
     <title>GitHub integration :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
-    <link href="../../css/theme.css?1641370666" rel="stylesheet">
-    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641429452" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641429452" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641429452" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641429452" rel="stylesheet">
+    <link href="../../css/theme.css?1641429452" rel="stylesheet">
+    <link href="../../css/tabs.css?1641429452" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641429452" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641429452" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641429452"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641429452"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641429452"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1641370666"></script>
+<script type="text/javascript" src="../../js/search.js?1641429452"></script>
 
     
   </div>
@@ -1783,9 +1783,9 @@
 
 <h2 id="integrating-bridgecrew-with-github">Integrating Bridgecrew with GitHub</h2>
 
-<p>By adding another Bridgecrew integration, you can generate and push automated pull requests (PRs) back into your GitHub repository to update your CloudFormation code and fix security issues, as well as gain automated scanning of incoming community pull requests.</p>
+<p>By adding another Bridgecrew integration, you can generate and push automated pull requests (PRs) back into your GitHub repository to update your CloudFormation code and fix security issues, as well as gain automated scanning of incoming community pull requests with bot generated comments for misconfigurations.</p>
 
-<p>Head back to the <a href="https://www.bridgecrew.cloud/integrations/Github/?utm_source=aws_workshop" target="_blank">Bridgecrew <strong>Integrations</strong></a> tab and select <strong>GitHub</strong> under the <strong>Source Control</strong> section.</p>
+<p>Head back to the <a href="https://www.bridgecrew.cloud/integrations/Github/?utm_source=aws_workshop" target="_blank">Bridgecrew <strong>Integrations</strong></a> tab and select <strong>GitHub</strong> under the <strong>Code Repositories</strong> section. Click on the &ldquo;GitHub organization&rdquo; link to grant Bridgecrew access to your organization.</p>
 
 <p><img src="./images/dash-authorize-github-2v2.png" alt="Authorize Github Bridgecrew Integration" title="Authorize Github Bridgecrew Integration" /></p>
 
@@ -1793,13 +1793,13 @@
 
 <p><img src="./images/dash-authorize-github-3.png" alt="Authorize Github Bridgecrew Integration" title="Authorize Github Bridgecrew Integration" /></p>
 
-<p>Once you’ve connected Bridgecrew to your CfnGoat demo repository, Bridgecrew will scan your CloudFormation code directly from GitHub again and bring the results into Bridgecrew.</p>
+<p>In the next screen, select the relevant repos (make sure to select cfngoat) and click &ldquo;Next&rdquo; and &ldquo;Done.&rdquo; Once you’ve connected Bridgecrew to your CfnGoat demo repository, Bridgecrew will scan your CloudFormation code directly from GitHub again and bring the results into Bridgecrew.</p>
 
-<p>To see all issues across your two scanning sources— your bridgecrew-tutorial CodePipeline and your newly integrated GitHub repository—you may need to check your filters on the <strong>Incidents</strong> page.</p>
+<p>To see all issues across your scanning sources— your bridgecrew-tutorial CodePipeline and your newly integrated GitHub repository—head over to the <a href="https://www.bridgecrew.cloud/projects" target="_blank">Projects page</a>. You may need to change the drop down to cfngoat.</p>
 
-<p><img src="./images/dash-github-integration-filter-1.png" alt="Filtering Incidents in the Bridgecrew dashboard" title="Filtering Incidents in the Bridgecrew dashboard" /></p>
+<p><img src="./images/projects_page_cfngoat.png" alt="Projects page" title="Projects page" /></p>
 
-<p>You will now see the same violation alerting from two sources.  Although this may seem redundant, it’s actually an important feature for tracking security posture at multiple steps in the DevOps lifecycle.</p>
+<p>You will now see all of the violations across the repo. You can also switch the top drop down to your CodeBuild integration to see the same violations.  Although this may seem redundant, it’s actually an important feature for tracking security posture at multiple steps in the DevOps lifecycle.</p>
 
 
 <footer class="footline">
@@ -2835,19 +2835,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
-    <script src="../../js/jquery.sticky.js?1641370666"></script>
-    <script src="../../js/featherlight.min.js?1641370666"></script>
-    <script src="../../js/highlight.pack.js?1641370666"></script>
+    <script src="../../js/clipboard.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641429452"></script>
+    <script src="../../js/jquery.sticky.js?1641429452"></script>
+    <script src="../../js/featherlight.min.js?1641429452"></script>
+    <script src="../../js/highlight.pack.js?1641429452"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
-    <script src="../../js/learn.js?1641370666"></script>
-    <script src="../../js/hugo-learn.js?1641370666"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641429452"></script>
+    <script src="../../js/learn.js?1641429452"></script>
+    <script src="../../js/hugo-learn.js?1641429452"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1641370666"></script>
+            <script src="../../mermaid/mermaid.js?1641429452"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

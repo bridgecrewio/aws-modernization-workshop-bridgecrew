@@ -176,8 +176,8 @@ For more developer-friendly local scanning, Bridgecrew&amp;rsquo;s Checkov VS Co
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/aws/10_module_one/1004_local_scan_dashboard.html</guid>
-      <description>Viewing results in Bridgecrew In the previous section, we scanned our demo CloudFormation repository locally with both standalone CLI and the Checkob VSCode plugin, and sent the results to the Bridgecrew platform for investigation and remediation.
-To explore the reported issues we saw in the CLI output, head to the Incidents tab in your Bridgecrew account.
+      <description>Viewing results in Bridgecrew In the previous section, we scanned our demo CloudFormation repository locally with both standalone CLI and the Checkov VSCode plugin, and sent the results to the Bridgecrew platform for investigation and remediation.
+To explore the reported issues we saw in the CLI output, click on the link at the end of the output or head to the Projects tab in your Bridgecrew account.
 Bridgecrew comes with hundreds of out-of-the-box policies to help you adhere to cloud security best practices as defined by the Center of Internet Security (CIS).</description>
     </item>
     
@@ -332,9 +332,8 @@ Navigate to the Projects tab in the Bridgecrew platform. Here you can see the re
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/aws/30_module_three/3002_bridgecrew_automate_integrate_github.html</guid>
-      <description>Integrating Bridgecrew with GitHub By adding another Bridgecrew integration, you can generate and push automated pull requests (PRs) back into your GitHub repository to update your CloudFormation code and fix security issues, as well as gain automated scanning of incoming community pull requests.
-Head back to the Bridgecrew Integrations tab and select GitHub under the Source Control section.
-Just like we did for the AWS CodePipeline GitHub authorization, choose which accounts and repositories to grant the Bridgecrew github integration access too.</description>
+      <description>Integrating Bridgecrew with GitHub By adding another Bridgecrew integration, you can generate and push automated pull requests (PRs) back into your GitHub repository to update your CloudFormation code and fix security issues, as well as gain automated scanning of incoming community pull requests with bot generated comments for misconfigurations.
+Head back to the Bridgecrew Integrations tab and select GitHub under the Code Repositories section. Click on the &amp;ldquo;GitHub organization&amp;rdquo; link to grant Bridgecrew access to your organization.</description>
     </item>
     
     <item>

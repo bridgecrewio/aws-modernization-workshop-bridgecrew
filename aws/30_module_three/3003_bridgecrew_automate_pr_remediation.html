@@ -12,22 +12,22 @@
     <title>Pull request fixes :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1641370666" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/hybrid.css?1641370666" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1641370666" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1641370666" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1641370666" rel="stylesheet">
-    <link href="../../css/theme.css?1641370666" rel="stylesheet">
-    <link href="../../css/tabs.css?1641370666" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1641370666" rel="stylesheet">
+    <link href="../../css/nucleus.css?1641429452" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/hybrid.css?1641429452" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1641429452" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1641429452" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1641429452" rel="stylesheet">
+    <link href="../../css/theme.css?1641429452" rel="stylesheet">
+    <link href="../../css/tabs.css?1641429452" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1641429452" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1641370666" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1641429452" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1641370666"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1641429452"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1641370666"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1641370666"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1641429452"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1641429452"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1641370666"></script>
+<script type="text/javascript" src="../../js/search.js?1641429452"></script>
 
     
   </div>
@@ -1787,13 +1787,13 @@
 
 <p>Let’s walk through the process with one of the policies we looked at earlier, <strong>Ensure S3 bucket has ‘restrict_public_bucket’ enabled</strong>:</p>
 
-<p><img src="./images/dash-remediate-1.png" alt="Showing multiple information sources in the Bridgecrew Dashboard" title="Showing multiple information sources in the Bridgecrew Dashboard" /></p>
+<p><img src="./images/dash-remediate-1.png" alt="Projects page" title="Projects page" /></p>
 
-<p>When we click on one of the GitHub-integrated violations, <code>&lt;yourgithubusername&gt;/cfngoat: Bucket.FinancialsBucket</code>, for example, we’ll see the platform recommending an automated fix in the form of a code diff:</p>
+<p>You can see that this issue has a suggested fix available (green for new lines added). We can click on the lightbulb icon and follow the &ldquo;View Guidelines&rdquo; link to see the docs for that misconfiguration.</p>
 
 <p><img src="./images/dash-remediate-2.png" alt="Git remediation workflow" title="Git remediation workflow" /></p>
 
-<p>Check out the Guidelines tab for more information on the policy and if you’are satisfied with the proposed fix, you can <strong>tick the box next to the resource name</strong> above the diff, and select <strong>Remediate</strong>.</p>
+<p>Let&rsquo;s open a pull request. Select the <strong>FIX</strong> button then <strong>Submit</strong> in the upper right corner.</p>
 
 <p><img src="./images/dash-remediate-3.png" alt="Git remediation workflow" title="Git remediation workflow" /></p>
 
@@ -1801,9 +1801,7 @@
 
 <p><img src="./images/dash-remediate-4.png" alt="Git remediation workflow" title="Git remediation workflow" /></p>
 
-<p>After you select <strong>Remediate</strong>, you’ll be taken back to the <strong>Incidents</strong> screen with a message confirming the pull request has been successfully raised. You’ll also see the remediation has had the effect of hiding the issue from the Incidents list; other resources are listed, but the one we addressed is gone.</p>
-
-<p><img src="./images/dash-remediate-5.png" alt="Git remediation workflow" title="Git remediation workflow" /></p>
+<p>After you select <strong>Submit</strong>, you’ll see a message confirming the pull request has been successfully raised with a link to the PR in GitHub. You’ll also see the remediation has had the effect of hiding the issue from the Projects list; other policy violations are listed, but the one we addressed is gone.</p>
 
 <p>You’ll also notice, however, that the issue is still present from our CodePipeline source, so we’re not secure yet!</p>
 
@@ -2874,19 +2872,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1641370666"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1641370666"></script>
-    <script src="../../js/jquery.sticky.js?1641370666"></script>
-    <script src="../../js/featherlight.min.js?1641370666"></script>
-    <script src="../../js/highlight.pack.js?1641370666"></script>
+    <script src="../../js/clipboard.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1641429452"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1641429452"></script>
+    <script src="../../js/jquery.sticky.js?1641429452"></script>
+    <script src="../../js/featherlight.min.js?1641429452"></script>
+    <script src="../../js/highlight.pack.js?1641429452"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1641370666"></script>
-    <script src="../../js/learn.js?1641370666"></script>
-    <script src="../../js/hugo-learn.js?1641370666"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1641429452"></script>
+    <script src="../../js/learn.js?1641429452"></script>
+    <script src="../../js/hugo-learn.js?1641429452"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1641370666"></script>
+            <script src="../../mermaid/mermaid.js?1641429452"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
