@@ -15,6 +15,6 @@ Feel free to explore more of the Bridgecrew Dashboard, and try inviting more of 
 
 To continue the conversation, you can find us [@bridgecrewio](https://twitter.com/bridgecrewio) on twitter, or say *hi!* in our [#CodifiedSecurity](https://slack.bridgecrew.io/?utm_source=awsworkshop) slack channel, [here!](https://slack.bridgecrew.io/?utm_source=awsworkshop)
 
-
+You can also check out the [Prisma Cloud DevDay](https://register.paloaltonetworks.com/securitydevdays) to experience that platform in action.
 
 

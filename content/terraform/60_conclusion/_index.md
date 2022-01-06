@@ -14,3 +14,5 @@ In this workshop, we didn’t just learn how to identify and automate fixing mis
 Try more of the integrations with other popular developer and DevOps tools. Share what you’ve found with other members of your team and show how easy it is to incorporate this into their development processes. This will show how we can collaborate on the same security dashboard from the **[User Management](https://www.bridgecrew.cloud/settings/userManagement?utm_source=awsworkshop)** [page](https://www.bridgecrew.cloud/settings/userManagement).
 
 If you have any questions or thoughts, find us [@bridgecrewio](https://twitter.com/bridgecrewio) on Twitter, or say hi! in our [#CodifiedSecurity](https://slack.bridgecrew.io) Slack channel!
+
+You can also check out the [Prisma Cloud DevDay](https://register.paloaltonetworks.com/securitydevdays) to experience that platform in action.

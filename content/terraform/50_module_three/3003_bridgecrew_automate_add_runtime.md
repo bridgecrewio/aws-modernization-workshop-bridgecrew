@@ -34,7 +34,7 @@ You will be taken to your AWS account to spin up the CloudFormation stack to aut
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00003.png "AWS Bridgecrew integration")
 
-**Check the checkbox** to approve the IAM permission creations via our Terraform stack, and click **Create Stack**:
+**Check the checkbox** to approve the IAM permission creations via our CloudFormation stack, and click **Create Stack**:
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00004.png "AWS Bridgecrew integration")
 
@@ -42,7 +42,7 @@ You can track the progress of the stack creation within your AWS account.
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00006.png "AWS Bridgecrew integration")
 
- Once completed, you'll see the integration turn green in the Bridgecrew Integrations dashboard:
+ Once completed, you'll see the integration in the Bridgecrew Integrations dashboard:
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00007.png "AWS Bridgecrew integration")
 
@@ -60,7 +60,7 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
 
 We can browse through all the security and compliance violations detected in our live AWS account. We can filter based on Status, Source, Category, Severity, Time Range, Benchmarks, and Tags. There are "low hanging fruit" filters for traced resource, unencrypted resources and publicly accessible resources.
 
-In the example below, we can see a security group we deployed previously that opens port 22 to all traffic. Selecting a resource from the group of resources on the right-hand side will display much more information, including a Terraform representation of the AWS object in question:
+In the example below, we can see a security group we deployed previously that opens port 22 to all traffic:
 
 ![AWS Bridgecrew integration](./images/dashboard-aws-runtime-00012.png "AWS Bridgecrew integration")
 

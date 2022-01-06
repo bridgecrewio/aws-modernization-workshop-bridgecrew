@@ -13,24 +13,19 @@ If your developers don’t have direct access to the AWS account, the provided l
 
 For all those reasons and more, Bridgecrew provides reporting, monitoring, alerting, and visualizations for individual runs and across your entire infrastructure.
 
-
-Heading back to Bridgecrew, you’ll notice, our AWS CodeBuild integration has gone green showing that we’ve received data. You can also see the AWS account ID and the name of our CodeBuild pipeline received from our CodeBuild job!
+Heading back to Bridgecrew, you’ll notice, our AWS CodeBuild integration has been added to the Integrations list showing that we’ve received data.
 
 ![AWS Sucessful Bridgecrew Integration](./images/runpipeline-dashboard-1.png "AWS Sucessful Bridgecrew Integration")
 
-Navigating to the **Incidents** tab, you’ll see a list of all of the issues previously reported in the CodeBuild logs. If you select an item on the left-hand side, you’ll see all of the CloudFormation resources impacted by that issue. 
-
+Navigating to the **Projects** tab and select CFNGoat from the dropdown and you’ll see a list of all of the issues previously reported in the CodeBuild logs. If you select an item on the left-hand side, you’ll see all of the policy violations in our CFN repository. 
 
 ![AWS Codebuild errors in Bridgecrew Dashboard](./images/runpipeline-dashboard-3.png "AWS Codebuild errors in Bridgecrew Dashboard")
 
-
-You can also filter issues by severity, benchmarks, categories, and by source: 
-
-![AWS Codebuild errors in Bridgecrew Dashboard](./images/runpipeline-dashboard-2.png "AWS Codebuild errors in Bridgecrew Dashboard")
+You can also filter issues by status, category, severity, tags, has fix, by modifier.
 
 Selecting a specific resource, you will see metadata such as commit details and a historical timeline, which includes all actions and changes made to the resource. Bridgecrew also shows the code configuration and lines that need to be addressed:
 
-![AWS Codebuild errors in Bridgecrew Dashboard](./images/runpipeline-dashboard-4.png "AWS Codebuild errors in Bridgecrew Dashboard")
+![AWS Codebuild errors in Bridgecrew Dashboard](./images/runpipeline-dashboard-3.png "AWS Codebuild errors in Bridgecrew Dashboard")
 
 Refresh the dashboard to see updated historical trends and collated information from all of your monitoring sources:
 

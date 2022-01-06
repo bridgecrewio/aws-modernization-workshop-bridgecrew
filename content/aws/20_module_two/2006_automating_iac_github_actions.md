@@ -14,7 +14,7 @@ As with AWS CodeBuild, we’ll also automatically send the results to Brigecrew 
 Generally speaking, you wouldn't configure both CI/CD solutions for a single repository, consider this page informational only if you have followed through the AWS CodeBuild and AWS CodeDeploy sections, the observability provided into the Bridgecrew platform will be similar.
 {{% /notice %}}
 
-As with other Integrations, the GitHub Actions CI/CD integration page at [https://www.bridgecrew.cloud/integrations/githubActions](https://www.bridgecrew.cloud/integrations/githubActions) allows us to setup GitHub Actions, select **Add Subscription**.
+As with other Integrations, the GitHub Actions CI/CD integration page at [https://www.bridgecrew.cloud/integrations/githubActions](https://www.bridgecrew.cloud/integrations/githubActions) allows us to setup GitHub Actions. Give the API key a name like `gh_action` and then click "Create" and "Next."
 
 ![GitHub Action Integration in Bridgecrew](./images/github_action_1.png "GitHub Action Integration in Bridgecrew")
 
@@ -33,16 +33,13 @@ Then select **Secrets** from the left, and click **New Repository Secret**
 
 ![CFNGoat fork in GitHub](./images/github_action_3.png "CFNGoat fork in GitHub")
 
-Name the secret `BRIDGECREW_API_KEY` as instructed in the Bridgecrew integration details above.
+Name the secret `BC_API_KEY` as instructed in the Bridgecrew integration details above.
 
 Copy and paste your API Token from the Bridgecrew integration details page into the `value` field.
 
-![CFNGoat repository secrets](./images/github_action_4.png "CFNGoat repository secrets")
+![CFNGoat repository secrets](./images/add_github_secret.png "CFNGoat repository secrets")
 
-Select **Add secret**, the secret will then be listed by name in the **Settings > Secrets** page you'll be taken back too.
-
-
-![CFNGoat repository secrets](./images/github_action_5.png "CFNGoat repository secrets")
+Select **Add secret**, the secret will then be listed by name in the **Settings > Secrets** page you'll be taken back to.
 
 ### Adding the automated workflow.
 
@@ -77,7 +74,7 @@ jobs:
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master
       with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+        api-key: ${{ secrets.BC_API_KEY }}
 ```
 The result should look like this, select **Start commit**
 
