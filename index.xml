@@ -394,5 +394,14 @@ Greenfield infrastructure as code deployments are a luxury not many of us have. 
 Implementing automated remediations does require extra permissions than previously granted with the default AWS Read Only integration. When you attempt a runtime remediation without the correct permissions, you’ll be prompted to configure the AWS Remediation Stack:</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>/azure/readme.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/readme.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
