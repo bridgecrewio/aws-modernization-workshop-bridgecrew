@@ -3,7 +3,7 @@ name: Publish Workshops
 on:
   push:
     branches:
-      - payton-review-1
+      - aws-workshops
 
 jobs:
   build-deploy:
@@ -15,8 +15,8 @@ jobs:
         with:
           submodules: true
       - run: |
-              git fetch --no-recurse-submodules origin azure-workshop
-              git merge origin/azure-workshop
+              git fetch --no-recurse-submodules origin azure-workshops
+              git merge origin/azure-workshops
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
         with:
