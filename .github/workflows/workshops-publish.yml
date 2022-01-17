@@ -15,8 +15,8 @@ jobs:
         with:
           submodules: true
       - run: |
-        git fetch origin azure-workshop
-        git merge origin/azure-workshop
+              git fetch origin azure-workshop
+              git merge origin/azure-workshop
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
         with:
