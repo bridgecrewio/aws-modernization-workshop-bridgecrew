@@ -55,7 +55,7 @@ Click "Confirm & Apply." This will deploy the simple S3 bucket. If you have the 
 
 #### Without Terraform Cloud
 
-Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your S3 bucket and security group. Type `yes` and let Terraform provision your resources.
+Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your S3 bucket. Type `yes` and let Terraform provision your resources.
 
 ![Plan output](images/tf_plan.png "Plan output")
 
