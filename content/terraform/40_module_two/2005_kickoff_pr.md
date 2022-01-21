@@ -47,10 +47,6 @@ You can fix the violations later, but for now, click "Merge pull request" and "C
 
 If you added the Terraform Cloud integration - Head back over to Terraform Cloud and select the latest run. You'll again see the policy violations, but since we set the failure level to "advisory (logging only)," we can still apply the template.
 
-{{% notice warning %}}
-We're using a free tier resource (S3), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.
-{{% /notice %}}
-
 Click "Confirm & Apply." This will deploy the simple S3 bucket. If you have the Yor GitHub Action, you may have to select that run as well and click "Confirm & Apply."
 
 #### Without Terraform Cloud
@@ -59,6 +55,9 @@ Alternatively, locally you can run `git pull origin master` to update your local
 
 ![Plan output](images/tf_plan.png "Plan output")
 
+{{% notice warning %}}
+We're using a free tier resource (S3), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.
+{{% /notice %}}
 
 #### Check that the bucket is live
 

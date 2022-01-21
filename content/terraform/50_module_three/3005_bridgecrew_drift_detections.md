@@ -35,4 +35,4 @@ That will force start a scan of your environment that will find misconfiguration
 
 ![Drift alert in Bridgecrew](images/new_drift_1.png "Drift alert in Bridgecrew")
 
-You found drift! From here, you can either run `terraform apply` to bring your cloud instances back in line with the state saved locally or in Terraform Cloud, or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud. Alternatively, in the Projects page, you will find **Fix Drift** that will open a pull request on your behalf to make the change to match code to cloud.
+You found drift! From here, you can either run `terraform apply` to bring your cloud resources back in line with the state saved locally or in Terraform Cloud, or make the changes to your Terraform templates to match the changes made in production and update the state in Terraform Cloud. Alternatively, in the Projects page, you will find **Fix Drift** that will open a pull request on your behalf to make the change to match code to cloud.
