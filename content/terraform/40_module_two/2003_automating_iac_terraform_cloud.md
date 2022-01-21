@@ -46,7 +46,7 @@ Name the workspace `terragoat` and open the “Advanced options” and add the d
 
 ![Config settings](images/terraform_cloud_config_settings.png "Config settings")
 
-Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. If you are at an AWS event and using Event Engine, include your `AWS_SESSION_TOKEN`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
 
