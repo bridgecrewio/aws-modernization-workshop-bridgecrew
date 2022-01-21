@@ -24,14 +24,15 @@ Cloud9 requires third-party-cookies. You can whitelist the [specific domains]( h
 {{% /notice %}}
 
 ### Launch Cloud9:
-Create a Cloud9 Environment: [https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2)
-
 {{% notice warning %}}
-Make sure you are naming your Cloud9 environment `Bridgecrew-Workshop`, otherwise things will break later.
+You can skip this step and use the VS Code Plugin instead to get more Bridgecrew benefits
 {{% /notice %}}
+
+Create a Cloud9 Environment: [https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2)
 
 - Select **Create environment**
 - Name it **Bridgecrew-Workshop**, and take all other defaults
+- Select `t3.medium` as the instance type
 - When it comes up, customize the environment by closing the **welcome tab**
 and **lower work area**, and opening a new **terminal** tab in the main work area:
 ![c9before](/images/c9before.png)
