@@ -4,23 +4,38 @@ on:
   push:
     branches:
       - aws-workshops
+      - azure-workshops
 
 jobs:
   build-deploy:
     runs-on: [self-hosted, public, linux, x64]
-
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
+      - name: Checkout 
+        uses: actions/checkout@v2
         with:
+          repository: bridgecrewio/aws-modernization-workshop-bridgecrew
+          ref: merged-workshops
           submodules: true
       - name: Merge Azure Content
         uses: devmasx/merge-branch@master
         with:
           type: now
           from_branch: azure-workshops
-          target_branch: aws-workshops
+          target_branch: merged-workshops
           github_token: ${{ github.token }}
+      - name: Merge AWS Content
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: aws-workshops
+          target_branch: merged-workshops
+          github_token: ${{ github.token }}
+      - name: Refresh 
+        uses: actions/checkout@v2
+        with:
+          repository: bridgecrewio/aws-modernization-workshop-bridgecrew
+          ref: merged-workshops
+          submodules: true
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
         with:
