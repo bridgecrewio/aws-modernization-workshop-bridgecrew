@@ -9,13 +9,12 @@ on:
 jobs:
   build-deploy:
     runs-on: [self-hosted, public, linux, x64]
-
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
         with:
-          repository: 'bridgecrewio/aws-modernization-workshop-bridgecrew'
-          ref: 'merged-workshops'
+          repository: bridgecrewio/aws-modernization-workshop-bridgecrew
+          ref: merged-workshops
           submodules: true
       - name: Merge Azure Content
         uses: devmasx/merge-branch@master
@@ -34,8 +33,8 @@ jobs:
      - name: Refresh 
         uses: actions/checkout@v2
         with:
-          repository: 'bridgecrewio/aws-modernization-workshop-bridgecrew'
-          ref: 'merged-workshops'
+          repository: bridgecrewio/aws-modernization-workshop-bridgecrew
+          ref: merged-workshops
           submodules: true
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
