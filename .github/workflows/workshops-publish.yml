@@ -14,9 +14,13 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: true
-      - run: |
-              git fetch --no-recurse-submodules origin azure-workshops
-              git merge origin/azure-workshops
+      - name: Merge Azure Content
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: azure-workshops
+          target_branch: aws-workshops
+          github_token: ${{ github.token }}
       - name: Hugo to GH Pages
         uses: chabad360/hugo-gh-pages@v2
         with:
