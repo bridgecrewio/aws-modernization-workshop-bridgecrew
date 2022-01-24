@@ -30,7 +30,7 @@ jobs:
           from_branch: aws-workshops
           target_branch: merged-workshops
           github_token: ${{ github.token }}
-     - name: Refresh 
+      - name: Refresh 
         uses: actions/checkout@v2
         with:
           repository: bridgecrewio/aws-modernization-workshop-bridgecrew
