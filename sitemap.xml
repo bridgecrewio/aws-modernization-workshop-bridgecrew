@@ -6,19 +6,29 @@
   </url><url>
     <loc>/</loc>
   </url><url>
+    <loc>/azure.html</loc>
+  </url><url>
     <loc>/terraform.html</loc>
   </url><url>
     <loc>/aws/5_getting_started.html</loc>
+  </url><url>
+    <loc>/azure/00_getting_started.html</loc>
   </url><url>
     <loc>/terraform/00_getting_started.html</loc>
   </url><url>
     <loc>/aws/5b_what_cloudformation.html</loc>
   </url><url>
+    <loc>/azure/10_what_is_terraform.html</loc>
+  </url><url>
     <loc>/terraform/10_what_is_terraform.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites.html</loc>
   </url><url>
+    <loc>/azure/20_prerequisites.html</loc>
+  </url><url>
     <loc>/terraform/20_prerequisites.html</loc>
+  </url><url>
+    <loc>/azure/20_prerequisites/2001_terraform_setup.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/2001_terraform_setup.html</loc>
   </url><url>
@@ -26,11 +36,15 @@
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup.html</loc>
   </url><url>
+    <loc>/azure/20_prerequisites/azure_setup.html</loc>
+  </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/aws_event.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html</loc>
+  </url><url>
+    <loc>/azure/20_prerequisites/2003_bc_setup.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/2003_bc_setup.html</loc>
   </url><url>
@@ -50,15 +64,23 @@
   </url><url>
     <loc>/aws/10_module_one.html</loc>
   </url><url>
+    <loc>/azure/30_module_one.html</loc>
+  </url><url>
     <loc>/terraform/30_module_one.html</loc>
   </url><url>
     <loc>/aws/10_module_one/1001_cfngoat.html</loc>
+  </url><url>
+    <loc>/azure/30_module_one/1001_terragoat.html</loc>
   </url><url>
     <loc>/terraform/30_module_one/1001_terragoat.html</loc>
   </url><url>
     <loc>/aws/10_module_one/1002_local_scan_cli.html</loc>
   </url><url>
+    <loc>/azure/30_module_one/1002_local_scan_cli.html</loc>
+  </url><url>
     <loc>/terraform/30_module_one/1002_local_scan_cli.html</loc>
+  </url><url>
+    <loc>/azure/30_module_one/1003_local_scan_dashboard.html</loc>
   </url><url>
     <loc>/terraform/30_module_one/1003_local_scan_dashboard.html</loc>
   </url><url>
@@ -66,29 +88,43 @@
   </url><url>
     <loc>/aws/10_module_one/1004_local_scan_dashboard.html</loc>
   </url><url>
+    <loc>/azure/30_module_one/1004_vs_code.html</loc>
+  </url><url>
     <loc>/terraform/30_module_one/1004_vs_code.html</loc>
   </url><url>
     <loc>/aws/20_module_two.html</loc>
+  </url><url>
+    <loc>/azure/40_module_two.html</loc>
   </url><url>
     <loc>/terraform/40_module_two.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2001_automating_iac_github.html</loc>
   </url><url>
+    <loc>/azure/40_module_two/2001_automating_iac_github_action.html</loc>
+  </url><url>
     <loc>/terraform/40_module_two/2001_automating_iac_github_action.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2002_automating_iac_codebuild.html</loc>
+  </url><url>
+    <loc>/azure/40_module_two/2002_yor_github_action.html</loc>
   </url><url>
     <loc>/terraform/40_module_two/2002_yor_github_action.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2003_automating_iac_codebuild_iam.html</loc>
   </url><url>
+    <loc>/azure/40_module_two/2003_automating_iac_terraform_cloud.html</loc>
+  </url><url>
     <loc>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2004_automating_iac_codepipeline.html</loc>
   </url><url>
+    <loc>/azure/40_module_two/2004_github_application.html</loc>
+  </url><url>
     <loc>/terraform/40_module_two/2004_github_application.html</loc>
   </url><url>
     <loc>/aws/20_module_two/2005_automating_iac_results.html</loc>
+  </url><url>
+    <loc>/azure/40_module_two/2005_kickoff_pr.html</loc>
   </url><url>
     <loc>/terraform/40_module_two/2005_kickoff_pr.html</loc>
   </url><url>
@@ -96,21 +132,31 @@
   </url><url>
     <loc>/aws/30_module_three.html</loc>
   </url><url>
+    <loc>/azure/50_module_three.html</loc>
+  </url><url>
     <loc>/terraform/50_module_three.html</loc>
   </url><url>
     <loc>/aws/30_module_three/3001_bridgecrew_dashboard_results.html</loc>
+  </url><url>
+    <loc>/azure/50_module_three/3001_bridgecrew_dashboard_results.html</loc>
   </url><url>
     <loc>/terraform/50_module_three/3001_bridgecrew_dashboard_results.html</loc>
   </url><url>
     <loc>/aws/30_module_three/3002_bridgecrew_automate_integrate_github.html</loc>
   </url><url>
+    <loc>/azure/50_module_three/3002_bridgecrew_pull_request_fix.html</loc>
+  </url><url>
     <loc>/terraform/50_module_three/3002_bridgecrew_pull_request_fix.html</loc>
   </url><url>
     <loc>/terraform/50_module_three/3003_bridgecrew_automate_add_runtime.html</loc>
   </url><url>
+    <loc>/azure/50_module_three/3003_bridgecrew_automate_add_runtime.html</loc>
+  </url><url>
     <loc>/aws/30_module_three/3003_bridgecrew_automate_pr_remediation.html</loc>
   </url><url>
     <loc>/aws/30_module_three/3004_bridgecrew_automate_add_runtime.html</loc>
+  </url><url>
+    <loc>/azure/50_module_three/3005_bridgecrew_drift_detections.html</loc>
   </url><url>
     <loc>/terraform/50_module_three/3005_bridgecrew_drift_detections.html</loc>
   </url><url>
@@ -118,9 +164,13 @@
   </url><url>
     <loc>/aws/40_conclusion.html</loc>
   </url><url>
+    <loc>/azure/60_conclusion.html</loc>
+  </url><url>
     <loc>/terraform/60_conclusion.html</loc>
   </url><url>
     <loc>/aws/100_cleanup.html</loc>
+  </url><url>
+    <loc>/azure/100_cleanup.html</loc>
   </url><url>
     <loc>/terraform/100_cleanup.html</loc>
   </url><url>

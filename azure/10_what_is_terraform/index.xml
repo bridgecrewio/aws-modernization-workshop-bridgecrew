@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure as Code using Terraform on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/azure/10_what_is_terraform.html</link>
+    <description>Recent content in Infrastructure as Code using Terraform on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/azure/10_what_is_terraform/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

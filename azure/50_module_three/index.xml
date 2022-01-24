@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module - Fix on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/azure/50_module_three.html</link>
+    <description>Recent content in Module - Fix on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/azure/50_module_three/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bridgecrew platform results</title>
+      <link>/azure/50_module_three/3001_bridgecrew_dashboard_results.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/50_module_three/3001_bridgecrew_dashboard_results.html</guid>
+      <description>Investigating security violations in Bridgecrew Providing feedback in IDEs and CI/CD pipelines provides valuable insights into the posture of your code. Bridgecrew provides a centralized view for tracking misconfigurations across your code scans and runtime environments. We’ll start with the view across code scans.
+Navigate to the Projects tab in the Bridgecrew platform. Here you can see the results of your GitHub scan, as well as any other code scan that includes a repository ID and your Bridgecrew API.</description>
+    </item>
+    
+    <item>
+      <title>Pull request fixes</title>
+      <link>/azure/50_module_three/3002_bridgecrew_pull_request_fix.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/50_module_three/3002_bridgecrew_pull_request_fix.html</guid>
+      <description>Automating fixes through pull requests Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository. These fixes are sourced from static recommendations and Smart Fixes that are fixes sourced from your own repositories based on other code that has passed those checks.</description>
+    </item>
+    
+    <item>
+      <title>Azure runtime scanning</title>
+      <link>/azure/50_module_three/3003_bridgecrew_automate_add_runtime.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/50_module_three/3003_bridgecrew_automate_add_runtime.html</guid>
+      <description>Scanning runtime resources for vulnerable infrastructure Let’s switch gears to address infrastructure that wasn&amp;rsquo;t deployed by Terraform.
+Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our Azure accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your Azure accounts that are managed by a team that has not yet made the switch.</description>
+    </item>
+    
+    <item>
+      <title>Drift Detection</title>
+      <link>/azure/50_module_three/3005_bridgecrew_drift_detections.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/50_module_three/3005_bridgecrew_drift_detections.html</guid>
+      <description>Drift Detection between Azure and Terraform Cloud state using Bridgecrew In this final section, you’ll switch gears and detect drift. Drift occurs when the infrastructure deployed in the cloud is different from what was defined in the IaC template. You call what the infrastructure should be the “state” saved in files locally or in Terraform Cloud. For example, if the infrastructure in Azure may have different configurations than the Terraform template defined.</description>
+    </item>
+    
+  </channel>
+</rss>

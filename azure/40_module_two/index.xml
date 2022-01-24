@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module - Automate on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/azure/40_module_two.html</link>
+    <description>Recent content in Module - Automate on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/azure/40_module_two/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Action</title>
+      <link>/azure/40_module_two/2001_automating_iac_github_action.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/40_module_two/2001_automating_iac_github_action.html</guid>
+      <description>Setting up the Bridgecrew GitHub Action You can leverage GitHub actions to run automated scans for every build or specific builds, such as the ones that merge into the master branch. This action can alert on misconfigurations, or you can set it up to block code from being merged if certain policies are violated. It can also send the results to Bridgecrew for further review and remediation steps.
+The TerraGoat repository already has a Checkov Action built in at terragoat/.</description>
+    </item>
+    
+    <item>
+      <title>Yor tag &amp; trace</title>
+      <link>/azure/40_module_two/2002_yor_github_action.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/40_module_two/2002_yor_github_action.html</guid>
+      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  An introduction to Yor Yor is an open-source tool that automatically tags infrastructure as code (IaC) templates with attribution and ownership details, unique IDs that get carried across to cloud resources, and any other need-to-know information.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Cloud</title>
+      <link>/azure/40_module_two/2003_automating_iac_terraform_cloud.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
+      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  A new, native integration between Bridgecrew and Terraform Cloud called Run Tasks is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls.</description>
+    </item>
+    
+    <item>
+      <title>GitHub Application</title>
+      <link>/azure/40_module_two/2004_github_application.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/40_module_two/2004_github_application.html</guid>
+      <description>Integrating Bridgecrew with GitHub In this section, you’ll add a GitHub integration to automatically generate pull request comments and set up for automated fix pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
+Head back to the Bridgecrew Integrations tab and select GitHub under the Code Repositories section and click on the &amp;ldquo;GitHub organization&amp;rdquo; link:
+Choose which accounts and repositories to grant the Bridgecrew GitHub integration access to:</description>
+    </item>
+    
+    <item>
+      <title>Test pull request</title>
+      <link>/azure/40_module_two/2005_kickoff_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/azure/40_module_two/2005_kickoff_pr.html</guid>
+      <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terraform/simple_instance/storage.tf. Add the following code:
+provider &amp;#34;random&amp;#34; { } resource &amp;#34;random_string&amp;#34; &amp;#34;sa_name_affix&amp;#34; { length = 8 special = false upper = false } provider &amp;#34;azurerm&amp;#34; { features {} } resource &amp;#34;azurerm_resource_group&amp;#34; &amp;#34;trekgroup&amp;#34; { name = &amp;#34;trekgroup-resources&amp;#34; location = &amp;#34;West US&amp;#34; } resource &amp;#34;azurerm_storage_account&amp;#34; &amp;#34;storagebay&amp;#34; { name = &amp;#34;storagebay${random_string.</description>
+    </item>
+    
+  </channel>
+</rss>
