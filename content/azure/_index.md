@@ -16,4 +16,4 @@ Using **Bridgecrew, Checkov, VS Code, GitHub, Terraform Cloud,** and **Azure**, 
 - Set up CI/CD pipelines to automate security scanning and policy enforcement
 - Fix IaC security errors and Azure resource misconfigurations with Bridgecrew
 
-**Let’s start with a few core concepts!**
+**Let’s start with a few core concepts!** 
