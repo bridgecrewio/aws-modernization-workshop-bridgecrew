@@ -12,22 +12,22 @@
     <title>Azure Environment :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1643055028" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1643055028" rel="stylesheet">
-    <link href="../../css/hybrid.css?1643055028" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1643055028" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1643055028" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1643055028" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1643055028" rel="stylesheet">
-    <link href="../../css/theme.css?1643055028" rel="stylesheet">
-    <link href="../../css/tabs.css?1643055028" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1643055028" rel="stylesheet">
+    <link href="../../css/nucleus.css?1643131204" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1643131204" rel="stylesheet">
+    <link href="../../css/hybrid.css?1643131204" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1643131204" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1643131204" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1643131204" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1643131204" rel="stylesheet">
+    <link href="../../css/theme.css?1643131204" rel="stylesheet">
+    <link href="../../css/tabs.css?1643131204" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1643131204" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1643055028" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1643131204" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1643055028"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1643131204"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1643055028"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1643055028"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1643131204"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1643131204"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1643055028"></script>
+<script type="text/javascript" src="../../js/search.js?1643131204"></script>
 
     
   </div>
@@ -2449,7 +2449,7 @@
 	
 
 
-<div class="notices warning" ><p>Disclaimer: We will be using an Azure account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any Azure services to avoid additional fees.</p>
+<div class="notices warning" ><p>Disclaimer: We will be using an Azure account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any Azure services at the end of the workshop to avoid additional fees.</p>
 </div>
 
 
@@ -2461,11 +2461,18 @@
 
 
 <ol>
-<li><p>If you don&rsquo;t already have an Azure account with Administrator access: <a href="https://azure.microsoft.com/en-us/free/" target="_blank">create
-one now by clicking here</a></p></li>
+<li><p>If you don&rsquo;t already have an Azure account with Administrator access: <a href="https://azure.microsoft.com/en-us/free/" target="_blank">create one now by clicking here</a></p></li>
 
-<li><p>Once you have an Azure account, ensure you are following the remaining workshop steps as an AD user with administrator access to the Azure account: <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview" target="_blank">View permissions for your user</a>. Alternatively, you can use a service principal with enough access to perform Terraform tasks: <a href="https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/guides/service_principal_configuration" target="_blank">See the Terraform docs for more info</a></p></li>
+<li><p>From your local terminal, make sure to install the <a href="https://docs.microsoft.com/en-us/cli/azure/" target="_blank">Azure CLI</a> and log in with <code>az login</code></p></li>
+
+<li><p>We need a <a href="https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/guides/service_principal_configuration" target="_blank">service principle</a> account for part of this workshop. Check that you are logged in as an AD user with administrator access to the Azure account: <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview" target="_blank">View permissions for your user</a>.</p></li>
+
+<li><p>From your terminal run <code>az account list</code> to list your connected accounts. Grab your <code>id</code> from that output and set your subscription with <code>az account set --subscription=&quot;&lt;your_subscription_id&gt;&quot;</code>.</p></li>
+
+<li><p>Generate a Service Principle with <code>az ad sp create-for-rbac --role=&quot;Contributor&quot; --scopes=&quot;/subscriptions/&lt;your_subscription_id&gt;&quot;</code>. Save the output for later steps in the workshop.</p></li>
 </ol>
+
+<p><img src="images/code_ad_sp.png" alt="Azure Service Principle" title="Azure Service Principle" /></p>
 
 
 
@@ -3906,19 +3913,19 @@ one now by clicking here</a></p></li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1643055028"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1643055028"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1643055028"></script>
-    <script src="../../js/jquery.sticky.js?1643055028"></script>
-    <script src="../../js/featherlight.min.js?1643055028"></script>
-    <script src="../../js/highlight.pack.js?1643055028"></script>
+    <script src="../../js/clipboard.min.js?1643131204"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1643131204"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1643131204"></script>
+    <script src="../../js/jquery.sticky.js?1643131204"></script>
+    <script src="../../js/featherlight.min.js?1643131204"></script>
+    <script src="../../js/highlight.pack.js?1643131204"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1643055028"></script>
-    <script src="../../js/learn.js?1643055028"></script>
-    <script src="../../js/hugo-learn.js?1643055028"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1643131204"></script>
+    <script src="../../js/learn.js?1643131204"></script>
+    <script src="../../js/hugo-learn.js?1643131204"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1643055028"></script>
+            <script src="../../mermaid/mermaid.js?1643131204"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
