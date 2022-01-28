@@ -50,6 +50,10 @@ Select “Configure variables” and under "Workspace variables" add your AWS Ac
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
 
+For Event Engine, it will look like this:
+
+![Add environment variables](images/terraform_cloud_env_variables_ee.png "Add environment variables")
+
 Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.
 
 ![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
