@@ -47,6 +47,7 @@ Name the workspace `terragoat` and open the “Advanced options” and add the d
 ![Config settings](images/terraform_cloud_config_settings.png "Config settings")
 
 Select “Configure variables” and add your ARM API variables as follows:
+
 * ARM_TENANT_ID - The `tenant` field when you created your Contributor Service Account
 * ARM_CLIENT_ID - The `appId` field when you created your Contributor Service Account
 * ARM_CLIENT_SECRET - The `password` field when you created your Contributor Service Account
