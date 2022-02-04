@@ -43,6 +43,7 @@ weight: 1
                     </a>
                 </div>
         </div>
+        {{% includeContentSection "azure" %}}
         <div class="col-lg-6 col-sm-6 mb-4">
                 <div class="card text-center">
                     <a href="./azure.html">
@@ -56,5 +57,6 @@ weight: 1
                     </a>
                 </div>
         </div>
-    </div>
+        </div>
+        {{% /includeContentSection %}}
 </div>
