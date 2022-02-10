@@ -46,15 +46,24 @@ Name the workspace `terragoat` and open the “Advanced options” and add the d
 
 ![Config settings](images/terraform_cloud_config_settings.png "Config settings")
 
-Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_SESSION_TOKEN`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html). 
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
+
+
+{{% notice warning %}}
+If each of the Variables does not say "Env" in the far right of the line, you've created the wrong type of variable. This is easy to do as "Terraform" variables are the default option when clicking on "Add environment Variable". You can delete them and re-create if necessary in the correct format!
+{{% /notice %}}
 
 Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.
 
 ![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
 
 Grab the API token from Terraform Cloud for the integration. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) (User -> Settings -> Tokens) and select “Create an API token.”
+
+{{% notice warning %}}
+Make sure you are in USER settings, there are three different settings tabs within Terraform Cloud, User settings, global org settings and workspace settings. Your screen should look as below, if there are multiple type of API key to chose from, you're in the wrong place!
+{{% /notice %}}
 
 ![Terraform Cloud API token](images/terraform_cloud_api_token.png "Terraform Cloud API token")
 
