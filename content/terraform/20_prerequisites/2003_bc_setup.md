@@ -26,6 +26,14 @@ sudo pip3 install checkov
 
 If you run into problems, try the [alternate install instructions](https://docs.bridgecrew.io/docs/ingesting-scan-data#installation).
 
+### Install Yor.io
+
+We’ll also be using a new Bridgecrew open source tool, Yor, to make tagging and tracing infrastructure between code and the cloud easier, to install into our linux environment, run the following:
+
+
+```bash
+wget -q -O - https://github.com/bridgecrewio/yor/releases/download/0.1.62/yor-0.1.62-linux-amd64.tar.gz | sudo tar -xvz -C /usr/bin
+```
 
 ### Bridgecrew API token
 
