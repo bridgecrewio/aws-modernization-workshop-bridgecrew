@@ -9,7 +9,7 @@ pre: "<b>5.4 </b>"
 
 In this section, you’ll add a GitHub integration to generate code comments and set up for automated pull requests (PRs) in the next section. This integration also provides native and automated scanning of incoming commits and pull requests.
 
-Head back to the [Bridgecrew Integrations](https://www.bridgecrew.cloud/integrations/Github) tab and select GitHub under the Source Control section and “Authorize on GitHub Marketplace”:
+Head back to the [Bridgecrew Integrations](https://www.bridgecrew.cloud/integrations/Github) tab and select GitHub under the Code Repositories section and click on the "GitHub organization" link:
 
 ![Authorize Github Bridgecrew Integration](images/bridgecrew_github_application.png "Authorize Github Bridgecrew Integration")
 

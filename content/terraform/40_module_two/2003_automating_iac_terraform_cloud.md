@@ -45,11 +45,15 @@ Select “GitHub” and choose your TerraGoat repository we previously forked:
 Name the workspace `terragoat` and open the “Advanced options” and add the directory `/terraform/simple_instance/` (we'll be adding that directory later). This will focus the scans to just the aws templates. Turn on "Automatic speculative plans" to create plans for pull requests. Select “Create workspace”:
 
 ![Config settings](images/terraform_cloud_config_settings.png "Config settings")
-
-Select “Configure variables” and add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_SESSION_TOKEN`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html). 
+Select “Configure variables” and under "Workspace variables" add your AWS Account and Access Keys as environment variables called `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. If you are at an AWS event and using Event Engine, include your `AWS_SESSION_TOKEN`. If you aren’t sure where to find the keys, see [this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
 ![Add environment variables](images/terraform_cloud_env_variables.png "Add environment variables")
 
+For Event Engine, it will look like this:
+
+![Add environment variables](images/terraform_cloud_env_variables_ee.png "Add environment variables")
+
+Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.
 
 {{% notice warning %}}
 If each of the Variables does not say "Env" in the far right of the line, you've created the wrong type of variable. This is easy to do as "Terraform" variables are the default option when clicking on "Add environment Variable". You can delete them and re-create if necessary in the correct format!

@@ -17,15 +17,13 @@ Typically, you wouldn’t do more than one scan during a build, such as two Acti
 </p>
 {{% /notice %}}
 
-Start with the [GitHub Actions integration page](https://www.bridgecrew.cloud/integrations/githubActions) within the Bridgecrew platform and select “Add Subscription.”
+Start with the [GitHub Actions integration page](https://www.bridgecrew.cloud/integrations/githubActions) within the Bridgecrew platform. Give your key a name like `gh_action` and select “Create.” Copy that API token for the next step in the process and click "Next" and "Done."
 
 ![GitHub Action Integration in Bridgecrew](images/bc_github_action_integration.png "GitHub Action Integration in Bridgecrew")
 
-The integration provides steps to enable GitHub actions, which you’ll walk through below.
+The wizard provides example code to enable Bridgecrew as a GitHub Action.
 
-![GitHub Action code to copy](images/github_action_code.png "GitHub Action code")
-
-You need to add that key to GitHub in their secrets store as an environment variable. This prevents your API key from being public when you have your code in a public repository.
+You need to add the Bridgecrew API key you just generated to GitHub in their secrets store as an environment variable. This prevents your API key from being public when you have your code in a public repository.
 
 Go to your fork of TerraGoat on GitHub and select “Settings”.
 
@@ -35,9 +33,9 @@ Then select “Secrets” from the left, and click “New Repository Secret”.
 
 ![GitHub Action secrets](images/github_secrets.png "GitHub Action secrets")
 
-Name the secret `BRIDGECREW_API_KEY` as instructed in the Bridgecrew integration details above.
+Name the secret `BC_API_KEY` as instructed in the Bridgecrew integration details above.
 
-Copy and paste your API Token from the Bridgecrew integration details page into the value field.
+Copy and paste your API Token from the Bridgecrew integration wizard into the value field.
 
 ![Add the Bridgecrew secret](images/add_github_secret.png "Add the Bridgecrew secret")
 
@@ -47,7 +45,7 @@ Selecting “Add secret” will list the secret in the “Settings” -> “Secr
 
 Github Actions are defined as workflow files within your code repository under the .github/workflows directory. To create an action, you’ll add a new file to this directory. If you already have workflows and are familiar with the workflow file format, you could add the Bridgecrew step section to your own workflows for the same results.
 
-To create a new workflow, select “Actions” within your TerraGoat forked repository, then select “New Workflow.”
+To create a new workflow, select “Actions” within your TerraGoat forked repository, click on "I understand my workflows, go ahead and enable them," then select “New Workflow.”
 
 ![GitHub Action menu](images/github_action_menu.png "GitHub Action menu")
 
@@ -74,7 +72,7 @@ jobs:
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master
       with:
-        api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+        api-key: ${{ secrets.BC_API_KEY }}
         directory: terraform/
 ```
 
@@ -96,4 +94,4 @@ Rather than digging through the job logs, the action also outputs annotations fo
 
 ![Reults of the Action](images/github_action_result2.png "Results of the Action")
 
-The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. The first acts as just an observability and alerting tool, the second as guardrails for developers to prevent misconfigured templates from making it into the repository. You can change the `soft_fail` setting to block builds in the `bridgecrew.yaml` file.
+The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. The first acts as just an observability and alerting tool, the second as guardrails for developers to prevent misconfigured templates from making it into the repository. You can change this to not fail a build by adding `soft_fail: true` setting in the `with` block.
