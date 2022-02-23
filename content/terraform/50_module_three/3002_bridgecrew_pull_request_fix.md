@@ -7,7 +7,7 @@ pre: "<b>6.2 </b>"
 
 ## Automating fixes through pull requests
 
-Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository.
+Now that you’ve pulled in multiple infrastructure sources, you may get overwhelmed at the prospect of fixing the several dozen issues Bridgecrew has identified. To help us implement fixes as fast as possible, Bridgecrew generates and pushes fix pull requests back into your GitHub repository. These fixes are sourced from static recommendations and Smart Fixes that are fixes sourced from your own repositories based on other code that has passed those checks.
 
 Let’s walk through the process with one of the policies you looked at earlier, "Ensure bucket ACL does not grant READ permission to everyone"
 
@@ -15,7 +15,11 @@ Let’s walk through the process with one of the policies you looked at earlier,
 
 The lightbulb icon takes you to the Bridgecrew docs for more information about the violation. We can also suppress that check for this specific resource. Finally, in the middle is the **Fix** button. This enables you to automatically create a pull request with the diff shown. In this case, it will remove the acl with `public-read` access and `force_destroy` setting.
 
-You can include other fixes, but for the sake of this workshop, we’ll just do the one. Select **Submit**.
+That's a static fix. Next, look for the "Ensure RDS instances have backup policy" violation. There is no one right answer for how long to keep backups, but based on other code in my repo, 15 days is the most common.
+
+![Smart Fix](images/smart_fix.png "Smart Fix")
+
+You can include other fixes, but for the sake of this workshop, we’ll just do the two. Select **Submit**.
 
 That created a pull request, but you’ll need to approve the patch to make the changes in your repository. Over in your TerraGoat repository in GitHub, you’ll see a new PR under the “Pull requests” tab, which is ready for review:
 
@@ -29,4 +33,4 @@ Make sure to pull the origin locally to update your local copy of TerraGoat with
 
 **Congratulations!**
 
-You’ve built an automated IaC scanning workflow in a live environment and automated the fixing of an exposed S3 bucket!
+You’ve built an automated IaC scanning workflow in a live environment and automated the fixing of an IaC template!

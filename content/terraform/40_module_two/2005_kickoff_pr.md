@@ -35,7 +35,7 @@ Then "Create a pull request." After a few seconds, you should automatically see 
 - The Checkov GitHub Action
 - The Bridgecrew GitHub Action
 - The Bridgecrew GitHub Application
-- Two Terraform Cloud integration checks (if you added that integration)
+- The Terraform Cloud integration checks (if you added that integration) Note that this one will fail the first time because we haven't committed the directory yet
 
 ![All the GitHub integrations](images/github_checks.png "All the GitHub integrations")
 
@@ -47,24 +47,23 @@ You can fix the violations later, but for now, click "Merge pull request" and "C
 
 If you added the Terraform Cloud integration - Head back over to Terraform Cloud and select the latest run. You'll again see the policy violations, but since we set the failure level to "advisory (logging only)," we can still apply the template.
 
-{{% notice warning %}}
-We're using a free tier instance (t2-micro), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.
-{{% /notice %}}
-
-Click "Confirm & Apply." This will deploy the simple EC2 instance and security group. 
+Click "Confirm & Apply." This will deploy the simple S3 bucket. If you have the Yor GitHub Action, you may have to select that run as well and click "Confirm & Apply."
 
 #### Without Terraform Cloud
 
-Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your EC2 instance and security group. Type `yes` and let Terraform provision your resources.
+Alternatively, locally you can run `git pull origin master` to update your local directory. Move to your `simple_instance` directory in your terminal (`cd terraform/simple_instance` from the `terragoat` directory). Then run `terraform init` to initialize your directory and `terraform apply` to create your S3 bucket and security group. Type `yes` and let Terraform provision your resources.
 
 ![Plan output](images/tf_plan.png "Plan output")
 
+{{% notice warning %}}
+We're using a free tier resource (S3), but remember to cleanup with terraform destroy at the end to avoid additional charges from AWS.
+{{% /notice %}}
 
-#### Check that the instance is live
+#### Check that the bucket is live
 
-Optionally, head over to your AWS console to confirm an instance was created.
+Optionally, head over to your AWS console to confirm a bucket was created.
 
-![New EC2 instance](images/aws_instance.png "New EC2 instance")
+![New S3 bucket](images/aws_instance.png "New S3 bucket")
 
 
 ### Congratulations!
