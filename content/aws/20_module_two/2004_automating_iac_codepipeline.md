@@ -42,7 +42,7 @@ The CodePipeline screen should refresh with a green **Sucessfully connected to G
 
 ![AWS CodePipeline Github connected OK](./images/codepipeline-create-project-github-9.png "AWS CodePipeline Github connected OK")
 
-Now that CodePipeline has access to our GitHub repository, we can select it as the pipeline source. Select the **master** (or **main** branch) to have our pipeline run when commits to this branch occur:
+Now that CodePipeline has access to our GitHub repository, we can select it as the pipeline source. Select the **master** (or **main** branch) to have our pipeline run when commits to this branch occur and **Full clone**:
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-10.png "AWS CodePipeline Select Repo")
 
@@ -58,7 +58,36 @@ On the next screen, select **Skip deploy stage**. We don’t want to deploy our 
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-12.png "AWS CodePipeline Select Repo")
 
-Finally, select **Create pipeline** on the review page, which will trigger your new CodePipeline to immediately run against the latest commit in our CfnGoat repository:
+Copy the ARN from under "ConnectionArn" under "Step 2: Add source stage." In the example above it's `arn:aws:codestar-connections:us-east-1:714...`.
+
+![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-13.png "AWS CodePipeline Select Repo")
+
+Now go to the [AWS IAM dashboard](https://console.aws.amazon.com/iamv2), click on **Roles** and search for the role created by CodePipeline ("cfngoat" should help you find it.). Click on that role.
+
+![CFN IAM role](./images/cfn-iam-role.png "CFN IAM role")
+
+Under **Add permissions** click on **Attach policies** then **Create policies**. Click on JSON and fill in the following, replacing the ARN with your ARN from CodePipeline (should still be in your clipboard).
+
+```JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "codestar-connections:UseConnection",
+            "Resource": "insert connection ARN here"
+        }
+    ]
+}
+```
+
+![IAM Role](./images/json-iam-role.png "IAM Role")
+
+Don't worry about tags. Give your policy a name like `connection-permissions` and then **Create policy**. Return to the IAM page where you were attaching permissions, refresh the policy list, and select the policy you just created. Choose Attach policies.
+
+![IAM policy attach](./images/gitclone-role-policy-attach.png "IAM policy attach")
+
+Finally, go back to your CodePipeline and select **Create pipeline** on the review page, which will trigger your new CodePipeline to immediately run against the latest commit in our CfnGoat repository:
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-13.png "AWS CodePipeline Select Repo")
 
