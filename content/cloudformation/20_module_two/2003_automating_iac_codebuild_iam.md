@@ -23,7 +23,7 @@ Under **Resources**, choose **Specific** and select **Add ARN**. Fill in the sam
 
 ![AWS IAM Dashboard](./images/codebuild-create-project-github-iam-14.png "AWS IAM Dashboard")
 
-You could also use the `cli` command `aws ssm get-parameter --name bridgecrew_api_key` to get the whole ARN and paste it into the ARN field.
+You could also use the `cli` command `aws ssm get-parameter --name bc-api-key` to get the whole ARN and paste it into the ARN field.
 ![Retreive SSM secret and ARN](./images/codebuild-create-project-github-iam-14p2.png "Retreive SSM secret and ARN")
 
 Select **Add** then select **Review Policy**.
