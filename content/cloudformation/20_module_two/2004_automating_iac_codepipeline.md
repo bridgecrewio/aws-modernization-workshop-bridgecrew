@@ -30,7 +30,7 @@ In some AWS events you will need to use GitHub V1. Please pay attention to the m
 
 As CodeBuild and CodePipeline are different tools, you'll also need to authorize CodePipeline to your GitHub account, select **Connect to Github** and follow the authorization redirects in the popup window.
 
-Give the Github Connection a name:
+Give the Github Connection a name, for this workshop we are using `bc-tutorial-github-codepipeline`.
 
 ![AWS CodePipeline Github Connection](./images/codepipeline-create-project-github-4.png "AWS CodePipeline Github Connection")
 
