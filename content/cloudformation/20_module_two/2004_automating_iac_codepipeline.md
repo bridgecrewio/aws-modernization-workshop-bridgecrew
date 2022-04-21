@@ -53,6 +53,8 @@ Now that CodePipeline has access to our GitHub repository, we can select it as t
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-10.png "AWS CodePipeline Select Repo")
 
+We also want to ensure we are allowing CodePipeline to do a "Full Clone" here, as Checkov needs the git metadata from the `cfnGoat` repository to add the relevant data to new events in the Bridgecrew dashboard.
+
 ## Instruct CodePipeline to trigger our CodeBuild
 
 When CodePipeline sees a new commit in our GitHub repository, it will trigger a build action. To set this to be our CodeBuild commands, select the same region as the CodeBuild project, then select the CodeBuild project, **bridgecrew-tutorial**.
@@ -68,5 +70,29 @@ On the next screen, select **Skip deploy stage**. We don’t want to deploy our 
 Finally, select **Create pipeline** on the review page, which will trigger your new CodePipeline to immediately run against the latest commit in our CfnGoat repository:
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-13.png "AWS CodePipeline Select Repo")
+
+## A Little more IAM fun.
+
+Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details.
+
+This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it's own copy of our `CfnGoat` repo from GitHub, however, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines' GitHub connection) to the CodeBuild, we'll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.
+
+All we need to do is add a new `Inline Policy` to the `codebuild-bridgecrew-tutorial-service-role` role with the following permissions:
+
+```
+
+Read: 
+GetConnection
+PassConnection
+UseConnetion
+GetIndividualAccessToken
+
+List:
+ListConnections
+```
+
+We can save this inline policy as: `codebuild-access-codestar`
+
+## Success!
 
 **Now we don’t need to manually run the Checkov CLI; your developers will get a Bridgecrew scan every time they commit!** 
