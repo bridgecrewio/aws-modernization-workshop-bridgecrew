@@ -16,23 +16,21 @@ To pre-build this environment for each workshop attendee, we'll run some CloudFo
 
 ## An introduction to “KIND”
 
-KIND, or “Kubernetes in Docker” is a simple way to createof creating local Kubernetes clusters for testing, experimentation and development.
+KIND, or “Kubernetes in Docker” is a simple way to create local Kubernetes clusters for testing, experimentation and development.
 
 [https://kind.sigs.k8s.io/](https://kind.sigs.k8s.io/)
 
 ![alt_text](images/kindLogo.png "image_tooltip")
 
-As the name suggests, Kind nests a Kkubernetes cluster inside containers on your existing (Docker, Podman, ContainerD, etc) system. 
+As the name suggests, KIND nests a Kubernetes cluster inside containers on your existing (Docker, Podman, ContainerD, etc) system.
 
-We’ll be using Kind to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.
-
+We’ll be using KIND to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.
 
 ### Setting up the workshop environment via CloudFormation
-
 	
-1. From within your AWS Account, go to the CloudFormation Service.
-2. Use the following Amazon S3 URL as a template source: 
-3. Provide a name for the stack. For example, “bridgecrew-k8s-workshop” would be fine.
+1. From your AWS Account, go to the CloudFormation Service.
+2. Use the following Amazon S3 URL as a template source:
+3. Name the stack. For example:  “bridgecrew-k8s-workshop” 
 4. Fill out the required parameters, these will help set up the environment without manual steps later in the workshop!
 
 ![alt_text](images/cfStackDetailsInputPrompt.png "image_tooltip")
@@ -44,17 +42,17 @@ Fill in your git clone address for your fork of [https://github.com/bridgecrewio
 ![alt_text](images/cfKustomizeForkUrl.png "image_tooltip")
 
 
-Enter your Bridgecrew API key fromfor your free Bbridgecrew account in the `UserBridgecrewAPI` field.
+Enter your Bridgecrew API key from your free Bridgecrew account in the `UserBridgecrewAPI` field.
 
 
 ![alt_text](images/cfBridgecrewAPIToken.png "image_tooltip")
 
-Enter any public SSH key you wish to use (for which you own the private key). Yyou will use this to log into the KIND machine. Paste this in full into the `UserSSHKey` field. 
+Enter any public SSH key you wish to use (for which you own the private key). You will use this to log into the KIND machine. Paste this in full into the `UserSSHKey` field.
 
 
 ![alt_text](images/cfUserSSHKey.png "image_tooltip")
 
-Finally, enter *your own* current public IP address from wherever you are attending this workshop. We will lock down certain public service access to this IP for security. You can edit this later if needed. 
+Finally, enter your current public IP address from wherever you are attending this workshop. We will lock down certain public service access to this IP for security. You can edit this later if needed.
 
 Add this IP into the ‘YourPublicIP’ field: 
 
@@ -69,6 +67,5 @@ Add this IP into the ‘YourPublicIP’ field:
 
 ### VSCode
 
-
-Not just for it’s code editing capabilities, we will also demonstrate security plugins for VSCode during this webinar. Security plugins for VSCode  which will helpaide your development teams to spot misconfigurations much earlier in the development process., To download VSCode for free, visit get yourself the latest copy for your environment of VSCode, for free, from [https://code.visualstudio.com/download.](https://code.visualstudio.com/download)
+We will also demonstrate security plugins for VSCode during this webinar. Security plugins for VSCode will help your development teams spot misconfigurations much earlier in the development process. To download VSCode for free, visit [https://code.visualstudio.com/download.](https://code.visualstudio.com/download)
 
