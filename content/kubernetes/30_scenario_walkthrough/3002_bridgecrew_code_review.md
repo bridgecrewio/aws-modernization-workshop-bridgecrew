@@ -9,7 +9,6 @@ Every time ArgoCD had tried to deploy our Dev environment to the Kubernetes clus
 
 Details of all the issues found with the dev deployment can be seen in this view, with filters for severity, tags, etc.
 
- \
 
 ![alt_text](images/bcDashFullScreenshot.png "image_tooltip")
 
