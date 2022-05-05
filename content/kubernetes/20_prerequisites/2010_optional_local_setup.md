@@ -7,22 +7,17 @@ pre: "<b>2.5 </b>"
 
 ### Go it alone (Local setup)
 
+This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and  we cannot guarantee that these instructions will work flawlessly in every environment.
 
-This option is strongly discouraged as we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and we cannot guarantee that these instructions will work flawlessly in every environment.
+However, we’d like to provide Option Three so that you can see the steps needed to install all the needed dependencies for the workshop.
 
-
-However, we’d like to provide this so that you can see the steps needed to install in the interest of transparency for what has been configured behind the scenes in the two automated workshop environments above, the following steps give example commands for installing all the needed dependencies for the workshop.
-
-
-These stepsThey are intended foraimed at a Linux X64 Ubuntu 20.04 machine, as our automated workshop environments run in cContainers on these OS images.
-
+These steps are intended for a Linux X64 Ubuntu 20.04 machine, as our automated workshop environments run in Containers on these OS images.
 
 #### Docker / PodMan / Rancher Desktop / ContainerD
 
+Your machine must be able to run containers. The examples below all use Docker Desktop to spin up containerized dependencies, but all dependencies should work with other local ContainerD-based container tooling.  
 
-    Your machine must be able to  will need a machine capable of running containers., The our examples below all use Ddocker Ddesktop in order to spin up containerized dependencies, buthowever all dependencies should work with other local ContainerD-based container tooling.  \
- \
-See this page to install Docker Desktop. For docker desktop install, see here: [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
+See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 
 
 #### Install the KIND CLI tool
@@ -35,7 +30,7 @@ See this page to install Docker Desktop. For docker desktop install, see here: [
 ```
 
 
-### Build theour KIND Kubernetes cluster
+### Build the KIND Kubernetes cluster
 
 
 ```
@@ -43,7 +38,7 @@ See this page to install Docker Desktop. For docker desktop install, see here: [
 ```
 
 
-### Install the Kkubectl CLI tool
+### Install the Kubectl CLI tool
 
 
 ```
@@ -95,8 +90,7 @@ This is optional, but is a and good practice for compartmentalizing Ppython depe
 ### Test your installed dependencies
 
 
-If all of the dependencies are correctly installed, the following commands should all run withoutsuccessfully, displaying no errors or failures:
-
+If all of the dependencies are correctly installed, the following commands should all run without errors or failures:
 
 ```
     kubectl cluster-info --context kind-bridgecrew-workshop
