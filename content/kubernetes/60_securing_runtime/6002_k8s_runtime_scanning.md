@@ -46,10 +46,10 @@ Next, we simply *run the Kubectl commands* provided to enable the runtime integr
 ![alt_text](images/kubectlRuntimeK8sIntegration.png "image_tooltip")
 
 
-By running `kubectl get cronjob –namespace bridgecrew’ we can see the bridgecrew runtime agent, scheduled to run and keep bridgecrew updated with the runtime posture of the cluster.
+By running `kubectl get cronjob –namespace bridgecrew` we can see the bridgecrew runtime agent, scheduled to run and keep bridgecrew updated with the runtime posture of the cluster.
 
 
-![alt_text](images/bcK8sCronjobGet.png "image_tooltip")
+![alt_text](images/bcK8sCronjobget.png "image_tooltip")
 
 
 Instead of waiting for the first scheduled run, lets manually run the job the first time so we can see data in the Bridgecrew dashboard: 
