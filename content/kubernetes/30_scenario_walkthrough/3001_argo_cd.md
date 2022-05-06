@@ -5,7 +5,7 @@ weight: 10
 pre: "<b>3.1 </b>"
 ---
 
-Using the public IP of your KIND kubernetes cluster, open `https://KIND CLUSTER IP>:30443` in your local browser to be prompted with the ArgoCD login screen, the admin credentials were already discussed in the workshop setup and are unique to your workshop environment. 
+Using the public IP of your KIND kubernetes cluster, open `https://<KIND CLUSTER IP>:32443` in your local browser to be prompted with the ArgoCD login screen, the admin credentials were already discussed in the workshop setup and are unique to your workshop environment. 
 
 You can always ```cat .bcworkshop/.argo-password``` to reveal the password again from the KIND host console if needbe.
 
