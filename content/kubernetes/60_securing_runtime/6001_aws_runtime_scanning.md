@@ -36,7 +36,7 @@ You will be taken to your AWS account to spin up the CloudFormation stack to aut
 Check the checkbox to approve the IAM permission creations via our CloudFormation stack, and click Create Stack:
 
 
-![alt_text](images/bcIntegrationAWSCreateStack.png "image_tooltip")
+![Approve IAM](images/bcAwsCreateStack2.png "Approve IAM")
 
 
 You can track the progress of the stack creation within your AWS account.
