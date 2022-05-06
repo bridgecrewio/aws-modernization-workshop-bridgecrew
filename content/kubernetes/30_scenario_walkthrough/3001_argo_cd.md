@@ -5,9 +5,9 @@ weight: 10
 pre: "<b>3.1 </b>"
 ---
 
-Using the public IP of your KIND kubernetes cluster, open `https://<KIND CLUSTER IP>:32443` in your local browser to be prompted with the ArgoCD login screen, the admin credentials were already discussed in the workshop setup and are unique to your workshop environment. 
+Using the public IP of your KIND kubernetes cluster, open `https://<KIND CLUSTER IP>:32443` in your local browser to be prompted with the ArgoCD login screen. 
 
-You can always ```cat .bcworkshop/.argo-password``` to reveal the password again from the KIND host console if needbe.
+You can `cat .bcworkshop/.argo-password` to reveal the password from the KIND host console. The username is `admin`.
 
  
 ![alt_text](images/argoCdLogin.png "image_tooltip")
@@ -53,6 +53,6 @@ In dev, we see a different story, the service loadbalancer is created, but the D
 
 ![alt_text](images/argoErrorAdmissionController.png "image_tooltip")
 
-It looks like the deployment was blocked from running on the cluster due to a number of security issues found by Bridgecrew’s Kubernetes admission controller, which the dev team had just installed.. But thats not the nicest way to view the error. 
+It looks like the deployment was blocked from running on the cluster due to a number of security issues found by Bridgecrew’s Kubernetes admission controller, which the dev team had just installed. But thats not the nicest way to view the error. 
  
 Follow the `complete details` link at the bottom of the error message for a clearer view.

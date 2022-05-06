@@ -56,8 +56,7 @@ Here we can see a number of namespaces including one for our ArgoCD continuous d
 Let's take a look at the pods and services in that namespace.
 
 ``` 
-Kubectl get po –namespace argocd
-
+kubectl get po --namespace argocd
 ```
 
 
@@ -65,6 +64,11 @@ Kubectl get po –namespace argocd
 
 
 Looks like ArgoCD is up and running. Let's have a look at the services for ArgoCD: 
+
+```
+kubectl get svc --namespace argocd
+```
+
 
 ![alt_text](images/argoKubectlGetSvc.png "image_tooltip")
 

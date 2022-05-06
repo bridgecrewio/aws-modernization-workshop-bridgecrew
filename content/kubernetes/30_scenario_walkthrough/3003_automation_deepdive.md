@@ -24,7 +24,7 @@ kubectl apply -k ./kustomizegoat/kustomize/overlays/dev
 
 As the admission controller is powered by our open source Infra-as-code scanning tool, checkov.io, we can simulate the failure even without having a kubernetes cluster, by having Checkov scan the local kustomize manifests.
 
-To do this, try running `checkov -d ./kustomizegoat –framework kustomize` in the kustomize directory, you will see output on the CLI very similar to what we have already seen in Bridgecrew from the admission controller.
+To do this, try running `checkov -d ./kustomizegoat --framework kustomize` in the kustomize directory, you will see output on the CLI very similar to what we have already seen in Bridgecrew from the admission controller.
 
 Here you will see *all* the policy results from Checkov for all of our overlays and base directories. The Admission controller has a configurable list of specific policies it rejects (high severity) where as this checkov output will show all severities!
 
