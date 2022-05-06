@@ -28,7 +28,7 @@ Create a new API key for the integration and click “*CREATE”*:
 ![alt_text](images/bcIntegrationK8sAPIKey.png "image_tooltip")
 
 
-Give the *cluster a name*, this is used to identify the Kubernetes cluster within Bridgecrew.
+Give the *cluster a name*, this is used to identify the Kubernetes cluster within Bridgecrew. For example, use `workshop-cluster`.
 
 
 ![alt_text](images/bcIntegrationCreateK8sCluster.png "image_tooltip")
@@ -54,12 +54,12 @@ By running `kubectl get cronjob –namespace bridgecrew` we can see the bridgecr
 
 Instead of waiting for the first scheduled run, lets manually run the job the first time so we can see data in the Bridgecrew dashboard: 
 
-`kubectl create job --from-cronjob/bridgecrew manual-bc-runtime-scan --namespace=bridgecrew`
+`kubectl create job --from=cronjob/bridgecrew manual-bc-runtime-scan --namespace=bridgecrew`
 
 ![alt_text](images/kubectlCreateJobRuntimeScan.png "image_tooltip")
 
 
-_We will now start to see data under the incidents tab in the Bridgecrew dashboard, you can check on the status of the Job’s instance with the `kubectl get job` command also.
+We will now start to see data under the incidents tab in the Bridgecrew dashboard, you can check on the status of the Job’s instance with the `kubectl get job -n bridgecrew` command also.
 
 
 ![alt_text](images/kubectlGetJobKickoffRuntimeScan.png "image_tooltip")
