@@ -15,7 +15,7 @@ They already use ‘Infrastructure as Code’ to define their environments, and 
 ![alt_text](images/kubectlGetNodes.png "image_tooltip")
 
 
-Their CD “Continuous deployment” tool is ArgoCD, which is configured to take any changes to in their main infrastructure GitHub branch, and apply those changes to the cluster, for both the Prod and Dev environments! \
+Their continuous deployment (CD) tool is ArgoCD, which is configured to take any changes to in their main infrastructure GitHub branch, and apply those changes to the cluster, for both the Prod and Dev environments! \
  \
 
 ![alt_text](images/ArgoEnvironments.png "image_tooltip")
@@ -28,12 +28,12 @@ You have already briefly met the infrastructure as code repository holding these
 
 ### Kubectl 
 
-You should already have access to your “KIND” Kubernetes cluster for this workshop, confirm that with the following command, showing our Kubenetes cluster nodes:
+You should already have access to your "kind" Kubernetes cluster for this workshop, confirm that with the following command, showing our Kubenetes cluster nodes:
 
 
 ```
 
-Kubectl get nodes
+kubectl get nodes
 
 ```
 
@@ -44,8 +44,7 @@ Kubectl get nodes
 We can also take a look at the existing Namespaces running on our cluster: 
 
 ```
-
-Kubectl get ns 
+kubectl get ns 
 ```
 
 
@@ -54,7 +53,7 @@ Kubectl get ns
 
 Here we can see a number of namespaces including one for our ArgoCD continuous deployment system, which itself is running on our cluster and monitoring our git repo for changes to our infrastructure configuration.
 
-Lets take a look at the pods and services in that namespace
+Let's take a look at the pods and services in that namespace.
 
 ``` 
 Kubectl get po –namespace argocd
@@ -65,7 +64,7 @@ Kubectl get po –namespace argocd
 ![alt_text](images/argoKubectlGetPod.png "image_tooltip")
 
 
-Looks like argoCD is up and running, let's have a look at the services for howto access it: 
+Looks like ArgoCD is up and running. Let's have a look at the services for ArgoCD: 
 
 ![alt_text](images/argoKubectlGetSvc.png "image_tooltip")
 

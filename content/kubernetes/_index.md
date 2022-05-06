@@ -1,12 +1,12 @@
 ---
-title: "Cloud DevSecOps with Kubernetes, AWS and Bridgecrew"
+title: "Kubernetes Workshop"
 chapter: true
 weight: 1
 ---
 
 # Welcome!
 
-In this workshop, you’ll learn how to leverage infrastructure as code (IaC) and DevSecOps to automate, scale, and improve the security posture of your cloud infrastructure. We’ll create a pipeline that provides frequent, easy-to-digest improvements to ensure our configurations are secure and compliant from the build-time to runtime.
+In this workshop, you’ll learn how to leverage infrastructure as code (IaC) and DevSecOps to automate, scale, and improve the security posture of your cloud infrastructure. We’ll create a pipeline that provides frequent, easy-to-digest improvements to ensure our configurations are secure and compliant from build-time to runtime.
 
 Using **Bridgecrew, Checkov, VS Code, GitHub, Kubernetes, ArgoCD** and **AWS**, we’ll get hands-on experience implementing an automated **Kubernetes** security and compliance workflow.
 
