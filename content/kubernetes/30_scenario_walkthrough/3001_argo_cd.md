@@ -5,9 +5,15 @@ weight: 10
 pre: "<b>3.1 </b>"
 ---
 
-Using the public IP of your KIND kubernetes cluster, open `https://<KIND CLUSTER IP>:32443` in your local browser to be prompted with the ArgoCD login screen. 
+In order to access the ArgoCD web interface within our Kubernetes cluster, we'll need to know the public IP address of our workshop environment.
 
-You can `cat .bcworkshop/.argo-password` to reveal the password from the KIND host console. The username is `admin`.
+Clicking the link below, will load the CloudFormation *stacks* page. Select `bridgecrew-workshop` and select the *Outputs* tab, where we will see the public IP and ArgoCD URL.
+
+[https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks?filteringStatus=active&filteringText=&viewNested=true&hideStacks=false](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks?filteringStatus=active&filteringText=&viewNested=true&hideStacks=false)
+
+The URL will be in the form `https://<CLUSTER IP>:32443` click this link and you will be  prompted with the ArgoCD login screen. 
+
+You can `cat .bcworkshop/.argo-password` within our Cloud9 terminal to reveal the password for login. The username is `admin`.
 
  
 ![alt_text](images/argoCdLogin.png "image_tooltip")
