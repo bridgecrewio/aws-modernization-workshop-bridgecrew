@@ -26,10 +26,9 @@ We’ll be using KIND to ensure everyone has the same, repeatable Kubernetes con
 
 ### Setting up the workshop environment via CloudFormation
 	
-1. From your AWS Account, go to the CloudFormation Service.
-2. Use the following Amazon S3 URL as a template source:
-3. Name the stack. For example:  `bridgecrew-k8s-workshop`
-4. Fill out the required parameters, these will help set up the environment without manual steps later in the workshop!
+1. Clicking the following link will open CloudFormation and pre-fill the template source from Amazon S3: [https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2&skipRegion=true#/stacks/create/review?templateURL=https://kubernetes-workshop-cloudformation.s3.us-east-2.amazonaws.com/workshop-init-cloudformation.yaml&stackName=bridgecrew-workshop](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2&skipRegion=true#/stacks/create/review?templateURL=https://kubernetes-workshop-cloudformation.s3.us-east-2.amazonaws.com/workshop-init-cloudformation.yaml&stackName=bridgecrew-workshop)
+
+2. Fill out the required parameters described below. these will enable CloudFormation to set up the environment without manual steps later in the workshop!
 
 ![alt_text](images/cfStackDetailsInputPrompt.png "image_tooltip")
 
