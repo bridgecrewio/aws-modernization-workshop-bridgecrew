@@ -6,6 +6,8 @@
   </url><url>
     <loc>/</loc>
   </url><url>
+    <loc>/kubernetes.html</loc>
+  </url><url>
     <loc>/azure.html</loc>
   </url><url>
     <loc>/terraform.html</loc>
@@ -14,7 +16,11 @@
   </url><url>
     <loc>/azure/00_getting_started.html</loc>
   </url><url>
+    <loc>/kubernetes/10_getting_started.html</loc>
+  </url><url>
     <loc>/terraform/00_getting_started.html</loc>
+  </url><url>
+    <loc>/kubernetes/20_prerequisites/aws_setup.html</loc>
   </url><url>
     <loc>/aws/5b_what_cloudformation.html</loc>
   </url><url>
@@ -22,15 +28,23 @@
   </url><url>
     <loc>/terraform/10_what_is_terraform.html</loc>
   </url><url>
+    <loc>/kubernetes/20_prerequisites.html</loc>
+  </url><url>
+    <loc>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</loc>
+  </url><url>
     <loc>/aws/6_prerequisites.html</loc>
   </url><url>
     <loc>/azure/20_prerequisites.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites.html</loc>
   </url><url>
+    <loc>/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html</loc>
+  </url><url>
     <loc>/azure/20_prerequisites/2001_terraform_setup.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/2001_terraform_setup.html</loc>
+  </url><url>
+    <loc>/kubernetes/20_prerequisites/2003_account_setup.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup.html</loc>
   </url><url>
@@ -40,6 +54,10 @@
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/aws_event.html</loc>
   </url><url>
+    <loc>/kubernetes/20_prerequisites/2002_create_our_scenario.html</loc>
+  </url><url>
+    <loc>/kubernetes/20_prerequisites/2010_optional_local_setup.html</loc>
+  </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine.html</loc>
@@ -48,19 +66,47 @@
   </url><url>
     <loc>/terraform/20_prerequisites/2003_bc_setup.html</loc>
   </url><url>
+    <loc>/kubernetes/30_scenario_walkthrough.html</loc>
+  </url><url>
+    <loc>/kubernetes/30_scenario_walkthrough/3001_argo_cd.html</loc>
+  </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/workspace.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/aws_event/workspace.html</loc>
   </url><url>
+    <loc>/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html</loc>
+  </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/9_own_account.html</loc>
+  </url><url>
+    <loc>/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/9_own_account/workspace.html</loc>
   </url><url>
     <loc>/aws/6_prerequisites/601_setting_up_bridgecrew_account.html</loc>
   </url><url>
+    <loc>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</loc>
+  </url><url>
+    <loc>/kubernetes/40_pull_requests_and_ci.html</loc>
+  </url><url>
+    <loc>/kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html</loc>
+  </url><url>
+    <loc>/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html</loc>
+  </url><url>
+    <loc>/kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html</loc>
+  </url><url>
     <loc>/aws/6_prerequisites/7_aws_setup/8_aws_eventengine/setup_short.html</loc>
   </url><url>
     <loc>/terraform/20_prerequisites/aws_setup/aws_event/setup_short.html</loc>
+  </url><url>
+    <loc>/kubernetes/50_ide_integration.html</loc>
+  </url><url>
+    <loc>/kubernetes/60_securing_runtime.html</loc>
+  </url><url>
+    <loc>/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html</loc>
+  </url><url>
+    <loc>/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html</loc>
+  </url><url>
+    <loc>/kubernetes/70_cleanup.html</loc>
   </url><url>
     <loc>/aws/10_module_one.html</loc>
   </url><url>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scenario Introduction on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/kubernetes/30_scenario_walkthrough.html</link>
+    <description>Recent content in Scenario Introduction on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/kubernetes/30_scenario_walkthrough/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArgoCD</title>
+      <link>/kubernetes/30_scenario_walkthrough/3001_argo_cd.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/30_scenario_walkthrough/3001_argo_cd.html</guid>
+      <description>In order to access the ArgoCD web interface within our Kubernetes cluster, we&amp;rsquo;ll need to know the public IP address of our workshop environment.
+Clicking the link below, will load the CloudFormation stacks page. Select bridgecrew-workshop and select the Outputs tab, where we will see the public IP and ArgoCD URL.
+https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks?filteringStatus=active&amp;amp;filteringText=&amp;amp;viewNested=true&amp;amp;hideStacks=false
+The URL will be in the form https://&amp;lt;CLUSTER IP&amp;gt;:32443 click this link and you will be prompted with the ArgoCD login screen.</description>
+    </item>
+    
+    <item>
+      <title>Bridgecrew Code Reviews</title>
+      <link>/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html</guid>
+      <description>Every time ArgoCD had tried to deploy our Dev environment to the Kubernetes cluster, the cluster had been instructed to check the security posture of incoming kubernetes manifests with the Bridgecrew admission controller.
+Details of all the issues found with the dev deployment can be seen in this view, with filters for severity, tags, etc.
+It seems we have 17 detected issues on our Deployment object, and none on the Service object, which explains why this was successfully deployed in the dev environment, but the Deployment wasn&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>Automation Deepdive</title>
+      <link>/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html</guid>
+      <description>While doing things manually is NOT what we want for a DevSecOps pipeline, for the sake of understanding the current setup a little more, lets see what it looks like if the developer was to try and apply the dev environment directly to the kubernetes cluster using the CLI, kubectl.
+This will render the kustomize template and pass it to the kubernetes API, we should see the same results from the API as we saw through Argo, with our admission controller rejecting the deployment…</description>
+    </item>
+    
+    <item>
+      <title>Scenario Summary</title>
+      <link>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</guid>
+      <description>You are here! This is all well and good, there’s a free Admission controller that our Dev team have installed into our Kubernetes cluster to prevent bad things being deployed, however, lets look where in the development cycle this is currently happening:
+We’ve blocked this deployment in the red oval, a lot of developers time, commands, processing time on code testing, and other processes have already happened before this point.</description>
+    </item>
+    
+  </channel>
+</rss>

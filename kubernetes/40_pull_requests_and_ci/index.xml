@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pull Requests and CI on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/kubernetes/40_pull_requests_and_ci.html</link>
+    <description>Recent content in Pull Requests and CI on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/kubernetes/40_pull_requests_and_ci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrate Bridgecrew with GitHub</title>
+      <link>/kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html</guid>
+      <description>Integrating Bridgecrew with GitHub To enable automated PR scanning on your repositories, goto the **Integrations **page at the bottom of the icon bar on the left.
+Then, click on New Integration and select GitHub from the code repositories options
+A popout dialog will allow you to Authorize with your GitHub account and chose the repositories you want Bridgecrew to scan, click **Authorize **to be redirected to GitHub to complete this.</description>
+    </item>
+    
+    <item>
+      <title>Create A Pull Request</title>
+      <link>/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html</guid>
+      <description>Creating Infrastructure with a Pull Request! To see our new security controls in action, let&amp;rsquo;s create a pull request to modify our Dev environment configuration!
+In GitHub, on your fork of KustomizeGoat, click into the kustomize &amp;gt; overlays and dev directories:
+Click on the kustomization.yaml file to open it in the GitHub web viewer, and click edit
+Lets make a simple change right now, and modify the name of the dev Namespace</description>
+    </item>
+    
+    <item>
+      <title>Block with CI</title>
+      <link>/kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html</guid>
+      <description>PR Scanning vs CI Our pull request annotations give good collaborative team feedback to the development teams involved, however, without extra configuration, the feedback is ecactly that, just feedback.
+CI pipelines allow us to actually block (by failing) a build or change from making it from a development branch, into a main or production branch, while these two types of scans overlap, it is worth showing how you can configure Bridgecrew to sit within any CI pipeline to perform this function.</description>
+    </item>
+    
+  </channel>
+</rss>

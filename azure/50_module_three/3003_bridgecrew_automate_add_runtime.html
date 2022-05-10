@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="generator" content="Hugo 0.98.0" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Azure runtime scanning :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1646107601" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1646107601" rel="stylesheet">
-    <link href="../../css/hybrid.css?1646107601" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1646107601" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1646107601" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1646107601" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1646107601" rel="stylesheet">
-    <link href="../../css/theme.css?1646107601" rel="stylesheet">
-    <link href="../../css/tabs.css?1646107601" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1646107601" rel="stylesheet">
+    <link href="../../css/nucleus.css?1652156054" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1652156054" rel="stylesheet">
+    <link href="../../css/hybrid.css?1652156054" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1652156054" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1652156054" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1652156054" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1652156054" rel="stylesheet">
+    <link href="../../css/theme.css?1652156054" rel="stylesheet">
+    <link href="../../css/tabs.css?1652156054" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1652156054" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1646107601" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1652156054" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1646107601"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1652156054"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1646107601"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1646107601"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1652156054"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1652156054"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1646107601"></script>
+<script type="text/javascript" src="../../js/search.js?1652156054"></script>
 
     
   </div>
@@ -881,6 +881,614 @@
         ">
       <a href="../../aws/100_cleanup.html">
           <b>8 </b>Cleanup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes.html" title="Kubernetes Workshop" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes.html">
+          Kubernetes Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/10_getting_started.html" title="DevSecWhat?" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/10_getting_started.html">
+          <b>1 </b>DevSecWhat?
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/20_prerequisites.html" title="Prerequisites" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/20_prerequisites.html">
+          <b>2 </b>Prerequisites
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/20_prerequisites/aws_setup.html" title="AWS Environment" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/20_prerequisites/aws_setup.html">
+          <b>2.1 </b>AWS Environment
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html" title="At an AWS Event" class="dd-item ">
+        <a href="../../kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html">
+        <b>2.2.1 </b>At an AWS Event
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html" title="Own AWS environment" class="dd-item ">
+        <a href="../../kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html">
+        <b>2.2.2 </b>Own AWS environment
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/20_prerequisites/2003_account_setup.html" title="Account Setup" class="dd-item ">
+        <a href="../../kubernetes/20_prerequisites/2003_account_setup.html">
+        <b>2.3 </b>Account Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/20_prerequisites/2002_create_our_scenario.html" title="Create our Scenario" class="dd-item ">
+        <a href="../../kubernetes/20_prerequisites/2002_create_our_scenario.html">
+        <b>2.4 </b>Create our Scenario
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/20_prerequisites/2010_optional_local_setup.html" title="Optional local Setup" class="dd-item ">
+        <a href="../../kubernetes/20_prerequisites/2010_optional_local_setup.html">
+        <b>2.5 </b>Optional local Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/30_scenario_walkthrough.html" title="Scenario Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/30_scenario_walkthrough.html">
+          <b>3 </b>Scenario Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/30_scenario_walkthrough/3001_argo_cd.html" title="ArgoCD" class="dd-item ">
+        <a href="../../kubernetes/30_scenario_walkthrough/3001_argo_cd.html">
+        <b>3.1 </b>ArgoCD
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html" title="Bridgecrew Code Reviews" class="dd-item ">
+        <a href="../../kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html">
+        <b>3.2 </b>Bridgecrew Code Reviews
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html" title="Automation Deepdive" class="dd-item ">
+        <a href="../../kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html">
+        <b>3.3 </b>Automation Deepdive
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html" title="Scenario Summary" class="dd-item ">
+        <a href="../../kubernetes/30_scenario_walkthrough/3004_scenario_summary.html">
+        <b>3.4 </b>Scenario Summary
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/40_pull_requests_and_ci.html" title="Pull Requests and CI" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/40_pull_requests_and_ci.html">
+          <b>4 </b>Pull Requests and CI
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html" title="Integrate Bridgecrew with GitHub" class="dd-item ">
+        <a href="../../kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html">
+        <b>4.1 </b>Integrate Bridgecrew with GitHub
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html" title="Create A Pull Request" class="dd-item ">
+        <a href="../../kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html">
+        <b>4.2 </b>Create A Pull Request
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html" title="Block with CI" class="dd-item ">
+        <a href="../../kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html">
+        <b>4.3 </b>Block with CI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/50_ide_integration.html" title="IDE Integration" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/50_ide_integration.html">
+          <b>5 </b>IDE Integration
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/60_securing_runtime.html" title="Securing Runtime" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/60_securing_runtime.html">
+          <b>6 </b>Securing Runtime
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html" title="AWS Runtime" class="dd-item ">
+        <a href="../../kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html">
+        <b>6.1 </b>AWS Runtime
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html" title="Kubernetes Runtime" class="dd-item ">
+        <a href="../../kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html">
+        <b>6.2 </b>Kubernetes Runtime
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/70_cleanup.html" title="Cleanup" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../kubernetes/70_cleanup.html">
+          <b>7 </b>Cleanup
           
             <i class="fas fa-check read-icon"></i>
           
@@ -2477,15 +3085,15 @@ Read-only access is scoped as minimally as possible in order to give Bridgecrew 
 <p>Give your token a name like <code>azure token</code>, then click &ldquo;Create.&rdquo; We don&rsquo;t need to save that key, so click &ldquo;Next.&rdquo;</p>
 
 <p>Copy that code to be added to an existing Terraform file or, in our case, a new one. In a new folder, add that code to a file called <code>bc.tf</code> with a blank azure provider block, so it will looke like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-hcl" data-lang="hcl"><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;azurerm&#34;</span> {
-   <span style="color:#66d9ef">features</span> {}
-}
-
-<span style="color:#66d9ef">module</span> <span style="color:#e6db74">&#34;bridgecrew-read&#34;</span> {
-  source                     <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bridgecrewio/bridgecrew-azure-read-only/azurerm&#34;</span>
-  org_name                   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;example&#34;</span>
-  bridgecrew_token           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;27bd647e-ea89-47be-adea-EXAMPLE&#34;</span>
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;azurerm&#34;</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">features</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">module</span> <span style="color:#e6db74">&#34;bridgecrew-read&#34;</span> {
+</span></span><span style="display:flex;"><span>  source                     <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bridgecrewio/bridgecrew-azure-read-only/azurerm&#34;</span>
+</span></span><span style="display:flex;"><span>  org_name                   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;example&#34;</span>
+</span></span><span style="display:flex;"><span>  bridgecrew_token           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;27bd647e-ea89-47be-adea-EXAMPLE&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>In your terminal, move to that directory and run <code>terraform init</code>. After initialized, run <code>terraform apply</code>.</p>
 
 <p><img src="./images/azure-tf-apply.png" alt="Azure Bridgecrew Terraform" title="Azure Bridgecrew Terraform" /></p>
@@ -3030,6 +3638,378 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -3953,19 +4933,19 @@ Unlike the rest of this workshop, the information displayed in your Bridgecrew D
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1646107601"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1646107601"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1646107601"></script>
-    <script src="../../js/jquery.sticky.js?1646107601"></script>
-    <script src="../../js/featherlight.min.js?1646107601"></script>
-    <script src="../../js/highlight.pack.js?1646107601"></script>
+    <script src="../../js/clipboard.min.js?1652156054"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1652156054"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1652156054"></script>
+    <script src="../../js/jquery.sticky.js?1652156054"></script>
+    <script src="../../js/featherlight.min.js?1652156054"></script>
+    <script src="../../js/highlight.pack.js?1652156054"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1646107601"></script>
-    <script src="../../js/learn.js?1646107601"></script>
-    <script src="../../js/hugo-learn.js?1646107601"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1652156054"></script>
+    <script src="../../js/learn.js?1652156054"></script>
+    <script src="../../js/hugo-learn.js?1652156054"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1646107601"></script>
+            <script src="../../mermaid/mermaid.js?1652156054"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

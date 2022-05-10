@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Environment on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/kubernetes/20_prerequisites/aws_setup.html</link>
+    <description>Recent content in AWS Environment on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/kubernetes/20_prerequisites/aws_setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>At an AWS Event</title>
+      <link>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</guid>
+      <description>Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
+e8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
+    </item>
+    
+    <item>
+      <title>Own AWS environment</title>
+      <link>/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html</guid>
+      <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
+ AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
+  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
+    </item>
+    
+  </channel>
+</rss>
