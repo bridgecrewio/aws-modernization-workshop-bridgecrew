@@ -1,12 +1,12 @@
 ---
-title: "Create A Pull Request"
+title: "Create A pull request"
 chapter: false
 weight: 16
 pre: "<b>4.2 </b>"
 ---
 
 
-### Create Infrastructure with a pull request
+### Create infrastructure with a pull request
 
 To see our new security controls in action, let's create a pull request to modify our development environment configuration!
 

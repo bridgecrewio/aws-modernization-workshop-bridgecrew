@@ -6,7 +6,7 @@ pre: "<b>6.1 </b>"
 ---
 
 
-### AWS Runtime
+### AWS runtime
 
 Greenfield infrastructure as code deployments are unfortunately not very common. In reality, AWS accounts typically have objects that were created manually. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch to IaC.
 

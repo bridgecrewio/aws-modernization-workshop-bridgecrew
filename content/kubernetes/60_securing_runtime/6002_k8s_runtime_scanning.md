@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Runtime"
+title: Kubernetes runtime
 chapter: false
 weight: 21
 pre: "<b>6.2 </b>"
@@ -7,7 +7,7 @@ pre: "<b>6.2 </b>"
 
 
 
-## Kubernetes Runtime
+## Kubernetes runtime
 
 Now let’s add insights into our Kubernetes workloads that are already running.
 

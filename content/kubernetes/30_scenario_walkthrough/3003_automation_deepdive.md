@@ -1,5 +1,5 @@
 ---
-title: "Automation Deepdive"
+title: "Automation deep dive"
 chapter: false
 weight: 12
 pre: "<b>3.3 </b>"

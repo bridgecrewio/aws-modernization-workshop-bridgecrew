@@ -1,17 +1,17 @@
 ---
-title: "At an AWS Event"
+title: "At an AWS event"
 chapter: false
 weight: 4
 pre: "<b>2.2.1 </b>"
 ---
 
-# Using AWS Event engine
+# Using AWS Event Engine
 
 To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
 
 ## `e8476example`
 
-### Create AWS Account
+### Create an AWS account
 
 1 . Connect to the portal by clicking the button or browsing to [https://dashboard.eventengine.run/](https://dashboard.eventengine.run/). The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to **Accept Terms & Login**. Click on that button to continue.
 

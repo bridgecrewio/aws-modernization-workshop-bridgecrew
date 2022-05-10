@@ -1,5 +1,5 @@
 ---
-title: "IDE Integration"
+title: "IDE integration"
 chapter: false
 weight: 18
 pre: "<b>5 </b>"
@@ -63,5 +63,4 @@ This means that results can vary slightly from VSCode and the fully rendered Kus
 
 ## Congrats, that's all for IDE enablement!
 
- 
 At the time of this workshop, we also support [**IntelliJ**](https://docs.bridgecrew.io/docs/jetbrains) with the same style of plugin. Check it out if interested from the *Integrations* page in *Bridgecrew*.

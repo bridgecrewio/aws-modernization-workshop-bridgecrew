@@ -1,11 +1,11 @@
 ---
-title: "Scenario Introduction"
+title: "Scenario introduction"
 chapter: false
 weight: 9
 pre: "<b>3 </b>"
 ---
 
-## The Scenario
+## The scenario
 
 Your workshop drops you into an example development team, at the start of their journey through the DevSecOps world.
 
@@ -25,7 +25,7 @@ The KustomizeGoat repository we forked during the workshop setup is the reposito
 
 ## Let’s take a look around
 
-### Kubectl 
+### kubectl 
 
 You should already have access to your kind Kubernetes cluster for this workshop. Confirm your access with the following command showing our Kubenetes cluster nodes:
 

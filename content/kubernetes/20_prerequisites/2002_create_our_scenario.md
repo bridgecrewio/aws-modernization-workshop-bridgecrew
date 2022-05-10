@@ -1,12 +1,12 @@
 ---
-title: "Create our Scenario"
+title: "Create our scenario"
 chapter: false
 weight: 7
 pre: "<b>2.4 </b>"
 ---
 
 
-##  The Automated AWS Workshop Environment
+##  The automated AWS workshop environment
 
 To pre-build this environment for each workshop attendee, we'll run some CloudFormation within our AWS account.
 

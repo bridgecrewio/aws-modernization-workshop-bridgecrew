@@ -1,5 +1,5 @@
 ---
-title: "Optional local Setup"
+title: "Optional local setup"
 chapter: false
 weight: 8
 pre: "<b>2.5 </b>"
@@ -70,7 +70,7 @@ This is optional, but is a and good practice for compartmentalizing Ppython depe
 
 	
 
-### Install Yor, Bridgecrew's infrastructure tag and trace tool
+### Install Yor, Bridgecrew's IaC tag and trace tool
 
 
 ```

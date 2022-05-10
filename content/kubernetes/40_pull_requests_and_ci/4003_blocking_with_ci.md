@@ -6,7 +6,7 @@ pre: "<b>4.3 </b>"
 ---
 
 
-##  PR Scanning vs CI
+##  PR scanning versus CI
 
 Our pull request annotations give good collaborative team feedback to the development teams involved, however, without extra configuration, the feedback is ecactly that, just feedback.
 
@@ -16,7 +16,7 @@ As we are in a GitHub source control environment, we'll configure GitHub Actions
 
 
 
-## Configure the Bridgecrew GitHub action integration.
+## Configure the Bridgecrew GitHub Action integration.
 
 To enable automated PR scanning on your repositories, goto the **Integrations **page at the bottom of the icon bar on the left.
 
@@ -53,7 +53,7 @@ Finally, select **Add secret** and you will see the new secret listed in the **A
 Back in Bridgecrew, select **Next** to access an example GitHub Action step. Then select **Done** to exit the new integration setup.
 
 
-## Adding the action to our GitHub repository.
+## Adding the action to our GitHub repository
 
 GitHub Actions are workflow files within your code repository under the .github/workflows directory. To create an action, you’ll need to add a new file to this directory. If you already have workflows and are familiar with the workflow file format, you can add the Bridgecrew step section example we saw in the integration setup page to your own workflows for the same results.
 

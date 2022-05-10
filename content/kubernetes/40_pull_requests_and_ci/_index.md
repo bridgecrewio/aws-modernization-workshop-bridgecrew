@@ -1,5 +1,5 @@
 ---
-title: "Pull Requests and CI"
+title: "Pull requests and CI"
 chapter: false
 weight: 14
 pre: "<b>4 </b>"
