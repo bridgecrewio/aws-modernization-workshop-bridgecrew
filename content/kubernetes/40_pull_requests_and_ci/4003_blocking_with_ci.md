@@ -12,7 +12,7 @@ Our pull request annotations give good collaborative team feedback to the develo
 
 CI pipelines allow us to actually block (by failing) a build or change from making it from a development branch, into a main or production branch, while these two types of scans overlap, it is worth showing how you can configure Bridgecrew to sit within any CI pipeline to perform this function.
 
-As we are in a GitHub source control environment, we'll configure GitHub actions to block builds, giving us another defensive checkpoint.
+As we are in a GitHub source control environment, we'll configure GitHub Actions to block builds, giving us another defensive checkpoint.
 
 
 
@@ -20,57 +20,57 @@ As we are in a GitHub source control environment, we'll configure GitHub actions
 
 To enable automated PR scanning on your repositories, goto the **Integrations **page at the bottom of the icon bar on the left.
 
-Then, click on **New Integration** and select **GitHub Actions** from the **CI/CD Systems** section
+Then, select **New Integration** and select **GitHub Actions** from the **CI/CD Systems** section
 
 
 ![alt_text](images/bcIntegrationsforCI.png "image_tooltip")
 
 
-A popout dialog will allow you to create a new Bridgecrew API token to be used by the GitHub Action, give the token a name and click next, twice.
+A pop-up dialog box will allow you to create a new Bridgecrew API token that GitHub Action will use. Give the token a name and click next twice.
 
 
 ![alt_text](images/bcGHAIntegration-1.png "image_tooltip")
 
 
-Follow the instructions on the “Add Environment Variable” page to ensure the API key is stored in our Github KustomizeGoat repository as a secret. 
+Follow the instructions on the “Add Environment Variable” page to ensure the API key is stored in our GitHub KustomizeGoat repository as a secret. 
 
 
 ![alt_text](images/githubActionsSecrets.png "image_tooltip")
 
 
-Within the GitHub repository settings, find **Security > Secrets** and select **Actions** then from the **Actions secrets **page above, select **New repository secret** and fill in the relevant details.
+Within the GitHub repository settings, navigate to **Security > Secrets** and select **Actions**. From the **Actions secrets **page above, select **New repository secret** and fill in the relevant details.
 
 
 ![alt_text](images/githubStoreBCAPIKey.png "image_tooltip")
 
 
-Finally, click **Add secret**, you will see the new secret listed in the **Actions secrets** page.
+Finally, select **Add secret** and you will see the new secret listed in the **Actions secrets** page.
 
 
 ![alt_text](images/githubRepoSecretDone.png "image_tooltip")
 
 
-Then back in Bridgecrew, click **Next** to access an example GitHub Action step, then click **Done** to exit the new integration setup! 
+Back in Bridgecrew, select **Next** to access an example GitHub Action step. Then select **Done** to exit the new integration setup.
 
 
-## Adding the action to our github repository.
+## Adding the action to our GitHub repository.
 
-Github Actions are defined as workflow files within your code repository under the .github/workflows directory. To create an action, you’ll add a new file to this directory. If you already have workflows and are familiar with the workflow file format, you could add the Bridgecrew step section example we saw in the integration setup page to your own workflows for the same results.
+GitHub Actions are workflow files within your code repository under the .github/workflows directory. To create an action, you’ll need to add a new file to this directory. If you already have workflows and are familiar with the workflow file format, you can add the Bridgecrew step section example we saw in the integration setup page to your own workflows for the same results.
 
-To create a new workflow, select *“Actions”* within your *KustomizeGoat* forked repository, and then click on *“set up a workflow yourself”* to create a new, blank workflow.
+To create a new workflow, select *Actions* within your *KustomizeGoat* forked repository, and then select *“set up a workflow yourself”* to create a new, blank workflow.
 
 
 ![alt_text](images/githubGetStartedActions.png "image_tooltip")
 
 
-Name the new file bridgecrew.yaml  
+Name the new file bridgecrew.yaml.
  
 
 ![alt_text](images/githubSaveBridgecrewYml.png "image_tooltip")
  
 
 
-Now we’ll replace the entire example / documentation contents shown by default with the workflow template provided below. This takes the jobs section provided by the Bridgecrew integration instructions and wraps it in a fully functional GitHub Actions definition.
+Now we’ll replace the sample contents with the workflow template provided below. This takes the jobs section provided by the Bridgecrew integration instructions and wraps it in a fully functional GitHub Actions definition.
 
 
 ```
@@ -108,35 +108,35 @@ Finally, save the new workflow file into your code repository by selecting *Comm
 ![alt_text](images/githubPRCheckovAction.png "image_tooltip")
 
 
-Notice how the action was configured for Pull Requests and the main branch?
+Notice how the action was configured for pull requests and the main branch?
 
-The GitHub Action will start running Bridgecrew scans against the latest commit in your KustomizeGoat repository. You can see this by selecting the “Actions” page within your forked repository in GitHub. You will see a new workflow, titled Bridgecrew, and that the job that was kicked off by merging in the workflow yaml file.
+The GitHub Action will start running Bridgecrew scans against the latest commit in your KustomizeGoat repository. You can see this by selecting the “Actions” page within your forked repository in GitHub. Now there's a new workflow, titled Bridgecrew, and the job that was kicked off by merging in the workflow yaml file.
 
 
 ![alt_text](images/githubActionsWorkflows.png "image_tooltip")
 
 
-Selecting this job will allow you to view the status and logging output from the pipeline, where checkov will run and output any violations found in the KustomizeGoat codebase.
+Selecting this job will allow you to view the status and logging output from the pipeline, where Checkov will output any violations found in the KustomizeGoat codebase.
 
-Rather than digging through the job logs, the action also outputs security annotations for each violation found in the “*Security*” tab of the repository on github, here we get a much clearer at-a-glance view of the `main` branch:
+Rather than digging through the job logs, the action also outputs security annotations for each violation found in the “*Security*” tab of the repository on GitHub. Now we get a much clearer view of the `main` branch:
 
 
 ![alt_text](images/githubActionSecurityTab.png "image_tooltip")
 
 
-The full output can always be found through the *Actions* tab and drilling down into a specific run.
+The full output can always be found in the *Actions* tab, by drilling down into a specific run.
 
 
 ![alt_text](images/CheckovRawGitHubActionOutput.png "image_tooltip")
 
 
-The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. The first acts as just an observability and alerting tool, the second as guardrails for developers to prevent misconfigured templates from making it into the repository. You can change this to not fail a build by adding `soft_fail: true` setting in the `with` block.
+The Bridgecrew GitHub Action can either pass all builds or block builds based on policy violations. When Bridgecrew GitHub Action is configured to pass all builds, it serves as an alerting tool that increases visibility of policy violations. When it is configured to block builds that are violation of policies, Bridgecrew GitHub Action serves as guardrails to prevent misconfigured templates from entering the repository. You can change this to not fail a build by adding `soft_fail: true` setting in the `with` block.
 
-As with all Bridgecrew integrations, all CI scans are also reported into the Bridgecrew dashboard as **Code Reviews:** 
+All CI scans are also reported into the Bridgecrew dashboard as **Code Reviews:** 
  
 
 ![alt_text](images/bcCodeReviewCheckovActions.png "image_tooltip")
 
 
-Thats it, We'll now block our CI pipeline from continuing if we have IaC policy failures.
+We'll now block our CI pipeline from continuing if we have IaC policy failures.
 
