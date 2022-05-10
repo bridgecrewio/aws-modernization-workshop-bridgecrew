@@ -8,10 +8,6 @@ pre: "<b>2.4 </b>"
 
 ##  The Automated AWS Workshop Environment
 
-Your workshop environment will drop you into an example development team, at the start of their journey through the DevSecOps world!
-
-They already use ‘Infrastructure as Code’ to define their environments, and the deployment target is a Kubernetes cluster, which is also setup.
-
 To pre-build this environment for each workshop attendee, we'll run some CloudFormation within our AWS account.
 
 ## An introduction to “kind”

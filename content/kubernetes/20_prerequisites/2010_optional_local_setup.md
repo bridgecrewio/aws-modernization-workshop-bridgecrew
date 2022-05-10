@@ -5,7 +5,7 @@ weight: 8
 pre: "<b>2.5 </b>"
 ---
 
-### Go it alone (Local setup)
+### Go it alone (local setup)
 
 This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and  we cannot guarantee that these instructions will work flawlessly in every environment.
 
@@ -30,7 +30,7 @@ See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 ```
 
 
-### Build the KIND Kubernetes cluster
+### Build the kind Kubernetes cluster
 
 
 ```
@@ -60,7 +60,7 @@ This is optional, but is a and good practice for compartmentalizing Ppython depe
 ```
 
 
-### Install Bridgecrews’ Checkov.io scanning tool
+### Install Checkov, Bridgecrew's open source scanning tool
 
 
 ```
@@ -70,7 +70,7 @@ This is optional, but is a and good practice for compartmentalizing Ppython depe
 
 	
 
-### Install Bridgecrews’ Yor.io infrastructure tag and trace tool
+### Install Yor, Bridgecrew's infrastructure tag and trace tool
 
 
 ```
