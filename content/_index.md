@@ -43,6 +43,19 @@ weight: 1
                     </a>
                 </div>
         </div>
+        <div class="col-lg-6 col-sm-6 mb-4">
+                <div class="card text-center">
+                    <a href="./kubernetes.html">
+                        <div class="card-body p-lg-5 px-3 py-4">
+                            <a href="./kubernetes.html">
+                                <img src="images/kubernetes_logo.png">
+                                <h4 class="card-title mb-3">Kubernetes workshop</h4>
+                                <p class="card-text">Try your hand at securing Kubernetes from manifest to cluster through DevOps tools integrations.</p>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+        </div>
         {{% includeContentSection "azure" %}}
         <div class="col-lg-6 col-sm-6 mb-4">
                 <div class="card text-center">
