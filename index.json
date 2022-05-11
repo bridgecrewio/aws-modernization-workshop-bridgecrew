@@ -11,7 +11,7 @@
 	"title": "Cloud DevSecOps with Bridgecrew",
 	"tags": [],
 	"description": "",
-	"content": "  a { color: inherit; text-decoration: none; } \nWelcome! \nCloudFormation workshop Learn about securing CloudFormation templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, CodeBuild, CodePipeline, GitHub and AWS runtime.\n     Terraform workshop Learn about securing Terraform templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, GitHub, Terraform Cloud, and AWS runtime.\n     Kubernetes workshop Try your hand at securing Kubernetes from manifest to cluster through DevOps tools integrations.\n    \n Terraform + Azure workshop Learn about securing Terraform templates and Azure from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, GitHub, Terraform Cloud, and Azure runtime.\n      \n\n"
+	"content": "  a { color: inherit; text-decoration: none; } \nWelcome! \nCloudFormation workshop Learn about securing CloudFormation templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, CodeBuild, CodePipeline, GitHub and AWS runtime.\n     Terraform workshop Learn about securing Terraform templates from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, GitHub, Terraform Cloud, and AWS runtime.\n     Kubernetes workshop Try your hand at securing Kubernetes from manifest to cluster through DevOps tools integrations.\n    \n Terraform + Azure workshop Learn about securing Terraform templates and Azure from code to cloud using Bridgecrew\u0026rsquo;s integrations with VS Code, GitHub, Terraform Cloud, and Azure runtime.\n     \n\n"
 },
 {
 	"uri": "/kubernetes.html",
