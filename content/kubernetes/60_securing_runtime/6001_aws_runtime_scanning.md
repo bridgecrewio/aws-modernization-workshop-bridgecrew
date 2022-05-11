@@ -8,7 +8,7 @@ pre: "<b>6.1 </b>"
 
 ### AWS runtime
 
-Greenfield infrastructure as code deployments are unfortunately not very common. In reality, AWS accounts typically have objects that were created manually. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch to IaC.
+Greenfield infrastructure as code (IaC) deployments are unfortunately not very common. In reality, AWS accounts typically have objects that were created manually. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch to IaC.
 
 That’s why it’s especially important to scan objects directly in your AWS environment and your Terraform templates in Git or as part of the CI/CD pipeline, as shown earlier.
 
@@ -17,7 +17,7 @@ Bridgecrew provides runtime scanning via an AWS integration, which provides full
 
 #### AWS runtime integration
 
-To enable runtime scanning of your AWS account, go to the [Integrations Tab](https://www.bridgecrew.cloud/integrations/catalog/aws-api-access) and select “AWS” under the Cloud Providers section. Choose the `AWS Read Access Stack` and click *“Next”*.
+To enable runtime scanning of your AWS account, go to the [Integrations Tab](https://www.bridgecrew.cloud/integrations/catalog/aws-api-access) and select “AWS” under the Cloud Providers section. Choose the `AWS Read Access Stack` and click *“Next.”*
 
 
 ![alt_text](images/bcIntegrationAWSReadOnly.png "image_tooltip")
@@ -45,18 +45,18 @@ You can track the progress of the stack creation within your AWS account.
 ![alt_text](images/bcAwsCloudFormationIntegration.png "image_tooltip")
 
 
-Once completed, you’ll see the integration in the Bridgecrew Integrations dashboard:
+Once completed, you’ll see the integration in the Bridgecrew Integrations tab:
 
 
 ![alt_text](images/bcIntegrationPageAWSStatus.png "image_tooltip")
 
 
-That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking.
+That’s all it takes to connect your AWS account to Bridgecrew for continuous cloud security monitoring and compliance benchmarking in runtime.
 
 
 ## Exploring runtime violations
 
-With the AWS account connected, you’ll start to see runtime violations in the [Incidents](https://www.bridgecrew.cloud/incidents) page.
+With the AWS account connected, you’ll start to see runtime violations in the [Incidents](https://www.bridgecrew.cloud/incidents) screen.
 
 Unlike the rest of this workshop, the information displayed in your Bridgecrew Dashboard may differ from the images below, as no two AWS accounts will have the same content.
 
