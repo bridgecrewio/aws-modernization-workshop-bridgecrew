@@ -70,6 +70,5 @@ weight: 1
                     </a>
                 </div>
         </div>
-        </div>
         {{% /includeContentSection %}}
 </div>
