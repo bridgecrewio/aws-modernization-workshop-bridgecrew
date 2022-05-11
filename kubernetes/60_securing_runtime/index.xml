@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Securing Runtime on Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Securing runtime on Cloud DevSecOps workshop with Bridgecrew</title>
     <link>/kubernetes/60_securing_runtime.html</link>
-    <description>Recent content in Securing Runtime on Cloud DevSecOps workshop with Bridgecrew</description>
+    <description>Recent content in Securing runtime on Cloud DevSecOps workshop with Bridgecrew</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/kubernetes/60_securing_runtime/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS Runtime</title>
+      <title>AWS runtime</title>
       <link>/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html</guid>
-      <description>AWS Runtime Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our AWS accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch.
-That’s why it’s important to scan objects directly in your AWS environment in addition to scanning your Terraform templates in git or as part of the CI/CD pipeline, as we’ve already shown.</description>
+      <description>AWS runtime Greenfield infrastructure as code (IaC) deployments are unfortunately not very common. In reality, AWS accounts typically have objects that were created manually. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch to IaC.
+That’s why it’s especially important to scan objects directly in your AWS environment and your Terraform templates in Git or as part of the CI/CD pipeline, as shown earlier.</description>
     </item>
     
     <item>
-      <title>Kubernetes Runtime</title>
+      <title>Kubernetes runtime</title>
       <link>/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html</guid>
-      <description>Kubernetes Runtime Great! Now lets add insight into our already-running Kubernetes workloads too!
-In the integrations page, once again click “ADD INTEGRATION”
-Then, from the Cloud Providers section, chose Kubernetes:
-Create a new API key for the integration and click “CREATE”:
-Give the cluster a name, this is used to identify the Kubernetes cluster within Bridgecrew. For example, use workshop-cluster.
-Finally, select your kubernetes version (&amp;gt;0.19 or &amp;lt;0.19) and copy the provided kubectl commands:</description>
+      <description>Kubernetes runtime Now let’s add insights into our Kubernetes workloads that are already running.
+In the integrations page, click ADD INTEGRATION
+Then, from the Cloud Providers section, choose Kubernetes:
+Create a new API key for the integration and click CREATE:
+Give the cluster a name. This name is used to identify the Kubernetes cluster within Bridgecrew. For example, use workshop-cluster.
+Next, select your Kubernetes version (&amp;gt;0.19 or &amp;lt;0.19) and copy the provided kubectl commands:</description>
     </item>
     
   </channel>

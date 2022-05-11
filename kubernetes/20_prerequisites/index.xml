@@ -7,34 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/kubernetes/20_prerequisites/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Account Setup</title>
+      <title>Account setup</title>
       <link>/kubernetes/20_prerequisites/2003_account_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2003_account_setup.html</guid>
-      <description>A free Bridgecrew account The Bridgecrew platform will give us visibility, solutions, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account at https://bridgecrew.cloud
+      <description>A free Bridgecrew account The Bridgecrew platform will give us visibility, fixes, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account here.
 Generate a Bridgecrew API key Throughout this tutorial, you’ll need to use the Bridgecrew API token. You can access it here or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.</description>
     </item>
     
     <item>
-      <title>Create our Scenario</title>
+      <title>Create our scenario</title>
       <link>/kubernetes/20_prerequisites/2002_create_our_scenario.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2002_create_our_scenario.html</guid>
-      <description>The Automated AWS Workshop Environment Your workshop environment will drop you into an example development team, at the start of their journey through the DevSecOps world!
-They already use ‘Infrastructure as Code’ to define their environments, and the deployment target is a Kubernetes cluster, which is also setup.
-To pre-build this environment for each workshop attendee, we&amp;rsquo;ll run some CloudFormation within our AWS account.
-An introduction to “kind” kind, or “Kubernetes in Docker” is a simple way to create local Kubernetes clusters for testing, experimentation and development.</description>
+      <description>The automated AWS workshop environment To pre-build this environment for each workshop attendee, we&amp;rsquo;ll run some CloudFormation within our AWS account.
+An introduction to “kind” kind, or “Kubernetes in Docker” is a simple way to create local Kubernetes clusters for testing, experimentation and development.
+As the name suggests, kind nests a Kubernetes cluster inside containers on your existing (Docker, Podman, ContainerD, etc) system.
+We’ll be using kind to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.</description>
     </item>
     
     <item>
-      <title>Optional local Setup</title>
+      <title>Optional local setup</title>
       <link>/kubernetes/20_prerequisites/2010_optional_local_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2010_optional_local_setup.html</guid>
-      <description>Go it alone (Local setup) This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and we cannot guarantee that these instructions will work flawlessly in every environment.
+      <description>Go it alone (local setup) This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and we cannot guarantee that these instructions will work flawlessly in every environment.
 However, we’d like to provide Option Three so that you can see the steps needed to install all the needed dependencies for the workshop.
 These steps are intended for a Linux X64 Ubuntu 20.</description>
     </item>

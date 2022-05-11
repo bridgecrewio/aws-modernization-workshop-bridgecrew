@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scenario Introduction on Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Scenario introduction on Cloud DevSecOps workshop with Bridgecrew</title>
     <link>/kubernetes/30_scenario_walkthrough.html</link>
-    <description>Recent content in Scenario Introduction on Cloud DevSecOps workshop with Bridgecrew</description>
+    <description>Recent content in Scenario introduction on Cloud DevSecOps workshop with Bridgecrew</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/kubernetes/30_scenario_walkthrough/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -24,13 +24,13 @@ The URL will be in the form https://&amp;lt;CLUSTER IP&amp;gt;:32443 click this 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html</guid>
-      <description>Every time ArgoCD had tried to deploy our Dev environment to the Kubernetes cluster, the cluster had been instructed to check the security posture of incoming kubernetes manifests with the Bridgecrew admission controller.
-Details of all the issues found with the dev deployment can be seen in this view, with filters for severity, tags, etc.
-It seems we have 17 detected issues on our Deployment object, and none on the Service object, which explains why this was successfully deployed in the dev environment, but the Deployment wasn&amp;rsquo;t.</description>
+      <description>Each time ArgoCD tries to deploy our development environment to the Kubernetes cluster, the cluster is instructed to check the security posture of incoming Kubernetes manifests with the Bridgecrew admission controller.
+Details of all the issues found with the development deployment can be seen in this view, with filters for severity, tags, and other important attributes.
+We’ve detected 17 issues on our Deployment object and no issues on the service object.</description>
     </item>
     
     <item>
-      <title>Automation Deepdive</title>
+      <title>Automation deep dive</title>
       <link>/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -40,13 +40,13 @@ This will render the kustomize template and pass it to the kubernetes API, we sh
     </item>
     
     <item>
-      <title>Scenario Summary</title>
+      <title>Scenario summary</title>
       <link>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</guid>
-      <description>You are here! This is all well and good, there’s a free Admission controller that our Dev team have installed into our Kubernetes cluster to prevent bad things being deployed, however, lets look where in the development cycle this is currently happening:
-We’ve blocked this deployment in the red oval, a lot of developers time, commands, processing time on code testing, and other processes have already happened before this point.</description>
+      <description>Where are we now? To summarize, we now have a free admission controller installed into our Kubernetes cluster to prevent issues from being deployed. Let’s take a look at where all this is happening in the development cycle:
+So far, we’ve blocked the automated deployment (n the red oval). However, before we could block deployment, our team already spent a lot of time developing and testing the code we blocked.</description>
     </item>
     
   </channel>

@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>At an AWS Event</title>
+      <title>At an AWS event</title>
       <link>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</guid>
-      <description>Using AWS Event engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
-e8476example Create AWS Account 1 . Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
+      <description>Using AWS Event Engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff; this is your unique access code. For example:
+e8476example Create an AWS account  Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@ e8476example Create AWS Account 1 . Connect to the portal by clicking the button
       
       <guid>/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html</guid>
       <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
- AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
+ AWS environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
   If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
     </item>
     
@@ -48,34 +48,34 @@ Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilit
     </item>
     
     <item>
-      <title>Account Setup</title>
+      <title>Account setup</title>
       <link>/kubernetes/20_prerequisites/2003_account_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2003_account_setup.html</guid>
-      <description>A free Bridgecrew account The Bridgecrew platform will give us visibility, solutions, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account at https://bridgecrew.cloud
+      <description>A free Bridgecrew account The Bridgecrew platform will give us visibility, fixes, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account here.
 Generate a Bridgecrew API key Throughout this tutorial, you’ll need to use the Bridgecrew API token. You can access it here or in your Bridgecrew account by navigating to the Integrations tab and selecting API Token.</description>
     </item>
     
     <item>
-      <title>Create our Scenario</title>
+      <title>Create our scenario</title>
       <link>/kubernetes/20_prerequisites/2002_create_our_scenario.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2002_create_our_scenario.html</guid>
-      <description>The Automated AWS Workshop Environment Your workshop environment will drop you into an example development team, at the start of their journey through the DevSecOps world!
-They already use ‘Infrastructure as Code’ to define their environments, and the deployment target is a Kubernetes cluster, which is also setup.
-To pre-build this environment for each workshop attendee, we&amp;rsquo;ll run some CloudFormation within our AWS account.
-An introduction to “kind” kind, or “Kubernetes in Docker” is a simple way to create local Kubernetes clusters for testing, experimentation and development.</description>
+      <description>The automated AWS workshop environment To pre-build this environment for each workshop attendee, we&amp;rsquo;ll run some CloudFormation within our AWS account.
+An introduction to “kind” kind, or “Kubernetes in Docker” is a simple way to create local Kubernetes clusters for testing, experimentation and development.
+As the name suggests, kind nests a Kubernetes cluster inside containers on your existing (Docker, Podman, ContainerD, etc) system.
+We’ll be using kind to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.</description>
     </item>
     
     <item>
-      <title>Optional local Setup</title>
+      <title>Optional local setup</title>
       <link>/kubernetes/20_prerequisites/2010_optional_local_setup.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/20_prerequisites/2010_optional_local_setup.html</guid>
-      <description>Go it alone (Local setup) This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and we cannot guarantee that these instructions will work flawlessly in every environment.
+      <description>Go it alone (local setup) This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and we cannot guarantee that these instructions will work flawlessly in every environment.
 However, we’d like to provide Option Three so that you can see the steps needed to install all the needed dependencies for the workshop.
 These steps are intended for a Linux X64 Ubuntu 20.</description>
     </item>
@@ -153,13 +153,13 @@ The URL will be in the form https://&amp;lt;CLUSTER IP&amp;gt;:32443 click this 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/30_scenario_walkthrough/3002_bridgecrew_code_review.html</guid>
-      <description>Every time ArgoCD had tried to deploy our Dev environment to the Kubernetes cluster, the cluster had been instructed to check the security posture of incoming kubernetes manifests with the Bridgecrew admission controller.
-Details of all the issues found with the dev deployment can be seen in this view, with filters for severity, tags, etc.
-It seems we have 17 detected issues on our Deployment object, and none on the Service object, which explains why this was successfully deployed in the dev environment, but the Deployment wasn&amp;rsquo;t.</description>
+      <description>Each time ArgoCD tries to deploy our development environment to the Kubernetes cluster, the cluster is instructed to check the security posture of incoming Kubernetes manifests with the Bridgecrew admission controller.
+Details of all the issues found with the development deployment can be seen in this view, with filters for severity, tags, and other important attributes.
+We’ve detected 17 issues on our Deployment object and no issues on the service object.</description>
     </item>
     
     <item>
-      <title>Automation Deepdive</title>
+      <title>Automation deep dive</title>
       <link>/kubernetes/30_scenario_walkthrough/3003_automation_deepdive.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -191,13 +191,13 @@ pip3 install bridgecrew If installing globally on your system (not in a python v
     </item>
     
     <item>
-      <title>Scenario Summary</title>
+      <title>Scenario summary</title>
       <link>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</guid>
-      <description>You are here! This is all well and good, there’s a free Admission controller that our Dev team have installed into our Kubernetes cluster to prevent bad things being deployed, however, lets look where in the development cycle this is currently happening:
-We’ve blocked this deployment in the red oval, a lot of developers time, commands, processing time on code testing, and other processes have already happened before this point.</description>
+      <description>Where are we now? To summarize, we now have a free admission controller installed into our Kubernetes cluster to prevent issues from being deployed. Let’s take a look at where all this is happening in the development cycle:
+So far, we’ve blocked the automated deployment (n the red oval). However, before we could block deployment, our team already spent a lot of time developing and testing the code we blocked.</description>
     </item>
     
     <item>
@@ -206,21 +206,21 @@ We’ve blocked this deployment in the red oval, a lot of developers time, comma
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/40_pull_requests_and_ci/4001_integrate_bridgecrew_github.html</guid>
-      <description>Integrating Bridgecrew with GitHub To enable automated PR scanning on your repositories, goto the **Integrations **page at the bottom of the icon bar on the left.
-Then, click on New Integration and select GitHub from the code repositories options
-A popout dialog will allow you to Authorize with your GitHub account and chose the repositories you want Bridgecrew to scan, click **Authorize **to be redirected to GitHub to complete this.</description>
+      <description>Integrate Bridgecrew with GitHub To enable automated PR scanning on your repositories, goto the **Integrations **page at the bottom of the icon bar on the left.
+Then, select New Integration and select GitHub from the Code Repositories options
+A pop-up dialog box will allow you to Authorize with your GitHub account and choose the repositories you want Bridgecrew to scan. Select **Authorize **to be redirected to GitHub to complete this step.</description>
     </item>
     
     <item>
-      <title>Create A Pull Request</title>
+      <title>Create A pull request</title>
       <link>/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/40_pull_requests_and_ci/4002_create_test_pr.html</guid>
-      <description>Creating Infrastructure with a Pull Request! To see our new security controls in action, let&amp;rsquo;s create a pull request to modify our Dev environment configuration!
-In GitHub, on your fork of KustomizeGoat, click into the kustomize &amp;gt; overlays and dev directories:
-Click on the kustomization.yaml file to open it in the GitHub web viewer, and click edit
-Lets make a simple change right now, and modify the name of the dev Namespace</description>
+      <description>Create infrastructure with a pull request To see our new security controls in action, let&amp;rsquo;s create a pull request to modify our development environment configuration!
+In GitHub, on your fork of KustomizeGoat, navigate into the kustomize &amp;gt; overlays and dev directories:
+Select on the kustomization.yaml file to open it in the GitHub web viewer, and select edit.
+Let&amp;rsquo;s make a simple change right now to trigger a build. Modify the name of the dev namespace.</description>
     </item>
     
     <item>
@@ -229,7 +229,7 @@ Lets make a simple change right now, and modify the name of the dev Namespace</d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/40_pull_requests_and_ci/4003_blocking_with_ci.html</guid>
-      <description>PR Scanning vs CI Our pull request annotations give good collaborative team feedback to the development teams involved, however, without extra configuration, the feedback is ecactly that, just feedback.
+      <description>PR scanning versus CI Our pull request annotations give good collaborative team feedback to the development teams involved, however, without extra configuration, the feedback is ecactly that, just feedback.
 CI pipelines allow us to actually block (by failing) a build or change from making it from a development branch, into a main or production branch, while these two types of scans overlap, it is worth showing how you can configure Bridgecrew to sit within any CI pipeline to perform this function.</description>
     </item>
     
@@ -258,27 +258,27 @@ python3 -m venv env source ./env/bin/activate </description>
     </item>
     
     <item>
-      <title>AWS Runtime</title>
+      <title>AWS runtime</title>
       <link>/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/60_securing_runtime/6001_aws_runtime_scanning.html</guid>
-      <description>AWS Runtime Greenfield infrastructure as code deployments are a luxury not many of us have. In reality, our AWS accounts have objects that were created manually for one reason or another. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch.
-That’s why it’s important to scan objects directly in your AWS environment in addition to scanning your Terraform templates in git or as part of the CI/CD pipeline, as we’ve already shown.</description>
+      <description>AWS runtime Greenfield infrastructure as code (IaC) deployments are unfortunately not very common. In reality, AWS accounts typically have objects that were created manually. Transitioning to IaC is rarely a one-and-done affair, so you may have objects in your AWS accounts that are managed by a team that has not yet made the switch to IaC.
+That’s why it’s especially important to scan objects directly in your AWS environment and your Terraform templates in Git or as part of the CI/CD pipeline, as shown earlier.</description>
     </item>
     
     <item>
-      <title>Kubernetes Runtime</title>
+      <title>Kubernetes runtime</title>
       <link>/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/kubernetes/60_securing_runtime/6002_k8s_runtime_scanning.html</guid>
-      <description>Kubernetes Runtime Great! Now lets add insight into our already-running Kubernetes workloads too!
-In the integrations page, once again click “ADD INTEGRATION”
-Then, from the Cloud Providers section, chose Kubernetes:
-Create a new API key for the integration and click “CREATE”:
-Give the cluster a name, this is used to identify the Kubernetes cluster within Bridgecrew. For example, use workshop-cluster.
-Finally, select your kubernetes version (&amp;gt;0.19 or &amp;lt;0.19) and copy the provided kubectl commands:</description>
+      <description>Kubernetes runtime Now let’s add insights into our Kubernetes workloads that are already running.
+In the integrations page, click ADD INTEGRATION
+Then, from the Cloud Providers section, choose Kubernetes:
+Create a new API key for the integration and click CREATE:
+Give the cluster a name. This name is used to identify the Kubernetes cluster within Bridgecrew. For example, use workshop-cluster.
+Next, select your Kubernetes version (&amp;gt;0.19 or &amp;lt;0.19) and copy the provided kubectl commands:</description>
     </item>
     
     <item>
