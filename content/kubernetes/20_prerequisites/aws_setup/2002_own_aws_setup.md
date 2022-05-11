@@ -9,7 +9,7 @@ pre: "<b>2.2.2 </b>"
 Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
 {{% /notice %}}
 
-## AWS Environment setup
+## AWS environment setup
 
 {{% notice info %}}
 Your account must have the ability to create new IAM roles and scope other IAM permissions.

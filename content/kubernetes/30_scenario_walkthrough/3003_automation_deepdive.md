@@ -1,5 +1,5 @@
 ---
-title: "Automation Deepdive"
+title: "Automation deep dive"
 chapter: false
 weight: 12
 pre: "<b>3.3 </b>"
@@ -20,13 +20,13 @@ kubectl apply -k ./kustomizegoat/kustomize/overlays/dev
 ![alt_text](images/admissionControllerManualKubeCtl.png "image_tooltip")
 
 
-## Unwrapping the Admission Controller: Checkov
+## Unwrapping the Checkov admission controller
 
-As the admission controller is powered by our open source Infra-as-code scanning tool, checkov.io, we can simulate the failure even without having a kubernetes cluster, by having Checkov scan the local kustomize manifests.
+Because the admission controller is powered by Checkov, Bridgecrew’s open-source security scanning tool,we can simulate the failure by having Checkov scan the local Kustomize manifests. This way, we don’t need to have a Kubernetes cluster.
 
-To do this, try running `checkov -d ./kustomizegoat --framework kustomize` in the kustomize directory, you will see output on the CLI very similar to what we have already seen in Bridgecrew from the admission controller.
+To do this, try running `checkov -d ./kustomizegoat --framework kustomize` in the Kustomize directory. The CLI output will be very similar to what we have already seen in Bridgecrew from the admission controller.
 
-Here you will see *all* the policy results from Checkov for all of our overlays and base directories. The Admission controller has a configurable list of specific policies it rejects (high severity) where as this checkov output will show all severities!
+Here you will see all the policy results from Checkov for all of our overlays and base directories. The admission controller has a configurable list of specific policies it rejects, but this Checkov output will show all severities.
 
 
 ![alt_text](images/checkovExampleError.png "image_tooltip")

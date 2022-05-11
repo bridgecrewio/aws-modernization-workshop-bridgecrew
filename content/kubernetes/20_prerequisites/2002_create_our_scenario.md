@@ -1,16 +1,12 @@
 ---
-title: "Create our Scenario"
+title: "Create our scenario"
 chapter: false
 weight: 7
 pre: "<b>2.4 </b>"
 ---
 
 
-##  The Automated AWS Workshop Environment
-
-Your workshop environment will drop you into an example development team, at the start of their journey through the DevSecOps world!
-
-They already use ‘Infrastructure as Code’ to define their environments, and the deployment target is a Kubernetes cluster, which is also setup.
+##  The automated AWS workshop environment
 
 To pre-build this environment for each workshop attendee, we'll run some CloudFormation within our AWS account.
 
@@ -22,7 +18,7 @@ To pre-build this environment for each workshop attendee, we'll run some CloudFo
 
 As the name suggests, kind nests a Kubernetes cluster inside containers on your existing (Docker, Podman, ContainerD, etc) system.
 
-We’ll be using KIND to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.
+We’ll be using kind to ensure everyone has the same, repeatable Kubernetes configuration for this workshop, regardless of deployment location.
 
 ### Setting up the workshop environment via CloudFormation
 	
@@ -62,7 +58,7 @@ Add this IP into the ‘YourPublicIP’ field:
 ![alt_text](images/cfCreateStack.png "image_tooltip")
 
 
-### VSCode
+### VS Code
 
-We will also demonstrate security plugins for VSCode during this workshop. Security plugins for VSCode will help your development teams spot misconfigurations much earlier in the development process. To download VSCode for free, visit [https://code.visualstudio.com/download.](https://code.visualstudio.com/download)
+We will also demonstrate security plugins for VS Code during this workshop. Security plugins for VS Code will help your development teams spot misconfigurations much earlier in the development process. Download VS Code for free [here](https://code.visualstudio.com/download).
 
