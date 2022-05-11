@@ -20,7 +20,7 @@ Your machine must be able to run containers. The examples below all use Docker D
 See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 
 
-#### Install the KIND CLI tool
+#### Install the kind CLI tool
 
 
 ```
@@ -51,7 +51,7 @@ See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 ### Set up a ‘pipenv’ for our Python dependencies.
 
 
-This is optional, but is a and good practice for compartmentalizing Ppython dependencies and libraries from each other when you’re on a system where you may be working with multiple projects. In this example, we’ll be installing our Checkov.io scanning tool into the pipenv, but you can alsocould just as well install Ccheckov globally with `pip install checkov` instead.
+This is optional, but is a and good practice for compartmentalizing Python dependencies and libraries from each other when you’re on a system where you may be working with multiple projects. In this example, we’ll be installing our Checkov scanning tool into the pipenv, but you can also just as well install Checkov globally with `pip install checkov` instead.
 
 
 ```
@@ -78,7 +78,7 @@ This is optional, but is a and good practice for compartmentalizing Ppython depe
 ```
 
 
-### Clone the “KustomizeGoat” sample repository
+### Clone the KustomizeGoat sample repository
 
 
 ```
