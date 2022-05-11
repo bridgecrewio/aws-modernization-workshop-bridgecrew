@@ -1,28 +1,21 @@
 ---
-title: "Scenario Summary"
+title: "Scenario summary"
 chapter: false
 weight: 13
 pre: "<b>3.4 </b>"
 ---
 
-## You are here!
+## Where are we now?
 
-This is all well and good, there’s a free Admission controller that our Dev team have installed into our Kubernetes cluster to prevent bad things being deployed, however, lets look where in the development cycle this is currently happening: 
-
+To summarize,  we now have a free admission controller installed into our Kubernetes cluster to prevent issues from being deployed. Let’s take a look at where all this is happening in the development cycle: 
 
 ![alt_text](images/weAreHere.png "image_tooltip")
 
+So far, we’ve blocked the automated deployment (n the red oval). However, before we could block deployment, our team already spent a lot of time developing and testing the code we blocked. It would be great to spot issues earlier in the pipeline, so that we avoid the rework and duplicated efforts caused by the issues and blocked deployment.
 
+Another thing to consider is that by the time we’re at the Kubernetes cluster, our alerts look like this:
 
-We’ve blocked this deployment in the red oval, a lot of developers time, commands, processing time on code testing, and other processes have already happened before this point. \
-
-I’m sure we can make it easier for issues to be spotted earlier in the pipeline!
-
-
-
-Plus, by the time we’re at the Kubernetes cluster, our alerts look like this:
 ![alt_text](images/bcAdmissionControllerBadUXFileName.png "image_tooltip")
 
 
-That random filename is the internals of the Kubernetes admission controller rendering our template and checking it for errors, not very developer friendly as a security output! We’ve lost the context of the original code repository, let's see what else we can do to improve developer experience here!
-
+That filename is produced by the Kubernetes admission controller rendering our template and checking it for errors. The output is not very developer friendly and loses a lot ofthe context of the original code repository. So, let's see what we can do to make the output more developer-friendly.
