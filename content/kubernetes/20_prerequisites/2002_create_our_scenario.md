@@ -53,8 +53,15 @@ Add this IP into the ‘YourPublicIP’ field:
 
 ![alt_text](images/cfCreateStack.png "image_tooltip")
 
+#### Verify Cloud9 environment access
 
-### VS Code
+Finally, lets check on the environment that CloudFormation has built for us. 
+Click here: [https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-west-2) to load the *Cloud9 Environments* within your AWS account. You will see a single `bridgecrew-workshop` environment which our automation has created!
 
-We will also demonstrate security plugins for VS Code during this workshop. Security plugins for VS Code will help your development teams spot misconfigurations much earlier in the development process. Download VS Code for free [here](https://code.visualstudio.com/download).
+Click *Open IDE*. You will be taken to an environment which we will use for the rest of the workshop.
 
+* The file browser down the left hand side already has your fork of KustomizeGoat available.
+* The terminal window along the bottom of the browser tab is within our kubernetes cluster, `kubectl`, `checkov` and other commands needed for the workshop will work out of the box.
+* You can open/edit files by double clicking on a file within the file browser from the left, just like a locally installed IDE.
+
+If you have any issues accessing this environment, let your workshop host know.
