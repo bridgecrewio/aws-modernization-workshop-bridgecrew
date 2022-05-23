@@ -28,7 +28,7 @@ GitHub discourages individuals from having more than one account. If you already
 
 ![alt_text](images/gitHubLogin.png "image_tooltip")
 
-### Fork KustomizeGgoat
+### Fork KustomizeGoat
 
 This workshop uses our vulnerable-by-design Kubernetes and Kustomize project, [KustomizeGoat](https://github.com/bridgecrewio/kustomizegoat/). This project gives us a base set of deployments we can explore, edit, and remediate without needing to integrate your own code.
 
