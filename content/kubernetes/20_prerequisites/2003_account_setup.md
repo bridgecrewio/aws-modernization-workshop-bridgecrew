@@ -56,7 +56,7 @@ https://github.com/<your-github-user>/kustomizegoat.git
 #### Verify Cloud9 environment access
 
 Finally, lets check on the environment that CloudFormation has built for us. 
-Click here: [https://us-east-2.console.aws.amazon.com/cloud9/home/shared?region=us-east-2](https://us-east-2.console.aws.amazon.com/cloud9/home/shared?region=us-east-2) to load the *Cloud9 Environments* within your AWS account. You will see a single `bridgecrew-workshop` environment which our automation has created!
+Click here: [https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-east-2](https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-east-2) to load the *Cloud9 Environments* within your AWS account. You will see a single `bridgecrew-workshop` environment which our automation has created!
 
 Click *Open IDE*. You will be taken to an environment which we will use for the rest of the workshop.
 
