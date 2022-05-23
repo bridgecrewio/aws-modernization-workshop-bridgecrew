@@ -40,10 +40,6 @@ Enter your Bridgecrew API key from your free Bridgecrew account in the `UserBrid
 
 ![alt_text](images/cfBridgecrewAPIToken.png "image_tooltip")
 
-Enter any [**public** SSH key](https://helpdeskgeek.com/how-to/how-to-generate-ssh-keys-on-windows-mac-and-linux/) you wish to use (for which you own the private key). You will use this to log into the KIND machine. Paste this in full into the `UserSSHKey` field.
-
-
-![alt_text](images/cfUserSSHKey.png "image_tooltip")
 
 Finally, enter your current [public IP address](http://whatismyip.com/) from wherever you are attending this workshop. We will lock down certain public service access to this IP for security. You can edit this later if needed.
 
