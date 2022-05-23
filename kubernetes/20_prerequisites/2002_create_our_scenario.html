@@ -12,22 +12,22 @@
     <title>Create our scenario :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1653334973" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1653334973" rel="stylesheet">
-    <link href="../../css/hybrid.css?1653334973" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1653334973" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1653334973" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1653334973" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1653334973" rel="stylesheet">
-    <link href="../../css/theme.css?1653334973" rel="stylesheet">
-    <link href="../../css/tabs.css?1653334973" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1653334973" rel="stylesheet">
+    <link href="../../css/nucleus.css?1653335659" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1653335659" rel="stylesheet">
+    <link href="../../css/hybrid.css?1653335659" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1653335659" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1653335659" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1653335659" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1653335659" rel="stylesheet">
+    <link href="../../css/theme.css?1653335659" rel="stylesheet">
+    <link href="../../css/tabs.css?1653335659" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1653335659" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1653334973" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1653335659" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1653334973"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1653335659"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1653334973"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1653334973"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1653335659"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1653335659"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1653334973"></script>
+<script type="text/javascript" src="../../js/search.js?1653335659"></script>
 
     
   </div>
@@ -3030,8 +3030,10 @@
 <li><a href="#the-automated-aws-workshop-environment">The automated AWS workshop environment</a></li>
 <li><a href="#an-introduction-to-kind">An introduction to “kind”</a>
 <ul>
-<li><a href="#setting-up-the-workshop-environment-via-cloudformation">Setting up the workshop environment via CloudFormation</a></li>
-<li><a href="#vs-code">VS Code</a></li>
+<li><a href="#setting-up-the-workshop-environment-via-cloudformation">Setting up the workshop environment via CloudFormation</a>
+<ul>
+<li><a href="#verify-cloud9-environment-access">Verify Cloud9 environment access</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -3092,10 +3094,6 @@
 
 <p><img src="images/cfBridgecrewAPIToken.png" alt="alt_text" title="image_tooltip" /></p>
 
-<p>Enter any <a href="https://helpdeskgeek.com/how-to/how-to-generate-ssh-keys-on-windows-mac-and-linux/" target="_blank"><strong>public</strong> SSH key</a> you wish to use (for which you own the private key). You will use this to log into the KIND machine. Paste this in full into the <code>UserSSHKey</code> field.</p>
-
-<p><img src="images/cfUserSSHKey.png" alt="alt_text" title="image_tooltip" /></p>
-
 <p>Finally, enter your current <a href="http://whatismyip.com/" target="_blank">public IP address</a> from wherever you are attending this workshop. We will lock down certain public service access to this IP for security. You can edit this later if needed.</p>
 
 <p>Add this IP into the ‘YourPublicIP’ field:</p>
@@ -3106,9 +3104,20 @@
 
 <p><img src="images/cfCreateStack.png" alt="alt_text" title="image_tooltip" /></p>
 
-<h3 id="vs-code">VS Code</h3>
+<h4 id="verify-cloud9-environment-access">Verify Cloud9 environment access</h4>
 
-<p>We will also demonstrate security plugins for VS Code during this workshop. Security plugins for VS Code will help your development teams spot misconfigurations much earlier in the development process. Download VS Code for free <a href="https://code.visualstudio.com/download" target="_blank">here</a>.</p>
+<p>Finally, lets check on the environment that CloudFormation has built for us.
+Click here: <a href="https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-west-2" target="_blank">https://us-west-2.console.aws.amazon.com/cloud9/home/shared?region=us-west-2</a> to load the <em>Cloud9 Environments</em> within your AWS account. You will see a single <code>bridgecrew-workshop</code> environment which our automation has created!</p>
+
+<p>Click <em>Open IDE</em>. You will be taken to an environment which we will use for the rest of the workshop.</p>
+
+<ul>
+<li>The file browser down the left hand side already has your fork of KustomizeGoat available.</li>
+<li>The terminal window along the bottom of the browser tab is within our kubernetes cluster, <code>kubectl</code>, <code>checkov</code> and other commands needed for the workshop will work out of the box.</li>
+<li>You can open/edit files by double clicking on a file within the file browser from the left, just like a locally installed IDE.</li>
+</ul>
+
+<p>If you have any issues accessing this environment, let your workshop host know.</p>
 
 
 <footer class="footline">
@@ -4918,19 +4927,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1653334973"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1653334973"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1653334973"></script>
-    <script src="../../js/jquery.sticky.js?1653334973"></script>
-    <script src="../../js/featherlight.min.js?1653334973"></script>
-    <script src="../../js/highlight.pack.js?1653334973"></script>
+    <script src="../../js/clipboard.min.js?1653335659"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1653335659"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1653335659"></script>
+    <script src="../../js/jquery.sticky.js?1653335659"></script>
+    <script src="../../js/featherlight.min.js?1653335659"></script>
+    <script src="../../js/highlight.pack.js?1653335659"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1653334973"></script>
-    <script src="../../js/learn.js?1653334973"></script>
-    <script src="../../js/hugo-learn.js?1653334973"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1653335659"></script>
+    <script src="../../js/learn.js?1653335659"></script>
+    <script src="../../js/hugo-learn.js?1653335659"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1653334973"></script>
+            <script src="../../mermaid/mermaid.js?1653335659"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
