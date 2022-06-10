@@ -23,7 +23,7 @@ Choose **Github (Version 2)** as the **source provider**.
 
 As CodeBuild and CodePipeline are different tools, you'll also need to authorize CodePipeline to your GitHub account, select **Connect to Github** and follow the authorization redirects in the popup window.
 
-Give the Github Connection a name:
+Give the Github Connection a name, for this workshop we are using `bc-tutorial-github-codepipeline`.
 
 ![AWS CodePipeline Github Connection](./images/codepipeline-create-project-github-4.png "AWS CodePipeline Github Connection")
 
@@ -42,9 +42,11 @@ The CodePipeline screen should refresh with a green **Sucessfully connected to G
 
 ![AWS CodePipeline Github connected OK](./images/codepipeline-create-project-github-9.png "AWS CodePipeline Github connected OK")
 
-Now that CodePipeline has access to our GitHub repository, we can select it as the pipeline source. Select the **master** (or **main** branch) to have our pipeline run when commits to this branch occur and **Full clone**:
+Now that CodePipeline has access to our GitHub repository, we can select it as the pipeline source. Select the **master** (or **main** branch) to have our pipeline run when commits to this branch occur:
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-10.png "AWS CodePipeline Select Repo")
+
+We also want to ensure we are allowing CodePipeline to do a "Full Clone" here, as Checkov needs the git metadata from the `cfnGoat` repository to add the relevant data to new events in the Bridgecrew dashboard.
 
 ## Instruct CodePipeline to trigger our CodeBuild
 
@@ -55,6 +57,15 @@ Leave the default of **Single Build** selected and select **Next**
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-11.png "AWS CodePipeline Select Repo")
 
 On the next screen, select **Skip deploy stage**. We don’t want to deploy our CfnGoat CloudFormation to AWS as we’re just highlighting how to stop a build from progressing if there are security violations!
+
+## One final IAM change
+
+Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details.
+
+This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it's own copy of our `CfnGoat` repo from GitHub, however, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines' GitHub connection) to the CodeBuild, we'll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.
+
+All we need to do is add a new `Inline Policy` to the `codebuild-bridgecrew-tutorial-service-role` role with the following permissions:
+
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-12.png "AWS CodePipeline Select Repo")
 
@@ -91,4 +102,4 @@ Finally, go back to your CodePipeline and select **Create pipeline** on the revi
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-13.png "AWS CodePipeline Select Repo")
 
-**Now we don’t need to manually run the Bridgecrew CLI; your developers will get a Bridgecrew scan every time they commit!** 
+**Now we don’t need to manually run the checkov CLI; your developers will get a Bridgecrew scan every time they commit!** 
