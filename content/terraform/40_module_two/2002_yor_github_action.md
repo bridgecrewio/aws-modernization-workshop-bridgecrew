@@ -17,6 +17,7 @@ There are two options to detect drift. You can either add the integration with T
 
 For drift detection, the important tag is `yor_trace`. It’s a unique identifier that helps us trace from a cloud runtime configuration back to the IaC that provisioned it. To do that we need 3 elements:
 
+
 * Yor automated tagging (this page)
 * Integration with the VCS that stores the IaC (we’ll use GitHub in step 5.4 as an example)
 * Cloud integration (we’ll use AWS in step 6.3 as an example)

@@ -56,9 +56,19 @@ For Event Engine, it will look like this:
 
 Go to the Workspace Settings and select General. From this settings screen, grab your workspace ID for the next step.
 
+{{% notice warning %}}
+If each of the Variables does not say "Env" in the far right of the line, you've created the wrong type of variable. This is easy to do as "Terraform" variables are the default option when clicking on "Add environment Variable". You can delete them and re-create if necessary in the correct format!
+{{% /notice %}}
+
+
 ![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
 
 Grab the API token from Terraform Cloud for the integration. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) (User -> Settings -> Tokens) and select “Create an API token.”
+
+{{% notice warning %}}
+Make sure you are in USER settings, there are three different settings tabs within Terraform Cloud, User settings, global org settings and workspace settings. Your screen should look as below, if there are multiple type of API key to chose from, you're in the wrong place!
+{{% /notice %}}
+
 
 ![Terraform Cloud API token](images/terraform_cloud_api_token.png "Terraform Cloud API token")
 

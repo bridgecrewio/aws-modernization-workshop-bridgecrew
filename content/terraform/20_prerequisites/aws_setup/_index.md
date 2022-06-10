@@ -2,7 +2,7 @@
 title: "AWS Environment"
 chapter: false
 weight: 6
-pre: "<b>3.2 </b>"
+pre: "<b>3.1 </b>"
 ---
 
 # AWS Environment Setup
