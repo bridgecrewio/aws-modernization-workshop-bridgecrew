@@ -22,7 +22,11 @@ The integration provides steps to enable GitHub actions, which we'll walk throug
 
 ![GitHub Action Integration in Bridgecrew](./images/github_action_1a1.png "GitHub Action Integration in Bridgecrew")
 
-Firstly, just like we stored the Bridgecrew API secret in `aws ssm put-parameter` for CodeBuild, allowing the CI/CD run to securely access the secret, we do the same with GitHub Actions, by creating a GitHub secret, this prevents our API key being exposed in the configuration (which is stored in our codebase).
+Firstly, just like we created an API token for CodeBuild integration, we do the same for GitHub Actions.
+
+Remember we then stored the Bridgecrew API secret in `aws ssm put-parameter` for CodeBuild, allowing the CI/CD run to securely access the secret, we do the same with GitHub Actions, by creating a GitHub secret, this prevents our API key being exposed in the configuration (which is stored in our codebase).
+
+![GitHub Action Integration in Bridgecrew](./images/github_action_1a2.png "GitHub Action Integration in Bridgecrew")
 
 Go to your **fork of CFNGoat on GitHub**, select **Settings**
 
@@ -37,9 +41,11 @@ Name the secret `BC_API_KEY` as instructed in the Bridgecrew integration details
 
 Copy and paste your API Token from the Bridgecrew integration details page into the `value` field.
 
-![CFNGoat repository secrets](./images/add_github_secret.png "CFNGoat repository secrets")
+![CFNGoat repository secrets](./images/github_action_4.png "CFNGoat repository secrets")
 
-Select **Add secret**, the secret will then be listed by name in the **Settings > Secrets** page you'll be taken back to.
+Select **Add secret**, the secret will then be listed by name in the **Settings > Secrets** page you'll be taken back too.
+
+![CFNGoat repository secrets](./images/github_action_5.png "CFNGoat repository secrets")
 
 ### Adding the automated workflow.
 
@@ -84,7 +90,7 @@ Finally, save the new workflow file into your code repository by selecting **Com
 
 ![Save Github action workflow](./images/github_action_8.png "Save Github action workflow")
 
-The GitHub Action will immediatley start running the Bridgecrew CLI against the latest commit in your GFNGoat Repository.
+The GitHub Action will immediatley start running the Checkov CLI against the latest commit in your GFNGoat Repository.
 
 You can see this by selecting the **Actions** page within your CFNGoat forked repository in GitHub.
 
@@ -92,7 +98,7 @@ You will see a new workflow, titled *Bridgecrew* and a job about to run automati
 
  ![Save Github action workflow](./images/github_action_10.png "Save Github action workflow")
 
-Selecting this *job* will allow you to view the status and logging output from the pipeline, where the Bridgecrew CLI will run and output any violations found in the CFNGoat codebase.
+Selecting this *job* will allow you to view the status and logging output from the pipeline, where the Checkov CLI will run and output any violations found in the CFNGoat codebase.
 
  ![Github action workflow logs](./images/github_action_11.png "Github action workflow logs")
 
