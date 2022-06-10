@@ -49,5 +49,5 @@ VERSION:
 
 Throughout the tutorial, you’ll need to create Bridgecrew API tokens. You can access [them here](https://www.bridgecrew.cloud/integrations) via the **API TOKENS** button on the integration page.
 
-![Bridgecrew API token](./images/bc_api_key.png)
+![Bridgecrew API token](./images/bc_api_key.gif)
 
