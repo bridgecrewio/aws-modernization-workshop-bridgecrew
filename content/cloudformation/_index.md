@@ -1,5 +1,5 @@
 ---
-title: "AWS Workshop"
+title: "Cloud DevSecOps for CloudFormation with Bridgecrew"
 chapter: true
 weight: 1
 ---

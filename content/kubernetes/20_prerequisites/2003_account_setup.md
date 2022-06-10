@@ -7,7 +7,7 @@ pre: "<b>2.3 </b>"
 
 ## A free Bridgecrew account
 
-The Bridgecrew platform will give us visibility, fixes, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account [here](https://bridgecrew.cloud).
+The Bridgecrew platform will give us visibility, solutions, and alerts from the first line of Kubernetes manifest all the way through to checking the running cluster’s security posture. Sign up or log in to an existing account at [https://bridgecrew.cloud](https://bridgecrew.cloud)
 
 
 ![alt_text](images/bcSignup.png "image_tooltip")
@@ -44,7 +44,7 @@ Head over to the [KustomizeGoat](https://github.com/bridgecrewio/kustomizegoat/)
 
 If you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account by selecting your GitHub username from the list. This will fork the repo.
 
-Note down the URL for this new copy of the repository, also known as the “git clone address,” select “code” and copy the `HTTPS` address that is shown. The `HTTPS` address format is:
+Note down the URL for this new copy of the repository, also known as the “git clone address”, select “code” and copy the `HTTPS` address that is shown. The `HTTPS` address format is:
 
 ```
 https://github.com/<your-github-user>/kustomizegoat.git
