@@ -32,7 +32,7 @@ Here we are provided a link to our build logs, revealing the security violations
 
 Navigating to [*Codebuild > Report Group*](https://console.aws.amazon.com/codesuite/codebuild/), we can also see a simple graph of failed and passed checks with an easier-to-read output of all failed checks. 
 
-![AWS CodeBuild JUnit output](./images/junit-codebuild-output-report.png) "AWS CodeBuild JUnit output")
+![AWS CodeBuild JUnit output](./images/junit-codebuild-output-report.png) "AWS CodeBuild JUnit output"
 
 ## Congratulations!
 You’ve just automated security scanning of your infrastructure as code into a developer-friendly CI/CD pipeline.
