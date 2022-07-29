@@ -13,7 +13,7 @@
       
       <guid>/azure/40_module_two/2001_automating_iac_github_action.html</guid>
       <description>Setting up the Bridgecrew GitHub Action You can leverage GitHub actions to run automated scans for every build or specific builds, such as the ones that merge into the master branch. This action can alert on misconfigurations, or you can set it up to block code from being merged if certain policies are violated. It can also send the results to Bridgecrew for further review and remediation steps.
-The TerraGoat repository already has a Checkov Action built in at terragoat/.</description>
+Typically, you wouldn’t do more than one scan during a build, such as two Actions, a CI/CD integration and a Terraform Cloud scan, so you can remove the Actions when you set up the Terraform Cloud scan or leave it for illustrative purposes.</description>
     </item>
     
     <item>
@@ -22,7 +22,8 @@ The TerraGoat repository already has a Checkov Action built in at terragoat/.</d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/azure/40_module_two/2002_yor_github_action.html</guid>
-      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  An introduction to Yor Yor is an open-source tool that automatically tags infrastructure as code (IaC) templates with attribution and ownership details, unique IDs that get carried across to cloud resources, and any other need-to-know information.</description>
+      <description>An introduction to Yor Yor is an open-source tool that automatically tags infrastructure as code (IaC) templates with attribution and ownership details, unique IDs that get carried across to cloud resources, and any other need-to-know information. It can run locally, as a pre-commit hook, or in a CI/CD pipeline.
+For drift detection, the important tag is yor_trace. It’s a unique identifier that helps us trace from a cloud runtime configuration back to the IaC that provisioned it.</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@ The TerraGoat repository already has a Checkov Action built in at terragoat/.</d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/azure/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
-      <description>There are two options to detect drift. You can either add the integration with Terraform Cloud or tag your resources with Yor. These don&#39;t conflict with each other so you can add both.  A new, native integration between Bridgecrew and Terraform Cloud called Run Tasks is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387  Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls.</description>
+      <description>Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
+Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial.</description>
     </item>
     
     <item>

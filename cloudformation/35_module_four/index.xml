@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module - Trace on Cloud DevSecOps workshop with Bridgecrew</title>
+    <link>/cloudformation/35_module_four.html</link>
+    <description>Recent content in Module - Trace on Cloud DevSecOps workshop with Bridgecrew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/cloudformation/35_module_four/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tag &amp; Trace resources</title>
+      <link>/cloudformation/35_module_four/3501_introducing_yor_cli.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloudformation/35_module_four/3501_introducing_yor_cli.html</guid>
+      <description>Using the Yor CLI We&amp;rsquo;re going to use the Yor CLI to add tracability tags to a deployable infrastructure-as-code repoistory.
+Installing Yor We have already installed Yor into our Cloud9 environment at the beginning of this workshop, for other installation options (for example, to use Yor locally on your machine, see the options in the Yor.io installation docs
+Clone the sample repository While we could use Yor to tag our CFNGoat repository, we would not want to deploy infrastructure with that many intentional security issues into our AWS accounts.</description>
+    </item>
+    
+    <item>
+      <title>Automated Tracing</title>
+      <link>/cloudformation/35_module_four/3502_yor_automated_tracing.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloudformation/35_module_four/3502_yor_automated_tracing.html</guid>
+      <description>Integrating Yor into your CI pipeline. In the same way as Checkov can be used for both a quick local scan or automated as part of your CI pipeline, Yor is designed to do the same.
+The following simple Github action will run Yor, auto-committing new tags on changed resources
+name: yor on: - push - pull_request jobs: add-your-tags: runs-on: ubuntu-latest strategy: matrix: python-version: [3.7] steps: - name: Checkout repo uses: actions/checkout@v2 with: fetch-depth: 0 - name: Run yor action uses: bridgecrewio/yor-action@main Lets take a look at this in action:</description>
+    </item>
+    
+    <item>
+      <title>Using Yor Tracing</title>
+      <link>/cloudformation/35_module_four/3503_using_yor_traces.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloudformation/35_module_four/3503_using_yor_traces.html</guid>
+      <description>Using Yor traces in runtime Easily find Cloud Resources based on git information Once our resources are deployed, we now have multiple ways to find, link and correlate between the who and what of our IaC actions in git, and the real resources running in our cloud environment.
+For example, we can use the bridgecrew dashboard resource explorer, to query for all runtime resources in our AWS account which were last modified by matt-at-bridgecrew.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -13,8 +13,9 @@
       
       <guid>/terraform/20_prerequisites/aws_setup/2002b_own_aws_setup.html</guid>
       <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
- AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
-  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
+AWS Environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
+If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here
+Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop</description>
     </item>
     
   </channel>

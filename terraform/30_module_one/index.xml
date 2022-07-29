@@ -25,7 +25,7 @@ If you have multiple organizations, GitHub will ask which of your orgs to fork i
       
       <guid>/terraform/30_module_one/1002_local_scan_cli.html</guid>
       <description>If you are running Checkov with the Bridgecrew API token and you use a proxy, you may need to turn off your VPN/proxy or use the --ca-certificate flag to allow your proxy&amp;rsquo;s certificate using the directions here: https://github.com/bridgecrewio/checkov/pull/1099. If you run Checkov without the Bridgecrew API token, this won&amp;rsquo;t be an issue.
- Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</description>
+Run Checkov locally To demonstrate what kinds of security and compliance errors Bridgecrew can identify in Terraform templates, start by using Checkov and send the results to the Bridgecrew platform.</description>
     </item>
     
     <item>

@@ -13,7 +13,8 @@
       
       <guid>/terraform/20_prerequisites/2001_terraform_setup.html</guid>
       <description>Terraform Environment Setup You’ll use the Terraform CLI locally as well as optionally Terraform Cloud. If you don’t have the Terraform CLI installed on your computer, see the instructions here.
-Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilities of the open source Terraform CLI. It’s free for basic usage, but we’ll be leveraging advanced features, such as Sentinel, that will require a paid subscription or trial.</description>
+If you are using an Amazon-provided AWS account, you do not need to install terraform locally, as it will already be installed in the Cloud9 IDE environment which has been set up for you.
+Terraform Cloud (TFC) is a self-service SaaS platform that extends the capabilities of the open source Terraform CLI.</description>
     </item>
     
     <item>

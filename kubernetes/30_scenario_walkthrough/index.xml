@@ -46,7 +46,7 @@ This will render the kustomize template and pass it to the kubernetes API, we sh
       
       <guid>/kubernetes/30_scenario_walkthrough/3004_scenario_summary.html</guid>
       <description>Where are we now? To summarize, we now have a free admission controller installed into our Kubernetes cluster to prevent issues from being deployed. Let’s take a look at where all this is happening in the development cycle:
-So far, we’ve blocked the automated deployment (n the red oval). However, before we could block deployment, our team already spent a lot of time developing and testing the code we blocked.</description>
+So far, we’ve blocked the automated deployment (n the red oval). However, before we could block deployment, our team already spent a lot of time developing and testing the code we blocked. It would be great to spot issues earlier in the pipeline, so that we avoid the rework and duplicated efforts caused by the issues and blocked deployment.</description>
     </item>
     
   </channel>

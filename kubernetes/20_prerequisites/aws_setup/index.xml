@@ -13,7 +13,7 @@
       
       <guid>/kubernetes/20_prerequisites/aws_setup/2001_event_engine_setup.html</guid>
       <description>Using AWS Event Engine To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff; this is your unique access code. For example:
-e8476example Create an AWS account  Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box.</description>
+e8476example Create an AWS account Connect to the portal by clicking the button or browsing to https://dashboard.eventengine.run/. The following screen shows up. Enter the provided hash in the text box. The button on the bottom right corner changes to Accept Terms &amp;amp; Login.</description>
     </item>
     
     <item>
@@ -23,8 +23,9 @@ e8476example Create an AWS account  Connect to the portal by clicking the button
       
       <guid>/kubernetes/20_prerequisites/aws_setup/2002_own_aws_setup.html</guid>
       <description>Disclaimer: We will be using an AWS account to show Bridgecrew’s runtime capabilities and drift detection. If you follow along, remember to shut down any AWS services to avoid additional fees.
- AWS environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
-  If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here</description>
+AWS environment setup Your account must have the ability to create new IAM roles and scope other IAM permissions.
+If you don&amp;rsquo;t already have an AWS account with Administrator access: create one now by clicking here
+Once you have an AWS account, ensure you are following the remaining workshop steps as an IAM user with administrator access to the AWS account: Create a new IAM user to use for the workshop</description>
     </item>
     
   </channel>
