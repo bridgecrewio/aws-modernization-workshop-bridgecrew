@@ -66,6 +66,6 @@ url = "https://www.bridgecrew.cloud/login/signUp?utm_source=workshop.bridgecrew.
 weight = 22
 
 [markup]
-  defaultMarkdownHandler = "blackfriday"
+  defaultMarkdownHandler = "goldmark"
   [markup.blackFriday]
     hrefTargetBlank = true

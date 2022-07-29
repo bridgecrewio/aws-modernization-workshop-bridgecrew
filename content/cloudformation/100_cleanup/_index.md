@@ -20,7 +20,7 @@ Finally, remove the IAM role we created:
 
 
 ## Bridgecrew Cleanup
-The Bridgecrew account you created is free to use for up to 100 cloud resources, you can leave your AWS account integrated from the [runtime section of this workshop](../30_module_three/3004_bridgecrew_automate_add_runtime.html) to automatically detect infrastructure security issues in your account. The GitHub integration will also continue to  scan pull requests to detect, annotate and prevent new infrastructure as code issues. 
+The Bridgecrew account you created is free to use for up to 100 cloud resources, you can leave your AWS account integrated from the [runtime section of this workshop](../cloudformation/30_module_three/3004_bridgecrew_automate_add_runtime.html) to automatically detect infrastructure security issues in your account. The GitHub integration will also continue to  scan pull requests to detect, annotate and prevent new infrastructure as code issues. 
 
 You may want to check out the following resources:
 
