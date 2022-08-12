@@ -56,16 +56,26 @@ Leave the default of **Single Build** selected and select **Next**
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-11.png "AWS CodePipeline Select Repo")
 
-On the next screen, select **Skip deploy stage**. We don’t want to deploy our CfnGoat CloudFormation to AWS as we’re just highlighting how to stop a build from progressing if there are security violations!
+Next, we'll add a Deploy stage for CD.
+
+## Add a CloudFormation Deploy stage to automatically deploy
+
+On the next screen,  we'll want to add automation to deploy our CloudFormation. We don't want to deploy all of CFNGoat (it is vulnerable by design after all). Instead we'll deploy one specific template for the workshop.
+
+Select `AWS CloudFormation` as the provider, `US West` as the Region, and `Create or update a stack` as the action. We'll need to provide a stack name for the stack we're creating, such as `bc-tutorial-stack`. Under Template choose `BuildArtifact` and file name `workshop/s3.tf`. That file doesn't exist yet, but we'll add it in a future step. Finally, give a new role name such as `bc-tutorial-deploy-role`. Select `Next`.
+
+![AWS Deploy stage](./images/aws-codepipeline-deploy.png "AWS Deploy stage")
+
 
 ## One final IAM change
 
-Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details.
+Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details and CodePipeline needs to be able to deploy S3 buckets.
 
-This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it's own copy of our `CfnGoat` repo from GitHub, however, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines' GitHub connection) to the CodeBuild, we'll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.
+This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it's own copy of our `CfnGoat` repo from GitHub. However, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines' GitHub connection) to the CodeBuild. We'll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.
+
+### CodeBuild IAM policy
 
 All we need to do is add a new `Inline Policy` to the `codebuild-bridgecrew-tutorial-service-role` role with the following permissions:
-
 
 ![AWS CodePipeline Select Repo](./images/codepipeline-create-project-github-12.png "AWS CodePipeline Select Repo")
 
@@ -97,6 +107,58 @@ Under **Add permissions** click on **Attach policies** then **Create policies**.
 Don't worry about tags. Give your policy a name like `connection-permissions` and then **Create policy**. Return to the IAM page where you were attaching permissions, refresh the policy list, and select the policy you just created. Choose Attach policies.
 
 ![IAM policy attach](./images/gitclone-role-policy-attach.png "IAM policy attach")
+
+### Deploy policy
+
+Remember that role we created for the deploy step called `bc-tutorial-deploy-role`? We need to give it permission to create and modify any resource you want to add. For this workshop, we need to give it the ability to deploy S3 buckets. Once you've built this pipeline, you may want to modify this policy to allow for deploying/modifying other resources like EC2s and Security Groups. For now, let's add S3 access.
+
+Go to IAM > Roles. Search for your Deploy role (`bc-tutorial-deploy-role`). Select **Add permissions** and **Create inline policy**. Go to JSON and add the following:
+
+```JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutAccessPointPolicyForObjectLambda",
+                "s3:PutAccountPublicAccessBlock",
+                "s3:PutBucketPublicAccessBlock",
+                "s3:PutMultiRegionAccessPointPolicy",
+                "s3:CreateBucket",
+                "s3:PutBucketCORS",
+                "s3:DeleteBucketPolicy",
+                "s3:PutEncryptionConfiguration",
+                "s3:PutBucketNotification",
+                "s3:DeleteBucketWebsite",
+                "s3:PutBucketWebsite",
+                "s3:DeleteAccessPointPolicyForObjectLambda",
+                "s3:PutBucketTagging",
+                "s3:PutBucketLogging",
+                "s3:PutAccessPointPublicAccessBlock",
+                "s3:PutObjectVersionAcl",
+                "s3:PutBucketAcl",
+                "s3:PutBucketPolicy",
+                "s3:DeleteAccessPointPolicy",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:PutAccessPointPolicy",
+                "s3:DeleteBucket",
+                "s3:PutBucketVersioning",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+{{% notice warning %}}
+This is a fairly permissive role. If you are using an account other than EventEngine, be sure to delete this role after you're done. You may also want to add/remove policies later as you refine what your pipeline should/shouldn't do.
+{{% /notice %}}
+
+Select **Review policy**, give it a name like `s3-pipeline-policy` and **Create policy**.
+
 
 Finally, go back to your CodePipeline and select **Create pipeline** on the review page, which will trigger your new CodePipeline to immediately run against the latest commit in our CfnGoat repository:
 

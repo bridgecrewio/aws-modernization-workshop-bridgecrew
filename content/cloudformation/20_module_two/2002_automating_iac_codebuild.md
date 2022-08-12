@@ -41,8 +41,39 @@ Finally, we tell Bridgecrew about our CodeBuild environment, what git repository
 We will be setting up codebuild on our fork of `CFNGoat`, so the `Repository Owner` will be your github user, `Repository Name` will be `cfngoat` and lets use the `master` branch by default.
 
 
-Next, copy the `buildspec.yaml` configuration to keep handy for configuring our CodeBuild pipeline.
+The `buildspec.yaml` is a good basic configuration, but we'll use the following code instead:
 
+```yaml
+version: 0.2
+env:
+  variables:
+      BC_SOURCE: "codebuild"
+  parameter-store:
+      BC_API_KEY: "bc-api-key"
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+       - pip3 install checkov
+       - echo Installing codebuild-extras...
+       - curl -fsSL https://raw.githubusercontent.com/bridgecrewio/aws-codebuild-extras/master/install >> extras.sh
+       - . ./extras.sh
+  build:
+    commands:
+       - checkov -d . --bc-api-key $BC_API_KEY --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT --branch $CODEBUILD_GIT_BRANCH --use-enforcement-rules -o junitxml > test_results.xml
+reports:
+  bridgecrew-infrastructure-security:
+    files:
+       - test_results.xml
+    discard-paths: yes
+    file-format: JunitXml
+
+artifacts:
+  files:
+    - '**/*'
+  name: myname-$(date +%Y-%m-%d)
+```
 
 ![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-codebuild-integration-save.png "Bridgecrew CodeBuild Integration")
 
