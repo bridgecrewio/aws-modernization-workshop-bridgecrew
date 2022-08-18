@@ -12,22 +12,22 @@
     <title>AWS CodeBuild setup :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1660739871" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1660739871" rel="stylesheet">
-    <link href="../../css/hybrid.css?1660739871" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1660739871" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1660739871" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1660739871" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1660739871" rel="stylesheet">
-    <link href="../../css/theme.css?1660739871" rel="stylesheet">
-    <link href="../../css/tabs.css?1660739871" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1660739871" rel="stylesheet">
+    <link href="../../css/nucleus.css?1660798561" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1660798561" rel="stylesheet">
+    <link href="../../css/hybrid.css?1660798561" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1660798561" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1660798561" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1660798561" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1660798561" rel="stylesheet">
+    <link href="../../css/theme.css?1660798561" rel="stylesheet">
+    <link href="../../css/tabs.css?1660798561" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1660798561" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1660739871" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1660798561" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1660739871"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1660798561"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1660739871"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1660739871"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1660798561"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1660798561"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1660739871"></script>
+<script type="text/javascript" src="../../js/search.js?1660798561"></script>
 
     
   </div>
@@ -3161,23 +3161,46 @@
 <p><img src="./images/aws-codebuild-home.png" alt="AWS CodeBuild" title="AWS CodeBuild"></p>
 <p>We’ll also automatically send the results to Brigecrew to maintain a view across all of our infrastructure projects and share visibility throughout our organization.</p>
 <p>First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account, select the <code>ADD INTEGRATION</code> button to open the integrations calalog.</p>
-<p><img src="./images/bridgecrew-dash-integrations-catalog.png" alt="Bridgecrew Integrations Catalog" title="Bridgecrew Integrations Catalog"></p>
 <p>Select AWS CodeBuild from the catalog, to be guided through the integration setup:</p>
 <p><img src="./images/bridgecrew-dash-add-codebuild.png" alt="Bridgecrew CodeBuild Integration" title="Bridgecrew CodeBuild Integration"></p>
 <p>You will be prompted to create a new Bridgecrew API key, this allows codebuild to talk to the Bridgecrew platform, name the key <code>Code Build Init Key</code> and click next, you will then be presented with the new API key, we need to save this for later. Create a new text file and save it.</p>
-<p><img src="./images/bridgecrew-dash-codebuild-api-key-integration.png" alt="Bridgecrew CodeBuild Integration" title="Bridgecrew CodeBuild Integration"></p>
 <p>The next page provides a command to automatically add the API key to our AWS environment.</p>
 <p>Run the command provided with your local aws CLI. This will save the Bridgecrew API key into your AWS System Manager’s parameter store so we can access it from our CodeBuild jobs later.</p>
 
 <div class="notices info" ><!-- raw HTML omitted -->
 </div>
 
-<p>Finally, we tell Bridgecrew about our CodeBuild environment, what git repository, branch, etc it&rsquo;s going to be responsible for running. This allows us to easily find the information reported back into Bridgecrew from CodeBuild.</p>
-<p><img src="./images/bridgecrew-dash-integrate-codebuild-attributes.png" alt="Bridgecrew CodeBuild Integration" title="Bridgecrew CodeBuild Integration"></p>
-<p>We will be setting up codebuild on our fork of <code>CFNGoat</code>, so the <code>Repository Owner</code> will be your github user, <code>Repository Name</code> will be <code>cfngoat</code> and lets use the <code>master</code> branch by default.</p>
-<p>Next, copy the <code>buildspec.yaml</code> configuration to keep handy for configuring our CodeBuild pipeline.</p>
 <p><img src="./images/bridgecrew-dash-codebuild-integration-save.png" alt="Bridgecrew CodeBuild Integration" title="Bridgecrew CodeBuild Integration"></p>
-<h3 id="new-codebuild-project">New Codebuild Project</h3>
+<p>The <code>buildspec.yaml</code> is a good basic configuration, but we&rsquo;ll use the following code instead:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">variables</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">BC_SOURCE</span>: <span style="color:#e6db74">&#34;codebuild&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">parameter-store</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">BC_API_KEY</span>: <span style="color:#e6db74">&#34;bc-api-key&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">phases</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">install</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runtime-versions</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">python</span>: <span style="color:#ae81ff">3.7</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">pip3 install checkov</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">echo Installing codebuild-extras...</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">curl -fsSL https://raw.githubusercontent.com/bridgecrewio/aws-codebuild-extras/master/install &gt;&gt; extras.sh</span>
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">. ./extras.sh</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">checkov -d . --bc-api-key $BC_API_KEY --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT --branch $CODEBUILD_GIT_BRANCH --use-enforcement-rules -o junitxml &gt; test_results.xml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">reports</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">bridgecrew-infrastructure-security</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">files</span>:
+</span></span><span style="display:flex;"><span>       - <span style="color:#ae81ff">test_results.xml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">discard-paths</span>: <span style="color:#66d9ef">yes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">file-format</span>: <span style="color:#ae81ff">JunitXml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">artifacts</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">files</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#e6db74">&#39;**/*&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">myname-$(date +%Y-%m-%d)</span>
+</span></span></code></pre></div><h3 id="new-codebuild-project">New Codebuild Project</h3>
 <p>Now go to your <a href="https://aws.amazon.com/codebuild/">AWS CodeBuild service</a> select Create a Build Project and name your project <code>bridgecrew-tutorial</code>.</p>
 <p><img src="./images/codebuild-create-project-github-1.png" alt="New CodeBuild Project" title="New CodeBuild Project"></p>
 <p>Under the Source section, choose <strong>GitHub</strong> in the <strong>Source Provider</strong> dropdown and select <strong>Connect using OAuth</strong>. When you select Connect to GitHub, you’ll be prompted to authorize your GitHub account:</p>
@@ -5085,19 +5108,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1660739871"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1660739871"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1660739871"></script>
-    <script src="../../js/jquery.sticky.js?1660739871"></script>
-    <script src="../../js/featherlight.min.js?1660739871"></script>
-    <script src="../../js/highlight.pack.js?1660739871"></script>
+    <script src="../../js/clipboard.min.js?1660798561"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1660798561"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1660798561"></script>
+    <script src="../../js/jquery.sticky.js?1660798561"></script>
+    <script src="../../js/featherlight.min.js?1660798561"></script>
+    <script src="../../js/highlight.pack.js?1660798561"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1660739871"></script>
-    <script src="../../js/learn.js?1660739871"></script>
-    <script src="../../js/hugo-learn.js?1660739871"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1660798561"></script>
+    <script src="../../js/learn.js?1660798561"></script>
+    <script src="../../js/hugo-learn.js?1660798561"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1660739871"></script>
+            <script src="../../mermaid/mermaid.js?1660798561"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
