@@ -716,6 +716,16 @@ Implementing automated remediations does require extra permissions than previous
     </item>
     
     <item>
+      <title>Example pull request and drift detection</title>
+      <link>/cloudformation/30_module_three/3006_bridgecrew_example_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloudformation/30_module_three/3006_bridgecrew_example_pr.html</guid>
+      <description>Example pull request Now that we have a full pipeline, let&amp;rsquo;s try it out! Go to GitHub and your CfnGoat fork. Select Add file and Create new file. Make the file path workshop/s3.yaml. Then copy and paste this CloudFormation code.
+Resources: S3Bucket: Type: &amp;#39;AWS::S3::Bucket&amp;#39; DeletionPolicy: Retain Properties: Tags: - Key: Class Value: Sovereign - Key: Tag Value: Fine BucketName: !Join - &amp;#34;-&amp;#34; - - &amp;#34;starship-bay3&amp;#34; - !Select - 0 - !</description>
+    </item>
+    
+    <item>
       <title>Tag &amp; Trace resources</title>
       <link>/cloudformation/35_module_four/3501_introducing_yor_cli.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

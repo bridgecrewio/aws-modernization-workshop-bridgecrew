@@ -57,5 +57,15 @@ Greenfield infrastructure as code deployments are a luxury not many of us have. 
 Implementing automated remediations does require extra permissions than previously granted with the default AWS Read Only integration. When you attempt a runtime remediation without the correct permissions, you’ll be prompted to configure the AWS Remediation Stack:</description>
     </item>
     
+    <item>
+      <title>Example pull request and drift detection</title>
+      <link>/cloudformation/30_module_three/3006_bridgecrew_example_pr.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloudformation/30_module_three/3006_bridgecrew_example_pr.html</guid>
+      <description>Example pull request Now that we have a full pipeline, let&amp;rsquo;s try it out! Go to GitHub and your CfnGoat fork. Select Add file and Create new file. Make the file path workshop/s3.yaml. Then copy and paste this CloudFormation code.
+Resources: S3Bucket: Type: &amp;#39;AWS::S3::Bucket&amp;#39; DeletionPolicy: Retain Properties: Tags: - Key: Class Value: Sovereign - Key: Tag Value: Fine BucketName: !Join - &amp;#34;-&amp;#34; - - &amp;#34;starship-bay3&amp;#34; - !Select - 0 - !</description>
+    </item>
+    
   </channel>
 </rss>

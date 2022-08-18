@@ -12,22 +12,22 @@
     <title>AWS CodePipeline Setup :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1660798561" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1660798561" rel="stylesheet">
-    <link href="../../css/hybrid.css?1660798561" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1660798561" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1660798561" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1660798561" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1660798561" rel="stylesheet">
-    <link href="../../css/theme.css?1660798561" rel="stylesheet">
-    <link href="../../css/tabs.css?1660798561" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1660798561" rel="stylesheet">
+    <link href="../../css/nucleus.css?1660800773" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1660800773" rel="stylesheet">
+    <link href="../../css/hybrid.css?1660800773" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1660800773" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1660800773" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1660800773" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1660800773" rel="stylesheet">
+    <link href="../../css/theme.css?1660800773" rel="stylesheet">
+    <link href="../../css/tabs.css?1660800773" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1660800773" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1660798561" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1660800773" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1660798561"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1660800773"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1660798561"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1660798561"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1660800773"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1660800773"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1660798561"></script>
+<script type="text/javascript" src="../../js/search.js?1660800773"></script>
 
     
   </div>
@@ -819,6 +819,27 @@
       <li data-nav-id="/cloudformation/30_module_three/3005_bridgecrew_automate_fix_runtime.html" title="AWS fixes in runtime" class="dd-item ">
         <a href="../../cloudformation/30_module_three/3005_bridgecrew_automate_fix_runtime.html">
         <b>6.5 </b>AWS fixes in runtime
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cloudformation/30_module_three/3006_bridgecrew_example_pr.html" title="Example pull request and drift detection" class="dd-item ">
+        <a href="../../cloudformation/30_module_three/3006_bridgecrew_example_pr.html">
+        <b>6.6 </b>Example pull request and drift detection
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3182,10 +3203,15 @@
 <p>When CodePipeline sees a new commit in our GitHub repository, it will trigger a build action. To set this to be our CodeBuild commands, select the same region as the CodeBuild project, then select the CodeBuild project, <strong>bridgecrew-tutorial</strong>.</p>
 <p>Leave the default of <strong>Single Build</strong> selected and select <strong>Next</strong></p>
 <p><img src="./images/codepipeline-create-project-github-11.png" alt="AWS CodePipeline Select Repo" title="AWS CodePipeline Select Repo"></p>
-<p>On the next screen, select <strong>Skip deploy stage</strong>. We don’t want to deploy our CfnGoat CloudFormation to AWS as we’re just highlighting how to stop a build from progressing if there are security violations!</p>
+<p>Next, we&rsquo;ll add a Deploy stage for CD.</p>
+<h2 id="add-a-cloudformation-deploy-stage-to-automatically-deploy">Add a CloudFormation Deploy stage to automatically deploy</h2>
+<p>On the next screen,  we&rsquo;ll want to add automation to deploy our CloudFormation. We don&rsquo;t want to deploy all of CFNGoat (it is vulnerable by design after all). Instead we&rsquo;ll deploy one specific template for the workshop.</p>
+<p>Select <code>AWS CloudFormation</code> as the provider, <code>US West</code> as the Region, and <code>Create or update a stack</code> as the action. We&rsquo;ll need to provide a stack name for the stack we&rsquo;re creating, such as <code>bc-tutorial-stack</code>. Under Template choose <code>BuildArtifact</code> and file name <code>workshop/s3.tf</code>. That file doesn&rsquo;t exist yet, but we&rsquo;ll add it in a future step. Finally, give a new role name such as <code>bc-tutorial-deploy-role</code>. Select <code>Next</code>.</p>
+<p><img src="./images/aws-codepipeline-deploy.png" alt="AWS Deploy stage" title="AWS Deploy stage"></p>
 <h2 id="one-final-iam-change">One final IAM change</h2>
-<p>Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details.</p>
-<p>This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it&rsquo;s own copy of our <code>CfnGoat</code> repo from GitHub, however, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines&rsquo; GitHub connection) to the CodeBuild, we&rsquo;ll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.</p>
+<p>Remember we needed to allow CodeBuild to access our Bridgecrew API token earlier? Well, in the final bit of IAM plumbing for this whole workshop, we also need to allow CodeBuild to access the CodePipeline connection details and CodePipeline needs to be able to deploy S3 buckets.</p>
+<p>This is because, when triggering CodeBuild manually, like we did earlier, CodeBuild pulls it&rsquo;s own copy of our <code>CfnGoat</code> repo from GitHub. However, when triggered by CodePipeline, CodePipeline passes a reference of the repo (Using CodePiplines&rsquo; GitHub connection) to the CodeBuild. We&rsquo;ll get all kinds of errors when CodeBuild tries to access the CodePipeline connection to Github if we dont do this.</p>
+<h3 id="codebuild-iam-policy">CodeBuild IAM policy</h3>
 <p>All we need to do is add a new <code>Inline Policy</code> to the <code>codebuild-bridgecrew-tutorial-service-role</code> role with the following permissions:</p>
 <p><img src="./images/codepipeline-create-project-github-12.png" alt="AWS CodePipeline Select Repo" title="AWS CodePipeline Select Repo"></p>
 <p>Copy the ARN from under &ldquo;ConnectionArn&rdquo; under &ldquo;Step 2: Add source stage.&rdquo; In the example above it&rsquo;s <code>arn:aws:codestar-connections:us-east-1:714...</code>.</p>
@@ -3206,6 +3232,50 @@
 </span></span></code></pre></div><p><img src="./images/json-iam-role.png" alt="IAM Role" title="IAM Role"></p>
 <p>Don&rsquo;t worry about tags. Give your policy a name like <code>connection-permissions</code> and then <strong>Create policy</strong>. Return to the IAM page where you were attaching permissions, refresh the policy list, and select the policy you just created. Choose Attach policies.</p>
 <p><img src="./images/gitclone-role-policy-attach.png" alt="IAM policy attach" title="IAM policy attach"></p>
+<h3 id="deploy-policy">Deploy policy</h3>
+<p>Remember that role we created for the deploy step called <code>bc-tutorial-deploy-role</code>? We need to give it permission to create and modify any resource you want to add. For this workshop, we need to give it the ability to deploy S3 buckets. Once you&rsquo;ve built this pipeline, you may want to modify this policy to allow for deploying/modifying other resources like EC2s and Security Groups. For now, let&rsquo;s add S3 access.</p>
+<p>Go to IAM &gt; Roles. Search for your Deploy role (<code>bc-tutorial-deploy-role</code>). Select <strong>Add permissions</strong> and <strong>Create inline policy</strong>. Go to JSON and add the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;VisualEditor0&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutAccessPointPolicyForObjectLambda&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutAccountPublicAccessBlock&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketPublicAccessBlock&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutMultiRegionAccessPointPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:CreateBucket&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketCORS&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:DeleteBucketPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutEncryptionConfiguration&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketNotification&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:DeleteBucketWebsite&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketWebsite&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:DeleteAccessPointPolicyForObjectLambda&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketTagging&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketLogging&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutAccessPointPublicAccessBlock&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutObjectVersionAcl&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketAcl&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:DeleteAccessPointPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketObjectLockConfiguration&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutAccessPointPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:DeleteBucket&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutBucketVersioning&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutObjectAcl&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+<div class="notices warning" ><p>This is a fairly permissive role. If you are using an account other than EventEngine, be sure to delete this role after you&rsquo;re done. You may also want to add/remove policies later as you refine what your pipeline should/shouldn&rsquo;t do.</p>
+</div>
+
+<p>Select <strong>Review policy</strong>, give it a name like <code>s3-pipeline-policy</code> and <strong>Create policy</strong>.</p>
 <p>Finally, go back to your CodePipeline and select <strong>Create pipeline</strong> on the review page, which will trigger your new CodePipeline to immediately run against the latest commit in our CfnGoat repository:</p>
 <p><img src="./images/codepipeline-create-project-github-13.png" alt="AWS CodePipeline Select Repo" title="AWS CodePipeline Select Repo"></p>
 <p><strong>Now we don’t need to manually run the checkov CLI; your developers will get a Bridgecrew scan every time they commit!</strong></p>
@@ -3633,6 +3703,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -5100,19 +5186,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1660798561"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1660798561"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1660798561"></script>
-    <script src="../../js/jquery.sticky.js?1660798561"></script>
-    <script src="../../js/featherlight.min.js?1660798561"></script>
-    <script src="../../js/highlight.pack.js?1660798561"></script>
+    <script src="../../js/clipboard.min.js?1660800773"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1660800773"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1660800773"></script>
+    <script src="../../js/jquery.sticky.js?1660800773"></script>
+    <script src="../../js/featherlight.min.js?1660800773"></script>
+    <script src="../../js/highlight.pack.js?1660800773"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1660798561"></script>
-    <script src="../../js/learn.js?1660798561"></script>
-    <script src="../../js/hugo-learn.js?1660798561"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1660800773"></script>
+    <script src="../../js/learn.js?1660800773"></script>
+    <script src="../../js/hugo-learn.js?1660800773"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1660798561"></script>
+            <script src="../../mermaid/mermaid.js?1660800773"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
