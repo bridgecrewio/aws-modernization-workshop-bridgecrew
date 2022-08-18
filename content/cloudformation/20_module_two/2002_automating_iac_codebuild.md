@@ -14,15 +14,11 @@ We’ll also automatically send the results to Brigecrew to maintain a view acro
 
 First, tell the Bridgecrew dashboard you’re going to integrate AWS CodeBuild. To do this, open the integrations menu in your Bridgecrew account, select the `ADD INTEGRATION` button to open the integrations calalog.
 
-![Bridgecrew Integrations Catalog](./images/bridgecrew-dash-integrations-catalog.png "Bridgecrew Integrations Catalog")
-
 Select AWS CodeBuild from the catalog, to be guided through the integration setup:
 
 ![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-add-codebuild.png "Bridgecrew CodeBuild Integration")
 
 You will be prompted to create a new Bridgecrew API key, this allows codebuild to talk to the Bridgecrew platform, name the key `Code Build Init Key` and click next, you will then be presented with the new API key, we need to save this for later. Create a new text file and save it.
-
-![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-codebuild-api-key-integration.png "Bridgecrew CodeBuild Integration")
 
 The next page provides a command to automatically add the API key to our AWS environment.
 
@@ -34,24 +30,46 @@ If the aws command fails, your IAM user may not have the correct permissions to 
 </p>
 {{% /notice %}}
 
-Finally, we tell Bridgecrew about our CodeBuild environment, what git repository, branch, etc it's going to be responsible for running. This allows us to easily find the information reported back into Bridgecrew from CodeBuild.
-
-![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-integrate-codebuild-attributes.png "Bridgecrew CodeBuild Integration")
-
-We will be setting up codebuild on our fork of `CFNGoat`, so the `Repository Owner` will be your github user, `Repository Name` will be `cfngoat` and lets use the `master` branch by default.
-
-
-Next, copy the `buildspec.yaml` configuration to keep handy for configuring our CodeBuild pipeline.
-
-
 ![Bridgecrew CodeBuild Integration](./images/bridgecrew-dash-codebuild-integration-save.png "Bridgecrew CodeBuild Integration")
+
+The `buildspec.yaml` is a good basic configuration, but we'll use the following code instead:
+
+```yaml
+version: 0.2
+env:
+  variables:
+      BC_SOURCE: "codebuild"
+  parameter-store:
+      BC_API_KEY: "bc-api-key"
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+       - pip3 install checkov
+       - echo Installing codebuild-extras...
+       - curl -fsSL https://raw.githubusercontent.com/bridgecrewio/aws-codebuild-extras/master/install >> extras.sh
+       - . ./extras.sh
+  build:
+    commands:
+       - checkov -d . --bc-api-key $BC_API_KEY --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT --branch $CODEBUILD_GIT_BRANCH --use-enforcement-rules -o junitxml > test_results.xml
+reports:
+  bridgecrew-infrastructure-security:
+    files:
+       - test_results.xml
+    discard-paths: yes
+    file-format: JunitXml
+artifacts:
+  files:
+    - '**/*'
+  name: myname-$(date +%Y-%m-%d)
+```
 
 ### New Codebuild Project
 
 Now go to your [AWS CodeBuild service](https://aws.amazon.com/codebuild/) select Create a Build Project and name your project `bridgecrew-tutorial`. 
 
 ![New CodeBuild Project](./images/codebuild-create-project-github-1.png "New CodeBuild Project")
-
 
 Under the Source section, choose **GitHub** in the **Source Provider** dropdown and select **Connect using OAuth**. When you select Connect to GitHub, you’ll be prompted to authorize your GitHub account:
 
