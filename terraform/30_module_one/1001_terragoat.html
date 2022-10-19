@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.104.3" />
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>TerraGoat :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1660800773" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1660800773" rel="stylesheet">
-    <link href="../../css/hybrid.css?1660800773" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1660800773" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1660800773" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1660800773" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1660800773" rel="stylesheet">
-    <link href="../../css/theme.css?1660800773" rel="stylesheet">
-    <link href="../../css/tabs.css?1660800773" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1660800773" rel="stylesheet">
+    <link href="../../css/nucleus.css?1666194779" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1666194779" rel="stylesheet">
+    <link href="../../css/hybrid.css?1666194779" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1666194779" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1666194779" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1666194779" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1666194779" rel="stylesheet">
+    <link href="../../css/theme.css?1666194779" rel="stylesheet">
+    <link href="../../css/tabs.css?1666194779" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1666194779" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1660800773" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1666194779" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1660800773"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1666194779"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1660800773"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1660800773"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1666194779"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1666194779"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1660800773"></script>
+<script type="text/javascript" src="../../js/search.js?1666194779"></script>
 
     
   </div>
@@ -3171,6 +3171,7 @@
     <li><a href="#vulnerable-by-design-demo-repository-setup">Vulnerable-by-design demo repository setup</a>
       <ul>
         <li><a href="#fork-the-terragoat-repository-on-github">Fork the TerraGoat repository on GitHub</a></li>
+        <li><a href="#remove-existing-github-actions">Remove existing GitHub Actions</a></li>
         <li><a href="#clone-a-local-copy">Clone a local copy</a></li>
       </ul>
     </li>
@@ -3206,6 +3207,13 @@
 <p><img src="images/terragoat_repo.png" alt="Fork the TerraGoat repo" title="Fork the TerraGoat repo"></p>
 <p>If you have multiple organizations, GitHub will ask which of your orgs to fork into. Choose your personal account via your username in the list to fork the repo.</p>
 <p><img src="images/terragoat_repo2.png" alt="Your own TerraGoat repo" title="Your own TerraGoat repo"></p>
+<h3 id="remove-existing-github-actions">Remove existing GitHub Actions</h3>
+<p>We will want to remove the existing GitHub actions which came over in the Fork, so that we can build our own CI pipelines in this workshop!</p>
+<p>To do this, go to the <code>Actions</code> tab, then click on <code>Go to workflow directory</code>.
+<img src="images/action_delete1.png" alt="Go to the actions directory" title="Go to the actions directory"></p>
+<p>Finally, chose <code>Delete Directory</code> from the options on the right and commit the changes.</p>
+<p><img src="images/action_delete2.png" alt="Delete option is hidden in a submenu" title="Delete option is hidden in a submenu"></p>
+<p><img src="images/action_delete3.png" alt="Commit the changes" title="Commit the changes"></p>
 <h3 id="clone-a-local-copy">Clone a local copy</h3>
 <p>To get a local copy of the TerraGoat repo, simply clone your fork:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/&lt;your-organization&gt;/terragoat.git
@@ -5132,19 +5140,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1660800773"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1660800773"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1660800773"></script>
-    <script src="../../js/jquery.sticky.js?1660800773"></script>
-    <script src="../../js/featherlight.min.js?1660800773"></script>
-    <script src="../../js/highlight.pack.js?1660800773"></script>
+    <script src="../../js/clipboard.min.js?1666194779"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1666194779"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1666194779"></script>
+    <script src="../../js/jquery.sticky.js?1666194779"></script>
+    <script src="../../js/featherlight.min.js?1666194779"></script>
+    <script src="../../js/highlight.pack.js?1666194779"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1660800773"></script>
-    <script src="../../js/learn.js?1660800773"></script>
-    <script src="../../js/hugo-learn.js?1660800773"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1666194779"></script>
+    <script src="../../js/learn.js?1666194779"></script>
+    <script src="../../js/hugo-learn.js?1666194779"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1660800773"></script>
+            <script src="../../mermaid/mermaid.js?1666194779"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -54,7 +54,7 @@ Choose which accounts and repositories to grant the Bridgecrew GitHub integratio
       
       <guid>/terraform/40_module_two/2005_kickoff_pr.html</guid>
       <description>Kick off a test pull request Check that all three integrations are working by kicking off a pull request. Go back to your fork of the TerraGoat repo and select &amp;ldquo;Add file&amp;rdquo; -&amp;gt; &amp;ldquo;Create new file.&amp;rdquo; Set the path to terraform/simple_instance/s3.tf. Add the following code:
-provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-west-2&amp;#34; } resource &amp;#34;aws_s3_bucket&amp;#34; &amp;#34;docking_bay&amp;#34; { bucket_prefix = &amp;#34;docking-bay-storage-&amp;#34; tags = { Name = &amp;#34;Docking Bay&amp;#34; Environment = &amp;#34;Dev&amp;#34; } } Select &amp;ldquo;Create a new branch&amp;rdquo; and &amp;ldquo;Propose new file.</description>
+provider &amp;#34;aws&amp;#34; { region = &amp;#34;us-west-2&amp;#34; } resource &amp;#34;aws_s3_bucket&amp;#34; &amp;#34;dockingbay&amp;#34; { bucket_prefix = &amp;#34;docking-bay-storage-&amp;#34; tags = { Name = &amp;#34;Docking Bay&amp;#34; Environment = &amp;#34;Dev&amp;#34; } } Select &amp;ldquo;Create a new branch&amp;rdquo; and &amp;ldquo;Propose new file.</description>
     </item>
     
   </channel>
