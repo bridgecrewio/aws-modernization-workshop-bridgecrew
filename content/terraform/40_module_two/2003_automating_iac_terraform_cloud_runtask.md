@@ -80,7 +80,7 @@ Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](h
 
 ![Add TFC workspace details to Bridgecrew](images/bc_tfc_details_runtasks2.png "Add TFC workspace details to Bridgecrew")
 
- Head back to Terraform Cloud. Go to the terragoat wokrspace settings via the navigation bar and select “Run Tasks”.
+ Head back to Terraform Cloud. Go to the terragoat workspace settings via the navigation bar and select “Run Tasks”.
 
 ![View Run Task Configuration](images/terraform_cloud_runtask_config.png "View Run Task Configration")
 
