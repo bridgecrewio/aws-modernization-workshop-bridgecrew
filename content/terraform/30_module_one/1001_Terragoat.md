@@ -21,6 +21,19 @@ If you have multiple organizations, GitHub will ask which of your orgs to fork i
 
 ![Your own TerraGoat repo](images/terragoat_repo2.png "Your own TerraGoat repo")
 
+### Remove existing GitHub Actions
+
+We will want to remove the existing GitHub actions which came over in the Fork, so that we can build our own CI pipelines in this workshop!
+
+To do this, go to the `Actions` tab, then click on `Go to workflow directory`.
+![Go to the actions directory](images/action_delete1.png "Go to the actions directory")
+
+Finally, chose `Delete Directory` from the options on the right and commit the changes.
+
+![Delete option is hidden in a submenu](images/action_delete2.png "Delete option is hidden in a submenu")
+
+![Commit the changes](images/action_delete3.png "Commit the changes")
+
 ### Clone a local copy
 
 To get a local copy of the TerraGoat repo, simply clone your fork:
