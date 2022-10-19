@@ -11,12 +11,6 @@ There are two options to detect drift. You can either add the integration with T
 </p>
 {{% /notice %}}
 
-{{% notice info %}}
-<p style='text-align: left;'>
-A new, native integration between Bridgecrew and Terraform Cloud called Run Tasks is coming soon! Check out the HashiCorp keynote for a preview: https://youtu.be/ZzLZaWUve4M?t=1387
-</p>
-{{% /notice %}}
-
 
 ## Leveraging Terraform Cloud and Run Tasks for Bridgecrew scans
 
@@ -74,7 +68,7 @@ Make sure you are in USER settings, there are three different settings tabs with
 
 Copy that API token for the next step.
 
-Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](https://www.bridgecrew.cloud/integrations) screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Run Tasks). Enter the TFC API token from the previous step and choose "Next." Enter your Organization name, click "Next". Enter the Workspace name (terragoat) - you can leave the 'Make Bridgecrew's run tasks mandatory unchecked for this workshop. Click "Next" and upon succesful configuration click "Done".
+Next, you’ll add the Bridgecrew integration. Head over to the [Integrations](https://www.bridgecrew.cloud/integrations) screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Run Tasks). Enter the TFC API token from the previous step and choose "Next." Enter your Organization name, click "Next". Enter the Workspace name (terragoat) - you can leave the 'Make Bridgecrew's run tasks mandatory' unchecked for this workshop (NOTE: A Terraform Cloud run will fail if a Bridgecrew scan reports a failure and if the Run Task for the specific Workspace is configured as Mandatory - by default, and for this workshop, we will set run tasks to 'Advisory'). Click "Next" and upon succesful configuration click "Done".
 
 ![Add TFC details to Bridgecrew](images/bc_tfc_details_runtasks.png "Add TFC details to Bridgecrew")
 
