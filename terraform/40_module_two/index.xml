@@ -27,13 +27,13 @@ For drift detection, the important tag is yor_trace. It’s a unique identifier 
     </item>
     
     <item>
-      <title>Terraform Cloud</title>
-      <link>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</link>
+      <title>Terraform Cloud with Run Tasks</title>
+      <link>/terraform/40_module_two/2003_automating_iac_terraform_cloud_runtask.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud.html</guid>
-      <description>Leveraging Terraform Cloud and Sentinel for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
-Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial.</description>
+      <guid>/terraform/40_module_two/2003_automating_iac_terraform_cloud_runtask.html</guid>
+      <description>Leveraging Terraform Cloud and Run Tasks for Bridgecrew scans Bridgecrew has a native integration with Terraform Cloud that leverages Run Tasks for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.
+Run Tasks is a paid add-on.</description>
     </item>
     
     <item>

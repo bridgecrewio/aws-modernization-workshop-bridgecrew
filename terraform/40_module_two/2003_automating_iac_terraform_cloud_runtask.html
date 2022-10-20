@@ -9,25 +9,25 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Terraform Cloud :: Cloud DevSecOps workshop with Bridgecrew</title>
+    <title>Terraform Cloud with Run Tasks :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1666194780" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1666194780" rel="stylesheet">
-    <link href="../../css/hybrid.css?1666194780" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1666194780" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1666194780" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1666194780" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1666194780" rel="stylesheet">
-    <link href="../../css/theme.css?1666194780" rel="stylesheet">
-    <link href="../../css/tabs.css?1666194780" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1666194780" rel="stylesheet">
+    <link href="../../css/nucleus.css?1666237850" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1666237850" rel="stylesheet">
+    <link href="../../css/hybrid.css?1666237850" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1666237850" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1666237850" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1666237850" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1666237850" rel="stylesheet">
+    <link href="../../css/theme.css?1666237850" rel="stylesheet">
+    <link href="../../css/tabs.css?1666237850" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1666237850" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1666194780" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1666237850" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1666194780"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1666237850"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../terraform/40_module_two/2003_automating_iac_terraform_cloud.html">
+  <body class="" data-url="../../terraform/40_module_two/2003_automating_iac_terraform_cloud_runtask.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1666194780"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1666194780"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1666237850"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1666237850"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1666194780"></script>
+<script type="text/javascript" src="../../js/search.js?1666237850"></script>
 
     
   </div>
@@ -1534,9 +1534,9 @@
  
   
     
-      <li data-nav-id="/terraform/40_module_two/2003_automating_iac_terraform_cloud.html" title="Terraform Cloud" class="dd-item active">
-        <a href="../../terraform/40_module_two/2003_automating_iac_terraform_cloud.html">
-        <b>5.3 </b>Terraform Cloud
+      <li data-nav-id="/terraform/40_module_two/2003_automating_iac_terraform_cloud_runtask.html" title="Terraform Cloud with Run Tasks" class="dd-item active">
+        <a href="../../terraform/40_module_two/2003_automating_iac_terraform_cloud_runtask.html">
+        <b>5.3 </b>Terraform Cloud with Run Tasks
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3151,7 +3151,7 @@
             
           
           
-            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Cloud DevSecOps for Terraform with Bridgecrew</a> > <a href='../../terraform/40_module_two.html'>Module - Automate</a> > Terraform Cloud
+            <a href='../../'>Cloud DevSecOps with Bridgecrew</a> > <a href='../../terraform.html'>Cloud DevSecOps for Terraform with Bridgecrew</a> > <a href='../../terraform/40_module_two.html'>Module - Automate</a> > Terraform Cloud with Run Tasks
           
         
           
@@ -3168,7 +3168,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#leveraging-terraform-cloud-and-sentinel-for-bridgecrew-scans">Leveraging Terraform Cloud and Sentinel for Bridgecrew scans</a></li>
+    <li><a href="#leveraging-terraform-cloud-and-run-tasks-for-bridgecrew-scans">Leveraging Terraform Cloud and Run Tasks for Bridgecrew scans</a></li>
   </ul>
 </nav>
     </div>
@@ -3186,7 +3186,7 @@
           
             <h1>
               
-              Terraform Cloud
+              Terraform Cloud with Run Tasks
             </h1>
           
 
@@ -3197,14 +3197,10 @@
 <div class="notices info" ><!-- raw HTML omitted -->
 </div>
 
+<h2 id="leveraging-terraform-cloud-and-run-tasks-for-bridgecrew-scans">Leveraging Terraform Cloud and Run Tasks for Bridgecrew scans</h2>
+<p>Bridgecrew has a native integration with Terraform Cloud that leverages Run Tasks for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</p>
 
-<div class="notices info" ><!-- raw HTML omitted -->
-</div>
-
-<h2 id="leveraging-terraform-cloud-and-sentinel-for-bridgecrew-scans">Leveraging Terraform Cloud and Sentinel for Bridgecrew scans</h2>
-<p>Bridgecrew has a native integration with Terraform Cloud that leverages Sentinel for policy controls. This means any commit that is pushed to Terraform Cloud will run through a Bridgecrew scan, identifying policy violations, blocking misconfigured builds, and detecting drift, all from the same place that you collaborate on Terraform templates, automate deployments, and store state.</p>
-
-<div class="notices info" ><p>Sentinel is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the &ldquo;drift detection&rdquo; section.</p>
+<div class="notices info" ><p>Run Tasks is a paid add-on. If you want to try this out for free, HashiCorp does offer a free trial. If you prefer not to sign up for the trial, feel free to skip this section and the &ldquo;drift detection&rdquo; section.</p>
 </div>
 
 <p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan &amp; Billing.” Choose the &ldquo;Trial Plan&rdquo; option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
@@ -3234,15 +3230,11 @@
 
 <p><img src="images/terraform_cloud_api_token.png" alt="Terraform Cloud API token" title="Terraform Cloud API token"></p>
 <p>Copy that API token for the next step.</p>
-<p>Next, you’ll add the Bridgecrew integration. Head over to the <a href="https://www.bridgecrew.cloud/integrations">Integrations</a> screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Sentinel). Enter the token name <code>tfc</code> and choose &ldquo;Create.&rdquo; You don&rsquo;t need to copy that key for this workshop. Paste your &ldquo;Workspace ID,&rdquo; &ldquo;terragoat,&rdquo; &ldquo;TerraGoat,&rdquo; and the API key from Terraform Cloud. Then click &ldquo;Next.&rdquo;</p>
-<p><img src="images/bc_tfc_details.png" alt="Add TFC details to Bridgecrew" title="Add TFC details to Bridgecrew"></p>
-<p>Normally, you would add a new repo with the Sentinel policies, but for the purpose of this workshop, we&rsquo;re going to simplify this flow. You can click &ldquo;Next&rdquo; on the &ldquo;Create &lsquo;sentinel.hcl&rsquo;&rdquo; step.</p>
-<p>Copy the &lsquo;bridgecrew.sentinel&rsquo; code and click &ldquo;Next&rdquo; in the wizard, then &ldquo;Done.&rdquo; Head back to Terraform Cloud. Go to Settings in the top nav and select “Policy Sets” and “Connect a new policy set”. You can create a versioned policy set, but for the sake of this workshop, go with &ldquo;No VCS connection.&rdquo;. Name your setting <code>terragoat_set</code> and choose the <code>terragoat</code> workspace and select “Connect policy set”.</p>
-<p><img src="images/terraform_cloud_connect_policy_set.png" alt="Connect the policy set" title="Connect the policy set"></p>
-<p>Then, select &ldquo;Policies.&rdquo; Click on &ldquo;Create a new policy.&rdquo; Name the policy <code>bridgecrew</code>. The &ldquo;Enforcement mode&rdquo; will determine whether builds are blocked (<code>hard-mandatory</code>) by violations of Sentinel policies, in this case sourced from Bridgecrew, are blocked but with an override (<code>soft-mandatory</code>), or just provide the violations but don&rsquo;t block. For the purpose of this workshop, we know there are violations but we want to deploy them anyway. Set the mode to <code>advisory (logging only)</code>.</p>
-<p>Paste the code you copied in the Bridgecrew integration page and paste it into the “Policy code” section. Under &ldquo;Policy Sets,&rdquo; choose <code>terragoat_set</code> from the drop down, then &ldquo;Add policy set&rdquo; and select “Create policy”:</p>
-<p><img src="images/sentinel_policy.png" alt="Add Sentinel Policy" title="Add Sentinel Policy"></p>
-<p><img src="images/terraform_cloud_policy_sets.png" alt="Policy sets" title="Policy sets"></p>
+<p>Next, you’ll add the Bridgecrew integration. Head over to the <a href="https://www.bridgecrew.cloud/integrations">Integrations</a> screen in the Bridgecrew platform. Scroll down and select Terraform Cloud (Run Tasks). Enter the TFC API token from the previous step and choose &ldquo;Next.&rdquo; Enter your Organization name, click &ldquo;Next&rdquo;. Enter the Workspace name (terragoat) - you can leave the &lsquo;Make Bridgecrew&rsquo;s run tasks mandatory&rsquo; unchecked for this workshop (NOTE: A Terraform Cloud run will fail if a Bridgecrew scan reports a failure and if the Run Task for the specific Workspace is configured as Mandatory - by default, and for this workshop, we will set run tasks to &lsquo;Advisory&rsquo;). Click &ldquo;Next&rdquo; and upon succesful configuration click &ldquo;Done&rdquo;.</p>
+<p><img src="images/bc_tfc_details_runtasks.png" alt="Add TFC details to Bridgecrew" title="Add TFC details to Bridgecrew"></p>
+<p><img src="images/bc_tfc_details_runtasks2.png" alt="Add TFC workspace details to Bridgecrew" title="Add TFC workspace details to Bridgecrew"></p>
+<p>Head back to Terraform Cloud. Go to the terragoat workspace settings via the navigation bar and select “Run Tasks”.</p>
+<p><img src="images/terraform_cloud_runtask_config.png" alt="View Run Task Configuration" title="View Run Task Configration"></p>
 <p>Finally, go to your workspace&rsquo;s main page and under &ldquo;Actions&rdquo; select &ldquo;Start new plan&rdquo;; don&rsquo;t worry if it fails, this just primes the runs to be automated with future GitHub pull requests.</p>
 <p><img src="images/tfc_queue.png" alt="Queue a plan" title="Queue a plan"></p>
 <p><strong>Your Terraform Cloud integration is ready to go!</strong></p>
@@ -5151,19 +5143,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1666194780"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1666194780"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1666194780"></script>
-    <script src="../../js/jquery.sticky.js?1666194780"></script>
-    <script src="../../js/featherlight.min.js?1666194780"></script>
-    <script src="../../js/highlight.pack.js?1666194780"></script>
+    <script src="../../js/clipboard.min.js?1666237851"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1666237851"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1666237851"></script>
+    <script src="../../js/jquery.sticky.js?1666237851"></script>
+    <script src="../../js/featherlight.min.js?1666237851"></script>
+    <script src="../../js/highlight.pack.js?1666237851"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1666194780"></script>
-    <script src="../../js/learn.js?1666194780"></script>
-    <script src="../../js/hugo-learn.js?1666194780"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1666237851"></script>
+    <script src="../../js/learn.js?1666237851"></script>
+    <script src="../../js/hugo-learn.js?1666237851"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1666194780"></script>
+            <script src="../../mermaid/mermaid.js?1666237851"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
