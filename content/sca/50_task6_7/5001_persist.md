@@ -31,4 +31,4 @@ Changing the code will automatically initiate a new pipeline so head over to Cod
 
 If it works, our application and manifest will pass our security tests and be redeployed as a much safer bank.
 
-If the build has been successful, enter the version of Log4j you used above to let the SOC team know and record your success!##
+If the build has been successful, Let your proctors know which version of Log4J you upgraded too!
