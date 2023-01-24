@@ -13,7 +13,7 @@ Modern development processes have sped up the innovation process. Traditional se
 
 The solution is to “shift left” your cloud security efforts. That is to bring security in an automated, scalable way earlier in the development process—planning, development, and build-time. The result is higher patch rates with faster time-to-fix. With the “shift left” approach, development teams are happy because they’re making security fixes in their development cycle, and security teams are happy because security posture improves.
 
-With cloud deployments, we have an opportunity to secure infrastructure from code to cloud. By securing infrastructure as code (IaC) templates at every stage of development, production infrastructure has the best possible chance to be secure and compliant. Bridgecrew is committed to making this as easy and seamless as possible with developer-friendly integrations and workflows.
+With application deployments, we have an opportunity to secure applications from code to cloud. By securing open source packages at every stage of development, production applicaitons have the best possible chance to be secure and compliant. Bridgecrew is committed to making this as easy and seamless as possible with developer-friendly integrations and workflows.
 
 
 

@@ -9,24 +9,24 @@ pre: "<b>2.5 </b>"
 
 This option is strongly discouraged because we will be unable to provide the same level of support throughout the live workshops. Every local environment is different and  we cannot guarantee that these instructions will work flawlessly in every environment.
 
-However, we’d like to provide Option Three so that you can see the steps needed to install all the needed dependencies for the workshop.
+However, we’d like to provide this option so that you can see the steps needed to install all the needed dependencies for the workshop.
 
-These steps are intended for a Linux X64 Ubuntu 20.04 machine, as our automated workshop environments run in Containers on these OS images.
+These steps are intended for a Linux X64 Ubuntu 20.04 machine, as our automated workshop environments run in containers on these OS images.
 
 #### Docker / PodMan / Rancher Desktop / ContainerD
 
 Your machine must be able to run containers. The examples below all use Docker Desktop to spin up containerized dependencies, but all dependencies should work with other local ContainerD-based container tooling.  
 
-See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
+See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 
 
 #### Install the kind CLI tool
 
 
 ```
-    curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
-    chmod +x ./kind
-    mv ./kind /usr/bin/kind
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /usr/bin/kind
 ```
 
 
@@ -34,7 +34,7 @@ See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 
 
 ```
-    /usr/bin/kind create cluster --name bridgecrew-workshop
+/usr/bin/kind create cluster --name bridgecrew-workshop
 ```
 
 
@@ -42,21 +42,21 @@ See See [this page](https://docs.docker.com/desktop/) to install Docker Desktop.
 
 
 ```
-    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-    chmod +x ./kubectl
-    mv ./kubectl /usr/bin/kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+mv ./kubectl /usr/bin/kubectl
 ```
 
 
-### Set up a ‘pipenv’ for our Python dependencies.
+### Optional: Set up a ‘pipenv’ for our Python dependencies.
 
 
-This is optional, but is a and good practice for compartmentalizing Python dependencies and libraries from each other when you’re on a system where you may be working with multiple projects. In this example, we’ll be installing our Checkov scanning tool into the pipenv, but you can also just as well install Checkov globally with `pip install checkov` instead.
+This is an optional step, but good practice for compartmentalizing Python dependencies and libraries from each other when you’re on a system where you may be working with multiple projects. In this example, we’ll be installing our Checkov scanning tool into the pipenv, but you can also just as well install Checkov globally with `pip install checkov` instead.
 
 
 ```
-    apt install -y pipenv
-    pipenv --python 3.8
+apt install -y pipenv
+pipenv --python 3.8
 ```
 
 
@@ -64,7 +64,7 @@ This is optional, but is a and good practice for compartmentalizing Python depen
 
 
 ```
-    pipenv install checkov || pip install checkov
+pipenv install checkov || pip install checkov
 ```
 
 
@@ -74,7 +74,7 @@ This is optional, but is a and good practice for compartmentalizing Python depen
 
 
 ```
-    docker pull bridgecrew/yor
+docker pull bridgecrew/yor
 ```
 
 
@@ -82,7 +82,7 @@ This is optional, but is a and good practice for compartmentalizing Python depen
 
 
 ```
-    git clone https://github.com/bridgecrewio/kustomizegoat.git
+git clone https://github.com/bridgecrewio/kustomizegoat.git
 ```
 
 
@@ -93,8 +93,8 @@ This is optional, but is a and good practice for compartmentalizing Python depen
 If all of the dependencies are correctly installed, the following commands should all run without errors or failures:
 
 ```
-    kubectl cluster-info --context kind-bridgecrew-workshop
-    checkov --version
-    docker run --tty --volume /root:/root bridgecrew/yor --version
-    cd kustomizegoat && git status
+kubectl cluster-info --context kind-bridgecrew-workshop
+checkov --version
+docker run --tty --volume /root:/root bridgecrew/yor --version
+cd kustomizegoat && git status
 ```

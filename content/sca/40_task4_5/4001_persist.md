@@ -24,7 +24,7 @@ In *Terminal 1* try this out and see what you find?
 `cat /proc/1/cgroup`
 Do you think we are contained?
 
-We could have made this a flag but we have bigger flags to capture! This is more hacker education.
+We could have made this a target but we have bigger flags to capture! This is more hacker education.
 
 In this file and depending on the host OS and runtime, you could find evidence of a container runtime. Words like
 
@@ -41,14 +41,15 @@ Are there indicators that we are in fact within a container?
 
 One of the easiest ways to find out how much privilege or capability a container has is to see what access it has to devices. This is as straight-forward looking in the `/dev` directory.
 
-A least privilege container will have a minimal offering. Most of the host devices will be hidden (for security reasons!) from the container. Let's take a look:
+A least privilege container will have a minimal offering. Most of the host devices will be hidden (for security reasons) from the container. Let's take a look:
 
 `ls /dev`
-Holy schnikies that a long list isn't it! So many devices and so little time.
+
+Holy schnikies, that a long list isn't it?! So many devices and so little time.
 
 ### Step 3 - Access the host filesystem!
 
-If we can access the host nodes filesystem, then we have access to all containers running on that host AND if we're smart, we can add a root ssh key for ourselves such that we can ssh directly back into that host without using our Log4shell hacking trickery. That way if they( or we later ) patch the vulnerability, we will still have our backdoor in place.
+If we can access the host nodes filesystem, then we have access to all containers running on that host AND if we're smart, we can add a root SSH key for ourselves such that we can SSH directly back into that host without using our Log4shell hacking trickery. That way if they (or we later) patch the vulnerability, we will still have our backdoor in place.
 
 First we need to see if we have access to the host filesystem. There area a few sneaky ways to determine which file in the `/dev` directory represents this device.
 
@@ -80,4 +81,4 @@ findfs PARTUUID=shorter-bunch-of-unique-characters
 
 From here you're on your own!
 
-You know the device for the host filesystem. We want you to mount the host filesystem and find the a flag we've buried in an ssh key in the filesystem. Think what user you'd want to log in as in future for the most powerful system access...
+You know the device for the host filesystem. We want you to mount the host filesystem and find the note we've buried in an SSH key in the filesystem. Think what user you'd want to log in as in future for the most powerful system access...

