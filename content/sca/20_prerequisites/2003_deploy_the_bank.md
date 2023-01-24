@@ -8,13 +8,13 @@ pre: "<b>2.4 </b>"
 
 ##  The automated AWS workshop environment
 
-To pre-build this environment for each workshop attendee, we'll run some CloudFormation within our AWS account.
+To pre-build this environment for each workshop attendee, we'll run some CloudFormation within our AWS account. Before you get started, make sure you're in the us-west-2 (US West - Oregon) of AWS.
 
 ### Setting up the workshop environment via CloudFormation
 	
 1. Clicking the following link will open CloudFormation and pre-fill the template source from Amazon S3: [https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2&skipRegion=false#/stacks/create/review?templateURL=https://kubernetes-workshop-cloudformation.s3.us-east-2.amazonaws.com/workshop-init-cloudformation.yaml&stackName=bridgecrew-workshop](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2&skipRegion=false#/stacks/create/review?templateURL=https://kubernetes-workshop-cloudformation.s3.us-east-2.amazonaws.com/workshop-init-cloudformation.yaml&stackName=bridgecrew-workshop)
 
-2. Fill out the required parameters described below. these will enable CloudFormation to set up the environment without manual steps later in the workshop!
+2. Fill out the required parameters described below. these will enable CloudFormation to set up the environment without manual steps later in the workshop.
 
 
 When prompted, simply enter your current [public IP address](http://whatismyip.com/) from wherever you are attending this workshop. We will lock down certain public service access to this IP for security. You can edit this later if needed.
@@ -28,8 +28,7 @@ Enter your Bridgecrew API key from your free Bridgecrew account in the `UserBrid
 
 ![alt_text](images/cfBridgecrewAPIToken.png "image_tooltip")
 
-5\. Select “NEXT”. There are no further configuration options needed, `select the checkbox` to confirm IAM roles will be created through this automation, then select `Create stack` Click through to create the stack.
-
+5\. Select “NEXT”. There are no further configuration options needed. Select the checkbox to confirm IAM roles will be created through this automation, then select `Create stack`. Click through to create the stack.
 
 ![alt_text](images/cfCreateStack.png "image_tooltip")
 

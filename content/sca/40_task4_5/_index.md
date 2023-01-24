@@ -5,7 +5,7 @@ weight: 14
 pre: "<b>4 </b>"
 ---
 
-In the last task, our flag was a custom generated jndi/ldap variable designed to be logged by log4j and we know that if we log in to our Bank with incorrect credentials, they will be logged.
+In the last task, there was a custom generated JNDI/LDAP variable designed to be logged by log4j and we know that if we log in to our Bank with incorrect credentials, they will be logged.
 
 ## Step 1
 What do you think the next action is?
@@ -22,10 +22,9 @@ If you succeeded then your netcat has achieved what is called a "reverse shell".
 If you've succeeded, try running a few based linux commands in the reverse shell to see what happens, you should find you are inside a command line shell of the banking application!
 
 {{% notice warning %}}
-<p style='text-align: left;'>
 Reverse shells are fragile. Do not hit ctrl-c or commands that can be interpreted by the real shell and pop you out of your reverse shell. Keep it simple, you also dont want to try tools that create a UI in the shell, such as tmux, vim or emacs. Remember this is a shell within a shell.
-</p>
+{{% /notice %}}
 
 
 ## Your Challenge
-This pod may be ephemeral, lets gain more permenant access to the banks data while we are here. There is most likley a database..... Find the POSTGRES_PASSWORD to move onto the next step!
+This pod may be ephemeral, lets gain more permenant access to the banks data while we are here. There is most likley a database..... Find the `POSTGRES_PASSWORD` to move onto the next step!

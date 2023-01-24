@@ -8,12 +8,11 @@ pre: "<b>5 </b>"
 
 ## GET YOUR WHITE HATS ON!
 
-We've seen how dangerous having a critical vulnerability in an application, in combination with a default or worse lazy deployment manifest can be! If we can get access to an underlying host we can establish a persistent hacker presence. From there we can:
+We've seen how dangerous having a critical vulnerability in an application, in combination with a default, or worse lazy, deployment manifest can be. If we can get access to an underlying host we can establish a persistent hacker presence. From there we can:
 
 - Run Crypto mining
 - Scan the networks for ports that might be open allowing us to move laterally through the network
 - Query the metadata server to see if we have access to via cloud services and potential take over the cloud infrastruture or access private S3 data!
-
 
 Let's start this task by preventing us from being able to break out of the container and gain access to the host node filesystem for starters.
 

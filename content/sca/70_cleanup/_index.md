@@ -17,8 +17,6 @@ If you are not sure whether the accounts were created specifically for the works
 
 You can keep your Bridgecrew.cloud account for free, however if you do require account removal, it can be achieved via the “user options” > “Usage”. in the bottom left corner of the dashboard. [https://docs.bridgecrew.io/docs/how-do-i-delete-my-account](https://docs.bridgecrew.io/docs/how-do-i-delete-my-account)
 
-    
-![alt_text](images/bcDeleteAccount.png "image_tooltip")
      
 ### AWS environment 
 
