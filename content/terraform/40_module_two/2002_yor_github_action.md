@@ -48,6 +48,9 @@ on:
 jobs:
   yor:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+  
     steps:
       - uses: actions/checkout@v2
         name: Checkout repo
