@@ -22,11 +22,11 @@ Run Tasks is a paid add-on. If you want to try this out for free, HashiCorp does
 
 To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan & Billing.” Choose the "Trial Plan" option. You should see Policies and Policy Sets show up in the left navigation menu.
 
-![Terraform Cloud plans](images/terraform_cloud_signup.png "Terraform Cloud plans")
+![Terraform Cloud plans](images/tfc_billing.png "Terraform Cloud plans")
 
 You need to add your TerraGoat repository to Terraform Cloud. Go to “Workspaces” and select “Create one now.”
 
-![Terraform Cloud new workspace](images/terraform_cloud_new_workspace.png "Terraform Cloud new workspace")
+![Terraform Cloud new workspace](images/tfc_new_workspace.png "Terraform Cloud new workspace")
 
 Select “Version control workflow”:
 
@@ -55,9 +55,12 @@ If each of the Variables does not say "Env" in the far right of the line, you've
 {{% /notice %}}
 
 
-![Grab your workspace ID](images/terraform_cloud_workspace_id.png "Grab your workspace ID")
+![Grab your workspace ID](images/tfc_workspace_overview.png "Grab your workspace ID")
 
-Grab the API token from Terraform Cloud for the integration. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) (User -> Settings -> Tokens) and select “Create an API token.”
+Create an API token from Terraform Cloud for the integration with Bridgecrew. Go to the [API token menu](https://app.terraform.io/app/settings/tokens) (User -> Settings -> Tokens) and select “Create an API token.”
+
+
+![Create Token](images/tfc_user_token.png "Create Token")
 
 {{% notice warning %}}
 Make sure you are in USER settings, there are three different settings tabs within Terraform Cloud, User settings, global org settings and workspace settings. Your screen should look as below, if there are multiple type of API key to chose from, you're in the wrong place!
