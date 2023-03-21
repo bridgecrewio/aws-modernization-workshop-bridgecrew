@@ -26,7 +26,7 @@ To sign up for the free trial of Terraform Cloud’s Team & Governance plan, go 
 
 You need to add your TerraGoat repository to Terraform Cloud. Go to “Workspaces” and select “Create one now.”
 
-![Terraform Cloud new workspace](images/terraform_cloud_new_workspace.png "Terraform Cloud new workspace")
+![Terraform Cloud new workspace](images/tfc_new_workspace.png "Terraform Cloud new workspace")
 
 Select “Version control workflow”:
 
