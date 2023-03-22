@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.104.3" />
+    <meta name="generator" content="Hugo 0.111.3">
     <meta name="description" content="learn how to automate your cloud infrastructure security from code to cloud with Bridgecrew">
 <meta name="author" content="Matt Johnson @ Bridgecrew">
 
@@ -12,22 +12,22 @@
     <title>Terraform Cloud with Run Tasks :: Cloud DevSecOps workshop with Bridgecrew</title>
 
     
-    <link href="../../css/nucleus.css?1666237850" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1666237850" rel="stylesheet">
-    <link href="../../css/hybrid.css?1666237850" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1666237850" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1666237850" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1666237850" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1666237850" rel="stylesheet">
-    <link href="../../css/theme.css?1666237850" rel="stylesheet">
-    <link href="../../css/tabs.css?1666237850" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1666237850" rel="stylesheet">
+    <link href="../../css/nucleus.css?1679497099" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1679497099" rel="stylesheet">
+    <link href="../../css/hybrid.css?1679497099" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1679497099" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1679497099" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1679497099" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1679497099" rel="stylesheet">
+    <link href="../../css/theme.css?1679497099" rel="stylesheet">
+    <link href="../../css/tabs.css?1679497099" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1679497099" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1666237850" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1679497099" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1666237850"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1679497099"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1666237850"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1666237850"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1679497099"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1679497099"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1666237850"></script>
+<script type="text/javascript" src="../../js/search.js?1679497099"></script>
 
     
   </div>
@@ -3204,9 +3204,9 @@
 </div>
 
 <p>To sign up for the free trial of Terraform Cloud’s Team &amp; Governance plan, go to your Terraform Cloud instance. In the top navigation, select “Settings” and “Plan &amp; Billing.” Choose the &ldquo;Trial Plan&rdquo; option. You should see Policies and Policy Sets show up in the left navigation menu.</p>
-<p><img src="images/terraform_cloud_signup.png" alt="Terraform Cloud plans" title="Terraform Cloud plans"></p>
+<p><img src="images/tfc_billing.png" alt="Terraform Cloud plans" title="Terraform Cloud plans"></p>
 <p>You need to add your TerraGoat repository to Terraform Cloud. Go to “Workspaces” and select “Create one now.”</p>
-<p><img src="images/terraform_cloud_new_workspace.png" alt="Terraform Cloud new workspace" title="Terraform Cloud new workspace"></p>
+<p><img src="images/tfc_new_workspace.png" alt="Terraform Cloud new workspace" title="Terraform Cloud new workspace"></p>
 <p>Select “Version control workflow”:</p>
 <p><img src="images/terraform_cloud_create_workspace.png" alt="Create a version control workflow" title="Create a version control workflow"></p>
 <p>Select “GitHub,&quot; then &ldquo;github.com,&rdquo; authorize access, and choose your TerraGoat repository we previously forked:</p>
@@ -3222,8 +3222,9 @@
 <div class="notices warning" ><p>If each of the Variables does not say &ldquo;Env&rdquo; in the far right of the line, you&rsquo;ve created the wrong type of variable. This is easy to do as &ldquo;Terraform&rdquo; variables are the default option when clicking on &ldquo;Add environment Variable&rdquo;. You can delete them and re-create if necessary in the correct format!</p>
 </div>
 
-<p><img src="images/terraform_cloud_workspace_id.png" alt="Grab your workspace ID" title="Grab your workspace ID"></p>
-<p>Grab the API token from Terraform Cloud for the integration. Go to the <a href="https://app.terraform.io/app/settings/tokens">API token menu</a> (User -&gt; Settings -&gt; Tokens) and select “Create an API token.”</p>
+<p><img src="images/tfc_workspace_overview.png" alt="Grab your workspace ID" title="Grab your workspace ID"></p>
+<p>Create an API token from Terraform Cloud for the integration with Bridgecrew. Go to the <a href="https://app.terraform.io/app/settings/tokens">API token menu</a> (User -&gt; Settings -&gt; Tokens) and select “Create an API token.”</p>
+<p><img src="images/tfc_user_token.png" alt="Create Token" title="Create Token"></p>
 
 <div class="notices warning" ><p>Make sure you are in USER settings, there are three different settings tabs within Terraform Cloud, User settings, global org settings and workspace settings. Your screen should look as below, if there are multiple type of API key to chose from, you&rsquo;re in the wrong place!</p>
 </div>
@@ -5143,19 +5144,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1666237851"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1666237851"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1666237851"></script>
-    <script src="../../js/jquery.sticky.js?1666237851"></script>
-    <script src="../../js/featherlight.min.js?1666237851"></script>
-    <script src="../../js/highlight.pack.js?1666237851"></script>
+    <script src="../../js/clipboard.min.js?1679497100"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1679497100"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1679497100"></script>
+    <script src="../../js/jquery.sticky.js?1679497100"></script>
+    <script src="../../js/featherlight.min.js?1679497100"></script>
+    <script src="../../js/highlight.pack.js?1679497100"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1666237851"></script>
-    <script src="../../js/learn.js?1666237851"></script>
-    <script src="../../js/hugo-learn.js?1666237851"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1679497100"></script>
+    <script src="../../js/learn.js?1679497100"></script>
+    <script src="../../js/hugo-learn.js?1679497100"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1666237851"></script>
+            <script src="../../mermaid/mermaid.js?1679497100"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
